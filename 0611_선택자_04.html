@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 선택자 */
+      * {
+        border: 1px solid #000;
+      }
+      body > a {
+        color: red;
+      }
+      /* 부모의 자식요소 지정 (자식 선택자)
+      (안에 있는 자식요소를 다 선택할 경우는 부등호 빼면 됨)*/
+      p > a {
+        color: green;
+      }
+      p > span > a {
+        color: pink;
+      }
+      /* 하위 선택자 + 인접 선택자(+, 현재 요소 바로 뒤에만 선택) */
+      /* p .first + span {color: orange;} */
+      /* 하위 선택자(공백) + 형제 선택자(~) */
+      p .first ~ span {
+        color: orange;
+      }
+      /* 그룹 선택자 */
+      h1,
+      a {
+        background-color: beige;
+      }
+      h1 + p {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p>문단태그</p>
+    <h1>제목태그</h1>
+    <p>문단태그</p>
+    <a href="">링크태그1</a>
+    <p>
+      <span class="first">span태그</span>
+      <span>span태그</span>
+      <span>span태그</span>
+      <span>span태그</span>
+      <a href="">링크태그2</a>
+      <span>
+        <a href="">링크태그3</a>
+      </span>
+    </p>
+  </body>
+</html>
