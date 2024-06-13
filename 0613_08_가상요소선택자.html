@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li:first-child {
+        color: red;
+      }
+      /* li:last-child{color: blue;} */
+      li:nth-child(2) {
+        color: aqua;
+      }
+      li:first-line {
+        font-size: 30px;
+      }
+      li:last-child:first-letter {
+        font-size: 50px;
+      }
+      li:last-child:first-line {
+        text-decoration: underline;
+      }
+      li:hover {
+        color: blue;
+        cursor: pointer;
+      }
+      /* 부모인 body 기준 둘째 자식이 p문단태그1이라서
+        p:first-child로 할 경우 적용이 안됨 */
+      p:nth-child(2) {
+        color: blue;
+      }
+      p:last-child {
+        color: blue;
+      }
+      a:hover:before {
+        content: "★";
+      }
+      a:hover:after {
+        content: "★";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>리스트1</li>
+      <li>리스트2</li>
+      <li>리스트3</li>
+      <li>리스트4</li>
+      <li>리스트5</li>
+      <hr />
+      <li>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+        dignissim lectus. Aenean ullamcorper sem et justo vestibulum, at rutrum
+        tortor eleifend. Etiam sed augue augue. In iaculis fringilla maximus.
+        Maecenas ut faucibus justo, ut dapibus turpis. Sed iaculis eros ac orci
+        rutrum, non semper tellus cursus. Cras placerat sed lectus sit amet
+        tempus. Vivamus eros turpis, consectetur ut volutpat vel, convallis
+        congue mi. Etiam quis tempus ex. Curabitur ut vulputate risus, eget
+        imperdiet velit. Orci varius natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Phasellus magna elit, placerat quis
+        porta vel, dictum vitae diam. Nulla quis arcu eu velit egestas lacinia.
+        Curabitur vel dui neque. Morbi posuere consequat semper. Maecenas
+        condimentum diam in ex elementum ornare. Etiam eu felis ac augue
+        tincidunt auctor. Maecenas volutpat efficitur pulvinar. Suspendisse a
+        turpis luctus, varius sapien eget, feugiat ligula. Nam quis orci
+        fringilla, ullamcorper eros sed, aliquam dui. Aenean et enim rhoncus,
+        tempus dui quis, lacinia erat. Integer tortor diam, imperdiet at tellus
+        vitae, mattis maximus tellus. Aliquam erat volutpat. Nam gravida
+        suscipit massa id accumsan. Aenean quis ante ac sapien rutrum fermentum
+        ut sed quam. Vestibulum ante ipsum primis in faucibus orci luctus et
+        ultrices posuere cubilia curae; Maecenas vestibulum sapien quis
+        convallis posuere. Sed porta diam imperdiet enim sagittis pellentesque.
+        Mauris convallis turpis a placerat semper. Aenean ornare mauris vitae
+        neque semper malesuada id eleifend libero. Donec libero enim, commodo
+        facilisis ornare in, volutpat vitae odio. Mauris vehicula mauris vitae
+        neque dapibus cursus. Nullam nisl ipsum, suscipit ut tellus vitae,
+        rutrum tincidunt nibh. Suspendisse lobortis purus vel nisi malesuada, in
+        sodales purus laoreet. Proin sollicitudin elit vitae venenatis suscipit.
+        Nunc vehicula ligula ac pretium tempor. Donec imperdiet libero lorem,
+        sit amet volutpat nisl mollis vel. Nam laoreet risus nibh. Etiam est
+        neque, lobortis at viverra vitae, semper vitae erat. Nullam sodales leo
+        nisi. Pellentesque ac turpis quam. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Etiam non tincidunt nulla, ac finibus
+        metus. Pellentesque placerat eleifend libero nec porttitor. Donec
+        fermentum vitae dui vel convallis. Praesent gravida risus at scelerisque
+        viverra. Suspendisse potenti. Nam faucibus urna finibus risus tempus
+        porta. Morbi vel lectus mauris. Donec eleifend et ex eget finibus. Donec
+        lacus nisl, ullamcorper tempor nunc in, lacinia efficitur nisl. Ut dolor
+        quam, fringilla id commodo facilisis, tempus eu diam. Pellentesque
+        sodales metus at iaculis lacinia. Mauris interdum posuere eleifend.
+        Praesent dictum lacus id ipsum ultrices, tristique lacinia leo pharetra.
+        Nullam ullamcorper ipsum ante, ac venenatis lectus pulvinar vitae.
+        Phasellus vitae sem vel nisl molestie accumsan. Fusce id ullamcorper mi.
+        Cras ut vehicula nibh. Nulla lacus magna, maximus ac metus in, dignissim
+        tincidunt enim. Sed pharetra velit tempor velit mattis, pellentesque
+        porta eros ultrices. Aliquam erat volutpat. Etiam pulvinar ipsum dui,
+        eget lacinia ipsum vehicula vel. Vestibulum nec suscipit dui. Donec
+        porta mi tincidunt justo posuere porta. Nunc vel aliquet turpis. Vivamus
+        volutpat, turpis eget pharetra scelerisque, orci nunc auctor elit, eget
+        aliquet nulla felis nec risus. Donec pretium pretium posuere.
+        Pellentesque eget elit neque. Nulla suscipit dictum felis in dignissim.
+        Curabitur pharetra libero ac metus mattis venenatis. Sed placerat felis
+        nibh, in lobortis quam aliquam sed. Phasellus molestie eros ullamcorper
+        magna pellentesque eleifend. Pellentesque quis purus quis metus
+        convallis laoreet. Etiam turpis ex, luctus nec ullamcorper a, lacinia
+        vel sapien. Cras eget mauris vitae magna consectetur tincidunt. In
+        faucibus neque vitae tellus pretium porttitor. Nam vel enim at libero
+        pharetra pretium sed in tellus. Nunc mi quam, pulvinar et pellentesque
+        vitae, molestie non est. Duis malesuada ipsum non ligula tempus
+        interdum. Aliquam at faucibus nibh. Phasellus volutpat mauris quis neque
+        malesuada malesuada. Sed vulputate vel nibh sed egestas. Sed at semper
+        velit.
+      </li>
+    </ul>
+    <p>문단태그1</p>
+    <p>문단태그2</p>
+    <p>문단태그3</p>
+    <p>문단태그4</p>
+    <a href="#">링크태그</a>
+  </body>
+</html>
