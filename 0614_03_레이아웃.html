@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{width: 500px; height: 500px; border: 1px solid #000;
+        position: relative;}
+        /* .child{width: 10%; height: 100px; background-color: red; position: absolute;
+        right: 0; bottom: 0px;} */
+        .child{width: 10%; height: 100px; background-color: red; position:relative; 
+        right: -450px;}
+        /* 퍼센트(%)로 수치 줄 경우 부모에 맞춰서 조정됨 ex)너비 500에서 10% */
+        /* 부모요소에 포지션이 없을 경우 body를 기준으로 함. 주로 겹칠 때 사용 */
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

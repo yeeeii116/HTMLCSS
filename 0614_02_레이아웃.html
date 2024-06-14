@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{position: relative; left: -50px; top: 0px;}
+        h1{position: relative; left: -50px; top: 0px;}
+        /* 음(-)의 값 줄 경우 왼쪽,위로 양의 값 줄 경우 오른쪽,아래로 
+        화면에서 안보이는 부분은 음의 값이라 생각하면 됨, 
+        수치는 동일해도 위치는 상대적임*/
+        div{background-color: blue; height: 300px;}
+        ul{background-color: blanchedalmond;}
+        ul.one {position: absolute; background-color: aqua;}
+        /* position:absolute는 절대적인 존재로 원래 위치에서 따로 나와
+        독립적으로 새로운 위치를 설정함. 부모박스를 기준으로 위치 지정 */
+    </style>
+</head>
+<body>
+    <span>인라인태그</span>
+    <a href="#">링크태그</a>
+    <h1>제목태그</h1>
+    <p>문단태그</p>
+    <ul class="one">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>
+
+    <div>그룹태그</div>
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>
+    
+</body>
+</html>

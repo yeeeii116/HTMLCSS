@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body > p:first-of-type{color: red;} */
+        /* boby요소 안에 있는 첫째 p요소 선택 */
+        /* p:first-child로 할 경우 div안에 있는 첫째 p요소만 선택됨 */
+        /* body > p:nth-last-of-type(2){color: aqua;} 
+        body요소 안에 있는 마지막 자식부터 부모의 두번째 p요소인 모든 p요소 선택*/
+        /*div :not(p){color: coral;}
+       div뒤에 공백=하위요소만 봄, 안띄우면 div 자체를 보겠다는 것 
+       div안에서 p가 아닌 요소 선택*/
+       /* body p:only-child{color: blueviolet;} 
+       부모의 유일한 자식인 모든 p요소 선택*/
+       /* p:only-of-type{color: aqua;}
+        부모의 유일한 p요소인 모든 p요소 선택 */
+        /* p:nth-last-child(3){color: red;}
+        p::selection{background-color: bisque;} */
+        p{color: red;}
+        p:nth-child(2){color: blue;}
+        .first {color: green;}
+        /* #one {color: darkkhaki;} */
+        /* 차일드는 가상요소 선택자, class선택자보다 우선순위 높음 
+        차일드는 항상 부모를 봐야함*/
+    </style>
+</head>
+<body>
+    <h1>제목태그</h1>
+    <p class="first" id="one">문단태그</p>
+    <h2>제목태그</h2>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <!-- <div>
+        <p>문단태그</p>
+    </div>
+    <div>
+        <p>문단태그</p>
+        <span>인라인태그</span>
+    </div> -->
+</body>
+</html>

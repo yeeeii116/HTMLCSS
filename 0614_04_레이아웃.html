@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{width: 1200px; border: 1px solid #000; position: relative; margin: 0 auto;}
+        .child{width: 20%; height: 100px; background-color: red; position: absolute;
+        }
+        .parent div:first-child{left: 0;}
+        .parent div:nth-child(2){left: calc(600px - 120px);}
+        .parent div:last-child{right: 0;}
+        /* 부모요소에 높이 값이 없을 경우 자식요소에 있는 값을 사용.
+        만약 자식요소가 집을 나가면 그 값을 잃음 */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>
