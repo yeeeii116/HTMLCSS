@@ -6,17 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* .parent{height: 100px;} */
-        .parent{width: 1200px; margin: 0 auto; border: 1px solid; position: relative; background-color: yellow;}
-       .parent>div{position: absolute;}
-       .parent>div:first-child{left: 0; top: 20px;}
-       .parent>div:last-child{right: 0;}
+        .parent{margin: 0 auto;}
+        .top{background-color: #fff; height: 100px; position: sticky; top: 0; z-index: 1;}
+        .two{background-color: green; height: 200px; margin: 2px;}
+        .three{width: 1200px; height: 800px; background-color: antiquewhite; position: relative; margin: 0 auto;}
+        .three>div:nth-child(2){position: absolute; top: 100px; left: 47%;}
+        /* .three>div:nth-last-child(1){position: absolute; left: 0;} */
+        .four{width: 1200px; background-color: green; height: 200px;}
     </style>
 </head>
 <body>
     <div class="parent">
-        <div>left<br>left<br>left</div>
-        <div>right</div>
+        <div class="parent top">메뉴바</div>
+        <div class="parent two"></div>
+            <div class="parent three">
+                <div class="lmage"><img src="./images/cts.png" alt="청주시장"></div>
+                    <div class="text">
+                     <h1>존경하는 88만 청주시민 여러분!</h1>
+                     <h3>
+                        통합 청주시가 출범하고 어느덧 열 돌을 맞이했습니다.<br>
+                     청주시와 역사적 동행을 하고 계신 88만 청주시민 여러분께<br>
+                     진심으로 감사를 드립니다.
+                     </h3>
+                     <br>
+                     <p>
+                        지난 10년은 모두가 함께 이룬 성과의 시간이었습니다.<br><br>
+                        헌정사상 최초로 주민주도의 자율통합을 이루었고<br>
+                        대한민국의 미래를 이끌어갈 첨단산업의 중심지로 자리매김하는 등<br>
+                        통합 청주시가 더욱 역동적으로 성장 발전해가는 성과들이<br>
+                        크게 나타나고 있습니다.<br><br>
+                    
+                        이제 우리는 청주청원 통합 10주년이라는 역사적인 대전환점에 와 있습니다.<br><br>
+                    
+                        희망찬 새 시대를 염원하던 통합의 정신을 되새기며<br>
+                        미래 100만 자족도시 청주를 향해<br>
+                        모두 함께 힘차게 나아갑시다.
+                        </p>
+                <div class="image1"><img src="./images/cts23726_deco03.png" alt="일러1"></div>
+                </div>
+            </div>
+         <div class="parent four"></div>
     </div>
+
 </body>
 </html>

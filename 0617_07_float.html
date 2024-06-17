@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .parent1{width: 1200px; margin: 0 auto; border: 1px solid; }
+        .parent1>div{width: 20%}
+        .parent1>div:nth-child(1){background-color: red;}
+        .parent1>div:nth-child(2){background-color: blue;}
+        .parent1>div:nth-child(3){background-color: yellow;}
+
+        .parent2{width: 1200px; margin: 0 auto; border: 1px solid; overflow: hidden; margin-top: 20px;}
+        .parent2>div{width: 20%; float: left;}
+        .parent2>div:nth-child(1){background-color: red;}
+        .parent2>div:nth-child(2){background-color: blue;}
+        .parent2>div:nth-child(3){background-color: yellow;}
+
+        .parent3{width: 1200px; margin: 0 auto; border: 1px solid; overflow: hidden;
+        margin-top: 20px;}
+        .parent3>div{width: 20%; float: left;}
+        .parent3>div:nth-child(1){background-color: red;}
+        .parent3>div:nth-child(2){background-color: blue; margin: 0 20%;}
+        .parent3>div:nth-child(3){background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div class="parent1">
+        <div class="one1">1</div>
+        <div class="two1">2</div>
+        <div class="three1">3</div>
+        </div>
+    </div>
+
+    <div class="parent2">
+        <div class="one2">1</div>
+        <div class="two2">2</div>
+        <div class="three2">3</div>
+        </div>
+    </div>
+
+    <div class="parent3">
+        <div class="one3">1</div>
+        <div class="two3">2</div>
+        <div class="three3">3</div>
+        </div>
+    </div>
+</body>
+</html>
