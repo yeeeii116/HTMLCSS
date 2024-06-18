@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{width: 1200px; margin: 0 auto; border: 1px solid;}
+        .one>div{width: 20%;}
+        .one>div:nth-child(1){background-color: red;}
+        .one>div:nth-child(2){background-color: blue;}
+        .one>div:nth-child(3){background-color: green;}
+
+        .two{width: 1200px; margin: 0 auto; border: 1px solid; overflow: hidden;}
+        .two>div{width: 20%; float: left;}
+        .two>div:nth-child(1){background-color: red;}
+        .two>div:nth-child(2){background-color: blue;}
+        .two>div:nth-child(3){background-color: green;}
+
+        .three{width: 1200px; margin: 0 auto; border: 1px solid; overflow: hidden;}
+        .three>div{width: 20%; float: left;}
+        .three>div:nth-child(1){background-color: red;}
+        .three>div:nth-child(2){background-color: blue; margin: 0 20%;}
+        .three>div:nth-child(3){background-color: green;}
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div><br>
+    <div class="two">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div><br>
+    <div class="three">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
