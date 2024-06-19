@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: prem;
+            src: url(webfonts/Pretendard-Medium.woff) format(woff);
+        }
+        *{margin: 0; padding: 0;}
+        table{border-collapse: collapse; margin: 20px auto; text-align: center; font: 20px prem;}
+        td{padding: 20px; border: 1px solid #ccc;}
+        tr:first-child{background-color: #eee; border-top: 2px solid #000;}
+        td:first-child{border-left: none;}
+        table .fin{border-right: none;}
+        /* td:nth-child(5)로도 가능 */
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>구분</td>
+            <td>8일전</td>
+            <td>7~4일전</td>
+            <td>3~1일전</td>
+            <td class="fin">당일</td>
+        </tr>
+        <tr>
+            <td>시설대관</td>
+            <td rowspan="3">위약금 없음</td>
+            <td rowspan="3">견적금액<br>50% 청구</td>
+            <td>견적금액<br>90% 청구</td>
+            <td rowspan="3" class="fin">견적금액<br>100% 청구</td>
+        </tr>
+        <tr>
+            <td>케이터링</td>
+            <td>견적금액<br>90% 청구</td>
+        </tr>        
+        <tr>
+            <td>프로그램</td>
+            <td>견적금액<br>100% 청구</td>
+        </tr>
+    </table>
+</body>
+</html>
