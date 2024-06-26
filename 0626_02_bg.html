@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        @font-face {
+            font-family: nanum;
+            src: url(webfonts/NanumBarunGothic.otf) format("opentype");
+        }
+        *{margin: 0; padding: 0;}
+        .con{width: 1480px; height: 500px; margin: 50px auto;}
+        .con div{width: 170px; height: 100%; border-radius: 10px; background-position: center; background-size: cover; float: left; margin-left: calc((100% - (171px * 8)) / 8); position: relative;}
+
+        div.con div::after{content: ""; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3); position: absolute; left: 0; top: 0; border-radius: 10px;}
+        
+        .con div p{color: #fff; font-size: 24px;
+        text-align: center; font-weight: bold; padding-top: 230px; text-transform: capitalize; position: relative; z-index: 1;}
+        .con div:first-child{background-image: url(./images/bg_category_1.jpg); }
+        .con div:nth-child(2){background-image: url(./images/bg_category_2.jpg); }
+        .con div:nth-child(3){background-image: url(./images/bg_category_4.jpg); }
+        .con div:nth-child(4){background-image: url(./images/bg_category_5.jpg); }
+        .con div:nth-child(5){background-image: url(./images/bg_category_6.jpg); }
+        .con div:nth-child(6){background-image: url(./images/bg_category_3.jpg); }
+        .con div:nth-child(7){background-image: url(./images/bg_category_7.jpg); }
+        .con div:nth-child(8){background-image: url(./images/bg_category_8.jpg); }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div><p>pakage</p></div>
+        <div><p>honeymoon</p></div>
+        <div><p>golf<br>& theme</p></div>
+        <div><p>air ticket</p></div>
+        <div><p>hotel</p></div>
+        <div><p>tour<br>& ticket</p></div>
+        <div><p>domestic</p></div>
+        <div><p>incentive</p></div>
+        
+    </div>
+</body>
+</html>

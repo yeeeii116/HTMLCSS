@@ -11,19 +11,21 @@
             font-family: nanum;
             src: url(webfonts/NanumBarunGothic.otf) format("opentype");
         }
-        section{width: 1480px; height: 440px; font-family: nanum;}
-        div{background-image: url(./images/bg_story_1.jpg);}
+        section{width: 1480px; font-family: nanum; margin: 50px auto;}
+        section>div:first-child{width: 770px; height: 440px; background-image: url(./images/bg_story_1.jpg); background-repeat: no-repeat; border-radius: 20px; background-position: left; float: left; background-size: cover;}
+        section div:last-child{float: right; margin-top: 90px; margin-right: 200px;}
+        h3{font-size: 24px; color: #777;}
+        h1{font-size: 48px; color: #222;}
+        h2{font-size: 48px; color: #ffc72c; text-transform: capitalize;}
     </style>
 </head>
 <body>
     <section>
+        <div class="bg"></div>
         <div>
-            <div></div>
-            <!-- <div>
-                <h3>여행의 새로운 가치를 알립니다</h3>
-                <h1>가치를 전달하는 여행</h1>
-                <h2>value-creating</h2>
-            </div> -->
+            <h3>여행의 새로운 가치를 알립니다</h3>
+            <h1>가치를 전달하는 여행</h1>
+            <h2>value-creating</h2>
         </div>
     </section>
 </body>
