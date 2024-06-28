@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{color: #000; text-decoration: none;}
+        #wrap{background-color: #161616;}
+        header{}
+        .topmenu{background-color: #666;}
+        .top{background-color: #666; width: 1000px; margin: 0 auto; overflow: hidden;}
+        .top ul{float: right;}
+        .top ul li{float: left;}
+        .top ul li a{color: #fff; text-transform: uppercase; padding: 10px; display: block;
+        height: 30px; line-height: 30px;}
+        /* a는 인라인속성이라 패딩 위아래가 안들어감 */
+        /* 만약 인라인속성에 높이 주고 싶을 경우 display: block;하고 높이값 넣기 */
+        .top ul li:nth-child(4) a{background-color: #fff; height: 20px; color: #000; line-height: 20px; margin-top: 5px;}
+        .top ul li a img{vertical-align: middle;}
+        /* 인라인속성 가지고 있는 이미지 수직정렬 */
+        nav{background-color: #161616;}
+        nav .logo{float: left;}
+        nav .menu{width: 1000px; height: 70px; margin: 0 auto;}
+        /* .menu div:first-child{position: absolute;} */
+        nav .menu ul{float: right;}
+        nav .menu ul li{float: left; line-height: 70px; padding: 0 20px;}
+        nav .menu ul li a{color: #fff; text-transform: uppercase;  }
+        /* .mdvisual{background-color: #9a9a9a; height: 400px;}
+        .mdvisual .visual{width: 1000px; margin: 0 auto; } 
+        백그라운드로 안넣을 경우*/
+        .visual{height: 400px; background: #9a9a9a url(./images/mad_17.jpg) center no-repeat;}
+        .pro{width: 1000px; margin: 0 auto; overflow: hidden; padding: 50px 0;}
+        .pro li{float: left; margin-left: calc((100% - (235px * 4)) / 3);}
+        .pro li:first-child{margin-left: 0;}
+         /* .pro2{width: 1000px; margin: 0 auto; overflow: hidden;}
+        .pro2 .event{float: left; margin-right: 70px;}
+        .pro2 .txt{margin: 0 20px; margin-top: 30px; padding-left: 90px;}
+        .pro2 .txt p{color: #ccc; font-size: 15px;}
+        .pro2 .txt p:first-child{font-size: 16px; font-weight: bold; margin-bottom: 20px;}
+        .pro2 .txt p span{font-weight: bold;} */
+        .event{width: 1000px; margin: 0 auto; overflow: hidden;}
+        .event>li{float: left; width: 50%;}
+        /* 부등호 안넣을 경우 자식, 후손까지 선택 됨, 부등호 넣으면 자식만 선택 */
+        .event>li div{width: 90%; margin: 0 auto; color: #fff; margin-bottom: 100px;}
+        .event>li div li{font-size: 14px; margin: 5px 0;}
+        .event>li div li span:first-child{font-weight: bold;}
+        .event>li div li span:nth-child(2){margin: 0 10px;}
+        .event>li div li span:nth-child(3){color: #9a9a9a;}
+        .event>li div>h3{margin: 20px 0;}
+        footer{border-top: 1px solid #9a9a9a;}
+        .foot{width: 1000px; margin: 0 auto; text-align: center; color: #fff; font-size: 14px; padding: 50px 0;}
+        .foot ul{display: inline-block;}
+        /* text를 가운데 정렬하고 싶어서(text-align) ul(블록요소)에 인라인속성(display: inline-block) 넣어줌 */
+        .foot ul li{float: left; padding: 0 10px;}
+        .foot address{font-style: normal; margin: 10px 0;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="topmenu">
+                <div class="top">
+                    <ul>
+                        <li><a href="#">log in</a></li>
+                        <li><a href="#">join</a></li>
+                        <li><a href="#">gust</a></li>
+                        <li><a href="#">검색어를 입력해주세요</a></li>
+                        <li><a href="#"><img src="./images/zoom.png" alt="zoom"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav>
+                <div class="menu">
+                    <div class="logo"><img src="./images/mad_12.gif" alt="logo"></div>
+                    <ul>
+                        <li><a href="#">brand</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">store</a></li>
+                        <li><a href="#">membership</a></li>
+                        <li><a href="#">event</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- <div class="mdvisual">
+                <div class="visual"><img src="./images/mad_17.jpg" alt="mad17"></div>
+            </div> -->
+            <div class="visual"></div>
+            <ul class="pro">
+                <li><img src="./images/mad_25.jpg" alt="steak"></li>
+                <li><img src="./images/mad_27.jpg" alt="rice"></li>
+                <li><img src="./images/mad_29.jpg" alt="pizza"></li>
+                <li><img src="./images/mad_31.jpg" alt="pasta"></li>
+            </ul>
+            <!-- <div class="pro2">
+                <div class="event"><img src="./images/mad_39.jpg" alt="event"></div>
+                <div class="txt">
+                    <p>공지사항</p>
+                    <p>MAD SURPRISE   매월 지정일 매드서프라이즈!   2017-06-28</p>
+                    <p>>MAD CELEBRATION  생일, 결혼기념일 스페셜!   2017-06-28</p>
+                    <p>MAD DAY   매월 마지막 주 수요일 기억하세요!   2017-06-28</p>
+                    <p>MAD 10% 멤버십이라면 언제나 10% 할인제공!   2017-06-28</p>
+                    <p>MAD REWARDS  올수록 커지는 리워즈 혜택!   2017-06-28</p>
+                </div>
+            </div> -->
+            <ul class="event">
+                <li><img src="./images/mad_39.jpg" alt="mad_39"></li>
+                <li>
+                    <div>
+                        <h3>공지사항</h3>
+                        <ul>
+                            <li><span>MAD SURPRISE</span><span>매월 지정일 매드서프라이즈!</span><span>2017-06-28</span></li>
+                            <li><span>MAD CELEBRATION</span><span>생일, 결혼기념일 스페셜!</span><span>2017-06-28</span></li>
+                            <li><span>MAD DAY</span><span>매월 마지막 주 수요일 기억하세요!</span><span>2017-06-28</span></li>
+                            <li><span>MAD 10%</span><span>멤버십이라면 언제나 10% 할인제공!</span><span> 2017-06-28</span></li>
+                            <li><span>MAD REWARDS</span><span>올수록 커지는 리워즈 혜택!</span><span> 2017-06-28</span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <div class="foot">
+                <ul>
+                    <li>서비스이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>기기운영관리방침</li>
+                    <li>고객서비스센터</li>
+                    <li>관리자문의</li>
+                </ul>
+                <address>서울특별시 강남구 압구정로 222(신사동) ㈜엠에프지코리아</address>
+                <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+       
+        
+    </div>
+</body>
+</html>
