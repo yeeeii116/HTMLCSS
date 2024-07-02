@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: NotoSansm;
+            src: url(webfonts/NotoSans-Medium.woff) format(woff);
+        }
+        *{margin: 0; padding: 0;}
+        #wrap{width: 1280px; height: 650px; margin: 50px auto; padding-top: 80px; font-family: NotoSansm;}
+        ul.one{list-style: none; width: 680px; height: 100%; float: left;}
+        ul.one li{float: left; width: 340px; height: 550px; color: #fff;
+        transition: 1s;}
+        ul.one li:first-child{background-image: url(./images/pr_img1.jpg); position: relative; top: -50px;}
+        ul.one li:nth-child(2){background-image: url(./images/pr_img2.jpg); position: relative;}
+        ul.one li:hover{background-size: 120%; transition: 1s;}
+
+        ul.one li:first-child div{position: absolute; left: 30%;
+        top: 90%; transform: translate(-30%, -90%);}
+        ul.one li:nth-child(2) div{position: absolute; left: 30%;
+        top: 90%; transform: translate(-30%, -90%);}
+        .ome li div{transition: all 1s}
+        .one li div h1{font-size: 50px;}
+        .one li div p{font-size: 16px; margin: 10px 0; margin-bottom: 40px;}
+        .one li:hover div p:last-child{transform: translateX(30px); transition: all 1s}
+        
+        ul.two{list-style: none; float: right; width: 565px;}
+        .two li{width: 260px; height: 265px; background-color: #f0f0f0; position: relative; margin-bottom: 20px; margin-right: 20px; float: left;}
+        .two li div{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        .line{position: absolute; background-color: #07348c;}
+        .line-top{width: 100%; height: 5px; transform: scaleX(0);  transform-origin: 0 0; transition: all 0.5s ease-in-out 1.5s;}
+        .line-right{width: 5px; height: 100%; right: 0; transform: scaleY(0);  transform-origin: 0 0;  transition: all 0.5s ease-in-out 1s;}
+        .line-bottom{width: 100%; height: 5px; bottom: 0; transform: scaleX(0);  transform-origin: 100% 0;  transition: all 0.5s ease-in-out 0.5s;}
+        .line-left{width: 5px; height: 100%; left: 0; transform: scaleY(0);  transform-origin: 0 100%;  transition: all 0.5s ease-in-out;}
+
+        .two li:hover .line-top{transform: scaleX(1); transition: all 0.5s ease-in-out;}
+        .two li:hover .line-right{transform: scaleY(1); transition: all 0.5s ease-in-out 0.5s;}
+        .two li:hover .line-bottom{transform: scaleX(1);  transition: all 0.5s ease-in-out 1s;}
+        .two li:hover .line-left{transform: scaleY(1);  transition: all 0.5s ease-in-out 1.5s;}
+        .two li div p{margin-bottom: 16px;}
+        .two li div img{transition: 0.5s;}
+        .two li:hover div img{transform: translateX(20px);}
+        .two li div h1{font-weight: normal; margin-bottom: 10px;}
+        .two li div h1 span{display: block; font-weight: bold;}
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul class="one">
+            <li>
+                <div class="txt">
+                    <h1>극동뉴스</h1>
+                    <p>극동건설의 다양한 소식을 가장 빠르게<br> 전달해드립니다.</p>
+                    <p><img src="./images/next_bar_wh.png" alt=""></p>
+                </div>
+            </li>
+            <li>
+                <div class="txt">
+                    <h1>R&D</h1>
+                    <P>끊임없는 신기술 개발과 혁신으로<br> 극동건설이 건축기술의 진보를 위해<br> 노력하고 있습니다</P>
+                    <p><img src="./images/next_bar_wh.png" alt=""></p>
+                </div>
+            </li>
+        </ul>
+        <ul class="two">
+            <li>
+                <div>
+                 <h1>언론속의 <span>극동</span></h1>
+                 <p>언론에 소개되는 극동의 소식을<br> 안내해드립니다.   <p>
+                 <p><img src="./images/next_bar_bk.png" alt="next_bar"></p>
+                </div>
+             <span class="line line-top"></span>
+             <span class="line line-right"></span>
+             <span class="line line-bottom"></span>
+             <span class="line line-left"></span>
+            </li>
+            <li>
+                <div>
+                 <h1>언론속의 <span>극동</span></h1>
+                 <p>언론에 소개되는 극동의 소식을<br> 안내해드립니다.   <p>
+                 <p><img src="./images/next_bar_bk.png" alt="next_bar"></p>
+                </div>
+             <span class="line line-top"></span>
+             <span class="line line-right"></span>
+             <span class="line line-bottom"></span>
+             <span class="line line-left"></span>
+            </li>
+            <li>
+                <div>
+                 <h1>언론속의 <span>극동</span></h1>
+                 <p>언론에 소개되는 극동의 소식을<br> 안내해드립니다.   <p>
+                 <p><img src="./images/next_bar_bk.png" alt="next_bar"></p>
+                </div>
+             <span class="line line-top"></span>
+             <span class="line line-right"></span>
+             <span class="line line-bottom"></span>
+             <span class="line line-left"></span>
+            </li>
+            <li>
+                <div>
+                 <h1>언론속의 <span>극동</span></h1>
+                 <p>언론에 소개되는 극동의 소식을<br> 안내해드립니다.   <p>
+                 <p><img src="./images/next_bar_bk.png" alt="next_bar"></p>
+                </div>
+             <span class="line line-top"></span>
+             <span class="line line-right"></span>
+             <span class="line line-bottom"></span>
+             <span class="line line-left"></span>
+            </li>
+        </ul>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none; width: 465px; height: 306px; border: 1px solid;}
+        ul li{width: calc(100% / 3); height: 100%; float: left; transition: 0.5s; cursor: pointer; position: relative;}
+        ul li:first-child{background-image: url(./images/sample01.jpg);}
+        ul li:nth-child(2){background-image: url(./images/sample02.jpg);}
+        ul li:nth-child(3){background-image: url(./images/sample03.jpg);}
+        ul li > p{color: #fff; text-align: center; line-height: 306px; font-size: 20px;}
+        ul:hover li:hover{width: 60%;}
+        .box{opacity: 0; text-align: center; font-size: 18px; color: #fff; width: 250px; transform: translate(-50%,-50%); position: absolute; top:50%; left: 50%; background-color: rgba(0, 0, 0, 0.5); transition: opacity 0s 0s;}
+        /* li기준 50%인 반 이동(50%지점 반에 위만 걸쳐서) 반을 또 잘라서 올리면 수직정렬(수평정렬도 동일)*/
+        ul:hover li:not(:hover){width: 20%;}
+        ul:hover li > p{display: none;}
+        /* li:hover로 바꿀 경우엔 그 li 글씨만 사라짐 */
+        ul li:hover .box{opacity: 1; transition: opacity 1s 1s;}
+        /* 사라졌다 나타날때 들썩거림을 방지하기 위해 display 대신 opacity로 설정 */
+        /* 디스플레이는 수치로 표시가 안되기 때문에(none, block 등) transition 적용 안됨 */
+
+
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>내추럴성분</p>
+            <div class="box">
+                <p>해피바스가 담고 있는<br>'내추럴 성분'이 궁금하다면?</p>
+            </div>
+        </li>
+        <li>
+            <p>내추럴성분</p>
+            <div class="box">
+                <p>해피바스가 담고 있는<br>'내추럴 성분'이 궁금하다면?</p>
+            </div>
+        </li>
+        <li>
+            <p>내추럴성분</p>
+            <div class="box">
+                <p>해피바스가 담고 있는<br>'내추럴 성분'이 궁금하다면?</p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
