@@ -5,43 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
     <style>
+        @font-face {
+            font-family: NotoSansKR-Regular;
+            src: url(webfonts/NotoSansKR-Regular.woff) format(woff);
+        }
         *{margin: 0; padding: 0;}
         ul{list-style: none;}
-        a{color: #333; text-decoration: none;}
+        a{text-decoration: none;}
         body{background-color: #fff;}
-        #wrap{}
+        #wrap{font-family: NotoSansKR-Regular;}
         #wrap header{height: 100px;}
         #wrap header .top{width: 1493px;margin: 0 auto;}
 
-        #wrap .logo{float: left; width: 126px; height: 40px; position: relative;}
-        #wrap .logo a{display: block; width: 100%; height: 100%; line-height: 100px;}
+        #wrap .logo{float: left; width: 126px; height: 100px;  position: relative;}
+        #wrap .logo a{display: block; width: 100%; height: 100%;  background-image: url(./images/bien_logo.svg); background-repeat: no-repeat;background-position: center;}
    
-        #wrap .menu > ul{height: 100px; position: relative;}
+        #wrap .menu > ul{width: 1493px; height: 100px; position: relative; }
         #wrap .menu > ul > li{float: left; position: relative; width: 140px;}
-        #wrap .menu > ul > li > a{display: block; line-height: 100px; text-align: center; position: relative; font-weight: bold; height: 100px;}
+        #wrap .menu > ul > li:first-child{margin-left: 50px;}
+        #wrap .menu > ul > li > a{display: block; line-height: 100px; text-align: center; position: relative; font-weight: bold; height: 100px; color: #333;}
 
         #wrap .menu > ul .sub{height: 0; overflow: hidden; transition: 0.5s; position: absolute; left: 0; top: 100px; width: 100%; z-index: 1; font-size: 14px;}
         #wrap .menu > ul:hover .sub{height: 280px;}
+        #wrap .menu > ul .sub li a{color: #ccc;}
 
         #wrap .menu > ul > li{line-height: 40px; text-align: center;}
-        #wrap .menu > ul > li:hover > a{}
         #wrap .menu > ul .sub li:hover a{color: green; display: block; text-decoration: underline;}
         .bg{position: absolute; left: 0; top: 100px; width: 100%; height: 0; transition: 0.4s;}
         #wrap .menu > ul:hover ~ .bg{height: 320px; background-color: #fff;}
 
         #wrap .menu ul .right{width: 1493px;}
         #wrap .menu ul .right>ul{float: right; line-height: 100px;}
-        #wrap .menu ul .right>ul li{float: left; margin: 0 15px; font-weight: bold;}
+        #wrap .menu ul .right>ul li{float: left; margin: 0 15px; font-weight: bold; }
+        #wrap .menu ul .right>ul li a{color: #333;}
+        #wrap .menu ul .right>ul li a i{padding-left: 5px;}
 
-        .main{width: 1576px; height: 796px; background-image: url(./images/bien02.JPG); background-repeat: no-repeat; background-position: center; margin: 0 auto;}
+        .main{width: 1576px; height: 796px; background-image: url(./images/bien02.JPG); background-repeat: no-repeat; background-position: center; margin: 0px auto; border-radius: 25px;}
     </style> 
 </head>
 <body>
     <div id="wrap">
         <header>
             <div class="top">
-                <div class="logo"><a href="#"><img src="./images/bien_logo.svg" alt="logo"></a></div>
+                <div class="logo"><a href="#"></a></div>
                 <div class="menu">
                     <ul>
                         <li><a href="#">PRODUCTS</a>
@@ -73,7 +81,7 @@
                         <div class="right">
                             <ul>
                                 <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Get in Touch<span></span></a></li>
+                                <li><a href="#">Get in Touch<i class="fa-solid fa-up-right-from-square"></i></a></li>
                                 <li><a href="">EN</a></li>
                             </ul>
                         </div>
