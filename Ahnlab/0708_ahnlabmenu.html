@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        body{background: #111;}
+        #wrap .left{width: 1200px; margin: 0 auto;}
+        #wrap .left .top{padding-top: 100px;}
+        #wrap .left .top>img{width: 300px; height: 19px;}
+        #wrap .left .top h2{color: #fff;margin-top: 40px;font-size: 32px;}
+        #wrap .left .menu>ul{padding-top: 80px;}
+        #wrap .left .menu > ul > li{width: 472px; padding: 22px 0; border-bottom: 1px solid #363636; color: #fff; position: relative;}
+        #wrap .left .menu > ul > li p{color: #989898; font-size: 20px; transition: 0.5s;}
+        #wrap .left .menu > ul > li:hover p{font-size: 24px; font-weight: bold; transition: 0.5s;}
+        #wrap .left .menu > ul > li:first-child:hover p{color: #2970ff;}
+        #wrap .left .menu > ul > li:nth-child(2):hover p{color: #2ccbe5;}
+        #wrap .left .menu > ul > li:nth-child(3):hover p{color: #2ca8fc;}
+        #wrap .left .menu > ul > li:nth-child(4):hover p{color: #8ab1ff;}
+        #wrap .left .menu > ul > li:nth-child(5):hover p{color: #55d8c5;}
+        #wrap .left .menu > ul > li:hover{border-bottom: 2px solid #fff;}
+
+        #wrap .left .menu > ul > li > .right{position: absolute; left: 472px; top: -80px; padding-left: 130px; height: 0; overflow: hidden;}
+        #wrap .left .menu > ul > li:hover > .right{height: 720px;}
+        
+
+        #wrap .left .menu>ul:hover .sub{}
+		#wrap .bg{}
+		#wrap .left .menu>ul:hover ~ .bg{}
+       
+    </style>
+</head>
+<body>
+    <div id="wrap">
+      <div class="left">
+        <div class="top">
+            <img src="./images/ahn-plus.png" alt="ahn-plus">
+            <h2>디지털 비즈니스 혁신을 위한<br>
+            최적의 보안 플랫폼</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><p>AhnLab CONNECT PLUS <span><img src="./images/ahn-plus-connect-after.png" alt="connect"></span></p>
+                    <ul class="right">
+                        <li><img src="./images/connect.png" alt="connect"></li>
+                        <li>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+                            연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</li>
+                        <li>View More</li>
+                    </ul>
+                </li>
+                <li><p>AhnLab CLOUD PLUS <span><img src="./images/ahn-plus-cloud-after.png" alt="cloud"></span></p>
+                    <ul class="right">
+                        <li><img src="./images/cloud.png" alt="cloud"></li>
+                        <li>AhnLab CLOUD PLUS는 클라우드 워크로드 보안 플랫폼(CWPP)부터
+                            클라우드 최적화 방화벽, IPS 등 최상의 기술력을 갖춘 솔루션을 통해
+                            고객의 디지털 혁신 기반을 마련합니다.</li>
+                        <li>View More</li>
+                    </ul>
+                </li>
+                <li><p>AhnLab ENDPOINT PLUS <span><img src="./images/ahn-plus-endpoint-after.png" alt="ENDPOINT"></span></p>
+                    <ul class="right">
+                        <li><img src="./images/endpoint.png" alt="endpoint"></li>
+                        <li>AhnLab ENDPOINT PLUS는 PC, 서버, 모바일, OT 기기 등 여러 엔드포인트
+                            자산에 대한 위협을 체계적으로 방어하는 엔드포인트 보안 플랫폼입니다.</li>
+                        <li>View More</li>
+                    </ul>
+                </li>
+                <li><p>AhnLab NETWORK PLUS <span><img src="./images/ahn-plus-network-after.png" alt="network"></span></p>
+                    <ul class="right">
+                        <li><img src="./images/network.png" alt="network"></li>
+                        <li>AhnLab NETWORK PLUS는 방화벽, IPS, 디도스 대응, 샌드박스 등
+                            여러 솔루션들이 유기적으로 연동하여 최상의 보안 역량을 제공하는
+                            네트워크 보안 플랫폼입니다.</li>
+                        <li>View More</li>
+                    </ul>
+                </li>
+                <li><p>AhnLab SERVICE PLUS <span><img src="./images/ahn-plus-service-after.png" alt="service"></span></p>
+                    <ul class="right">
+                        <li><img src="./images/survice.png" alt="service"></li>
+                        <li>안랩의 보안 전문가들이 수십 년간 축적해온 경험과 노하우를 바탕으로
+                            최상의 보안 서비스를 제공해 안전한 비즈니스 환경을 조성합니다.</li>
+                        <li>View More</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="bg"></div>
+        </div>
+    </div>
+</body>
+</html>
