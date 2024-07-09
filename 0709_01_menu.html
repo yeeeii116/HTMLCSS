@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		a{text-decoration: none;color: #333;}
+        div.wrap{width: 1602px; height: 386px; margin: 50px auto;}
+        .wrap .left h1{float: left; width: 55%; font-size: 117.6px; line-height: 100px;}
+
+        .wrap .menu>ul{float: right; width: 45%;}
+        .wrap .menu>ul>li{line-height: 40px;}
+        .wrap .menu>ul>li>a{display: block; font-size: 29.4px; padding: 10px 0;}
+        span{float: right;}
+        .wrap .menu>ul>li:hover span{opacity: 0; position: relative;}
+        .wrap .menu>ul>li:first-child{border-top: 1px solid #000;}
+
+        .wrap .menu>ul>li:hover>a span::after{content: "-";}
+
+        .wrap .menu>ul>li>.sub p{height: 0; opacity: 0; font-size: 14px; color:rgba(0, 0, 0, 0.61); padding-bottom: 30px; transition: 0.5s;}
+        .wrap .menu>ul>li .sub{height: 0; border-bottom: 1px solid #000;}
+        .wrap .menu>ul>li:hover .sub{height: 50px; display: block;}
+        .wrap .menu>ul>li:hover>.sub p{height: 50px; opacity: 1;}
+        /* hover를 뺀 대상에 transition 줘야함 */
+
+	</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left"><h1>Our<br>Services.</h1></div>
+        <div class="menu">
+            <ul>
+                <li><a href="">UX / UI<span>+</span></a>
+                    <ul class="sub">
+                        <li><p>Concept Proposal / UX Planning /  UI Design</p></li>
+                    </ul>
+                </li>
+                <li><a href="">Motion<span>+</span></a>
+                    <ul class="sub">
+                        <li><p>Scenario Planning / 2D Motion graphic Design / 3D Modeling & Animation / 3D VFX</p></li>
+                    </ul>
+                </li>
+                <li><a href="">Production<span>+</span></a>
+                    <ul class="sub">
+                        <li><p>Pre-Production / Production / Post-Production</p></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
