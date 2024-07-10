@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: NanumSquareL;
+            src: url(../webfonts/NanumSquareL.otf) format("opentype");
+        }
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        .main .con{width: 1080px; margin: 0 auto;}
+        .main .con .quick{width: 100%; height: 150px; background-color: #e2fefe;}
+        .main .con .quick ul{margin: 30px auto; overflow: hidden;}
+        .main .con .quick ul li{float: left; width: 16.666%; height: 100%; position: relative;}
+        .main .con .quick .item{padding-top: 20%; font-family: NanumSquareL;}
+        .main .con .quick .item p{text-align: center; font-weight: bold;}
+        .main .con .quick .item p:last-child{margin-top: 10px;}
+        .main .con ul li::after{content: ""; position: absolute; width: 1px; height: 150px; background-color: #ccc; right: 0; top: 30%;}
+        .main .con ul li:last-child:after{content: ""; width: 0px;}
+
+        .main .con .mlon{width: 100%; height: 460px; margin: 30px auto; background-color: #e2f3fb;}
+        .con .mlon ul{width: 100%; height: 100%;}
+        .con .mlon ul li{float: left; width: 25%; height: 100%; margin-top: 10px;}
+        .con .mlon .photo{text-align: center; position: relative;}
+        .con .mlon .photo .object>p:first-child{position: absolute; bottom:-30px; right: -15px;}
+        .con .mlon .photo .object>p:nth-child(2){position: absolute; bottom:-30px; right: -15px;}
+        .con .mlon .text{width: 214px; text-align: center; margin-top: 35px; margin-left: 30px; font-family: NanumSquareL;}
+        .con .mlon .text h3{font-size: 24px; font-weight: bold; letter-spacing: -1px; margin-bottom: 5px;}
+        .con .mlon .text p{font-size: 18px; word-break: keep-all;}
+        .con .mlon .text p:last-child{margin-top: 20px;}
+        .img-container{width: 192px; height: 256px; overflow: hidden; position: relative;
+         border-radius: 20px; margin-left: 40px;}
+        .img-container img{width: 100%; height: 100%; transition: transform 0.5s; position: absolute; top: 0; left: 0;}
+        .mlon li:hover .img-container img{transform: scale(1.2);}
+        li:hover{cursor: pointer;}
+
+        .con .mbnf{width: 100%; height: 364px; margin: 30px auto;}
+        .con .mbnf ul{overflow: hidden;}
+        .con .mbnf ul li{float: left; width: 230px; padding: 0 20px; margin-top: 10px; position: relative;}
+        .con .mbnf .menu p{font-family: NanumSquareL; text-align: center; width: 100%;}
+        .con .mbnf .menu p:nth-of-type(1){font-size: 24px; font-weight: bold;}
+        .con .mbnf .menu p:nth-of-type(2){font-size: 18px; padding-top: 20px;}
+        .mbnf li:first-child .menuimg img{transform: translateX(-30px);}
+        .mbnf li:nth-of-type(2) .menuimg img{transform: translateX(30px);}
+        .mbnf li:nth-of-type(3) .menuimg img{transform: translateX(20px);}
+        .mbnf li:nth-of-type(4) .menuimg img{transform: translateX(20px);}
+        .main .con .mbnf ul li::after{content: ""; position: absolute; width: 1px; height: 150px; background-color: #ccc; right: 0; top: 40%;}
+        .main .con .mbnf ul li:last-child:after{content: ""; width: 0px;}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="con">
+            <div class="quick">
+                <ul>
+                    <li>
+                        <div class="item">
+                            <p><a href="#"><img src="./images/ico_quick_menu1.png" alt="quick_menu1"></a></p>
+                            <p><a href="#">이용대금명세서</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <p><a href="#"><img src="./images/ico_quick_menu2.png" alt="quick_menu2"></a></p>
+                            <p><a href="#">결제예상금액</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <p><a href="#"><img src="./images/ico_quick_menu3.png" alt="quick_menu3"></a></p>
+                            <p><a href="#">이용내역조회</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <p><a href="#"><img src="./images/ico_quick_menu4.png" alt="quick_menu4"></a></p>
+                            <p><a href="#">내정보변경</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <p><a href="#"><img src="./images/ico_quick_menu5.png" alt="quick_menu5"></a></p>
+                            <p><a href="#">카드분실신고</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <p><a href="#"><img src="./images/ico_quick_menu6.png" alt="quick_menu6"></a></p>
+                            <p><a href="#">카드사용등록</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mlon">
+                <ul>
+                    <li>
+                        <div class="photo">
+                            <div class="img-container">
+                                <a href="#"><img src="./images/special_mlon_1_bg.png" alt="mlon_1"></a>
+                            </div>
+                            <div class="object">
+                                 <p><img src="./images/special_mlon_1_shd.png" alt="mlon_1_shd"></p>
+                                <p><img src="./images/special_mlon_1_obj.png" alt="mlon_1_obj"></p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>단기카드대출</h3>
+                            <p>(현금서비스)</p>
+                            <p>현금이 급할 때 바로 찾아쓰는,<br>편리한 생활자금 마련방법</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="photo">
+                            <div class="img-container">
+                                <a href="#"><img src="./images/special_mlon_2_bg.png" alt="mlon_2_bg"></a>
+                            </div>
+                            <div class="object">
+                                <p><img src="./images/special_mlon_2_shd.png" alt="mlon_2_shd"></p>
+                                <p><img src="./images/special_mlon_2_obj.png" alt="mlon_2_obj"></p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>장기카드대출</h3>
+                            <p>(카드론)</p>
+                            <p>목돈이 필요할 때<br>복잡한 심사 과정 없이 간편하게</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="photo">
+                            <div class="img-container">
+                                <a href="#"><img src="./images/special_mlon_3_bg.png" alt="mlon_3_bg"></a>
+                            </div>
+                            <div class="object">
+                                <p><img src="./images/special_mlon_3_shd.png" alt="mlon_3_shd"></p>
+                                <p><img src="./images/special_mlon_3_obj.png" alt="mlon_3_obj"></p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>일부결제금액이월약정</h3>
+                            <p>(리볼빙)</p>
+                            <p>원하는 만큼만 결제하고 매월 결제금액을 계획적으로 관리</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="photo">
+                            <div class="img-container">
+                                <a href="#"><img src="./images/special_mlon_4_bg.png" alt="mlon_4_bg"></a>
+                            </div>
+                            <div class="object">
+                                <p><img src="./images/special_mlon_4_shd.png" alt="mlon_4_shd"></p>
+                                <p><img src="./images/special_mlon_4_obj.png" alt="mlon_4_obj"></p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h3>올인원대출</h3>
+                            <p>(신용대출)</p>
+                            <p>우리카드가 없어도 서류없이,방문없이, 내 신용만으로</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mbnf">
+                <ul>
+                    <li>
+                        <div class="menu">
+                            <div class="menuimg">
+                                <a href="#"><img src="./images/special_mbnf_1_obj.png" alt="mbnf_1"></a>
+                            </div>
+                            <p>해외이용의 정석</p>
+                            <p>여행, 직구, 항공<br>무엇이든 우리카드로</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu">
+                            <div class="menuimg">
+                                <a href="#"><img src="./images/special_mbnf_2_obj.png" alt="mbnf_2"></a>
+                            </div>
+                            <p>MY Pick 서비스</p>
+                            <p>혜택도 맞춤!<br>나만을 위한 맞춤 혜택</p>
+                        </div>
+                    </li><li>
+                        <div class="menu">
+                            <div class="menuimg">
+                                <a href="#"><img src="./images/special_mbnf_3_obj.png" alt="mbnf_3"></a>
+                            </div>
+                            <p>우리V클럽</p>
+                            <p>특별함을 원하는<br>고객을 위한 VIP우대 혜택</p>
+                        </div>
+                    </li><li>
+                        <div class="menu">
+                            <div class="menuimg">
+                                <a href="#"><img src="./images/special_mbnf_4_obj.png" alt="mbnf_4"></a>
+                            </div>
+                            <p>우리 Point</p>
+                            <p>차곡차곡 쌓아<br>다양한 곳에서 사용가능</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
