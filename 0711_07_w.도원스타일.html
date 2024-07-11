@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        body{background-image: url(./images/brand_bg.jpg); width: 100%; height: 100%;}
+        
+        .brand{width: 1600px; height: 913px; margin: 50px auto; overflow: hidden;}
+        .left{float: left; width: 45%;}
+        .right{float: right;width: 55%;}
+        .right .txt{margin: 25% auto; }
+        .right .txt p:first-child{font-size: 36px; color: #fff;}
+        .right .txt h3{font-size: 52px; color: #ae874e;}
+        .right .txt p:last-child{font-size: 17px; color: #dbd1cb;}
+
+        div.plus{position: relative; top: -110px;}
+        div.plus p{position: absolute; display: inline-block;}
+        /* 둘이 겹치게 하기 위해서 position: absolute; a요소 안에 들어있기 때문에
+        크기를 갖기 위해 display: inline-block; */
+        div.plus p:first-child{color: #fff; line-height: 50px; width: 0; overflow: hidden;white-space: nowrap; transition: 0.5s;}
+        /* 숨긴 상태로 하기 위해 width: 0;overflow: hidden; 호버했을 때 너비를 
+        늘릴 경우 줄바꿈하지 않기 위해 white-space: nowrap; */
+        div.plus p:last-child{width: 50px; height: 50px; border-radius: 50%; background-color: #fff; font-size: 20px; text-align: center; line-height: 50px; font-weight: bold; transition: 1s;}
+        div.plus:hover p:first-child{width: 100%;transition: 1s;}
+        div.plus:hover p:last-child{transform: translateX(100px);background-color: #ae874e; color: #fff; transition: 0.5s;}
+    </style>
+</head>
+<body>
+    <div class="brand">
+        <div class="left">
+            <p><img src="./images/brand_img.png" alt="brand_img"></p>
+        </div>
+        <div class="right">
+            <div class="txt">
+                <p>5성급 호텔의 품격</p>
+                <h3>프리미엄 다이닝</h3>
+                <p>도원스타일은 중식당 ‘도원(桃園)’의 세컨드 브랜드입니다.<br>
+                    도원은 더플라자 호텔의 파인 다이닝 중식당으로, 1976년 오픈 이후 40여년간 사랑받아 왔습니다.<br>
+                    도원스타일은 호텔 도원의 뛰어난 맛과 서비스를 백화점 등 다양한 공간에서 제공하기 위해 탄생했습니다.</p>
+            </div>
+            <div class="plus">
+                    <a href="#">
+                        <p>View More</p>
+                        <p>+</p>
+                    </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        .imgbox{width: 500px;height: 300px;overflow: hidden;margin: 50px;position: relative; }
+        .blurbox{position: absolute;left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%;height: 100%; transition: 1s; clip-path: inset(0); z-index: 2;}
+        /* position: absolute; 줬으니까 위에 있는게 블러박스. 아래가 이미지박스 */
+        /* clip-path: inset(0); 시작을 만들어줘야 transition 적용됨 */
+        .imgbox img{width: 100%;height: 100%;object-fit: cover;}
+        .imgbox>img{filter: blur(5px);}
+        .imgbox:hover .blurbox{clip-path: inset(10px 20px round 250px 250px 0 0);}
+        /* inset 맨 앞에 있는 10px는 top right bottom left의 공간 */
+        .imgbox::before{content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: rgba(255, 255, 255, 0.3); width: 100%;height: 100%; z-index: 1;}
+        /* background는 크기 없으면 안들어감 */
+    </style>
+</head>
+<body>
+    <div class="imgbox">
+        <img src="https://glassdome.com/img/front/main/platform_img2.webp" alt="imgbox">
+        <div class="blurbox">
+            <img src="	https://glassdome.com/img/front/main/platform_img2.webp
+            " alt="blurbox">
+        </div>
+    </div>
+</body>
+</html>

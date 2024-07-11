@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+
+        /* a는 인라인요소라 display:block 속성 줘야함(p를 묶었으니까) */
+        /* 인라인요소는 크기값을 가질 수 없음 */
+        .quickMenu{background-color: #e2fdfe;}
+        ul.quick{width: 1080px;margin: 50px auto; overflow: hidden; padding: 40px 0;}
+        /* overflow: hidden;를 줘야 부모가 높이 유지할 수 있음 */
+        ul.quick li{float: left; width: calc(100% / 6); border-right: 1px solid #ccc; box-sizing: border-box;}
+        ul.quick li:last-child{border-right: none;}
+        ul.quick li a{display: block;}
+        ul.quick li a p{text-align: center;}
+        /* p에 너비값을 안주면 부모크기로 지정됨 */
+        /* 보더 크기 때문에 마지막 요소가 밑으로 내려옴.box-sizing: border-box;로  보더 크기 포함시키면 해결 */
+        ul.quick li a p:first-child{height: 50px;}
+        ul.quick li:hover a p:first-child{width: 50px;height: 50px;border-radius: 50%;background: rgba(0, 0, 0, 0.1); margin: 0 auto;}
+        /* 동그라미를 넣기 위해 width값 50px을 가지게 돼서 text-aline이 안됨.(원래는 p에 너비값을 안줘서 부모요소랑 동일했음) 그래서 다시 가운데 정렬로 맞춰주기 위해 margin: 0 auto; 들어감 */
+        /* 세로크기는 차일드요소 만큼 갖기 때문에 들썩들썩거림. 때문에 차일드요소에 세로크기를 주면 해결. 부모요소에 height: 50px;*/
+        .quick li:hover a p:last-child{padding-top: 20px;}
+
+        .special{width: 1080px;margin: 50px auto; overflow: hidden;}
+        /* overflow: hidden; 부모의 높이 찾기 */
+        .special li{float: left; width: calc(100% / 4); position: relative;}
+        /* .bg p{position:absolute}의 기준점 */
+        .special li a{display: block;}
+        .special li a>p{width: 192px;height: 256px;border-radius: 20px; overflow: hidden;}
+        /* overflow: hidden; 높이, 너비 넘치는거 숨기기 */
+        .special li a>p img{transition: 0.5s;}
+        .special li:hover a>p img{transform: scale(1.2);}
+        /* background로 할 경우엔 background-size를 100%에서 120%로 변경*/
+        .special li .bg p{position:absolute; left: 90px; top: 140px;}
+        /* 이미지 자체에 빈공간이 있기 때문에 left: 192px; top: 256px;로 맞춰도 안맞음 */
+        .special li .bg p:first-child{z-index: 1;}
+        /* position이 없으면 z-index 사용불가 */
+        .special li .text{margin-top: 50px;text-align: center; width: 192px; word-break: keep-all; letter-spacing: -3px;}
+        /* .special li a>p너비 만큼의 너비(width: 192px;)에서 가운데 정렬(text-align: center;)한거임. (처음엔 수직정렬 안맞는 상태로 나옴)*/
+        .special li .text h1{font-size: 24px;}
+        .special li .text h1 p{font-size: 18px;}
+        .special li .text>p{font-size: 18px; margin-top: 20px;}
+
+        .specia2{width: 1080px; margin: 50px auto; overflow: hidden;}
+        /* overflow: hidden; 부모의 높이 찾기 */
+        .specia2 li{float: left; width: calc(100% / 4); text-align: center;position: relative;}
+        /* .specia2 li::after의 기준점(position: relative;) */
+        /* 비행기이미지는 자신의 크기를 넘쳐서 text-align: center;를 줘도 가운데 정렬 안됨 그래서 .specia2 li:first-child img{width: 100%;}를 넣어서 크기 맞춰줌*/
+        .specia2 li::after{content: "";position: absolute;right: 0;top: 50%;width: 1px;height: 100px;background: #ccc; transform: translateY(-50%);}
+        /* 수직 가운데 정렬 top: 50%; transform: translateY(-50%); */
+        .specia2 li p:first-child{height: 247px;}
+        /* 다른 li요소들과 높이 맞추기 위해 높이값 넣어줌*/
+        .specia2 li:first-child img{width: 100%;}
+        .specia2 li:last-child::after{width: 0;}
+        /* after요소가 오른쪽 맨끝에도 나오기 때문에 그걸 없애주기 위해 width: 0; */
+        .specia2 li h1{font-size: 24px;}
+        .specia2 li>p{font-size: 18px;margin-top: 20px;}
+    </style>
+</head>
+<body>
+    <div class="quickMenu">
+        <ul class="quick">
+            <li>
+                <a href="#">
+                    <p><img src="./images/ico_quick_menu1.png" alt="quick1"></p>
+                    <p>이용대금명세서</p>
+                </a>
+                <!-- 둘다 a태그가 들어가니까 a태그로 다 묶어버리기 -->
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./images/ico_quick_menu1.png" alt="quick1"></p>
+                    <p>이용대금명세서</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./images/ico_quick_menu1.png" alt="quick1"></p>
+                    <p>이용대금명세서</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./images/ico_quick_menu1.png" alt="quick1"></p>
+                    <p>이용대금명세서</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./images/ico_quick_menu1.png" alt="quick1"></p>
+                    <p>이용대금명세서</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./images/ico_quick_menu1.png" alt="quick1"></p>
+                    <p>이용대금명세서</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <ul class="special">
+        <li>
+            <a href="#"><p><img src="./images/special_mlon_1_bg.png" alt="mlon_1_bg"></p></a>
+            <div class="bg">
+                <p><img src="./images/special_mlon_1_obj.png" alt="mlon_1_obj"></p>
+                <p><img src="./images/special_mlon_1_shd.png" alt="mlon_1_shd"></p>
+            </div>
+            <div class="text">
+                <h1>단기카드대출<p>(현금서비스)</p></h1>
+                <p>현금이 급할 때 바로 찾아쓰는,<br>편리한 생활자금 마련방법</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><p><img src="./images/special_mlon_2_bg.png" alt="mlon_2_bg"></p></a>
+            <div class="bg">
+                <p><img src="./images/special_mlon_2_obj.png" alt="mlon_2_obj"></p>
+                <p><img src="./images/special_mlon_2_shd.png" alt="mlon_2_shd"></p>
+            </div>
+            <div class="text">
+                <h1>장기카드대출<p>(카드론)</p></h1>
+                <p>목돈이 필요할 때<br> 복잡한 심사 과정 없이 간편하게</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><p><img src="./images/special_mlon_3_bg.png" alt="mlon_3_bg"></p></a>
+            <div class="bg">
+                <p><img src="./images/special_mlon_3_obj.png" alt="mlon_3_obj"></p>
+                <p><img src="./images/special_mlon_3_shd.png" alt="mlon_3_shd"></p>
+            </div>
+            <div class="text">
+                <h1>일부결제금액이월약정<p>(리볼빙)</p></h1>
+                <p>원하는 만큼만 결제하고 매월<br> 결제금액을 계획적으로 관리</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><p><img src="./images/special_mlon_4_bg.png" alt="mlon_4_bg"></p></a>
+            <div class="bg">
+                <p><img src="./images/special_mlon_4_obj.png" alt="mlon_4_obj"></p>
+                <p><img src="./images/special_mlon_4_shd.png" alt="mlon_4_shd"></p>
+            </div>
+            <div class="text">
+                <h1>올인원대출<p>(신용대출)</p></h1>
+                <p>우리카드가 없어도 서류없이,<br> 방문없이, 내 신용만으로</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="specia2">
+        <li>
+            <a href="#">
+                <p><img src="./images/special_mbnf_1_obj.png" alt="mbnf_1_obj"></p>
+            </a>
+            <h1>해외이용의 정석</h1>
+            <p>여행, 직구, 항공<br>무엇이든 우리카드로</p>
+        </li>
+        <li>
+            <a href="#">
+                <p><img src="./images/special_mbnf_2_obj.png" alt="mbnf_2_obj"></p>
+            </a>
+            <h1>MY Pick 서비스</h1>
+            <p>혜택도 맞춤!<br> 나만을 위한 맞춤 혜택</p>
+        </li>
+        <li>
+            <a href="#">
+                <p><img src="./images/special_mbnf_3_obj.png" alt="mbnf_3_obj"></p>
+            </a>
+            <h1>우리V클럽</h1>
+            <p>특별함을 원하는<br> 고객을 위한 VIP우대 혜택</p>
+        </li>
+        <li>
+            <a href="#">
+                <p><img src="./images/special_mbnf_4_obj.png" alt="mbnf_4obj"></p>
+            </a>
+            <h1>우리 Point</h1>
+            <p>차곡차곡 쌓아<br> 다양한 곳에서 사용가능</p>
+        </li>
+    </ul>
+</body>
+</html>
