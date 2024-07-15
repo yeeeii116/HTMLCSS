@@ -3,17 +3,36 @@
 *{margin: 0;padding: 0;}
 ul{list-style: none;}
 a{text-decoration: none; color: #333;}
+
+.top{width: 1200px;height: 100px; margin: 0 auto;border-bottom: 1px solid;}
+.top .logo{float: left; width: 200px;height: 100px;position: relative;}
+.top .logo>a{display: block; width: 100%;height: 40px;position: absolute; top: 50%; transform: translateY(-50%);background: #ccc;}
+.top .topmenu{float: right;}
+.top .topmenu > ul {width: 800px;margin-top: 30px;margin-right: 20px;}
+.top .topmenu > ul > li{float: left;width: 25%; line-height: 40px; text-align: center;}
+.top .topmenu > ul > li > a{display: block; border: 1px solid; border-left: none;background-color: #fff; line-height: 50px; text-align: center;}
+.top .topmenu > ul > li:first-child > a{border-left: 1px solid;}
+.top .topmenu ul .sub{width: 100%; height: 0; overflow: hidden; background-color: #fff; position: relative;}
+.top .topmenu ul:hover .sub{height: 160px; border-bottom: 1px solid;}
+.top .topmenu ul:hover li:first-child .sub{border-left: 1px solid;}
+.top .topmenu ul:hover li:last-child .sub{border-right: 1px solid;}
+.top .topmenu > ul> li:hover > a{background-color: #000; color: #fff;}
+.top .topmenu > ul .sub li:hover a{background-color: #000; color: #fff; display:block;}
+
+.slide{width: 1200px;height: 300px;margin: 0 auto;background: #ccc;}
+
 .contents{width: 1200px;margin: 50px auto;height: 200px;}
 /* 높이 고정해뒀기 때문에 overflow 필요없음 */
 .contents>div{width: calc(100% / 3);float: left;position: relative;}
 /* .contents>div.left ul.title li 고정점 */
 .contents>div.left input[type="radio"]{display: none;}
 .contents>div.left ul.title li{position: absolute; width: 100px;background: #ccc;text-align: center;line-height: 40px;border: 1px solid #333;z-index: 1;}
-.contents>div.left ul.title li:nth-child(2){left: 100px;}
+.contents>div.left ul.title li:nth-child(1){left: 10px;}
+.contents>div.left ul.title li:nth-child(2){left: 110px;}
 /* 공지사항이랑 갤러리 겹친 상태여서 옆으로 이동한것 */
-.contents>div.left ul.title li label{display: block;width: 100%; height: 100%;}
+.contents>div.left ul.title li label{display: block;width: 100%; height: 100%; cursor: pointer;}
 /* label이 인라인요소라 display: block; */
-.contents>div.left ul.content{position: relative; top: 40px;border: 1px solid #333;width: 100%; height: 150px;}
+.contents>div.left ul.content{position: relative; top: 41px;border: 1px solid #333;width: 100%; height: 150px;}
 /* title이랑 겹쳐서 원래 위치에서 40px 내림 */
 .contents>div.left ul.content>li{position: absolute; display: none; font-size: 14px; width: 100%;}
 .contents>div.left ul.content>li table{width: 90%;table-layout: fixed;margin: 10px auto 0;}
@@ -23,6 +42,18 @@ a{text-decoration: none; color: #333;}
 .contents>div.left ul.content>li ul li{display: inline-block; height: 150px; line-height: 150px;}
 .contents>div.left ul.content li img{width: 120px; vertical-align: middle;}
 /* 수직정렬 위해  height: 150px; line-height: 150px; vertical-align: middle; . line-height로 수직 안맞으면 높이주기. 이미지는 이미지 자체에 vertical-align까지*/
-#notice:checked ~ ul.title li:first-child{background: #fff; border-bottom: none;}
-#gallery:checked ~ ul.title li:last-child{background: #fff; border-bottom: none;}
+#notice:checked ~ ul.title li:first-child{background: #fff; border-bottom: none;padding-bottom: 1px;}
+#gallery:checked ~ ul.title li:last-child{background: #fff; border-bottom: none;padding-bottom: 1px;}
 #notice:checked ~ ul.content>li:first-child,#gallery:checked ~ ul.content>li:last-child{display: block;}
+
+.contents .center{float:left; width: 400px; height: 200px;background: url(../Contents/배너/credit-card.png); background-size: 300px 250px; background-repeat: no-repeat; background-position: center; position: relative;}
+.contents .center .txtbox{width: 80%; position: absolute;  top:50%; left: 50%; transform: translate(-50%,-50%); font-size: 16px; text-align: center;color: #fff;}
+.contents .center .txtbox::before{content: "";position: absolute;left: 10px; top:-15px;background: rgba(0, 0, 0, 0.3);width: 300px;height: 100px;}
+
+#popup{position: fixed;left: 0;top: 0;width: 100%;height: 100%;display: none; background: rgba(0, 0, 0, 0.3);z-index: 2;}
+#popup .popWindow{width: 600px;height: 400px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);border: 1px solid;background: #fff;}
+#popup .popWindow h1{border-bottom: 1px solid;padding: 20px;font-size: 24px;}
+#popup .popWindow .txt{padding: 20px;}
+#popup .popWindow .txt p{padding-top: 10px;}
+#popup .popWindow .txt a{float: right; border: 1px solid; padding: 10px 20px;}
+#popup:target{display: block;}
