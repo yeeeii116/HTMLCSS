@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #1f1f1f;}
+
+    header{width: 100%;margin: 0 auto;padding: 6px;overflow: hidden;}
+    .topleft li{float: left;margin-left: 15px;}
+    .topleft li>a{font-size: 14px; font-family: arial;}
+    .topright{float: right;}
+    .topright li{float: left; margin-right: 15px;}
+    .topright li>a{font-size: 13px; font-family: arial;}
+    .topright li img{line-height: 13px; vertical-align: middle;}
+    .topright li:last-child a{display: inline-block; padding: 10px 20px;border-radius: 50px; background-color: #0b58d8;color: #fff;margin: 0 10px;}
+    .topleft li:hover>a,.topright li:first-child:hover>a,
+    .topright li:nth-child(2):hover>a{text-decoration: underline;}
+    .topright li:nth-child(3)>a{position: relative;}
+    .topright li:nth-child(3)>a::after{content: "";width: 30px;height: 0px;position: absolute;left: -7px;top: -6px; background: rgba(0, 0, 0, 0.08);border-radius: 50%;}
+    .topright li:nth-child(3):hover>a::after{height: 30px;}
+    .topright li:nth-child(4):hover>a{box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);}
+
+    main{width: 100%;height: 280px;margin: 0 auto;}
+    main .logo{width: 100%; height: 100%;text-align: center;margin: 0 auto;}
+    main .logo img{width: 272px; height: 92px;padding-top: 190px;}
+
+    .search{text-align: center;margin: 20px;position: relative;}
+    input[type="search"]{width: 582px; padding: 12px 120px 12px 40px; border-radius: 50px; font-size: 16px; background-color: #fff; border: 1px solid #ddd; background-image: url(../image/desktop_searchbox_sprites318_hr.webp); background-repeat: no-repeat; background-position: 10px 7px;background-size: 30px;}
+    input[type="search"]:hover{box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);}
+    input[type="search"]:focus{outline: none;box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);}
+
+    .icon p:nth-child(2) > a > img{width: 24px; height: 24px;}
+    .icon p:nth-child(3) > a > img{width: 24px; height: 24px;}
+    .icon p{float: left;}
+
+    .down{width:300px;margin: 0 auto;}
+    .down li{float: left; margin: 10px;}
+    .down li>a{display: inline-block; background: #f8f9fa; padding: 10px 10px; border-radius: 5px;}
+    .down li:hover>a{border: 1px solid #ddd;}
+
