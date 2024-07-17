@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .flex{background: #ccc;margin: 20px;padding: 20px;display: flex;width: 500px;}
+        .flex div{background: #f00;border: 1px solid;width: 300px;}
+        .container1{flex-wrap: nowrap;}
+        /* 가로 그대로 유지.같이 줄어듬(?). 줄바꿈 하지 않고 넘치면 나감..? */
+        .container2{flex-wrap: wrap;}
+        /* 넘치면 줄 바꿈 */
+        .container3{flex-wrap: wrap-reverse;}
+        /* 줄바꿈을 하는데, 아이템을 역순으로 배치 */
+        .container4{flex-wrap: nowrap;}
+        .container4 div{flex-shrink: 0;}
+        /* flex-shrink는 자식요소에 넣어줘야함. flex-wrap: nowrap; flex-shrink: 0; 주면 부모를 넘침 */
+        .container5{flex-wrap: wrap;}
+        .container5 div{flex-shrink: 0;}
+        .container6{flex-flow: row nowrap;}
+        /* 크기 그대로 유지x.  flex-direction과 flex-wrap을 한꺼번에 지정할 수 있는 단축 속성 */
+    </style>
+</head>
+<body>
+    <div class="flex container1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="flex container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="flex container3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="flex container4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="flex container5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <div class="flex container6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
