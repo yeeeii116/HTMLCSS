@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .list{width: 1376px;margin: 50px auto;display: flex;flex-wrap: wrap;}
+        .list ul{width: 100%;height: 100%;display: flex;}
+        .list ul li{width: 174px;height: 406px;padding: 0 20px;flex: 1 1 172px;transition: 0.5s;}
+        /* .list ul li:first-child{flex: 1 1 50%;} */
+
+        .list:hover ul li:hover {flex-basis: 742px;}
+        .list:hover ul li:hover(:hover){flex-basis: 172px;}
+        .list ul li img{width: 100%;height: 100%;object-fit: cover;border-radius: 20px;}
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul>
+            <li><img src="./images/new_esg_img1.jpg" alt="img1"></li>
+            <li><img src="./images/new_esg_img2.jpg" alt="img2"></li>
+            <li><img src="./images/new_esg_img3.jpg" alt="img3"></li>
+            <li><img src="./images/new_esg_img4.jpg" alt="img4"></li>
+        </ul>
+    </div>
+</body>
+</html>

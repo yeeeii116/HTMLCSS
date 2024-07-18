@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{display: flex;}
+        .container img{width: 200px;}
+        .container p:first-child{width: 100px;}
+        .container p:nth-child(2){flex-basis: 100px;}
+        /* 부모 크기가 100px이여도 차일드가 200이면 차일드 요소에 유연하게 맞춤 */
+        /* flex-basis 강압적으로 크기를 지정하는 것이 아니라 데이터가 더 많으면 늘어나는 등 유연하게 맞춰줌 */
+        /*  Flex 아이템의 기본 크기를 설정합니다(flex-direction이 row일 때
+        는 너비, column일 때는 높이) */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><img src="./images/photo1.jpg" alt="photo1"></p>
+        <p><img src="./images/photo2.jpg" alt="photo2"></p>
+    </div>
+</body>
+</html>

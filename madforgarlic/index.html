@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .wrap{width: 1504px;margin: 50px auto;}
+        .top{width: 100%;height: 827px;display: flex;flex-wrap: wrap;}
+        .top ul{display: flex;flex-wrap: wrap;width: 100%;height: 100%;}
+        .top ul li{display: flex;flex-direction: column;justify-content: flex-start;width: 506px;height: 100%;flex-wrap: wrap;}
+        .top ul li img{width: 100%;height: 100%;object-fit: cover;}
+        .top ul li:first-child{width: 506px;height: 100%;}
+        .top ul li:first-child p:first-child{height: 492px;}
+        .top ul li:first-child p:nth-child(2){height: 335px;}
+
+        .top ul li:nth-child(2){width: 492px;height: 100%;}
+        .top ul li:nth-child(2) div.con{width: 246px;height: 492px;line-height: 0;}
+        .top ul li:nth-child(2) .con>p:last-child{width: 246px;height: 100%;}
+        .top ul li:nth-child(2)>p:last-child{width: 492px;height: 335px;}
+        
+        .top ul li:nth-child(3){width: 506px;height: 100%;}
+        .top ul li:nth-child(3) p:first-child{height: 492px;}
+        .top ul li:nth-child(3) p:nth-child(2){height: 335px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <ul>
+                <li>
+                    <p><img src="images/mad1.png" alt="photo"></p>
+                    <p><img src="images/mad2.jpg" alt="photo"></p>
+                </li>
+                <li>
+                    <div class="con">
+                        <p><img src="images/mad3.png" alt="photo"></p>
+                        <p><img src="images/mad4.png" alt="photo"></p>
+                        <p><img src="images/mad5.jpg" alt="photo"></p>
+                    </div>
+                    <p><img src="images/mad6.jpg" alt="photo"></p>
+                </li>
+                <li>
+                    <p><img src="images/mad7.png" alt="photo"></p>
+                    <p><img src="images/mad8.jpg" alt="photo"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

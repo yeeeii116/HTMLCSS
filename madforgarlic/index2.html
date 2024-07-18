@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #fff;}
+        .list{width: 1504px;margin: 0 auto;}
+        .list > ul{display: flex;flex-wrap: wrap;font-size: 0;}
+        .list > ul > li:nth-child(2) img{width: 246px;}
+
+        .list > ul > li{position: relative;}
+        .list > ul > li .over{position: absolute;left: 0;top: 0;width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;font-size: 16px;text-align: center;background: rgba(0, 0, 0, 0);transition: 0.5s;}
+        .list > ul > li .over .inner{color: #fff;transform: translateY(0px);  transition: 0.5s;}
+        .list > ul > li .over .inner a{display: inline-block; margin-top: 20px;padding: 10px 10px;background-color: #fff;color: #000;font-size: 14px;opacity: 0;transition: 0.5s 0.5s;}
+
+        .list > ul > li:hover .over{background: rgba(0, 0, 0, 0.5);}
+        .list > ul > li:hover .over .inner{transform: translateY(-20px);}
+        .list > ul > li:hover .over .inner a{opacity: 1;}
+    </style>
+</head>
+<body>
+    <div class="list">
+       <ul>
+        <li><img src="images/beverage1.jpg" alt="beverage1">
+            <div class="over">
+                <div class="inner">
+                    <p><img src="./images/list_logo.png" alt="logo"></p>
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <ul>
+                <li><img src="./images/beverage2.png" alt="beverage2"></li>
+                <li><img src="./images/beverage3.png" alt="beverage3">
+                    <div class="over">
+                        <div class="inner">
+                            <p><img src="./images/list_logo.png" alt="logo"></p>
+                            <a href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+                <li><img src="./images/beverage4.jpg" alt="beverage4">
+                    <div class="over">
+                        <div class="inner">
+                            <p><img src="./images/list_logo.png" alt="logo"></p>
+                            <a href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li><img src="./images/beverage5.png" alt="beverage5">
+                    <div class="over">
+                        <div class="inner">
+                            <p><img src="./images/list_logo.png" alt="logo"></p>
+                            <a href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+                <li><img src="./images/beverage6.png" alt="beverage6">
+                    <div class="over">
+                        <div class="inner">
+                            <p><img src="./images/list_logo.png" alt="logo"></p>
+                            <a href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+       </ul>
+    </div>
+</body>
+</html>

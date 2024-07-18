@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .container{display: flex;width: 500px;background: #ccc;}
+        .container p{flex-basis: 200px;background: #ddd;border: 1px solid;}
+        .container p:first-child{flex-shrink: 1;}
+        .container p:nth-child(2){flex-shrink: 1;}
+        .container p:nth-child(3){flex-shrink: 0;}
+        .container p:nth-child(4){flex-shrink: 0;}
+         /* flex-grow: "부모 크기가 남을 때" 자식의 크기를 늘려서 나눠서 채움(기본0), flex-shrink:부모보다 자식이 더 클 때 "자식의 크기를 줄여서" 부모 크기 안에 자식이 다 들어갈 수 있도록 함(기본1).flex-shrink: 0;은 안줄이는거.*/
+
+         /* flex: flex-grow, flex-shrink, flex-basis를 한 번에 쓸 수 있는 축약형 속성 */
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    </div>
+</body>
+</html>
