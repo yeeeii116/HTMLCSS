@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{display: grid; background: #ccc;width: 1000px;margin: 10px;}
+        .grid-item{background: #ddd;}
+        .container1{grid-template-columns: repeat(auto-fill,minmax(10%,auto));}
+        /* 10%인 100씩 */
+        .container2{grid-template-columns: repeat(auto-fit,minmax(10%,auto));}
+        /* 10%인 100씩이 아닌 부모요소 만큼 나눠가짐 */
+        /*  auto-fill과 auto-fit: auto-fill과 auto-fit은 column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채웁니다. */
+    </style>
+</head>
+<body>
+    <div class="grid container1">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+    </div>
+    <div class="grid container2">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .tab{width: 1800px;margin: 50px auto;display: grid;grid-template-columns: repeat(4,432px);grid-template-rows: repeat(2,1fr);gap: 20px;}
+        .tab img{width: 100%;height: 100%;object-fit: cover;border-radius: 20px;}
+
+        .tab .txt{grid-column: 1 / 3;margin-left: 60px;font-size: 20px;}
+        .tab .txt h1{font-size: 64px;color: #222;}
+        .tab .three{grid-column: 1 / 3;}
+        strong{color: #00a287;}
+
+    </style>
+</head>
+<body>
+    
+   <div class="tab">
+    <div class="txt">
+        <h1>PROGRAM</h1>
+        <p><strong>KAIST GGGS</strong>에서는 녹색성장과 지속가능성 문제해결을 위해<br>
+            탄소중립기후기술 및 정책·금융에 대한 통섭적인 이해를 갖춘<br>
+            국가 핵심인재를 양성합니다.</p>
+    </div>
+    <div class="one"><img src="./images/sec03_tab01.png" alt="tab1"></div>
+    <div class="two"><img src="./images/sec03_tab02.png" alt="tab2"></div>
+    <div class="three"><img src="./images/sec03_tab03.png" alt="tab3"></div>
+    <div class="four"><img src="./images/sec03_thumb.png" alt="thumb"></div>
+    <div class="five"><img src="./images/sec03_tab04.png" alt="tab4"></div>
+   </div> 
+</body>
+</html>

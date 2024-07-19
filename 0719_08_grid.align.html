@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{width: 1200px;height: 500px;margin: 50px auto;display: grid;background: #ccc;grid-template-columns: 100px 200px 300px;place-content: space-evenly center;}
+        /* flex는 row, column에 따라 수직 수평이 바뀌는데 grid는 그대로 justify-content: space-evenly; 수평 align-content: center; 수직 */
+        /* place-content는 수직 수평순으로 */
+        .grid-item{background: #ddd;border: 1px solid;}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+</body>
+</html>

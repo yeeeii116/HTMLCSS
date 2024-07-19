@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{width: 1200px;height: 500px;margin: 50px auto;display: grid;background: #ccc;
+       grid-template-rows: 100px 200px; grid-template-columns: 100px;grid-auto-columns: 500px;
+        grid-auto-rows: 300px;}
+
+      .grid-item{background: #ddd;border: 1px solid;}
+      .grid-item:first-child{grid-column: 2;}
+      /* 원래는 1개의 column으로 만들었는데 grid-column: 2; 2번째 열로 지정함으로써 생긴 2번째 열은 크기가 명시되지 않은 아이템에 크기를 주는 grid-auto-columns: 500px;의 크기를 따라간다 */
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"><h1>1</h1></div>
+        <div class="grid-item"><h4>2</h4></div>
+        <div class="grid-item"><h2>3</h2></div>
+        <div class="grid-item"><h4>4</h4></div>
+        <div class="grid-item"><h6>5</h6></div>
+        <div class="grid-item"><h3>6</h3></div>
+        <div class="grid-item">7<br>77<br>777</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item"><h1>9</h1></div>
+    </div>
+</body>
+</html>

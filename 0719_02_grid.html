@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{display: grid;background: #ccc;grid-template-rows: 100px; grid-auto-rows: 200px;grid-template-columns: repeat(3,minmax(300px,auto));
+        gap: 10px 20px;  }
+        /* grid-template-columns: 100px 200px 300px; 1열 100 2열 200 3열 300*/
+        /* grid-template-columns: 1fr; 남는 공간을 첫번째한테. grid-template-columns: 1fr 1fr 1fr 1fr; 부모 크기 기준 1:1:1:1 */
+        /* grid-template-columns: repeat(3,1fr); 1fr을 3번 반복 1:1:1 */
+        /* grid-template-columns: repeat(2,1fr 2fr); 반복횟수,반복값 */
+        /* 크기 명시 안할 경우 차일드요소 만큼 크기 가짐 */
+        /* grid-template-rows: 100px; grid-auto-rows: 200px; 크기 명시하지 않은 행들은 200px로 */
+        /* grid-template-columns: 100px 200px auto; 남는 공간은 auto로 처리 */
+        /* 고정픽셀, 비율 혼합해서 사용 가능 */
+        /* grid-template-columns: repeat(3,minmax(300px,auto)); 최소 300px보다 작아지면 스크롤 생김 */
+        /* row-gap: 10px;column-gap: 20px; = gap: 10px 20px; */
+        .grid-container .grid-item{background: #ddd;}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        </div>
+</body>
+</html>
