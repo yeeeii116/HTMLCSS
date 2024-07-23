@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .cnb{width: 1480px;margin: 50px auto;}
+        .cnb h1{width: 100%; text-align: center; margin-bottom: 30px;}
+        .cnb ul{display: flex;justify-content: space-between;}
+        /* flex는 항상 부모에 주기!!! */
+        .cnb ul li{width: calc(90% / 8);height: 500px;border-radius: 12px;color: #fff;background-size: cover;background-position: center;position: relative;overflow: hidden;transition: 0.5s;}
+        /* 너비 100%으로 나눌 경우 틈이 없이 나뉨, justify-content: space-between; 틈을 주기 위해서는 90% 등으로 너비를 남길 수 있게 나누기 */
+        /* 이미지 높이가 500으로 맞춰져 있어서 여기서는 굳이 background-size: cover; 넣을 필요 없긴 함 */
+        /* overflow: hidden; 가상선택자에 border-radius: 12px; 적용시키기 위해 */
+        .cnb ul li:nth-child(1){background-image: url(./images/bg_category_1.jpg);}
+        .cnb ul li:nth-child(2){background-image: url(./images/bg_category_2.jpg);background-position: 60%;}
+        /* 세로는 center, 가로만 60% 움직임 (가로 센터는 50%) */
+        .cnb ul li:nth-child(3){background-image: url(./images/bg_category_3.jpg);background-position: 10%;}
+        .cnb ul li:nth-child(4){background-image: url(./images/bg_category_4.jpg);}
+        .cnb ul li:nth-child(5){background-image: url(./images/bg_category_5.jpg);}
+        .cnb ul li:nth-child(6){background-image: url(./images/bg_category_6.jpg);background-position: 30%;}
+        .cnb ul li:nth-child(7){background-image: url(./images/bg_category_7.jpg);}
+        .cnb ul li:nth-child(8){background-image: url(./images/bg_category_8.jpg);background-position: right bottom;}
+        .cnb ul li::after{content: "";position: absolute;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.3);left: 0;top: 0;}
+        /* position 기준 .cnb ul li*/
+
+        .cnb ul li p{text-align: center;text-transform: capitalize; position: relative;z-index: 1;}
+        /* 가상선택자 때문에 p가 뒤로 가서 z-index: 1; 주기 위해 position: relative; */
+        .cnb ul li p:first-child{font-size: 24px;font-weight: bold;position: absolute;top: 50%;transform: translateY(-50%);width: 100%;}
+        /* width: 100%;가 없을 때는 text-align: center; 안먹음 */
+        .cnb ul li p:last-child{font-size: 16px;opacity: 0;position: absolute;width: 100%;transition: 0s;line-height: 20px;}
+        /* line-height: 20px; p 사이 정렬해주기 위해 넣음 */
+        /* position: absolute; hover했을 때 top위치 주려고 넣음  */
+
+        .cnb ul:hover li:hover{width: 20%;}
+        .cnb ul:hover li:not(:hover){width: 10%;}
+        .cnb ul:hover li:hover p:first-child{top: 43%;font-size: 32px;}
+        .cnb ul:hover li:hover:nth-child(3) p:first-child,.cnb ul:hover li:hover:nth-child(6) p:first-child{top: 40%;}
+        /* 2줄짜리는 높이가 안맞아서 따로 높이 설정해줌 */
+        .cnb ul:hover li:hover p:last-child{opacity: 1;top: 50%;transition: 0.5s 0.5s;}
+        /* 그 자리에 나올 수 있도록 hover했을 때 top: 50%; */
+        /* 마우스가 멀어졌을 때는 바로 사라지도록, 호버했을 때는 0.5s 있다가 나올 수 있도록 */
+        .cnb ul:hover li:hover::after{background: rgba(0, 0, 0, 0.5);}
+
+    </style>
+</head>
+<body>
+    <div class="cnb">
+        <h1>노랑풍선이 만드는 여행</h1>
+        <ul>
+            <li>
+                <p>pakage</p>
+                <p>전세계 맞춤 패키지여행으로<br>
+                    연인, 친구 가족과 함께<br>
+                    행복한 추억을 만듭니다.</p>
+            </li>
+            <li>
+                <p>honeymoon</p>
+                <p>신혼부부의 취향과 조건에 맞춘<br>
+                    특별한 여행으로<br>
+                    낭만적인 순간을 함께합니다.</p>
+            </li>
+            <li>
+                <p>golf<br>& theme</p>
+                <p>골프투어 , 가족여행 , 크루즈여행 ,<br>
+                    휴양여행, 성지순례, 문화탐방 등<br>
+                    원하는 테마로 여행할 수 있습니다.</p>
+            </li>
+            <li>
+                <p>air ticket</p>
+                <p>세계 주요 도시 및<br>
+                    국내 항공권 예약 · 발권과<br>
+                    단체 그룹 예약까지 가능합니다.</p>
+            </li>
+            <li>
+                <p>hotel</p>
+                <p>마음에 맞는 전세계 및 국내 호텔을<br>
+                    쉽고 빠르게 예약할 수 있습니다.</p>
+            </li>
+            <li>
+                <p>tour<br>& ticket</p>
+                <p>배낭여행 및 개별여행을 위한<br>
+                    유레일 패스 등 교통권과 현지투어 ,<br>
+                    입장티켓을 예약할 수 있습니다.</p>
+            </li>
+            <li>
+                <p>domestic</p>
+                <p>국내의 문화유적, 제주 패키지,<br>
+                    골프 및 렌터카, 특급 호텔 예약을<br>
+                    제공합니다.</p>
+            </li>
+            <li>
+                <p>incentive</p>
+                <p>국제회의 및 박람회, 기업·단체 연수<br>
+                    단체 포상, 대학교, 지역 모임 등<br>
+                    인센티브 여행을 함께합니다.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

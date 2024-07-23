@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .bn{width: 1190px;margin: 50px auto; display: grid;grid-template-rows: 242px 376px 100px 600px; grid-template-columns:  300px 300px 300px 318px}
+        .bn div img{}
+        .bn div:nth-child(1){grid-column: 1 / 3; grid-row: 1 / 2;}
+        .bn div:nth-child(2){grid-column: 1 / 2; grid-row: 2 / 6;}
+        .bn div:nth-child(3){grid-column: 2 / 3; grid-row: 2 / 6;}
+        .bn div:nth-child(4){grid-column: 3 / 5; grid-row: 1 / 5;}
+        .bn div:nth-child(5){grid-column: 1 / 3; grid-row: 4 / 7;}
+        .bn div:nth-child(6){grid-column: 3 / 5; grid-row: 3 / 8;}
+
+        /* .bn div:nth-child(4){grid-column: 2 / 3; grid-row: 1 / span 3;} */
+
+    </style>
+</head>
+<body>
+    <div class="bn">
+        <div class="banner1"><a href="#"><img src="./images/b1.jpg" alt="b1"></a></div>
+        <div class="banner2"><a href="#"><img src="./images/b2.gif" alt="b2"></a></div>
+        <div class="banner3"><a href="#"><img src="./images/b3.jpg" alt="b3"></a></div>
+        <div class="banner4"><a href="#"><img src="./images/b4.gif" alt="b4"></a></div>
+        <div class="banner5"><a href="#"><img src="./images/b5.jpg" alt="b5"></a></div>
+        <div class="banner6"><a href="#"><img src="./images/b6.jpg" alt="b6"></a></div>
+    </div>
+</body>
+</html>
