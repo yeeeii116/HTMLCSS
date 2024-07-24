@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .content{width: 1180px;margin: 50px auto;font-size: 0;height: 1120px;}
+        .content h3{font-size: 20px;}
+        .content > ul{display: flex;gap: 20px;}
+        .content > ul li ul{display: flex;flex-direction: column;gap: 20px;}
+        .content > ul li ul li{font-size: 16px;position: relative;}
+        .content > ul li ul li p{position: absolute;bottom: 30px;color: #fff;padding-left: 30px;}
+
+        .content > ul li ul li:first-child{width: 380px;height: 620px;overflow: hidden;}
+        .content > ul li:first-child ul li:last-child{width: 380px;height: 480px;overflow: hidden;}
+        .content > ul li:nth-child(2) ul li:first-child{width: 380px;height: 480px;overflow: hidden;}
+        .content > ul li:nth-child(2) ul li:last-child{width: 380px;height: 620px;overflow: hidden;}
+        .content > ul li:nth-child(3) ul li:first-child{width: 380px;height: 620px;overflow: hidden;}
+        .content > ul li:nth-child(3) ul li:last-child{width: 380px;height: 480px;overflow: hidden;}
+        .content > ul li ul li img{transition: 0.5s;width: 100%;}
+        .content > ul li ul li:hover img{width: 120%;}
+            
+
+       
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h3>more stories</h3>
+        <ul>
+            <li>
+               <ul>
+                   <li>
+                        <img src="./images/main_b01.jpg" alt="1">
+                        <p>팬데믹 이전으로 부활한 CES 2024</p>
+                    </li>
+                   <li>
+                        <img src="./images/main_b04.jpg" alt="4">
+                        <p>지속 가능한 환경을 위한
+                            지속 불가능한 규제</p>
+                    </li>
+               </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <img src="./images/main_b02.jpg" alt="2">
+                        <p>닛산, 항상 도전한다</p>
+                    </li>
+                    <li>
+                        <img src="./images/main_b05.jpg" alt="5">
+                        <p>포뮬러 E 시즌 10 프리뷰</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <img src="./images/main_b03.jpg" alt="3">
+                        <p>포뮬러 E 백스테이지</p>
+                    </li>
+                    <li>
+                        <img src="./images/main_b06.jpg" alt="6">
+                        <p>챗GPT 이후…
+                            2024년 우리가 주목할 기술</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
