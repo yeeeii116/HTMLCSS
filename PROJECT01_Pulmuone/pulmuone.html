@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        .wrap{width: 100%;}
+        header{width: 1180px;height: 117px;margin: 0 auto; padding-top: 20px;}
+        header .menu-top{display: flex;justify-content: flex-end;gap: 10px;}
+        header .menu-top li{position: relative;}
+        header .menu-top li a{margin-left: 24px;font-size: 15px;color: #666;}
+        header .menu-top li a::before{width: 16px;height: 14px;position: absolute;left: 1px;top: 2px;}
+        header .menu-top li:first-child a::before{content: url(./images/top_icon01.png);}
+        header .menu-top li:nth-child(2) a::before{content: url(./images/top_icon02.png);}
+        header .menu-top li:nth-child(3) a::before{content: url(./images/top_icon03.png);}
+
+        header .nav-wrap{width: 1180px;height: 117px; display: flex;align-items: center;}
+        header > .nav-wrap > .nav{width: 100%; display: flex;justify-content: center;gap: 1;}
+        header .nav-wrap > .nav li{width: 100%; text-align: center;position: relative;top: 0px;}
+        header .nav-wrap .nav > li > a{display: block; font-size: 24px;color: #1e1e1e;line-height: 117px;width: 100%;text-align: center;}
+
+        header > .nav-wrap > .nav .sub{position: absolute;left: 0;top: 137px;width: 100%;z-index: 1;display: block;}
+        header > .nav-wrap > .nav > li > .sub li a{line-height: 30px;font-size: 16px;color: #000;z-index: 1;}
+       
+
+        .bg{width: 100%;height: 240px; position: absolute;left: 0;top: 137px;background: #ccc;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <ul class="menu-top">
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">고객기쁨센터</a></li>
+                <li><a href="#">#풀무원</a></li>
+            </ul>
+            <div class="nav-wrap">
+                <div class class="logo"><img src="./images/logo.png" alt="logo"></div>
+                <ul class="nav">
+                    <li><a href="#">회사소개</a>
+                        <ul class="sub">
+                            <li><a href="#">총괄CEO인사말</a></li>
+                            <li><a href="#">CI소개</a></li>
+                            <li><a href="#">가치체계</a></li>
+                            <li><a href="#">사업소개</a></li>
+                            <li><a href="#">동반성장</a></li>
+                            <li><a href="#">기업지배구조</a></li>
+                            <li><a href="#">투자정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사회책임경영</a>
+                        <ul class="sub">
+                            <li><a href="#">개요</a></li>
+                            <li><a href="#">추진전략</a></li>
+                            <li><a href="#">활동 및 실적</a></li>
+                            <li><a href="#">수상</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">바른먹거리</a>
+                        <ul class="sub">
+                            <li><a href="#">지속가능 식생활</a></li>
+                            <li><a href="#">지속가능식품</a></li>
+                            <li><a href="#">바른먹거리 원칙</a></li>
+                            <li><a href="#">바른먹거리 캠페인</a></li>
+                            <li><a href="#">풀무원 지구식단</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">뉴스룸</a>
+                        <ul class="sub">
+                            <li><a href="#">풀무원뉴스</a></li>
+                            <li><a href="#">ESG경영</a></li>
+                            <li><a href="#">멀티미디어</a></li>
+                            <li><a href="#">자료&공지</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#"><img src="./images/search_icon.png" alt="search_icon"></a></p>
+                        <p>
+                            <select name="lang" id="lang">
+                                <option value="KOR">KOR</option>
+                                <option value="ENG">ENG</option>
+                                <option value="CHN">CHN</option>
+                                <option value="JPN">JPN</option>
+                            </select>
+                        </p>
+                    </li>
+                </ul>
+                <div class="bg"></div>
+            </div>
+        </header>
+        
+    </div>
+</body>
+</html>

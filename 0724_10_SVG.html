@@ -10,18 +10,8 @@
        section{position: relative;width: 520px;height: 500px;margin: 0 auto;}
        section p{clip-path: url(#path1);position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
        section p img{width: 100%;height: 100%;object-fit: cover;}
-       section p:nth-child(2) img{animation-name: ani;animation-duration: 3.5s;animation-delay: 20s;animation-iteration-count: infinite;}
-       
        svg{position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
 
-       @keyframes ani{
-        0%{ opacity: 1;}
-        100%{ opacity: 0;}
-       }
-       @keyframes ani2{
-        0%{ opacity: 0;}
-        100%{ opacity: 1;}
-       }
     </style>
 </head>
 <body>
@@ -29,7 +19,9 @@
         <p><img src="https://www.ottogi.co.kr/images/common/clip2_1.jpg" alt="pt"></p>
         <svg>
             <clipPath id="path1" clipPathUnits="objectBoundingBox">
-                <path d="M0.5,1 C0.469,1,0.439,0.996,0.419,0.989 L0.049,0.855 C0.025,0.846,0,0.809,0,0.781 V0.219 C0,0.191,0.025,0.154,0.049,0.145 L0.419,0.011 C0.439,0.004,0.469,0,0.5,0 C0.531,0,0.561,0.004,0.581,0.011 L0.951,0.145 C0.975,0.154,1,0.191,1,0.219 V0.781 C1,0.809,0.975,0.846,0.951,0.855 L0.581,0.989 C0.561,0.996,0.531,1,0.5,1"></path>
+                <path class="st0" d="M0.097,0.109C0.043,0.123,0,0.18,0,0.235L0,0.76c0,0.055,0.043,0.112,0.096,0.127l0.307,0.086
+	c0.053,0.015,0.14,0.015,0.193,0l0.307-0.086C0.957,0.872,1,0.815,1,0.76V0.235C1,0.18,0.957,0.123,0.903,0.109L0.597,0.026
+	c-0.053-0.014-0.14-0.014-0.193,0L0.097,0.109z"/>
             </clipPath>
         </svg>
     </section>
