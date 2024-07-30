@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #fff;}
+        .menu{width: 90%;margin: 0 auto;max-width: 1903px;height: 360px;display: flex;}
+        .menu li{width: 400px;background-repeat: no-repeat;background-size: cover;position: relative;}
+        .menu > li:nth-child(1){background-image: url(./images/main_sec01_card_list_type01_bg1_pc.jpg);}
+        .menu > li:nth-child(2){background-image: url(./images/main_sec01_card_list_type01_bg2_pc_230725.png);}
+        .menu > li:nth-child(3){background-image: url(./images/main_sec01_card_list_type01_bg3_pc.jpg);}
+        .menu > li:nth-child(4){background-image: url(./images/main_sec01_card_list_type01_bg4_pc.jpg);}
+        .menu > li > a{display: block; padding: 50px;}
+        .menu > li > a > p{font-size: 36px;font-weight: bold;position: relative; z-index: 1;}
+        .menu li .txt{font-weight: bold;display: none;position: relative; z-index: 1;}
+
+        .menu li:hover .txt li:first-child p,.menu li:hover .txt li:nth-child(2) p{transform: translateY(0px);}
+
+        .menu li .txt li:first-child{padding: 10px 0 15px;}
+        .menu li:hover .txt{display: inline-block;box-sizing: border-box;}
+        .menu > li:hover:after{content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+        .menu > li:first-child:hover:after{background-color: rgba(0, 163, 241, 0.84);}
+        .menu > li:nth-child(2):hover:after{background-color: rgba(219, 92, 41, 0.79);}
+        .menu > li:nth-child(3):hover:after{background-color: rgba(139, 185, 6, 0.76);}
+        .menu > li:nth-child(4):hover:after{background-color:rgba(0, 163, 241, 0.64);}
+
+        @media screen and (max-width:1024px) {
+            .menu{width: 994px;justify-content: center;flex-wrap: wrap;}
+            .menu li{width: 439px;height: 250px;}
+            .menu > li:nth-child(1){background-image: url(./images/main_sec01_card_list_type01_bg1_m.jpg);}
+            .menu > li:nth-child(2){background-image: url(./images/main_sec01_card_list_type01_bg2_m_230725.png);}
+            .menu > li:nth-child(3){background-image: url(./images/main_sec01_card_list_type01_bg3_m.jpg);}
+            .menu > li:nth-child(4){background-image: url(./images/main_sec01_card_list_type01_bg4_m.jpg);}
+            .menu li .txt li:first-child{display: none;}
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            <a href="#">
+                <p>화학</p>
+                <ul class="txt">
+                    <li><p>언제나 편리하게</p></li>
+                    <li><p><img src="./images/main_sec01_card_list_arrow.svg" alt="arrow"></p></li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <p>식품</p>
+                <ul class="txt">
+                    <li><p>누구나 풍요롭게</p></li>
+                    <li><p><img src="./images/main_sec01_card_list_arrow.svg" alt="arrow"></p></li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <p>의약바이오</p>
+                <ul class="txt">
+                    <li><p>오래도록 건강하게</p></li>
+                    <li><p><img src="./images/main_sec01_card_list_arrow.svg" alt="arrow"></p></li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <p>패키징</p>
+                <ul class="txt">
+                    <li><p>어디서나 즐겁게</p></li>
+                    <li><p><img src="./images/main_sec01_card_list_arrow.svg" alt="arrow"></p></li>
+                </ul>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
