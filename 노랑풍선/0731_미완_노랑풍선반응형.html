@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        @font-face {
+            font-family: nanum;
+            src: url(webfonts/NanumBarunGothic.otf) format("opentype");
+        }
+        @font-face {
+            font-family: YbFontMedium;
+            src: url(../webfonts/YbFontMedium.woff) format(woff);
+        }
+        *{margin: 0;padding: 0;}
+        .menu{width: 1480px;margin: 0 auto;}
+        .menu > p{text-align: center;margin: 56px 0;font-size: 36px;font-family: YbFontMedium;}
+        .menu .con{width: 100%;max-width: 1480px; height: 440px; margin: 50px auto;font-family: nanum;display: flex;}
+        .menu .con .bg{width: 720px;height: 100%;border-radius: 10px;overflow: hidden;}
+        .menu .con .text_wrap{width: calc(100% - 50%);display: flex;align-items: center;}
+        .menu .con .text_wrap .text{margin-left: 100px;}
+        .menu div.con:nth-of-type(2) div.text_wrap,
+        .menu div.con:nth-of-type(4) div.text_wrap{display: flex;justify-content: flex-end;text-align: end;}
+        .menu div.con:nth-of-type(2) .text_wrap div.text,
+        .menu div.con:nth-of-type(4) .text_wrap div.text{margin-right: 100px;}
+        h3{font-size: 24px; color: #777;font-weight: normal;letter-spacing: -3px;margin-bottom: 8px;}
+        h1{font-size: 48px; color: #222;font-weight: normal;letter-spacing: -5px;}
+        h2{font-size: 48px; color: #ffc72c; text-transform: capitalize;}
+
+        @media screen and (max-width:1020px) {
+            .menu{width: 95%;}
+            .menu > p{text-align: start; font-size: 24px;}
+            .menu .con{width: 100%;margin: 0 0;}
+            .menu .con .bg{width: 545px;height: 379px;}
+            h3{font-size: 16px;}
+            h1{font-size: 22px;}
+            h2{font-size: 22px;}
+            .menu .con .text_wrap .text{transform: translateY(-40px);}
+            .menu div.con:nth-of-type(2) div.text_wrap,
+            .menu div.con:nth-of-type(4) div.text_wrap{justify-content:left;text-align: left;}
+            .menu div.con:nth-of-type(2) div.text,
+            .menu div.con:nth-of-type(4) div.text{margin-left: 0;}
+        }
+        @media screen and (max-width:748px){}
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <p>노랑풍선이 바라는 여행</p>
+        <div class="con">
+            <div class="bg">
+                <img src="./images/bg_story_1.jpg" alt="bg_story">
+            </div>
+            <div class="text_wrap">
+                <div class="text">
+                    <h3>여행의 새로운 가치를 알립니다</h3>
+                    <h1>가치를 전달하는 여행</h1>
+                    <h2>value-creating</h2>
+                </div>
+            </div>
+        </div>
+        <div class="con">
+            <div class="text_wrap">
+                <div class="text">
+                    <h3>고객의, 고객에 의한, 고객을 위한</h3>
+                    <h1>신뢰를 받는 여행</h1>
+                    <h2>trustworthy</h2>
+                </div>
+            </div>
+            <div class="bg">
+                <img src="./images/bg_story_2.jpg" alt="bg_story">
+            </div>
+        </div>
+        <div class="con">
+            <div class="bg">
+                <img src="./images/bg_story_3.jpg" alt="bg_story">
+            </div>
+            <div class="text_wrap">
+                <div class="text">
+                    <h3>일상의 가장 반짝이는 순간을 만듭니다</h3>
+                    <h1>즐거움을 선사하는 여행</h1>
+                    <h2>Joyful</h2>
+                </div>
+            </div>
+        </div>
+        <div class="con">
+            <div class="text_wrap">
+                <div class="text">
+                    <h3>다양한 여행상품으로 여행 문화를 선도합니다</h3>
+                    <h1>혁신적인 여행</h1>
+                    <h2>Innovative</h2>
+                </div>
+            </div>
+            <div class="bg">
+                <img src="./images/bg_story_4.jpg" alt="bg_story">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
