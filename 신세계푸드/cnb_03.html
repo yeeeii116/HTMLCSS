@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #fff;}
+        .visual > p{font-size: 34px;text-align: center;margin: 30px 0;font-family: NanumBarunGothic;font-weight: bold;color: #444;}
+        ul.List{width: 100%;max-width: 940px;margin: 0 auto;display: flex;flex-wrap: wrap;justify-content: center;gap: 5px;}
+        ul.List li{flex: 1 0 30%;height: 424px;position: relative;}
+        
+        ul.List li a{display: block; padding-top: 145px;}
+        ul.List li a p{position: relative;z-index: 1;text-align: center;}
+        ul.List li a p:first-child{font-size: 30px;font-weight: bold;}
+        ul.List li a p:nth-child(2){font-size: 15px;padding-top: 16px;}
+
+        ul.List li .bg{position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-size: cover;transform: scale(1);transition: 0.5s;}
+        ul.List li:nth-child(1) .bg{background-image: url(./CNB-images/bg_info_1.jpg);}
+        ul.List li:nth-child(2) .bg{background-image: url(./CNB-images/bg_info_2.jpg);}
+        ul.List li:nth-child(3) .bg{background-image: url(./CNB-images/bg_info_3.jpg);}
+
+        ul.List li a::after{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);}
+        ul.List li:hover a::after{background-color: rgba(0, 0, 0, 0.76);}
+
+        .visual .bottom{max-width: 940px;height: 180px;margin: 0 auto;background-color: #c66f53;margin-top: 20px;text-align: center;}
+        .visual .bottom a{position: relative;flex: 1 0 100%;}
+        .visual .bottom a::before{content: url(./CNB-images/ico_01.png);width: 78px;height: 44px;position: absolute;left: -250px;top: 70px;}
+        .visual .bottom a::after{content: url(./CNB-images/ico_02.png);width: 32px;height: 32px;position: absolute;left: 200px;top: 70px;}
+        .visual .bottom h3{padding-top: 46px;font-size: 30px;font-family: NanumBarunGothic;}
+        .visual .bottom p{padding-top: 16px;font-size: 15px;font-family: NanumBarunGothic;}
+
+        @media screen and (max-width:960px) {
+            .visual > p{font-size: 18px;margin: 0;padding: 20px 10px 10px;text-align: left;}
+            ul.List{width: 90%;margin-left: 10px;margin-right: 10px;}
+            ul.List li{flex: 1 0 100%;height: 120px;}
+            ul.List li a{padding-top: 35px;}
+            ul.List li a p:first-child{font-size: 16px;}
+            ul.List li a p:nth-child(2){font-size: 12px;padding-top: 10px;}
+            br{display: none;}
+
+            .visual .bottom{width: 90%;height: 95px;margin: 0 10px;margin-top: 15px;}
+            .visual .bottom a::before{content: url(./CNB-images/ico_01.png);width: 47px;height: 30px;position: absolute;left: -320px;top: 30px;}
+            .visual .bottom a::after{content: url(./CNB-images/ico_02.png);width: 22px;height: 22px;position: absolute;left: 280px;top: 35px;}
+            .visual .bottom h3{padding: 20px 0 0; font-size: 16px;}
+            .visual .bottom p{padding-top: 10px;font-size: 12px;}
+        }
+
+        @font-face {
+            font-family: NanumBarunGothic;
+            src: url(./NanumBarunGothic.otf) format("ofentype");
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="visual">
+        <p>명확한 비전과 전략으로 최고의 투자 가치를 실현하는 신세계푸드</p>
+        <ul class="List">
+            <li>
+             <a href="#">
+                 <p>경영정보</p>
+                 <p>주주 및 이사회 구성을<br>안내해 드립니다.</p>
+                 <div class="bg"></div>
+             </a>
+            </li>
+            <li>
+             <a href="#">
+                 <p>재무정보</p>
+                 <p>영업현황 및 재무제표를<br>안내해 드립니다.</p>
+                 <div class="bg"></div>
+             </a>
+            </li>
+            <li>
+             <a href="#">
+                 <p>주식정보</p>
+                 <p>주가정보를<br>안내해 드립니다.</p>
+                 <div class="bg"></div>
+             </a>
+            </li>
+         </ul>
+         <ul class="bottom">
+            <li>
+                <a href="#">
+                    <h3>공시 및 공고</h3>
+                    <p>결산 공고 및 주주총회 결과를<br>안내해 드립니다.</p>
+                </a>
+            </li>
+         </ul>
+    </div>
+</body>
+</html>
