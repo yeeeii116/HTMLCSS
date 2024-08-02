@@ -9,11 +9,12 @@
         *{margin: 0;padding: 0;}
         ul{list-style: none;}
         .content{width: 1180px;margin: 50px auto;font-size: 0;height: 1120px;}
-        .content h3{font-size: 20px;}
+        .content h3{font-size: 32px;text-transform: capitalize;padding: 0 0 30px;}
         .content > ul{display: flex;gap: 20px;}
         .content > ul li ul{display: flex;flex-direction: column;gap: 20px;}
         .content > ul li ul li{font-size: 16px;position: relative;}
         .content > ul li ul li p{position: absolute;bottom: 30px;color: #fff;padding-left: 30px;}
+        /* img랑 겹쳐져야 하기 때문에 position: absolute; */
 
         .content > ul li ul li:first-child{width: 380px;height: 620px;overflow: hidden;}
         .content > ul li:first-child ul li:last-child{width: 380px;height: 480px;overflow: hidden;}
