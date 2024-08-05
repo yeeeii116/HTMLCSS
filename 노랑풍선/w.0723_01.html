@@ -31,7 +31,7 @@
         .cnb ul li p{text-align: center;text-transform: capitalize; position: relative;z-index: 1;}
         /* 가상선택자 때문에 p가 뒤로 가서 z-index: 1; 주기 위해 position: relative; */
         .cnb ul li p:first-child{font-size: 24px;font-weight: bold;position: absolute;top: 50%;transform: translateY(-50%);width: 100%;}
-        /* width: 100%;가 없을 때는 text-align: center; 안먹음 */
+        /* width: 100%;가 없을 때는 text-align: center; 안먹음. 기준은 .cnb ul li */
         .cnb ul li p:last-child{font-size: 16px;opacity: 0;position: absolute;width: 100%;transition: 0s;line-height: 20px;}
         /* line-height: 20px; p 사이 정렬해주기 위해 넣음 */
         /* position: absolute; hover했을 때 top위치 주려고 넣음  */

@@ -17,7 +17,7 @@
         /* 3. ul에 flex주기 */
         .cnb ul li{width: 311px;height: 100%;background-position: center;display: flex;justify-content: center;align-items: center;position: relative;text-align: center;}
         /* 5.width: 311px;height: 100%;background-position: center;
-        7.사진 가운데로 텍스트 보내주기 위해 display: flex;justify-content: center;align-items: center; 사용할 경우 a가 이미 너비, 높이를 100%를 가지고 있어서 가운데로 안감.(가운데로 보낼 빈 공간이 없음) 그래서 a::after로 변경해서 음영 넣어줌. a::after 기준점은 크기가 있는 .cnb ul li. 폰트 가운데 정렬 text-align: center; */
+        7.사진 가운데로 텍스트 보내주기 위해 display: flex;justify-content: center;align-items: center; 사용할 경우 a가 이미 너비, 높이를 100%를 가지고 있어서 가운데로 안감.(가운데로 보낼 빈 공간이 없음) 그래서 a를 a::after로 변경해서 음영 넣어줌. a::after 기준점은 크기가 있는 .cnb ul li. 폰트 가운데 정렬 text-align: center; */
         .cnb ul li p{position: relative;z-index: 1;}
         /* 8. 음영 뒤로 간 상태라 z-index 넣어줌 */
         .cnb ul li p:first-child{font-size: 30px;font-weight: bold;}

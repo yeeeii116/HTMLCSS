@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .customer{width: 100%;margin: 0 auto;text-align: center;}
+        .customer > p:first-child{font-size: 34px;color: #444;font-weight: 500;margin-bottom: 34px;}
+        .customer > p:nth-child(2){font-size: 25px;padding: 32px 0 40px;color: #444;position: relative;}
+        .customer > p:nth-child(2)::before{content: "";width: 150px;height: 5px;position: absolute;left: 50%;top: 0;background: #d3d3d3;transform: translateX(-50%);}
+        .customer > p:nth-child(2) > a{color: #434343;font-weight: bold;text-decoration: none;font-size: 30px;}
+
+        .process{padding: 70px 0 66px;background: #f3f3f3;width: 100%;}
+        .process h3{font-size: 25px;color: #444;padding-bottom: 30px;}
+        .process > ul{width: 95%;max-width: 940px;display: flex;margin: 0 auto;gap: 30px;}
+        .process > ul > li{width: 168px;height: 305px;background: #d2492c;border-radius: 20px;padding: 23px 13px 18px;box-sizing: border-box; position: relative;}
+        .process > ul > li:before{content: "";width: 108px;height: 100px;position: absolute;left: 50%;top: 25px;transform: translateX(-50%);}
+        .process > ul > li:first-child:before{background: url(./images/icon_voc.png) left;}
+        .process > ul > li:nth-child(2):before{background: url(./images/icon_voc.png) 25%;}
+        .process > ul > li:nth-child(3):before{background: url(./images/icon_voc.png) 50%;}
+        .process > ul > li:nth-child(4):before{background: url(./images/icon_voc.png) 75%;}
+        .process > ul > li:nth-child(5):before{background: url(./images/icon_voc.png) right;}
+
+        .process .txt{position: relative;top: 45%;}
+        .process .txt > p,.process .txt > p a{font-size: 23px;color: #ecff96;text-decoration: none;line-height: 40px;}
+
+        .process > ul > li:first-child p a{position: relative;font-weight: bold;}
+        .process > ul > li:first-child p a::before{content: "1";width: 20px;height: 20px;position: absolute;left: -60%;top: 20%; color: #d2492c;background: #ecff96;border-radius: 50%;line-height: 20px;font-size: 16px;font-weight: bold;margin-right: 7px;}
+        .process > ul > li:first-child p a::after{content: "";width: 14px;height: 14px;position: absolute;right: -35%;top: 30%;background: url(https://www.shinsegaefood.com/images/button/btn_arr_upwards_y.png);}
+
+        .process .txt .sub{color: #fff;line-height: 25px;font-weight: bold;}
+        .process .txt .sub > li:first-child p{position: relative;}
+        .process li:first-child .txt .sub > li:first-child p::before{content: "·";width: 2px;height: 2px;position: absolute;left: 20%;top: 0;}
+
+    
+        @media screen and (max-width:640px) {
+            .process > ul{flex-direction: column;gap: 10px;}
+            .process > ul > li{width: 100%;height: 108px;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="customer">
+        <p>
+            신세계푸드는 고객 및 지역사회의<br>
+            풍요로운 생활을 위해 노력하고 있습니다.<br>
+            불편한 점(고객피해 포함)이나 제안사항 등 소중한 의견을 남겨주시면<br>
+            신속하게 해결하도록 하겠습니다.
+        </p>
+        <p>
+            잘못된 관행이나 신세계푸드 임직원의 비 윤리적 행위에 대한 제보는<br><a href="#">신세계푸드 신문고</a>를 이용해 주세요.
+        </p>
+        <div class="process">
+            <h3>고객불만 처리절차</h3>
+            <ul>
+                <li>
+                    <div class="txt">
+                        <p><a href="#">접수</a></p>
+                        <ul class="sub">
+                            <li><p>홈페이지</p></li>
+                            <li><p>유선</p></li>
+                            <li><p>우편</p></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="txt">
+                        <p>현장방문</p>
+                        <ul class="sub">
+                            <li><p>매장 관리자</p></li>
+                            <li><p>cs담당자</p></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="txt">
+                        <p>원인분석</p>
+                        <ul class="sub">
+                            <li><p>매장 및 제조사</p></li>
+                            <li><p>품질혁신팀</p></li>
+                            <li><p>연구분석팀</p></li>
+                            <li><p>식품안전센터</p></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="txt">
+                        <p>대책수립</p>
+                        <ul class="sub">
+                            <li><p>원인분석 및 대책 수립</p></li>
+                            <li><p>재발방지 교육 및 개선</p></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="txt">
+                        <p>고객보고</p>
+                        <ul class="sub">
+                            <li><p>결과보고</p></li>
+                            <li><a href="#">소비자분쟁해결기준에 의한 보상</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
