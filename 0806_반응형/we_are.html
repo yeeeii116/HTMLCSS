@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #616161;}
+        
+        .we{width: 80%;max-width: 1132px;margin: 0 auto;}
+        .we .top-txt{display: flex;justify-content: space-between;}
+        .we .top-txt h2{width: 40%;font-size: 42px;color: #3f51b5;text-transform: uppercase;}
+        .we .top-txt p{width: 60%;line-height: 30px;font-size: 16px;color: #616161;padding-left: 15px; position: relative;}
+        .we .top-txt p::before{content: "";width: 2px;height: 44px;position: absolute;left: 0;top: 50%;transform: translateY(-50%); background: #e0e0e0;}
+
+        .we ul{display: flex;gap: 25px;text-align: center;margin: 100px 0 100px;}
+        .we ul li{flex: 1 1 20%;}
+        .we ul li p:nth-child(2){margin: 29px 0 20px;color: #3f51b5;}
+        .we ul li p:last-child{font-size: 14px;}
+
+        hr{width: 80%;margin: 0 auto;border: 1px solid #eee;width: 1132px;}
+
+        @media screen and (max-width:1132px) {
+            .we .top-txt{flex-direction: column;text-align: center;}
+            .we .top-txt h2{width: 100%;margin-bottom: 30px;}
+            .we .top-txt p{width: 100%;padding-left: 0;}
+            .we .top-txt p::before{width: 0;}
+        }
+        @media screen and (max-width:768px) {
+            .we ul{flex-direction: column;margin: 50px 0 50px;gap: 50px;}
+        }
+
+        .work{width: 100%;margin: 0 auto 100px;font-size: 0;}
+        .work h2{max-width: 1132px; font-size: 42px;text-transform: uppercase;color: #3f51b5;margin: 118px auto 76px;}
+        .work ul{display: flex;flex-wrap: wrap;}
+        .work ul li{flex: 1 1 25%;position: relative;}
+        .work ul li a{display: block;position: relative;}
+        .work ul li a::before{content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: #3f51b5;opacity: 0;}
+        .work ul li a > p{width: 100%;height: 100%;}
+        .work ul li a > p img{width: 100%;height: 100%;object-fit: cover;}
+
+        .work ul li:hover a::before{opacity: 0.8;}
+
+        .work ul li .txt-box{position: absolute;left: 0;top: -30px; z-index: 1;padding: 20px;color: #fff;font-size: 16px;opacity: 0;transition: 0.3s;}
+        .work ul li:hover .txt-box{opacity: 1;top: 0px;}
+        .work ul li .txt-box p:first-child{font-size: 23px;text-transform: capitalize;}
+        .work ul li .txt-box p:last-child{font-size: 11px;text-transform: uppercase;}
+
+        @media screen and (max-width:1132px) {
+            .work h2{text-align: center;}
+            .work ul li{flex-basis: 50%;}
+        }
+        @media screen and (max-width:768px) {
+            .work ul li{flex-basis: 100%;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="we">
+        <div class="top-txt">
+            <h2>we are</h2>
+            <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                piece of classical Latin literature from 45 BC, making it over 2000 years old.
+            </p>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/promo01.png" alt="01"></p>
+                    <p>HOME</p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of
+                        the printing and typesetting industry.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/promo02.png" alt="02"></p>
+                    <p>WE ARE</p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of
+                        the printing and typesetting industry.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/promo03.png" alt="03"></p>
+                    <p>WORK</p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of
+                        the printing and typesetting industry.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/promo04.png" alt="04"></p>
+                    <p>BLOG</p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of
+                        the printing and typesetting industry.
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="work">
+        <h2>work</h2>
+        <ul>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work01.jpg" alt="01"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work02.jpg" alt="02"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work03.jpg" alt="03"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work04.jpg" alt="04"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work05.jpg" alt="05"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work06.jpg" alt="06"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work07.jpg" alt="07"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p><img src="./p_images/work08.jpg" alt="08"></p>
+                    <div class="txt-box">
+                        <p>running</p>
+                        <p>web/print</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
