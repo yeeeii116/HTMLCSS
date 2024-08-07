@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #fff;}
+        /* body{background: #000;} */
+        header{height: 72px;position: fixed;width: 100%;left: 0;top: 0;}
+        /* 1. 6.반응형 제작 후 position: fixed;width: 100%;left: 0;top: 0; 추가 */
+        header .head{width: 100%;max-width: 1200px;margin: 0 auto;display: flex;justify-content: space-between;align-items: center;padding: 0 40px;box-sizing: border-box;height: 100%;}
+        /* 2. padding 넣을 시 가로 스크롤 생기기 때문에 box-sizing: border-box;로 크기 포함시키기 */
+        header .head .gnb ul li{padding: 0 34px;}
+        /* 5. */
+        header .head ul{display: flex;}
+        /* 4. ul 안에 있는 li 가로로 정렬 + header .head에 height: 100%; 추가  */
+        header .head .menu{display: none;}
+        /* 3. 화면이 작아졌을 때 나오기 때문에 일단 안보이게 */
+
+        @media screen and (max-width:900px) {
+            header .head .gnb{position: absolute;left: 0;top: 0;display: none;}
+            header .head .login{display: none;}
+            header .head .menu{display: block;}
+        }
+
+        section{height: 100vh;background: #000;}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo"><a href="#">로고</a></div>
+            <div class="gnb">
+                <ul>
+                    <li><a href="#">서비스소개</a></li>
+                    <li><a href="#">멤버십</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+            <div class="login">
+                <ul>
+                    <li><a href="#">SIGNUP</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <p><img src="https://www.hjmembers.co.kr/resources/images/main/ico-menu-mo.png" alt="menu"></p>
+            </div>
+        </div>
+    </header>
+    <section></section>
+</body>
+</html>

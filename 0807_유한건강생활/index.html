@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Pretendard-R;
+            src: url(../webfonts/Pretendard-Regular.woff) format(woff);
+        }
+
+        *{margin: 0%;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #fff;}
+        select{outline: none;}
+        header{width: 100%;max-width: 1600px;margin: 0 auto;display: flex;position: absolute;left: 50%;transform: translateX(-50%);padding-top: 20px;box-sizing: border-box;z-index: 2;}
+        header .logo{width: 160px;height: 64px;position: relative;display: flex;align-items: center;}
+        header .logo a{display: block; width: 100%;height: 30px; background-size: contain;background-image: url(./images/yuhancare_logo_white.png);background-repeat: no-repeat;align-items: center;}
+
+        header .nav{width: 100%;max-width: 960px;display: flex;margin: 0 auto;text-align: center;line-height: 64px;position: relative;}
+        header .nav > li{width: calc(100% / 6);position: relative;}
+        header .nav > li > a{font-family: Pretendard-R;font-size: 20px;}
+
+        /* .nav bg */
+        .bg1{position: absolute;width: 100%;height: 84px;left: 0;top: 0px;border-bottom: 1px solid #888;z-index: 1;}
+        header:hover ~ .bg1{background: rgba(24, 24, 24, 0.9);}
+
+        /* .sub bg */
+        .bg2{position: absolute;width: 100%;height: 0;left: 0;top: 85px;}
+        header:hover ~ .bg2{height: 175px;background: rgba(24, 24, 24, 0.9);transition: 0.5s;}
+
+        header .nav > li .sub{height: 0; overflow: hidden; position: absolute; left: 0; top: 64px; width: 100%;line-height: 35px;z-index: 1;}
+        header:hover .nav > li .sub{height: 176px;transition: 0.5s;}
+        header .nav > li .sub a{display: block;font-family: Pretendard-R;width: 100%;}
+        header .nav > li .sub li:first-child{padding-top: 15px;}
+        header .nav > li:first-child .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(2) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(3) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(4) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(5) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(6) .sub li{border-left: 1px solid #888;border-right: 1px solid #888;}
+
+        /* 선 연장 */
+        header .nav > li:first-child .sub li:last-child,header .nav > li:nth-child(2) .sub li:last-child,header .nav > li:nth-child(3) .sub li:last-child,header .nav > li:nth-child(4) .sub li:last-child,header .nav > li:nth-child(5) .sub li:last-child{height: 100px; border-left: 1px solid #888;}
+
+        header .lang{padding: 10px 20px;transform: translateY(5px);}
+        header .lang select{}
+
+       
+
+
+        .top-banner{width: 100%;height: 100vh;outline: none;}
+        .top-banner p{width: 100%;height: 100%;}
+        .top-banner p::before{content: "";width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: rgba(24, 24, 24, 0.3);}
+         /* {} */
+        
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"><a href="#"></a></div>
+            <ul class="nav">
+                <li><a href="#">회사소개</a>
+                    <ul class="sub">
+                        <li><a href="#">기업소개</a></li>
+                        <li><a href="#">설립자 유일한</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">사업소개</a>
+                    <ul class="sub">
+                        <li><a href="#">브랜드</a></li>
+                        <li><a href="#">R&D</a></li>
+                        <li><a href="#">F&B</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">기업문화</a>
+                    <ul class="sub">
+                        <li><a href="#">인재상</a></li>
+                        <li><a href="#">복리후생</a></li>
+                        <li><a href="#">업무환경</a></li>
+                        <li><a href="#">채용<span></span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">지속가능성</a>
+                    <ul class="sub">
+                        <li><a href="#">사회</a></li>
+                        <li><a href="#">환경</a></li>
+                        <li><a href="#">윤리경영</a></li>
+                        <li><a href="#">제보센터</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">미디어</a>
+                    <ul class="sub">
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">SNS<span></span></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객지원</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <div class="lang">
+                <select name="lang" id="lang-select">
+                    <option value="KOR">KOR</option>
+                    <option value="ENG">ENG</option>
+                </select>
+            </div>
+        </header>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        
+       
+
+        <div class="top-banner">
+            <p><img src="./images/slide_01.jpg" alt="slide01"></p>
+        </div>
+    </div>
+</body>
+</html>
