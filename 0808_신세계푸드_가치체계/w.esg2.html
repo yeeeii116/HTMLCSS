@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .ESG{width: 90%;max-width: 940px;margin: 0 auto;text-align: center;}
+        .ESG h2{padding-bottom: 48px;}
+        .ESG ul{display: flex;gap: 40px;justify-content: center;}
+        /* 1. */
+        .ESG ul li{flex: 0 1 200px;aspect-ratio: 1 / 1;border-radius: 50%;display: flex;flex-direction: column;justify-content: center;position: relative;gap: 40px;}
+        /* 2. */
+        /* 부모의 남는 공간만큼 커지게 하는 그로우는 0으로 설정. aspect-ratio: 1 / 1; 가로 세로비율 동일하게 */
+        /* 4. flex-direction: column;으로 줄 경우 justify-content: center;는 세로 정렬이 됨 */
+        .ESG ul li:nth-child(1){background: #000;}
+        .ESG ul li:nth-child(2){background: #434343;}
+        .ESG ul li:nth-child(3){background: #7d7d7d;}
+        /* 3. */
+        .ESG ul li::after{content: ">";position: absolute;right: -25px;top: 50%;transform: translateY(-50%);color: red;font-size: 24px;font-weight: bold;}
+        /* 5. 기준점 .ESG ul li */
+        .ESG ul li p{color: #fff;}
+        .ESG ul li p:first-child{font-size: 20px;font-weight: bold;position: relative;}
+        .ESG ul li p:first-child::after{content: "";width: 40px;height: 2px;background: #ccc;position: absolute;left: 50%;bottom: -20px;transform: translateX(-50%);}
+        /* 7. */
+        .ESG ul li:last-child:after{content: "";}
+        /* 6. */
+        .ESG h3{padding: 90px 0 34px;}
+       
+        @media screen and (max-width:960px) {
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ESG">
+        <h2>사회적 책임경영의 가치체계</h2>
+        <ul>
+            <li>
+                <p>경영이념</p>
+                <p>사회적 책임을 근간으로<br>하는 경영이념</p>
+            </li>
+            <li>
+                <p>신세계의 길</p>
+                <p>사회적 책임을 실천하는<br>신념 및 방향</p>
+            </li>
+            <li>
+                <p>신세계 Credo</p>
+                <p>이해관계자들의 사회적<br>책임경영 실천강령</p>
+            </li>
+        </ul>
+        <h3>경영이념</h3>
+        <p><img src="https://www.shinsegaefood.com/images/background/bg_value_tit.png" alt="value_tit"></p>
+    </div>
+</body>
+</html>

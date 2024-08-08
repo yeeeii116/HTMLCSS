@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .customer{width: 95%;max-width: 940px;margin: 0 auto;text-align: center;}
+        /* 1. */
+        .customer ul{display: flex;gap: 20px;counter-reset: number;}
+        /* 2. 8.반응형 제작 후에 counter-reset: number; 추가 */
+        .customer ul li{flex: 1 1 20%;background: #d2492c;border-radius: 20px;height: 305px;padding: 24px 13px 18px;box-sizing: border-box;color: #fff;font-size: 17px;}
+        /* 3. */
+        .customer ul li:nth-child(1)::before{background-position: 0 0;}
+        .customer ul li:nth-child(2)::before{background-position: -108px 0;}
+        .customer ul li:nth-child(3)::before{background-position: -216px 0;}
+        .customer ul li:nth-child(4)::before{background-position: -324px 0;}
+        .customer ul li:nth-child(5)::before{background-position: -432px 0;}
+        .customer ul li::before{content: "";width: 108px;height: 100px;background-image: url(./images/icon_voc.png);display: block;margin: 0 auto;}
+        /* 5. display: block;을 주면 밑에 있는 애들을 밀어냄. width를 가지고 있는 블록요소는 margin: 0 auto;로 가운데 정렬+백그라운드 설정(+108px씩) */
+        .customer ul li div{width: 80%;margin: 0 auto;}
+        /* 6. 마지막이 혼자 너비가 넓은 상태(차일드가 커서)여서 너비값 주고 가운데 정렬 */
+        .customer ul li p.title::before{content: counter(number); counter-increment: number;display: inline-block;background: #ecff96;border-radius: 50%;width: 18px;height: 18px;color: #d2492c; text-align: center;line-height: 18px;margin-right: 5px;}
+        /* 9. display: inline-block;은 크기 주기 위해서 넣음 */
+        .customer ul li div p{padding-left: 7px;letter-spacing: -1px;}
+        /* 4. */
+        .customer ul li div p::before{content: "";width: 2px;height: 2px;background: #fff;display: inline-block;margin: 13px 5px 0 -7px;border-radius: 50%;vertical-align: top;}
+        /* 7. display: inline-block; ~ 추가. vertical-align: top;은 인라인 속성 갖고 있는걸 수직정렬 */
+
+        @media screen and (max-width: 960px){
+            .customer ul{gap: 15px;}
+            .customer ul li{height: 240px;padding: 24px 10px 18px;font-size: 14px;}
+            .customer ul li:nth-child(1)::before{background-position: 0 0;}
+            .customer ul li:nth-child(2)::before{background-position: -54px 0;}
+            .customer ul li:nth-child(3)::before{background-position: -108px 0;}
+            .customer ul li:nth-child(4)::before{background-position: -162px 0;}
+            .customer ul li:nth-child(5)::before{background-position: -216px 0;}
+            .customer ul li::before{width: 54px;height: 50px;background-size: auto 50px;}
+        }
+        
+        @media screen and (max-width: 640px) {
+            .customer{text-align: left;}
+            .customer ul{flex-direction: column;gap: 10px;}
+            .customer ul li{position: relative;}
+            .customer ul li::before{position: absolute;left: 20px;
+            top: 20px;}
+            .customer ul li p.title{padding: 0 0 10px 79px;}
+            .customer ul li div{display: flex;margin-left: 75px;flex-wrap: wrap;}
+            .customer ul li div p{letter-spacing: -2px;position:relative;padding: 0 8px;box-sizing:border-box;}
+            .customer ul li div p::before{width: 0;height: 0;}
+            .customer ul li div p::after{content: "";width: 1px;height: 9px;background: #fff;position:absolute;right:0;top: 6px;}
+            .customer ul li div p:last-child::after{width: 0;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="customer">
+        <h2>고객불만 처리절차</h2>
+        <ul>
+            <li>
+                <p class="title"><a href="#">접수</a></p>
+                <div>
+                    <p>홈페이지</p>
+                    <p>유선</p>
+                    <p>우편</p>
+                </div>
+            </li>
+            <li>
+                <p class="title">현장방문</p>
+                <div>
+                    <p>매장 관리자</p>
+                    <p>CS 담당자</p>
+                </div>
+            </li>
+            <li>
+                <p class="title">원인분석</p>
+                <div>
+                    <p>매장 및 제조사</p>
+                    <p>품질혁신팀</p>
+                    <p>연구분석팀</p>
+                    <p>식품안전센터</p>
+                </div>
+            </li> 
+            <li>
+                <p class="title">대책수립</p>
+                <div>
+                    <p>원인분석 및 대책수립</p>
+                    <p>재발방지 교육 및 개선</p>
+                </div>
+            </li>
+            <li>
+                <p class="title">고객보고</p>
+                <div>
+                    <p>결과보고</p>
+                    <p><a href="#">소비자분쟁해결기준에 의한 보상</a></p>
+                </div>
+            </li>  
+        </ul>
+    </div>
+</body>
+</html>
