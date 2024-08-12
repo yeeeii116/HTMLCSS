@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        header{position: fixed;width: 100%;height: auto;background-color: #222;display: flex;justify-content: center;align-items: center;}
+        header .top_banner p{color: #fff;line-height: 30px;}
+        header .top_btn{line-height: 30px;vertical-align: middle;}
+
+        .menu{display: flex;gap: 60px;}
+        .menu .left{width: 40%; height: 931px;}
+        .menu .left img{width: 100%; height: 100%;}
+
+        .menu .right{width: 60%;display: flex;gap: 60px;}
+        .menu .right ul li{width: 452px;height: 565px;}
+        .menu .right ul li img{width: 100%;height: 100%;object-fit: cover;}
+        .menu .right ul:first-child{padding: 77px 0;}
+
+        .menu .right ul:last-child{padding: 163px 0 77px;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top_banner">
+            <p>마음의 성장 플랫폼, 플레이라이프</p>
+        </div>
+        <div class="top_btn">
+            <p><img src="./images/icon_banner_close.svg" alt="close"></p>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="left">
+            <img src="./images/main.jpg" alt="main">
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <p><img src="./images/m01.jpg" alt="m01"></p>
+                    <div class="txt">
+                        <p>PEOPLE</p>
+                        <p>이어지는 삶 속에서 새로 발견한 것</p>
+                        <p>“나만의 목표를 갖고 작은 시도를 계속 해보는 게 중요해요”</p>
+                        <p><strong>박찬종</strong>크리에이터, 패러사이클링 선수</p>
+                    </div>
+                </li>
+                <li>
+                    <p><img src="./images/m03.jpg" alt="m03"></p>
+                    <div class="txt">
+                        <p>PEOPLE</p>
+                        <p>잘하고 싶은 마음보다 일단 ‘시작’하는 마음으로</p>
+                        <p>“작은 목표를 향해 한 걸음, 한 걸음 내딛다 보면 ‘끝’도 있더라고요”</p>
+                        <p><strong>누아</strong>일러스트레이터</p>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <p><img src="./images/m02.jpg" alt="m02"></p>
+                    <div class="txt">
+                        <p>PEOPLE</p>
+                        <p>행복은 아주 작은 것에서부터</p>
+                        <p>“살아가는 모든 순간, 아이와 같은 마음이 필요해요”</p>
+                        <p><strong>박찬종</strong>크리에이터, 패러사이클링 선수</p>
+                    </div>
+                </li>
+                <li>
+                    <p><img src="./images/m04.jpg" alt="m04"></p>
+                    <div class="txt">
+                        <p>PEOPLE</p>
+                        <p>기사를 쓰는데 이렇게까지</p>
+                        <p>“휠체어를 타고 바퀴를 굴리자마자 ‘내가 알던 세상이 아니구나.’ 느꼈어요.”</p>
+                        <p><strong>남형도</strong>기자</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
