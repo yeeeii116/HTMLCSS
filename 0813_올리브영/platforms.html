@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Pretendard;
+            src: url(../webfonts/Pretendard-Medium.woff) format(woff);
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .platform{width: 80%;margin: 0 auto;display: flex;}
+        .platform .left{width: 40%;height: 100vh;position: sticky;top: 0;margin: 0 auto;}
+        .platform .left .leftinner{position: relative;top: 15%;font-family: Pretendard;}
+        .platform .left .leftinner > p{font-size: 54px;font-weight: bold;line-height: 60px;}
+        .platform .left .leftinner .index{margin-top: 60px;display: flex;flex-direction: column;gap: 15px;}
+        .platform .left .leftinner .index a{text-decoration: none;color: #565e65;font-weight: bold;}
+        
+        .platform .right{width: 60%;margin: 130px 0;}
+        .platform .right .content1{display: flex;margin-top: 140px;}
+        .platform .right .content1:first-child{margin-top: 0;}
+        .platform .right .content1 > span{font-size: 18px;font-weight: bold;color: #565e65;}
+        .platform .right .content1 .info{margin-left: 100px;width: 100%;font-family: Pretendard;}
+        .platform .right .content1 .info > span{display: none;font-size: 12px;font-weight: bold;color: #565e65;margin-bottom: 10px;margin-top: 3px;}
+        .platform .right .content1 .info img{width: 100%;height: 100%;object-fit: cover;}
+        .platform .right .content1 .info p:nth-of-type(2){font-size: 30px;font-weight: bold;margin-top: 46px;}
+        .platform .right .content1 .info p:nth-of-type(3){font-size: 18px;margin-top: 34px;color: #565e65;}
+        .platform .right .content1 .info > a{display: inline-block; font-size: 16px; padding-bottom: 2px;margin-top: 40px;color: #000;font-weight: bold;text-underline-offset: 5px;position: relative;}
+        .platform .right .content1 .info > a::before{content: "";background-image: url(https://corp.oliveyoung.com/img/pc-svg-418cd3751e7d1a9a4c3a8099b78970fd.svg);width: 10px;height: 10px;position: absolute;right: -15px;top: 5px;background-size: 380px 352px;background-position: -272px -324px;margin-left: 8px;}
+        .platform .right .content1 .info > a::before:hover{}
+
+        @media screen and (max-width:1170px) {
+            .platform{width: 95%;flex-direction: column;}
+            .platform .left{width: 100%;height: 50%;position: relative;padding-top: 40px;}
+            .platform .left .leftinner > p{font-size: 26px;line-height: 30px;padding-left: 7px;}
+            .platform .left .leftinner .index{display: none;}
+
+            .platform .right{width: 100%;margin: 60px 0;}
+            .platform .right .content1{margin-top: 60px;}
+            .platform .right .content1 > span{font-size: 12px;}
+            .platform .right .content1 .info{margin-left: 13px;}
+            .platform .right .content1 .info > span{display: block;}
+
+            .platform .right .content1 .info p:nth-of-type(2){font-size: 18px;margin-top: 30px;}
+            .platform .right .content1 .info p:nth-of-type(3){font-size: 13px;margin-top: 20px;}
+            .platform .right .content1 .info > a{display: inline-block; font-size: 13px;margin-top: 20px;}
+            
+        }
+
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="platform">
+        <div class="left">
+            <div class="leftinner">
+                <p>OLIVE YOUNG<br>Platforms</p>
+                <ul class="index">
+                    <li><a href="#">올리브영 매장</a></li>
+                    <li><a href="#">올리브영 Online (국내)</a></li>
+                    <li><a href="#">올리브영 글로벌</a></li>
+                    <li><a href="#">디플롯</a></li>
+            </div>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="content1">
+                <span>01</span>
+                <div class="info">
+                    <span>올리브영 매장 (국내)</span>
+                    <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=45C92CF235C1721F9975F16FFD3D7D7A" alt="img01"></p>
+                    <p>고객과 가장 가까운 곳에서<br>건강한 아름다움을 제안합니다.</p>
+                    <p>우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을 큐레이션합니다.<br> 또한 체험형 콘텐츠와 커머스의 연계를 통해 파트너사들에게<br> 매력적인 브랜딩, 마케팅 채널로 진화하고 있습니다.</p>
+                    <a href="#">올리브영 매장이 보고 싶다면?</a>
+                </div>
+            </div>
+            <div class="content1">
+                <span>02</span>
+                <div class="info">
+                    <span>올리브영 Online (국내)</span>
+                    <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg" alt="img02"></p>
+                    <p>고객이 건강한 아름다움을 찾아가는<br>온라인 PLAYGROUND를 제공합니다.</p>
+                    <p>우리는 차별화된 온라인 콘텐츠와 AI기술 기반 상품 추천을 통해 월 이용자 수 480만명,<br>멤버십 회원 수 1,400만명 이상의 뷰티&헬스 커뮤니티를 구현했습니다.<br>
+                    또한 업계 최초 당일 배송 서비스인 오늘드림을 실행하여 고객경험을 혁신했습니다.</p>
+                    <a href="#">올리브영 Online 서비스가 궁금하다면?</a>
+                </div>
+            </div><div class="content1">
+                <span>03</span>
+                <div class="info">
+                    <span>올리브영 글로벌</span>
+                    <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg" alt="img03"></p>
+                    <p>전세계에 한국의<br>뷰티&헬스를 알립니다.</p>
+                    <p>우리는 한국의 뷰티&헬스 브랜드들이 세계로 뻗어 나가는 교두보 역할을 수행합니다.<br>2019년 런칭한 글로벌몰과 연간 약 300만명 이상이 외국인 고객이 방문하는 국내 글로벌 특화매장은<br>파트너사와 함께 글로벌 시장에서 동반 성장을 할 수 있는 핵심 원동력입니다.</p>
+                    <a href="#">올리브영 글로벌 플랫폼을 보고싶다면?</a>
+                </div>
+            </div><div class="content1">
+                <span>04</span>
+                <div class="info">
+                    <span>디플롯</span>
+                    <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform4-7c45898de0bdfb1de922247a126d8886.jpg" alt="img04"></p>
+                    <p>가치지향 라이프스타일 플랫폼을 통해<br>고객에게 다양한 즐거움을 선물합니다.</p>
+                    <p>고객이 뷰티&헬스를 넘어 라이프스타일 전반에서 자신만의 가치와<br>취향을 반영한 브랜드를 탐색할 수 있습니다.<br>이러한 고객 경험의 확장을 통해 우리는 뷰티&헬스를 넘어선<br>종합 라이프스타일 플랫폼으로 도약합니다.</p>
+                    <a href="#">D.PLOT의 감각적인 제품들이 궁금하다면?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
