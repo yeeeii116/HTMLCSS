@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Pretendard;
+            src: url(./webfonts/Pretendard-Regular.woff) format(woff);
+        }
+        *{margin: 0;padding: 0;}
+        .sec1{width: 100%;margin: 100px 0;}
+        .sec1 .info_wrap{width: 100%;max-width: 1200px;margin: 0 auto 150px;}
+        .sec1 .info_wrap .info{margin-bottom: 150px;}
+        .sec1 .info_wrap .info p:first-child{font-size: 20px;color: #666;font-family: Pretendard;margin-bottom: 14px;letter-spacing: -0.4px;line-height: 20px;}
+        .sec1 .info_wrap .info p:nth-child(2){font-size: 40px;color: #000;font-family: Pretendard;letter-spacing: -0.8px;line-height: 55px;font-weight: bold;word-break: keep-all;}
+
+        .sec1 .box_wrap{width: 100%;max-width: 1440px;margin: 0 auto;height: 600px;}
+        .sec1 .box_wrap .box_bg{width: 100%;height: 100%;background-image: url(https://www.bgfecomaterials.com/resources/kr/images/company/business/advanced-materials_bg_pc_img.jpg);padding: 0 120px;box-sizing: border-box;display: flex;align-items: center;background-size: cover;background-position: center;}
+        .sec1 .box_wrap .box{color: #fff;font-family: Pretendard;word-break: keep-all;}
+        .sec1 .box_wrap .box p:first-child{font-size: 30px;font-weight: bold;letter-spacing: -0.6px;line-height: 45px;}
+        .sec1 .box_wrap .box span{display: inline-block;font-size: 16px;margin-top: 20px;letter-spacing: -0.32px;line-height: 26px;}
+
+        @media screen and (max-width: 1440px) {
+            .sec1 .info_wrap{width: 95%;}
+            .sec1 .info_wrap .info p:nth-child(2) br{display: none;}
+            .sec1 .box_wrap{width: 95%;max-width: 1392px;}
+        }
+        @media screen and (max-width: 1023px) {
+            .sec1{margin: 50px 0;}
+            .sec1 .info_wrap{margin: 0 auto 50px;}
+            .sec1 .info_wrap .info{margin-bottom: 14px;}
+            .sec1 .info_wrap .info p:first-child{font-size: 14px;letter-spacing: -0.28px;line-height: 14px;} 
+            .sec1 .info_wrap .info p:nth-child(2){font-size: 22px;letter-spacing: -0.44px;line-height: 32px;}
+
+            .sec1 .box_wrap{height: 500px;}
+            .sec1 .box_wrap .box_bg{padding: 0 120px;box-sizing: border-box;display: flex;align-items: center;padding: 0;align-items: flex-start;}
+            .sec1 .box_wrap .box{padding: 0 16px;margin-top: 50px;}
+            .sec1 .box_wrap .box p:first-child{font-size: 18px;letter-spacing: -0.36px;line-height: 26px;}
+            .sec1 .box_wrap .box span{font-size: 14px;letter-spacing: -0.28px;line-height: 22px;}
+            .sec1 .box_wrap .box br{display: none;}
+        }
+        @media screen and (max-width: 766px) {
+            .sec1 .box_wrap{height: auto;}
+            .sec1 .box_wrap .box_bg{background-image: url(https://www.bgfecomaterials.com/resources/kr/images/company/business/advanced-materials_bg_m_img.jpg);padding-top: 120%; position: relative;height: auto;}
+            .sec1 .box_wrap .box_bg .box{position: absolute;left: 0;top: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="sec1">
+        <div class="info_wrap">
+            <div class="info">
+                <p>사업소개</p>
+                <p>
+                    다양한 소재 솔루션으로 고객의 생활을 더 안전하고 풍요롭게 하며<br>
+                    환경에 이로운 신소재 개발로 지속 가능한 미래를 만듭니다.
+                </p>
+            </div>
+        </div>
+        <div class="box_wrap">
+            <div class="box_bg">
+                <div class="box">
+                     <p>
+                        고객의 니즈에 따라 맞춤형 엔지니어링 소재를 개발하여<br>
+                        다양한 용도별 요구 성능을 충족 시킵니다.
+                    </p>
+                    <span>
+                        환경규제 강화로 인한 금속부품의 경량화, 에너지효율 증대, e-Mobility와 ESS 등 신규 Application의<br> 확대로 고기능성 엔지니어링 소재의 적용처가 확대되고 있으며, 이에 따라 고객들은 보다 더 다양하고<br> 정밀한 기능성을 요구하고 있습니다.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
