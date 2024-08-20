@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div section{position: absolute;width: 300px;top: 0;left: 200px;height: 300px;background: #fff;border: 1px solid #ccc;display: none;}
+        .txt{color: #ccc;}
+        .active{color: red;}
+        .on{display: block;}
+
+    </style>
+</head>
+<body>
+   <p class="txt">보도자료</p>
+   <p class="txt">언론보도</p>
+   <p class="txt">CJBS NOW</p>
+   <p class="txt">미디어</p>
+   <p class="txt">뉴스구독(E-MAIL)</p>
+   <div>
+    <section>보도자료</section>
+    <section>언론보도</section>
+    <section>CJBS NOW</section>
+    <section>미디어</section>
+    <section>뉴스구독(E-MAIL)</section>
+   </div>
+
+    <script>
+        document.querySelectorAll(".txt")[0].classList.add("active")
+        document.querySelectorAll("section")[0].classList.add("on")
+        // 첫번째 txt가 클릭된 상태로 두기 위해서 넣은 것
+        
+        function myfnc(){
+            document.querySelectorAll(".txt").forEach(function(keys,item){
+                keys.classList.remove("active");
+            });
+            // 새로 만든 function
+        }
+        document.querySelectorAll(".txt").forEach(function(keys,item){
+            console.log(keys);
+            keys.onclick=function(){
+                myfnc();
+                keys.classList.add("active");
+                console.log(item);
+                document.querySelectorAll("section").forEach(function(value,key){
+                    value.classList.remove("on");
+                })
+                document.querySelectorAll("section")[item].classList.add("on")
+            }
+        });
+    </script>
+    <!--  -->
+</body>
+</html>

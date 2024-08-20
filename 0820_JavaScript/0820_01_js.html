@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.title="자바스크립트";
+        console.log('123'+(123+123)+"\n"+"결합연산자");
+        // +연산자--산술연산자(덧셈),결합연산자 역할
+        /* 여러줄 주석 */
+        
+    </script>
+    <!-- ""은 ''으로도 사용 가능 -->
+    <!-- console.log(123);은 디버깅할때 오류가 있는지 찾아볼 때 사용(검사(개발자코드)>console에서 확인 가능) -->
+    <!-- console.log(123+123);으로 할 경우에는 246으로 출력. console.log('123'+123);은 123123으로 출력  -->
+    <!-- "\n" 줄바꿈 -->
+</head>
+<body>
+    <h2>Demo JavaScript in Body</h2>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        document.body.style.background="#f00";
+        /* document.body.style.background="#f00"; head에서는 boby를 읽어들이지 못하기 때문에 body에 입력해야함 */
+    </script>
+</body>
+</html>
