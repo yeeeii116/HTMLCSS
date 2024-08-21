@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .btn{width: 1400px;display: flex;gap: 10px;justify-content: center;margin: 80px auto;}
+        .btn li{width: 200px;text-align: center;line-height: 54px;}
+        .btn li a{display: block;width: 100%;border-radius: 40px;background: rgba(51, 51, 51, 0.8);color: rgba(255, 255, 255, 0.5);font-weight: bold;text-decoration: none;}
+        .btn li a.on{background: #da291c;color: #fff;}
+
+        .content{width: 1400px;margin: 0 auto 60px;position: relative;z-index: 1;}
+        .content li{width: 100%;position: absolute;left: 0;top: 0;opacity: 0;}
+        .content li.on{opacity: 1;}
+        .content li:first-child div{width: 100%;}
+        .content li:first-child div > p{font-size: 39px;font-weight: bold;color: #da291c;margin-bottom: 60px;text-align: center;}
+       
+        .content li:nth-child(2){width: 100%;text-align: center;}
+        .content li:nth-child(2) div > p{font-size: 39px;font-weight: bold;color: #da291c;margin-bottom: 60px;background-repeat: no-repeat;background-size: cover;background-position: center;}
+        .content li:nth-child(2) div .bg{width: 100%;height: 500px; background: url(https://www.lotternd.com/upload/better_life/202308/1692250540_m0256628_20230817143540.jpg);background-size: cover;}
+        .content li:nth-child(2) div a{position: relative;top: 80px; display: block;width: 1400px;height: 341px;background: #fff;padding: 48px 20px 112px;box-sizing: border-box;margin: 0 auto;border-radius: 30px;color: #222;text-decoration: none;text-align: center;}
+        .content li:nth-child(2) div a p:first-child{font-size: 34px;margin-bottom: 40px;}
+        .content li:nth-child(2) div a p:nth-child(2){font-size: 20px;word-break: keep-all;}
+        
+
+    </style>
+</head>
+<body>
+    <ul class="btn">
+        <li><a href="#">Better Food</a></li>
+        <li><a href="#">Better Life</a></li>
+    </ul>
+    <ul class="content">
+        <li>
+            <div>
+                <p>
+                    롯데중앙연구소의 노력 끝에 탄생한 Better Food를 소개합니다.<br>
+                    개발부터 출시까지, 그 이면에 숨겨진 생생한 이야기를 만나보세요.
+                </p>
+                <div class="con_item">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>
+                    최고의 R&D 역량으로 모두의 Better Life에 기여하겠습니다.<br>
+                    롯데중앙연구소의 주요 연구 성과를 소개합니다.
+                </p>
+                <div class="bg">
+                    <a href="#">
+                        <p>국민 플레이버 바닐라, 열대우림동맹(RA) 인증으로 친환경까지 인증!</p>
+                        <p>바닐라는 모두가 사랑하는 ‘국민 플레이버‘의 대명사 입니다. 롯데중앙연구소는 1987년부터 바닐라 연구를 시작했으며, 1999년부터는 바닐라빈으로부터 ‘바닐라 추출물’을 직접 제조하고 제품에 적용해 고품질의 제품을 제공해왔습니다. 최근 롯데는 이 바닐라를 ‘친환경’에 접목해 고객에게 또 다른 가치를 제공하고 있습니다.</p>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        let btn = document.querySelectorAll(".btn li")
+        let con = document.querySelectorAll(".content li")
+        btn[0].querySelector("a").classList.add("on")
+        con[0].classList.add("on")
+
+        function myfnc(){
+            btn.forEach(function(value,key){
+                value.querySelector("a").classList.remove("on")
+            })
+        }
+
+        btn.forEach(function(value,key){
+            value.onclick = function(e){
+                e.preventDefault();
+                con.forEach(function(value,key){
+                    con[key].classList.remove("on")
+                })
+                myfnc();
+                btn[key].querySelector("a").classList.add("on");
+                con[key].classList.add("on")
+                
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>

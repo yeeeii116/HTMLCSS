@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var userName = "그린";
+        // 내가 앞으로 쓸 저장 공간의 이름 그린
+        var userId = "컴퓨터";
+        var userId = "computer";
+        // 재선언할(중복) 경우 새로운 데이터로 출력 = 재할당. 오류x
+        userId = "12345";
+        var pw;
+        pw = 456789;
+        {var pw = "aaaaa"}
+        // 변수 선언만
+        // 변수 할당
+        document.write(userName + userId + pw)
+        // 문서에 출력해줘. +는 결합연산자로 사용
+
+        let name = "그린";
+        let name1,name2,name3;
+        // let은 재선언 불가. 만약 name1 = "green";이 let name1;보다 앞으로 올 경우 오류
+        name1 = "green";
+        name2 = "yellow";
+        name1 = "blue";
+        {let name1 = "computer";}
+        // 코드블록 안은 다른 공간으로 인식하여 바깥거랑 중복 가능
+
+        const number = 123;
+        const a01 = true;
+        const a02 = null;
+        const a03 = 99;
+        document.write(a01 + a02);
+        /*  const number; const number = 123; 같이 입력할 경우 오류. const number = 123;만 입력해야함. 변수 선언과 동시에 값이 들어와야함 */
+        // a01과 a02의 true는 다름. 01은 논리형 데이터, 02는 단순 문자
+        // 삼항연산 조건 ? 참인값 : 거짓인값
+        document.write((a01 ? "참" : "거짓") + "<br>");
+        document.write(a03>=100 ? "100보다 큰수" : "100보다 작은 수");
+
+        // 오류는 검사 > consol 통해서 사용
+
+    </script>
+</body>
+</html>
