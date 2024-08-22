@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        document.write('<h1 class="title">제목태그</h1>');
+        // 안에 있는 큰따옴표가 중첩되면 안되기 때문에 작은 따옴표로 감싸줌
+
+        // alert("경고창입니다");
+
+        // let test = window.confirm("자바스크립트가 재미있습니까?");
+        // 사용자가 응답한 데이터 값(ok,cancle)을 저장할 공간을 변수로 만든 것
+
+        // 삼항연산 조건?참인값:거짓인값
+        // document.write((test ? "좋아한다" : "안좋아한다")+"<br>");
+
+        let gender = window.prompt("당신의 성별은?");
+        document.write("당신이 입력한 성별은 "+gender+"입니다.<br>");
+        let sum = prompt("당신의 총점은?");
+        document.write("당신이 입력한 총점은 "+sum+"입니다.<br>");
+        let kor = Number(prompt("점수입력"));
+        let eng = Number(prompt("점수입력"));
+        document.write(kor + eng);
+        // prompt 받은 데이터는 숫자도 문자로 받음. 숫자로 받고 싶을 경우 Number로...
+    </script>
+</body>
+</html>
