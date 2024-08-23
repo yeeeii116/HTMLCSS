@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .menu{width: 100%;height: 720px;margin-top: 176px;display: flex;}
+        .menu.on{background: transparent;}
+       .item{width: 894px;display: grid;grid-template-rows: repeat(2, 1fr);grid-template-columns: repeat(3, 1fr);gap: 94px 177px;text-align: center;margin: 133px auto;}
+       .item li{font-size: 0;width: 180px;height: 180px;border-radius: 50%;background-repeat: no-repeat;}
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul class="item">
+            <li>Naked Products</li>
+            <li>Fighting Animal Testing</li>
+            <li>Fresh Cosmetics</li>
+            <li>100% Vegetarian</li>
+            <li>Ethical Buying</li>
+            <li>Handmade With Love</li>
+        </ul>
+    </div>
+    <script>
+        let item = document.querySelectorAll(".item li")
+        let menu = document.querySelector(".menu")
+
+        function mufnc(){
+   
+        }
+
+        item.forEach(function(value,key){
+            value.style.background = "#222 url(https://weare.lush.co.kr/images/ico_main_value0"+(key+1)+".svg) no-repeat center center"; 
+
+            value.onmouseenter=function(){
+                document.querySelector(".menu").style.background="url(https://weare.lush.co.kr/images/main_value0"+(key+1)+".jpg) no-repeat center/cover"
+            }
+
+            value.onmouseleave=function(){
+            }
+
+        
+
+        })
+
+       menu.forEach(function(value,key){
+            value.onmouseleave=function(){
+                value.style.background="transparent";
+            }
+       })
+        
+    </script>
+</body>
+</html>
