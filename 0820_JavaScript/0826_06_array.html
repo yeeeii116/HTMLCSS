@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+     const fruits = ["Banana", "Orange", "Apple", "Mango"];
+     document.write(typeof fruits +"<br>");
+     document.write(fruits.join(" * ")+"<br>");
+     //join()  모든 배열 요소를 문자열로 조인
+     document.write(typeof fruits.join(" * ") +"<br>");
+     document.write(typeof fruits +"<br>");
+     document.write(fruits[0]+" * "+fruits[1]+" * "+fruits[2]+" * "+fruits[3]+"<br>");
+     document.write(`${fruits[0]} * ${fruits[1]} * ${fruits[2]} * ${fruits[3]}<br>`);
+
+    fruits.pop();
+    document.write(fruits+"<br>");
+    // pop() 배열에서 마지막 요소 제거
+    // 변수 문자 결합 +연산자
+    // 좌우의 식 연결 ,연산자
+    // `${변수}<br>`
+    document.write(`${fruits}<br>`);
+
+    fruits.push("Kiwi");
+    document.write(`${fruits}<br>`);
+    // push() 배열에 새 요소를 추가
+
+    fruits.shift();
+    document.write(`${fruits}<br>`);
+    // shift() 배열의 첫 번째 요소를 제거하고 다른 요소를 왼쪽으로 이동
+
+    fruits.unshift("Lemon");
+    document.write(`${fruits}<br>`);
+    // .unshift() 배열의 시작 부분에 새 요소를 추가
+
+    document.write(`${fruits.length}<br>`);
+    // length() 배열의 길이(배열 요소의 수)를 반환. 길이 속성은 항상 가장 높은 배열 인덱스보다 하나 더 큼
+
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const myChildren = myGirls.concat(myBoys);
+    document.write(`${typeof myChildren}<br>`);
+    document.write(`${myChildren}<br>`);
+    // concat() 병합 (연결)하여 새 배열을 만듦
+
+    document.write(`${myChildren.splice(2,0,"Tom")}<br>`);
+    document.write(`${myChildren}<br>`);
+    //  splice() 배열에 새 항목을 추가하는데 사용
+    /* 첫 번째 매개 변수 (2)는 새 요소를 추가 (접합)해야하는 위치를 정의
+    두 번째 매개 변수(0)는 제거 해야 하는 요소 수를 정의
+    나머지 매개 변수 ( "Lemon"", "Kiwi"")는추가 할 새 요소를 정의 */
+    document.write(`${myChildren.splice(2,1,"Ann","Tom")}<br>`);
+    document.write(`${myChildren}<br>`);
+    document.write(`${myChildren.splice(2,2)}<br>`);
+    document.write(`${myChildren}<br>`);
+    
+    document.write(`${myChildren.slice(1,3)}<br>`)
+    // 포함 미만
+    document.write(`${myChildren.slice(-2,-1)}<br>`)
+    // -2에서 -1까지
+
+    document.write(`${myChildren.slice(1,3)}<br>`)
+    document.write(`${myChildren.slice(-2,-1)}<br>`)
+
+    document.write(`${myChildren.sort()}<br>`)
+    document.write(`${myChildren.sort().reverse()}<br>`)
+
+
+    </script>
+</body>
+</html>

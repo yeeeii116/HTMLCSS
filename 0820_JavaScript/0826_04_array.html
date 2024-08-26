@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+      const cars = ["Saab", "Volvo", "BMW", 1000, true];
+      cars[5]="white";  
+      document.write(cars[3]+"<br>");
+      console.log(cars);
+      document.write(cars.length+"<br>");
+      
+      const cars1 = [
+        "Saab", 
+        "Volvo", 
+        "BMW", 
+        1000, 
+        true
+    ];
+
+    const car2 = [];
+    car2[0] =  "Saab";
+    car2[1] =  "Volvo";
+    car2[2] =  "BMW";
+    car2[3] =  1000;
+    car2[4] =  true;
+
+    car3 = new Array();
+    car3[0] =  "Saab";
+    car3[1] =  "Volvo";
+    car3[2] =  "BMW";
+    car3[3] =  1000;
+    car3[4] =  true;
+
+    const cars4 = new Array("Saab", "Volvo", "BMW");
+    document.write(typeof cars4+"<br>");
+
+    </script>
+</body>
+</html>
