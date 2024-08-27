@@ -15,7 +15,7 @@
         .btn li a{display: inline-flex;width: 100%;height: 44px;border: 1px solid #ccc;padding: 0 16px;box-sizing: border-box;align-items: center;background-color: #fff;color: #111;}
         .btn li a.on{border: 1px solid #211955;background-color: #211955;color: #fff;font-weight: bold;}
 
-        .content{width: 100%;max-width: 1200px;height: 80px;margin-bottom: 70px;position: relative;margin: 0 auto;}
+        .content{width: 100%;max-width: 1200px;height: 80px;position: relative;margin: 0 auto 70px;}
         .content li{width: 406px;height: 80px;background-size: contain;background-repeat: no-repeat;position: absolute;left: 50%;transform: translateX(-50%); opacity: 0;}
         .content li:first-child{width: 239px;}
         .content li:nth-child(2){width: 406px;}
@@ -24,6 +24,10 @@
         .content li:nth-child(5){width: 405px;}
         .content li:nth-child(6){width: 175px;}
         .content li.on{opacity: 1;}
+
+        .content2{width: 100%;height: 624px;position: relative;}
+        .content2 li{width: 100%;height: 100%;background-size: cover;background-position: center;position: absolute;left: 0;top: 0; opacity: 0;}
+        .content2 li.on{opacity: 1;}
 
     </style>
 </head>
@@ -46,19 +50,29 @@
         <li></li>
     </ul>
 
+    <ul class="content2">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
 
     <script>
         let btn = document.querySelectorAll(".btn li")
         let con = document.querySelectorAll(".content li")
+        let con2 = document.querySelectorAll(".content2 li")
         let titleBg = "url(images/title1.svg)";
 		let visualBg = "url(images/img_visual1.png)";
 
 
         btn[0].querySelector("a").classList.add("on");
         con[0].classList.add("on");
+        con2[0].classList.add("on");
 
         
-
         function myfnc(){
             btn.forEach(function(value,key){
                 btn[key].querySelector("a").classList.remove("on");
@@ -70,18 +84,25 @@
             value.onclick = function(e){
                 e.preventDefault();
                 myfnc();
+                con.forEach(function(value,key){
+                    con[key].classList.remove("on")
+                })
+                con2.forEach(function(value,key){
+                    con2[key].classList.remove("on")
+                })
                 btn[key].querySelector("a").classList.add("on");
                 con[key].classList.add("on");
-                con.forEach(function(value,key){
-                    value[key].classList.remove("on");
-                });
+                con2[key].classList.add("on");
 
             }
         })
 
         con.forEach(function(value,key){
             value.style.backgroundImage = titleBg.replace(titleBg.slice(-6,-5),key+1);
+        })
 
+        con2.forEach(function(value,key){
+            value.style.backgroundImage = visualBg.replace(visualBg.slice(-6,-5),key+1);
         })
 
 

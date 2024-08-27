@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;color: #000;}
+        .contents{width: 100%;max-width: 1520px;margin: 50px auto;border-top: 1px solid #111;}
+        .contents .c1 p{width: 100%;border-bottom: 1px solid #ccc;}
+        .contents p a{display: block;font-size: 32px;font-weight: bold;line-height: 40px;padding: 40px 120px 40px 20px;box-sizing: border-box;cursor: pointer;border-bottom: 1px solid #ebebeb;position: relative;}
+        .contents p a::before{content: "";width: 23px;height: 3px;margin: -1px 0 0 -11px;position: absolute;right: 30px;top: 50%;transform: translateY(-50%); background: #000;}
+        .contents p a::after{content: "";width: 3px;height: 23px;margin: -1px 0 0 -11px;position: absolute;right: 40px;top: 50%;transform: translateY(-50%); background: #000;}
+        .contents p a::after.on{transform: rotate(90deg);}
+        
+        .contents p .box{width: 100%;padding-top: 60px;}
+        .contents p .box img{width: 100%;object-fit: cover;}
+
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <p class="c1">
+            <a href="#">
+                GS파워
+            </a>
+            <div class="box"><img src="./images/img_collective_a01.jpg" alt=""></div>
+        </p>
+        <p class="c2">
+            <a href="#">
+                인천종합에너지
+            </a>
+            <div class="box"></div>
+        </p>
+    </div>
+
+    <script>
+        let c1 = document.querySelector(".contents .c1");
+        let c2 = document.querySelector(".contents .c2");
+
+       
+        
+        
+
+
+    </script>
+
+</body>
+</html>
