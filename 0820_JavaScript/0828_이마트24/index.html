@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        ul.history{width: calc(1130 / 1920* 100vw);max-width: 1130px;display: flex;flex-direction: column;padding-top: min(calc(67 / 1920* 100vw), 67px);padding-bottom: min(7.292vw, 140px);margin: 0 auto;}
+        ul.history li{padding-top: min(2.865vw, 55px);padding-bottom: min(2.604vw, 50px);border-bottom: 1px solid;display: flex;justify-content: space-between;}
+        ul.history .title{width: calc(181 / 1920* 100vw);max-width: 181px;display: flex;justify-content: space-between;}
+        ul.history .title img{width: 100%;height: 100%;object-fit: contain;}
+
+        .contents{height: 0;overflow: hidden;}
+        .contents.on{height: 150px;}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="history">
+            <li>
+                <div class="title">
+                    <p><img src="images/history.png" alt="1"></p>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <p class="number"><img src="images/2023.png" alt="1"></p>
+                    <span></span>
+                </div>
+                <div class="contents">
+                    <div class="month">
+                        <strong>3월</strong>
+                            <span>
+                                - 상품전시회&nbsp;“딜리셔스 페스티벌” 개최 <br>
+                                <span>*3/8(수) ~ 10(금), 서울 양재 AT센터</span>
+                            </span>
+                    </div>
+                    <div class="month">
+                        <strong>8월</strong>
+                            <span>
+                                - 해외사업&nbsp;진출 MOU &nbsp; &nbsp;<br>
+                                <span>*캄보디아</span>
+                            </span>
+                    </div>
+                    <div class="month">
+                        <strong>9월</strong>
+                            <span>
+                                - 업계&nbsp;최초 간편집밥 CAT.K 추진<br>
+                                <span>*신선반찬 플랫폼기업 ‘슈퍼키친’ 콜라보</span>
+                            </span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <p class="number"><img src="images/2022.png" alt="1"></p>
+                    <span></span>
+                </div>
+                <div class="contents">
+        
+                    <div class="month">
+                        <strong>3월</strong>
+                            <span>
+                                - 상품전시회&nbsp;“딜리셔스 페스티벌” 개최 <br>
+                                <span>*3/8(수) ~ 10(금), 서울 양재 AT센터</span>
+                            </span>
+                    </div>
+                    <div class="month">
+                        <strong>8월</strong>
+                            <span>
+                                - 해외사업&nbsp;진출 MOU &nbsp; &nbsp;<br>
+                                <span>*캄보디아</span>
+                            </span>
+                    </div>
+                    <div class="month">
+                        <strong>9월</strong>
+                            <span>
+                                - 업계&nbsp;최초 간편집밥 CAT.K 추진<br>
+                                <span>*신선반찬 플랫폼기업 ‘슈퍼키친’ 콜라보</span>
+                            </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let btn = document.querySelectorAll(".history li")
+        let bg = '<img src="images/2022.png" alt="">'
+
+        document.querySelector(".number").style.backgroundImage = bg;
+
+        function myfnc(){
+            btn.forEach(function(v,k){
+                v.querySelector(".contents").classList.remove("on");
+            })
+        }
+
+        btn.forEach(function(v,k){
+            v.onclick = function(){
+                btn[k].querySelector(".contents").classList.add("on");
+            }
+
+
+
+            
+        })
+
+
+    </script>
+</body>
+</html>
