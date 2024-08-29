@@ -6,25 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @font-face {
+            font-family: HankookKRTTFLight;
+            src: url(./fonts/HankookKRTTFLight.woff) format(woff);
+        }
         *{margin: 0;padding: 0;}
         a{text-decoration: none;}
 
-        .wrap{background: #ccc;}
-        header{width: 100%;max-width: 1920px;height: 104px;padding: 22px 32px;box-sizing: border-box;}
+        .wrap{}
+        header{width: 100%;max-width: 1920px;height: 104px;padding: 22px 32px;box-sizing: border-box;position: absolute;top: 0;z-index: 999;}
         header .top{display: flex;justify-content: space-between;}
         header .top .logo{}
         header .top .logo a{display: block; width: 137px;height: 62px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px; background-position: 0 0;vertical-align: baseline;background-repeat: no-repeat;}
         header .top .top_right{display: flex;}
         header .top .top_right .logo2{}
         header .top .top_right .logo2 a{display: inline-block;width: 110px;height: 33px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-repeat: no-repeat;background-position: -493px -96px;vertical-align: middle;}
-        header .top .top_right .menu{display: inline-block;width: 48px;height: 48px;padding: 6px 0;margin-left: 20px;vertical-align: middle;}
-        header .top .top_right .menu .menu_icon{width: 30px;height: 12px; position: relative;margin: 12px auto 0;cursor: pointer;}
+        header .top .top_right .menu{display: inline-block;width: 48px;height: 48px;padding: 6px 0;margin-left: 20px;vertical-align: middle;cursor: pointer;}
+        header .top .top_right .menu .menu_icon{width: 30px;height: 12px; position: relative;margin: 12px auto 0;}
 
         header .top .top_right .menu span{display: block;position: absolute;height: 2px;background-color: #fff;}
         header .top .top_right .menu span:first-child{top: 0;width: 100%;}
         header .top .top_right .menu span:nth-child(2){top: 8px;width: 54%;}
         header .top .top_right .menu span:nth-child(3){top: -8px;width: 80%;}
 
+        .sec1 .v_wrap{width: 100%;height: 100vh;position: relative;}
+        .sec1 .v_wrap video{width: 100%;height: 100%;object-fit: cover;}
+        .sec1 .mouse_scroll{width: 22px;height: 32px;box-shadow: inset 0 0 0 1px #fff;position: absolute;left: 50%;bottom: 2.3rem;margin-top: -35px;border-radius: 20px;}
+        .sec1 .mouse_scroll::before{content: "";width: 2px;height: 6px;background: #fff; 
+        border-radius: 2px;position: absolute;top: 4px;margin-left: -1px;left: 50%;animation-name: scroll;animation-duration: 1.5s;animation-iteration-count: infinite;}
+
+        @keyframes scroll {
+            0%{opacity: 1;}
+            100%{opacity: 0;transform: translateY(10px);}
+        }
+
+        .sec2{}
+        .sec2 .s2_txt p{width: 100%;height: 164px;font-size: 24px;padding: 48px 0 44px;text-align: center;font-family: HankookKRTTFLight;font-weight: 400;line-height: 41px;}
+        .sec2 .sec2_wrap{width: 100%;}
+        .sec2 .sec2_wrap ul{}
+        .sec2 .sec2_wrap ul li{width: 100%;height: 497px;background-repeat: no-repeat;background-position: center top;}
+        .sec2 .sec2_wrap ul li:first-child .s2_bg{width: 100%;height: 100%; background-image: url(https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240726/main_b01.jpg?a=0.4552386800183037);z-index: 1;}
+        /* .sec2 .sec2_wrap ul li:nth-child(2){background-image: url(https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240726/main_b02.jpg?a=0.2850402756703567);}
+        .sec2 .sec2_wrap ul li:nth-child(3){background-image: url(https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240624/main_b01_v2.jpg?a=0.6140810635610268);} */
+
+        .sec2 .sec2_wrap ul li .txt2{width: 580px;height: 168px;margin: 0 auto;position: relative;top: 50%;transform: translateY(-50%);z-index: 2;}
 
     </style>
 </head>
@@ -45,11 +70,46 @@
                 </div>
             </div>
         </header>
+        <div class="menu"></div>
         <div class="sec1">
             <div class="v_wrap">
-                <video controls autoplay muted loop>
-                    <source src="./video/main.mp4" type="video/mp4">
+                <video muted paused> 
+                    <!-- loop autoplay controls-->
+                    <source src="https://cdn.hankook-technologygroup.com/static/assets/mov/htg/ES_mainvideo_20240502.mp4" type="video/mp4">
                 </video>
+            </div>
+            <div class="mouse_scroll">
+            </div>
+        </div>
+        <div class="sec2">
+            <div class="s2_txt">
+                <p>우리는 혁신의 결과물이 아닌 <strong>혁신을 실현하게 만드는 방법</strong>에 대해 연구합니다.<br>혁신을 발현하게 만드는 철학과 영감에서부터<br> <strong>혁신가들의 생각과 협업하는 방식</strong>에 대해 이야기하고자 합니다.<br>더 많은 사람들이 <strong>스스로 혁신을 실현</strong>할 수 있도록 한 발 앞서 준비하겠습니다.</p>
+            </div>
+            <div class="sec2_wrap">
+                <ul>
+                    <li>
+                        <div class="s2_bg"></div>
+                        <div class="txt2">
+                            <h2><a href="#">태양에너지를 수확하는 방법</a></h2>
+                            <p>태양에너지를 수확하는 방법</p>
+                            <a href="#"><span class="more">read more</span><span class="arrow"></span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt2">
+                            <h2><a href="#">태양에너지를 수확하는 방법</a></h2>
+                            <p>태양에너지를 수확하는 방법</p>
+                            <a href="#"><span class="more">read more</span><span class="arrow"></span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt2">
+                            <h2><a href="#">태양에너지를 수확하는 방법</a></h2>
+                            <p>태양에너지를 수확하는 방법</p>
+                            <a href="#"><span class="more">read more</span><span class="arrow"></span></a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

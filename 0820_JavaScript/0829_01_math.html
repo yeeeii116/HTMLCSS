@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // document.write(+"<br>");
+        document.write(Math.E+"<br>"); // 오일러 수를 반환합니다.       
+        document.write(Math.PI +"<br>"); // PI 반환     
+        document.write(Math.SQRT2+"<br>");    // 2의 제곱근을 반환합니다
+        document.write(Math.SQRT1_2+"<br>");  // 1/2의 제곱근을 반환합니다.
+        document.write(Math.LN2+"<br>"); // 2의 자연 로그를 반환합니다.    
+        document.write(Math.LN10+"<br>");  // 10의 자연 로그를 반환합니다.   
+        document.write(Math.LOG2E+"<br>");    // E의 밑이 2인 로그를 반환합니다.
+        document.write(Math.LOG10E+"<br>");   // E의 밑이 10인 로그를 반환합니다
+
+        document.write(`${Math.round(1.533)}<br>`); 
+        //Math.round() 가장 가까운 정수를 반올림
+        document.write(`${Math.ceil(1.333)}<br>`); // 2,3,4...중에서 작은값 반환
+        document.write(`${Math.ceil(1.533)}<br>`);
+        document.write(`${Math.ceil(1)}<br>`); // 1,2,3,4...중에서 작은값 반환
+        // Math.ceil(x) 크거나 같은값중에서 작은값을 반환
+        document.write(`${Math.floor(1.333)}<br>`); // 1,0,-1 중에서 큰값
+        document.write(`${Math.floor(1.533)}<br>`); 
+        document.write(`${Math.floor(1)}<br>`);
+        // Math.floor(x) 작거나 같은값중에서 큰값을 반환
+
+        document.write(`${ Math.sign(-4)}<br>`); //
+        document.write(`${ Math.sign(null)}<br>`); // 
+        document.write(`${Math.trunc(1)}<br>`);
+        // Math.trunc(x)  x의 정수 부분을 반환합니다.
+
+        document.write(`${Math.sign(4)}<br>`);
+        document.write(`${Math.sign(-4)}<br>`);
+        document.write(`${Math.sign(null)}<br>`);
+
+        document.write(`${Math.pow(8, 2)}<br>`);
+        // Math.pow(x, y)는 x의 값을 y의 거듭제곱으로 반환
+
+        document.write(`${Math.sqrt(64)}<br>`);
+        //  Math.sqrt(x)는 x의 제곱근을 반환
+
+        document.write(`${Math.abs(-64)}<br>`);
+        document.write(`${Math.abs(0)}<br>`);
+        document.write(`${Math.abs(-4.7)}<br>`);
+        // Math.abs(x)는 x의 절대(양수) 값을 반환
+
+        document.write(`${Math.min(0, 150, 30, 20, -8, -200)}<br>`);
+        document.write(`${Math.max(0, 150, 30, 20, -8, -200)}<br>`);
+
+        document.write(`${Math.random()}<br>`);
+    </script>
+</body>
+</html>
