@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="xeicon.css">
+    <style>
+        @font-face {
+            font-family: archivo500;
+            src: url(fonts/archivo-v18-latin-500.woff2) format(woff2);
+        }
+        @font-face {
+            font-family: archivo;
+            src: url(fonts/archivo-v18-latin-regular.woff2) format(woff2);
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #d1a050;}
+        .retail{width: 100%;max-width: 1260px;margin: 50px auto;padding: 0px 2.5rem;box-sizing: border-box;}
+        .retail h1,.retail h2{width: 1210px;font-size: 42px;margin-bottom: 20px;color: #d1a050;line-height: 50px;font-family: archivo500;}
+        .retail h2{font-weight: normal;}
+        .retail .list li{border-top: 1px solid #d1a050;}
+        .retail .list li a{display: block; font-size: 24px;line-height: 36px;padding: 15px 20px;font-family: archivo;}
+        .retail .list li a.on{font-weight: bold;}
+        .retail .list li a i{transform: rotate(0deg);transition: 0.4s;}
+        .retail .list li a i.on{transform: rotate(45deg);}
+
+        .retail .list li .contents{transition: 0.5s;height: 0;overflow: hidden;}
+        .retail .list li .contents.on{height: 445px;}
+        .retail .list li .contents img{width: 100%;object-fit: cover;padding: 70px 40px 80px;box-sizing: border-box;}
+
+    </style>
+</head>
+<body>
+    <div class="retail">
+        <h1>RETAIL</h1>
+        <h2>Slices - Almond Base</h2>
+        <ul class="list">
+            <li>
+                <div class="inner">
+                    <a href="#"><i class="xi-plus-min"></i>AMERICAN</a>
+                    <div class="contents">
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg" alt="AMERICAN">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <a href="#"><i class="xi-plus-min"></i>CHEDDAR</a>
+                    <div class="contents">
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-CHEDDAR-pc.jpg" alt="CHEDDAR">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <a href="#"><i class="xi-plus-min"></i>PROVOLONE</a>
+                    <div class="contents">
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PROVOLONE-pc.jpg" alt="PROVOLONE">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <a href="#"><i class="xi-plus-min"></i>PEPPER JACK</a>
+                    <div class="contents">
+                        <img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PEPPERJACK-pc.jpg" alt="PEPPER JACK">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let list = document.querySelectorAll(".list li");
+        let con = document.querySelectorAll(".inner");
+
+        list.forEach(function(v,k){
+            v.onclick = function(e){
+                e.preventDefault();
+                let bool = this.querySelector(".contents").classList.contains("on");
+                if(!bool){
+                    this.querySelector(".contents").classList.add("on");
+                    this.querySelector("a").classList.add("on");
+                    this.querySelector("a > i").classList.add("on");
+
+                }else{
+                    this.querySelector(".contents").classList.remove("on");
+                    this.querySelector("a").classList.remove("on");
+                    this.querySelector("a > i").classList.remove("on");
+                }
+                
+            }
+        })
+    </script>
+</body>
+</html>

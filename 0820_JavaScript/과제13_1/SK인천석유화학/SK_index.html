@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: SUIT-M;
+            src: url(fonts/SUIT-Medium.woff2) format(woff2);
+        }
+        @font-face {
+            font-family: SUIT;
+            src: url(fonts/SUIT-Heavy.woff2) format(woff2);
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        .SK{width: 100%;display: flex;flex-direction: column;align-items: center;}
+        .SK .contents{width: 100%;position: relative;height: 100vh;background-color: #ddefc8;display: flex;flex-direction: column;}
+        .SK .contents li{width: 1052px;margin: 50px auto;text-align: center;padding: 50px 0;position: absolute;left: 50%;transform: translateX(-50%);opacity: 0;transition: 0.5s;}
+        .SK .contents li.on{opacity: 1;}
+        .SK .contents .inner a{display: block;}
+        .SK .contents li .inner a .t1{font-size: 68px;font-weight: bold;opacity: 0;transform: translateY(30px);transition: 0.5s;position: relative;font-family: SUIT;}
+        .SK .contents li .inner a .t1.on{opacity: 1;transform: translateY(0px);}
+        .SK .contents li:nth-child(1) .inner a p:nth-of-type(1){margin: 30px 0 20px;color: #16873e;}
+        .SK .contents li:nth-child(2) .inner a p:nth-of-type(1){margin: 24px 0 16px;color: #0072c6;}
+        .SK .contents li:nth-child(3) .inner a p:nth-of-type(1){margin: 21px 0 14px;color: #009a93;}
+        .SK .contents .inner a .t2{font-size: 22px;font-weight: bold; margin: 30px 0 20px;color: #555;font-weight: normal;letter-spacing: -0.4px;opacity: 0;transform: translateY(30px);transition: 0.5s;transition-delay: 0.2s;font-family: SUIT-M;line-height: 37px;}
+        .SK .contents .inner a .t2.on{opacity: 1;transform: translateY(0px);}
+
+
+        .btn{width: 171px;display: flex;justify-content: space-between;margin: 50px 0;}
+        .btn li{width: 45px;height: 45px;border-radius: 50%;border: 1px solid #828282;line-height: 45px;background: transparent;transform: translateY(-300px);}
+        .btn li.on:first-child{background: #16873e;}
+        .btn li.on:nth-child(2){background: #0072c6;}
+        .btn li.on:nth-child(3){background: #009a93;}
+        .btn li a{font-size: 20px;font-weight: bold;display: block;text-align: center;color: #828282;}
+        .btn li a.on{color: #fff;}
+
+    </style>
+</head>
+<body>
+    <div class="SK">
+        <ul class="contents">
+            <li>
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://www.skincheonpetrochem.com/resources/images/main/esg_E.gif" alt="1">
+                        <p class="t1">ENVIRONMENT</p>
+                        <p class="t2">
+                        SK인천석유화학은 저탄소 기반 에너지 전환을 위한 사업을 새로운 성장 동력으로 추진하고 있습니다.<br>
+                        오랜 기간 정유,석유화학 분야에서 쌓아온 기술역량을 바탕으로 탄소중립을 실현하는 그린 에너지 기업으로 도약하고자 합니다.
+                    </p>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://www.skincheonpetrochem.com/resources/images/main/esg_S.gif" alt="2">
+                        <p class="t1">SOCIAL</p>
+                        <p class="t2">
+                        투명하고 선진화된 Governance 체계를 구축하고 실질적 이사회 중심 경영을 통해<br>
+                        이해관계자의 기대 수준에 부합하는 Governance 혁신을 지속해 나가겠습니다.                              
+                    </p>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <a href="#">
+                        <img src="https://www.skincheonpetrochem.com/resources/images/main/esg_G.gif" alt="3">
+                        <p class="t1">GOVERNANCE</p>
+                        <p class="t2">
+                        SK인천석유화학은 저탄소 기반 에너지 전환을 위한 사업을 새로운 성장 동력으로 추진하고 있습니다.<br>
+                        오랜 기간 정유,석유화학 분야에서 쌓아온 기술역량을 바탕으로 탄소중립을 실현하는 그린 에너지 기업으로 도약하고자 합니다.
+                    </p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="btn">
+            <li>
+                <a href="#">
+                    E
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    S
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    G
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let btn = document.querySelectorAll(".btn li");
+        let con = document.querySelectorAll(".contents li");
+
+        btn[0].classList.add("on");
+        btn[0].querySelector("a").classList.add("on");
+        con[0].classList.add("on");
+        con[0].querySelector(".inner .t1").classList.add("on");
+        con[0].querySelector(".inner .t2").classList.add("on");
+
+        function myremove(){
+            btn.forEach(function(v,k){
+                btn[k].classList.remove("on");
+                btn[k].querySelector("a").classList.remove("on");
+                con[k].querySelector(".inner .t1").classList.remove("on");
+                con[k].querySelector(".inner .t2").classList.remove("on");
+            })
+        }
+
+        btn.forEach(function(v,k){
+            v.onclick = function(e){
+                e.preventDefault();
+                myremove();
+                con.forEach(function(value,key){
+                        value.classList.remove("on");
+                })
+                btn[k].classList.add("on");
+                btn[k].querySelector("a").classList.add("on");
+                con[k].classList.add("on");
+                con[k].querySelector(".inner .t1").classList.add("on");
+                con[k].querySelector(".inner .t2").classList.add("on");
+
+                if(k == 0){
+                    document.querySelector(".contents").style.backgroundColor = "#ddefc8";
+                } else if(k == 1){
+                    document.querySelector(".contents").style.backgroundColor = "#d6ebf5";
+                } else if(k == 2){
+                    document.querySelector(".contents").style.backgroundColor = "#cef6e9";
+                }
+            }
+        })
+    </script>
+</body>
+</html>
