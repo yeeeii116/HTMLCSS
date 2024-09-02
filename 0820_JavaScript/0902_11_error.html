@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+  <input type="text" id="demo">
+  <button>Test Input</button>
+  <p id="p01"></p>
+  <script>
+     function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("demo").value;
+        try {
+            if(x == "")  throw "is empty";
+            if(isNaN(x)) throw "is not a number";
+            x = Number(x);
+            if(x > 10)   throw "is too high";
+            if(x < 5)  throw "is too low";
+            message.innerHTML = "당신이 입력한 숫자는 5에서 10사이 숫자입니다."
+        }
+        catch(err) {
+            message.innerHTML = "Input " + err;
+        }
+        finally {
+            document.getElementById("demo").value = "";
+        } // 결과에 상관없이 계속 실행
+    }
+    document.querySelector("button").onclick = function(){
+        myFunction();
+    }
+    // try statement 실행할 코드 블록을 정의
+    // catch statement 오류를 처리하는 코드 블록을 정의
+    // finally statement 결과에 관계없이 실행할 코드 블록을 정의
+    // throw statement 사용자 지정 오류를 정의
+
+
+  </script>
+</body>
+</html>

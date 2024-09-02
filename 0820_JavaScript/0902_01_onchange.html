@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fname">
+    <script>
+        let x = document.getElementById("fname");
+        /* x.onchange = function(){
+            this.value = this.value.toUpperCase();
+            // input에 입력한 데이터(value)를 대문자로 변경
+        } */
+
+        /* x.onkeydown = function(e){
+            console.log(e.keyCode);
+            // 고유의 키 값이 console 창에 뜸
+        } */
+
+        //키보드의 키를 눌렀을때 발생하는 이벤트
+        // keydown, keypress 키를 누르고 있을때도 이벤트 발생 keypress는 alt,ctrl,방향키도 keyCode 값 반환 안됨
+        /* x.onkeypress = function(e){
+            console.log(e.keyCode);
+            // onkeydown과 달리 방향키, ALT 등은 반응이 없고 문자만 가능
+        } */
+
+        //키보드의 키를 누르고 뗐을 때 이벤트 발생
+        x.onkeyup = function(e){
+            console.log(e.keyCode);
+        }
+
+
+    </script>
+</body>
+</html>
