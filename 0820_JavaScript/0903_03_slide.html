@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        #slide{position: relative;width: 1200px;height: 300px;margin: 50px auto;overflow: hidden;}
+        #slide .slides{position:absolute;left: 0;display: flex;transition: 0.5s;}
+        #slide .slides img{width: 1200px;height: 300px;object-fit: cover;}
+        .btn li{cursor: pointer;}
+        .page li.on{color: red;}
+    </style>
+</head>
+<body>
+    <div id="slide">
+        <ul class="slides">
+            <li><img src="../images/photo1.jpg" alt="photo1"></li>
+            <li><img src="../images/photo2.jpg" alt="photo2"></li>
+            <li><img src="../images/photo3.jpg" alt="photo3"></li>
+            <li><img src="../images/photo4.jpg" alt="photo4"></li>
+            <li><img src="../images/photo5.jpg" alt="photo5"></li>
+        </ul>
+    </div>
+    <ul class="btn">
+        <li id="prev">이전으로</li>
+        <li id="next">다음으로</li>
+    </ul>
+    <script>
+        let slide = document.querySelector("#slide");
+        let slides = document.querySelector(".slides");
+        let slidesLi = document.querySelectorAll(".slides li");
+        let current = 0;
+        let slidewidth = slide.offsetWidth;
+        let len = slidesLi.length;
+    
+        console.log(len);
+        console.log(slidewidth);
+
+        document.querySelector("#next").onclick = function(){
+            if(current < len-1){
+            slides.style.left = -(current+1)*slidewidth+"px"
+            // key 0 1 2에 1200씩 곱해주기
+            }else if(current == len-1){
+                slides.style.left = -(0)*slidewidth+"px"
+                current = -1;
+            }
+            current++;
+            console.log(current);
+        }
+        document.querySelector("#prev").onclick = function(){
+            console.log(current);
+            if(current>0){
+                // slides.style.left = -(current-1)*slidewidth+"px";
+                current--;
+            }else if(current == 0){
+                current=len;
+                slides.style.left = -(current-1)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -36,6 +36,24 @@
         document.querySelector(".custom").style.display = "none";
     }
 
+    //아래 둘이 같은 구문
+    document.querySelector(".con").addEventListener("click",function(){});
+    document.querySelector(".con").addEventListener("mouseenter",function(){});
+    document.querySelector(".con").addEventListener("change",function(){});
+    document.querySelector(".con").addEventListener("mousemove",function(){});
+    document.querySelector("#fname").addEventListener("keydown",function(e){
+        console.log(e.keyCode);
+    });
+    document.addEventListener("scroll",function(){
+        let scr_top = document.documentElement.scrollTop;
+        console.log(scr_top); //스크롤 top의 좌표값 확인
+    })
+
+    document.querySelector(".con").onclick = function(){}
+    document.querySelector(".con").onmouseenter = function(){}
+    document.querySelector(".con").onchange = function(){}
+    document.querySelector(".con").onmousemove = function(){}
+    document.querySelector("#fname").onkeydown = function(){}
   </script>
 </body>
 </html>
