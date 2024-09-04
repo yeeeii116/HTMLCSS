@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .esg_wrap{background-image: url(https://sustainability.coway.co.kr/images/main/highlight-bg.jpg);background-size: cover;background-position: center top;background-repeat: no-repeat;padding: 120px 0;}
+        .esg_wrap h1{width: 1120px;margin: 0 auto;font-size: 1.938rem;color: #111;margin-bottom: 18px;}
+        .esg{width: 1120px;height: 405px;display: flex;margin: 0 auto;}
+        .esg .left{width: 50%;display: flex;flex-direction: column;justify-content: space-between;}
+        .esg .left p{font-size: 1rem;color: #333;margin-bottom: 48px;}
+        .esg .left .txt{}
+        .esg .left .txt::after{}
+        .esg .left .list li{width: 300px; font-size: 22px;padding: 16px 0;color: #999;font-weight: bold;border-bottom: 1px solid #999;position: relative;}
+        .esg .left .list li::after{content: "";background-image: url(https://sustainability.coway.co.kr/images/main/highlight-icon-more.png); width: 13px;position: absolute;aspect-ratio: 1 / 1;right: 0;top: 50%;transform: translateY(-50%);display: none;}
+        .esg .left .list li.on::after{display: block;}
+        .esg .left .list li span{font-size: 22px;padding: 16px 0color: #999;font-weight: bold;}
+        .esg .left .list li.on{border-bottom: 2px solid #04a6e1;color: #04a6e1;}
+        .esg .left .list li span.on{color: #04a6e1;}
+        .esg .left .list li .num{display: inline-block; padding-right: 13.2px;}
+
+        .esg .right{width: 50%;padding-left: 60px;box-sizing: border-box;position: relative;text-align: ;}
+        .esg .right .txt2{position: absolute;width: 100%;left: 0;bottom: 0;color: #fff;padding: 0 53px 45px 53px;box-sizing: border-box;word-break: keep-all;}
+        .esg .right .txt2 p:first-child{font-size: 22px;font-weight: bold;}
+        .esg .right .txt2 p:first-child span{display: inline-block;padding-right: 15px;}
+        .esg .right .txt2 p:last-child{font-size: 16px;line-height: 26px;margin-top: 11px;letter-spacing: -0.64px;}
+
+        .swiper {
+        width: 100%;
+        height: 100%;
+        }
+        .swiper-slide {
+        /* text-align: center; */
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        }
+        .swiper-slide img {
+        display: block;
+        width: 500px;
+        height: 100%;
+        object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="esg_wrap">
+        <h1>ESG Highlights</h1>
+        <div class="esg">
+            <div class="left">
+                <div class="txt">
+                    <p>환경(Environment), 사회(Social), 지배구조(Governance) 각 영역의 중요 주제를 선정하고 주제 내 코웨이 ESG 활동 성과를 모든 이해관계자에게 공개합니다.</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><span class="num">01</span><span class="index">지속가능경영 체계</span></li>
+                        <li><span class="num">02</span><span class="index">이해관계자</span></li>
+                        <li><span class="num">03</span><span class="index">중대성 평가</span></li>
+                        <li><span class="num">04</span><span class="index">중대 이슈 관리 및 보고</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="https://sustainability.coway.co.kr/images/main/highlight-img-1.jpg" alt="s1">
+                        <div class="txt2">
+                            <p><span>01</span>지속가능경영 체계</p>
+                            <p>
+                                코웨이는 환경, 사회, 경제적 지속 가능성을 위해 수립한 목표와 추진전략을 이행하여 지속가능경영을 선도할 것입니다.
+                            </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://sustainability.coway.co.kr/images/main/highlight-img-2.jpg" alt="s2">
+                        <div class="txt2">
+                            <p><span>02</span>이해관계자</p>
+                            <p>
+                                코웨이는 중요 이슈에 대한 이해관계자의 참여와 소통을 독려함으로써
+                                경영의 투명성 및 효율성을 제고하고 신뢰성 있는 관계를 구축해 나가고 있습니다.
+                            </p>
+                        </div>
+                        </div>
+                      <div class="swiper-slide">
+                        <img src="https://sustainability.coway.co.kr/images/main/highlight-img-3.jpg" alt="s3">
+                        <div class="txt2">
+                            <p><span>03</span>중대성 평가</p>
+                            <p>
+                                내부적 관점과 외부적 관점을 모두 고려하여 중대 이슈를 도출하였으며
+                                이와 관련된 활동, 성과 및 목표를 보고서에 상세히 담았습니다.                                              
+                            </p>
+                        </div>
+                        </div>
+                      <div class="swiper-slide">
+                        <img src="https://sustainability.coway.co.kr/images/main/highlight-img-4.jpg" alt="s4">
+                        <div class="txt2">
+                            <p><span>04</span>중대 이슈 관리 및 보고</p>
+                            <p>
+                                코웨이는 ESG경영을 고도화하고 외부 평가에 적극적으로 대응하고자
+                                중대성 평가 결과를 ESG위원회에 보고하고 있습니다.                        
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        let list = document.querySelectorAll(".list ul li");
+        list[0].classList.add("on");
+
+        var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          autoplay: {
+            delay: 3000,
+          },
+          on: {
+            slideChange: function(){
+                console.log(this.realIndex);
+                for(let i=0;i<4;i++){
+                    list[i].classList.remove("on");
+                }
+                list[this.realIndex].classList.add("on");
+            }
+          }
+        });
+        list.forEach(function(v,k){
+            v.onmouseenter = function(){
+                swiper.slideTo(k);
+                swiper.autoplay.stop();
+            }
+            v.onmouseleave = function(){
+                swiper.autoplay.start();
+            }
+        });
+      </script>
+</body>
+</html>
+<!-- list li도 0,1,2,3 순으로, slide도 0,1,2,3순으로 있기 때문에 가능 -->
