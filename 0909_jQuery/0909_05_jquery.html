@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+           $("a").click(function(){
+            $(this).text("변경함");
+           });
+           $('a[target="_blank"]').css("color","red");
+           // target이 _blank인 요소만 컬러를 빨간색으로 바꿔줌
+           $('a[target!="_blank"]').css("color","#000").css("textDecoration","none");
+           //  target이 _blank가 아닌 요소만
+           $(":button").css("background","blue");
+           $("input:even").css("background","yellow");
+           $("input:odd").css("background","red");
+        // 인덱스 번호로 따질 경우 0부터 시작 그래서 even(짝수)의 경우 0,2,4를 선택하고 odd(홀수)의 경우 1,3을 선택함
+            $("input:first-of-type").css("background","green");
+            $("p:only-child").css("border","1px solid");
+            // 부모의 유일한 자식인 모든 <p> 요소
+            $("p:only-of-type").css("border","1px solid");
+            // 해당 유형의 부모의 유일한 자식인 모든 <p> 요소
+
+        });
+    </script>
+</head>
+<body>
+    <a href="#" target="_blank">링크태그</a>
+    <a href="#" target="_new">링크태그</a>
+    <a href="#">링크태그</a>
+    <a href="#">링크태그</a>
+    <a href="#">링크태그</a>
+    <input type="button" value="01">
+    <input type="button" value="02">
+    <input type="button" value="03">
+    <input type="button" value="04">
+    <input type="button" value="05">
+    <div><p>문단태그</p></div>
+    <div>
+        <p>문단태그</p>
+        <a href="#">링크태그</a>
+    </div>
+</body>
+</html>

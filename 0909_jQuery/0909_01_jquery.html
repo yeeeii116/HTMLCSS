@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jquery.com에서 다운로드 누르고 주소 복붙 -->
+    <script>
+        /* document.addEventListener("DOMContentLoaded",function(){
+            // document.getElementById("demo").innerText = "제이쿼리";
+            document.getElementById("demo").textContent = "제이쿼리";
+        }); */
+        // 위에는 돔 구조만 읽어오는 것
+        
+        /* $(document).ready(function(){
+         $("#demo").text("제이쿼리");
+        });
+       // 위에부터 읽은 코드에는 데모가 없기 때문에 준비가 완료되면 실행할 수 있게 $(document).ready(function(){}); */
+    </script>
+</head>
+<body>
+    <p id="demo">jQuery</p>
+
+    <script>
+        $("#demo").text("제이쿼리");
+        // body에 적을 경우에는 이미 위에 구문을 실행했기 때문에 ready 메소드를 사용할 필요가 없음
+    </script>
+</body>
+</html>

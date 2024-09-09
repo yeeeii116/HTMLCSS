@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            // $('a[target="_blank"] + a').css("color","red");
+            // target이 _blank인 a의 요소 옆에 있는 a 요소
+            // $('a[target="_blank"] ~ a').css("color","red");
+            // target이 _blank인 a의 요소 뒤에 나타나는 모든 <a> 요소
+            // $("a:eq(1)").css("color","red");
+            // 목록의 두 번째 요소(인덱스는 0부터 시작)
+            // $("a:lt(1)").css("color","red");
+            // lt(x) 인덱스가 1미만인 요소 나열. <> gt(x) 인덱스가 1보다 큰 요소 나열
+            // $("a:not(:eq(1))").css("color","red");
+            // 목록(인덱스)의 두번째요소가 아닌 모든 a 요소
+            $("a:contains('링크')").css("color","red");
+            // '링크' 텍스트를 포함하는 모든 a요소
+            // $("div:has(p)").css("border","1px solid");
+            // <p> 요소가 있는 모든 <div> 요소
+            $("p:parent").css("border","1px solid");
+            // p의 부모를 찾는게 아니라 p가 부모가 되는 요소를 찾음
+        });
+    </script>
+</head>
+<body>
+    <a href="#" target="_blank">링크태그</a>
+    <a href="#" target="_new">링크태그</a>
+    <a href="#">링크태그</a>
+    <a href="#">링크태그</a>
+    <a href="#">링크태그</a>
+    <input type="button" value="01">
+    <input type="button" value="02">
+    <input type="button" value="03">
+    <input type="button" value="04">
+    <input type="button" value="05">
+    <div><p>문단태그</p></div>
+    <div>
+        <p>문단태그</p>
+        <a href="#">링크태그</a>
+    </div>
+</body>
+</html>

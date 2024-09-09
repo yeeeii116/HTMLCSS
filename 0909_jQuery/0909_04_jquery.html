@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- jquery cdn > uncompressed -->
+    <script>
+        $(function(){
+            $("p:nth-child(2)").css("color","red");
+            $("p:nth-child(3)").css("display","none");
+            $("p:nth-child(4)").hide();
+            $("p:nth-child(3)").css("display","");
+            // 속성값을 빈칸으로 둘 경우 기본 속성값으로
+            $("p:nth-child(4)").show();
+            $("p:nth-child(5)").remove();
+            // hide는 요소 숨기기, remove는 요소 제거
+            let node = $("#demo").parent().prop("nodeName");
+            console.log(node);
+            // HTML 요소의 부모를 반환합니다
+        });
+    </script>
+</head>
+<body>
+    <p id="demo">jQuery</p>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+</body>
+</html>
