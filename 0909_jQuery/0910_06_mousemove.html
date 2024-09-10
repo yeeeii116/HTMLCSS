@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{height: 3000px;margin-top: 1000px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            $(document).mousemove(function(e){
+                $(".cx").text(e.clientX); //스크롤 내려가도 좌표값 동일
+                $(".cy").text(e.clientY);
+                $(".px").text(e.pageX); // 스크롤 내려간 만큼 좌표값 포함
+                $(".py").text(e.pageY);
+                $(".sx").text(e.screenX); // 현재 디바이스 창을 기준으로 좌표값
+                $(".sy").text(e.screenY);
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>clientx : <span class="cx">0</span></p>
+    <p>clienty : <span class="cy">0</span></p>
+    <p>pagex : <span class="px">0</span></p>
+    <p>pagey : <span class="py">0</span></p>
+    <p>screenx : <span class="sx">0</span></p>
+    <p>screeny : <span class="sy">0</span></p>
+</body>
+</html>

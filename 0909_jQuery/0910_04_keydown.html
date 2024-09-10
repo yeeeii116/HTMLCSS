@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{width: 30px;height: 30px;border-radius: 50%;background: #ccc;position: relative;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+       $(function(){
+         $(document).keydown(function(e){
+            console.log(e.keyCode);
+            if(e.keyCode == 39){
+                //오른쪽 방향키 누를때
+                $("p").css("left","+=10px");
+            }else if(e.keyCode == 37){
+                //왼쪽 방향키 누를때
+                $("p").css("left","-=10px");
+            }else if(e.keyCode == 38){
+                //위 방향키 누를때
+                $("p").css("top","-=10px")
+            }else if(e.keyCode == 40){
+                //아래 방향키 누를때
+                $("p").css("top","+=10px")
+            }
+        })
+            // $(document).keyup(function(e){
+            // $(document).keypress(function(e){
+            //keyup 키보드를 눌렀다 뗐을 때, keydown은 눌렀을 때+꾹 눌렀을 때
+            //keypress는 꾹 눌렀을 때, 방향키 등은 안됨
+       });
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

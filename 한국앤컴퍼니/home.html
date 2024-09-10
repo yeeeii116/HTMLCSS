@@ -67,15 +67,26 @@
 
         .sec3{width: 100%;}
         .sec3 > ul{width: 1180px;height: 457px;margin: 0 auto;}
-        .sec3 > ul li ul{display: flex;flex-direction: column;}
-        .sec3 > ul li ul li{display: flex;justify-content: space-between;align-items: center;}
+        .sec3 > ul li ul{}
+        .sec3 > ul li ul li{display: flex;justify-content: space-between;align-items: center;width: 100%;height: 457px;}
+        .sec3 > ul li ul li:nth-child(2){flex-direction: row-reverse;}
         .sec3 > ul li ul li .s3_txtbox .s3_list{display: flex;gap: 10px;margin-bottom: 24px;}
-        .sec3 > ul li ul li .s3_txtbox .s3_list a{display: block;border: 1px solid #ccc;font-size: 12px;color: #000;margin: 0 2px;padding: 10px 20px 8px;line-height: 12px;font-family: HankookKRTTFRegular;}
+        .sec3 > ul li ul li .s3_txtbox .s3_list a{display: block;border: 1px solid #ccc;font-size: 12px;color: #000;margin: 0 2px;padding: 10px 20px 8px;line-height: 12px;font-family: HankookKRTTFRegular;position: relative;}
+
         .sec3 > ul li ul li .s3_txtbox .s3_txt h3{font-family: HankookKRTTFLight;font-size: 40px;margin-bottom: 16px;}
-        .sec3 > ul li ul li .s3_txtbox .s3_txt p{font-family: HankookKRTTFLight;font-size: 16px;margin-bottom: 20px;}
-        .sec3 > ul li ul li .s3_txtbox .s3_txt a span{position: relative;}
+        .sec3 > ul li ul li .s3_txtbox .s3_txt p{font-family: HankookKRTTFLight;font-size: 16px; margin-bottom: 20px;}
+        .sec3 > ul li ul li .s3_txtbox .s3_txt a span{display: inline-block; position: relative;color: #000;font-size: 0;font-weight: bold;width: 150px;height: 48px;line-height: 48px;text-transform: capitalize;transition: 0.3s ease-in-out;}
+        .sec3 > ul li ul li .s3_txtbox .s3_txt a span:hover{font-size: 16px;font-weight: bold;}
         .sec3 > ul li ul li .s3_txtbox .s3_txt a span::after{content: "";position: absolute;top: 0; width: 48px;height: 48px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-position: -432px -240px;background-repeat: no-repeat;margin-left: 10px;vertical-align: middle;}
         
+        .sec3 > ul li ul li .s3_imgbox{width: 580px;height: 337px;overflow: hidden;}
+        .sec3 > ul li ul li .s3_imgbox img{transform: scale(1);transition: 0.5s;}
+        .sec3 > ul li ul li .s3_imgbox img:hover{transform: scale(1.1);}
+
+        .sec4{width: 100%;height: 424px;}
+        .sec4 .s4_inner{width: 1180px;height: 100%; margin: 0 auto;}
+        .sec4 .s4_inner .s4_txtbox{width: 580px;height: 168px;}
+
 
 
         
@@ -179,49 +190,56 @@
                                     <a href="#"><span class="more">read more</span></a>
                                 </div>
                             </div>
-                            <div class="3s_imgbox">
-                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b03.jpg?a=0.2674378800718835" alt="s3_1">
+                            <div class="s3_imgbox">
+                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b03.jpg?a=0.8707287855402337" alt="s3_1">
                             </div>
                         </li>
                         <li>
-                            <div class="3s_txtbox">
+                            <div class="s3_txtbox">
                                 <div class="s3_list">
-                                    <ul>
-                                        <li><a href="">#Mobility Culture</a></li>
-                                        <li><a href="">#Interview</a></li>
-                                    </ul>
+                                        <a href="">#Mobility Culture</a>
+                                        <a href="">#Brand</a>
+                                        <a href="">#HankookTire</a>
                                 </div>
                                 <div class="s3_txt">
-                                    <h3>모터쇼의 진화, BIMOS 2024</h3>
-                                    <p>부산 모빌리티쇼 탐방기</p>
+                                    <h3>전동화 깃발 향해 달리는<br>‘성난 황소’</h3>
+                                    <p>람보르기니</p>
                                     <a href="#"><span class="more">read more</span></a>
                                 </div>
                             </div>
-                            <div class="3s_imgbox">
-                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b03.jpg?a=0.2674378800718835" alt="s3_1">
+                            <div class="s3_imgbox">
+                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b04.jpg?a=0.5914432188630598" alt="s3_1">
                             </div>
                         </li>
                         <li>
-                            <div class="3s_txtbox">
+                            <div class="s3_txtbox">
                                 <div class="s3_list">
-                                    <ul>
-                                        <li><a href="">#Mobility Culture</a></li>
-                                        <li><a href="">#Interview</a></li>
-                                    </ul>
+                                        <a href="">#Hihg-tech</a>
+                                        <a href="">#People & Culture</a>
+                                        <a href="">#Video</a>
                                 </div>
                                 <div class="s3_txt">
-                                    <h3>모터쇼의 진화, BIMOS 2024</h3>
-                                    <p>부산 모빌리티쇼 탐방기</p>
+                                    <h3>우주 기반의 B2C 서비스</h3>
+                                    <p>인공위성의 영향력</p>
                                     <a href="#"><span class="more">read more</span></a>
                                 </div>
                             </div>
-                            <div class="3s_imgbox">
-                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b03.jpg?a=0.2674378800718835" alt="s3_1">
+                            <div class="s3_imgbox">
+                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240726/main_b03.jpg?a=0.9639384445113834" alt="s3_1">
                             </div>
                         </li>
                     </ul>
                 </li>
             </ul>
+        </div>
+        <div class="sec4">
+            <div class="s4_inner">
+                <div class="s4_txtbox">
+                    <p><a href="#">한 시대를 풍미한 걸작들</a></p>
+                    <p>과거 혁신적인 상품</p>
+                    <a href="#"><span class="more">read more</span></a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
