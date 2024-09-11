@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="xeicon.css">
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        select{border: none;background: none;color: #ccc;font-size: 16px;}
+        header{position: absolute;top: 0;width: 100%;height: 75px;z-index: 999;}
+        header .top{width: 100%;max-width: 1720px;margin: 10px auto 0;display: flex;justify-content: space-between;align-items: center;}
+        header .top .logo{width: 150px;height: 75px;position: relative;}
+        header .top .logo a{display: block;width: 150px;height: 24px;background-image: url(https://glasslock.co.kr/pages/layout/_glasslock/images/common/logo.svg);background-size: contain;position: absolute;top: 50%;transform: translateY(-50%);}
+        header .nav{display: flex;justify-content: space-between;}
+        header .nav li{padding: 0 50px;}
+        header .nav li a{display: inline-block;line-height: 50px;font-weight: bold;color: #fff;font-size: 18px;}
+        header .nav li a:hover{color: #003E86;}
+        header .top_right{display: flex;gap: 10px;}
+        header .top_right p{width: 111px;height: 28px;text-align: center;border: 1px solid #fff;border-radius: 20px;line-height: 26px;padding: 0 12px;}
+        header .top_right p a{display: inline-block;width: 100%;height: 100%; color: #fff;}
+        header .top_right p a img{width: 20px;height: 20px;object-fit: cover;vertical-align: middle;filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg) brightness(107%) contrast(100%);}
+
+        .sec01{width: 100%;height: 100vh;}
+        .sec01 video{width: 100%;height: 100%;object-fit: cover;}
+
+        .swiper {width: 100%;height: 100%;}
+        .swiper-slide {text-align: center;font-size: 18px;background: #fff;display: flex;justify-content: center;align-items: center;}
+        .swiper-slide img {display: block;width: 100%;height: 100%;object-fit: cover;}
+        .swiper-pagination-bullet {width: 20px;height: 20px;text-align: center;line-height: 20px;font-size: 12px;color: #000;opacity: 1;background: rgba(255, 255, 255, 0.2);}
+        .swiper-pagination-bullet-active {color: #fff;background: #003E86;}
+
+        .sec02{width: 100%;margin: 100px 0;}
+        .sec02 .sec02_wrap{width: 100%;max-width: 1200px;margin: 0 auto;display: flex;gap: 150px;}
+        .sec02 .sec02_wrap .s02_img{width: 398px;height: 500px;border-radius: 200px 200px 0 0;overflow: hidden;background-image: url(https://glasslock.co.kr/pages/layout/_glasslock/images/main/vis1-1.jpg);background-size: cover;background-position: 70% center;}
+        .sec02 .sec02_wrap .s02_txt{padding-top: 100px;font-size: 24px;}
+        .sec02 .sec02_wrap .s02_txt img{width: 525px;height: 84px;object-fit: contain;}
+        .sec02 .sec02_wrap .s02_txt p:nth-child(2){margin-top: 30px;padding-left: 5px;}
+        .sec02 .sec02_wrap .s02_txt span{display: inline-block; margin-top: 50px;margin-left: 5px;}
+        .sec02 .sec02_wrap .s02_txt span a{display: inline-block;height: 100%;color: #333;padding: 7px 25px;border: 1px solid #333;border-radius: 30px;text-transform: capitalize;}
+        .sec02 .sec02_wrap .s02_txt span i{margin-left: 10px;}
+
+        .sec03{width: 100%;height: 600px;background-image: url(https://glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/cont_img_02-1.jpg);background-size: 100%;background-position: center; overflow: hidden;position: relative;transition: 0.5s;}
+        .sec03:hover{background-size: 110%;}
+        .sec03::after{content: "";position: absolute;top: 0;left: 0;bottom: 0;right: 0;background: rgba(0, 0, 0, 0.5);}
+        .sec03 .sec03_wrap{width: 100%;height: 100%;max-width: 1200px;margin: 0 auto;display: flex;justify-content: center;align-items: center;text-align: center;}
+        .sec03 .sec03_wrap .s03_txt{height: 200px;position: relative;z-index: 1;}
+        .sec03 .sec03_wrap .s03_txt p{font-size: 36px;color: #fff;margin-bottom: 40px;}
+        .sec03 .sec03_wrap .s03_txt span a{display: inline-block;color: #fff;padding: 7px 25px;border: 1px solid #fff;border-radius: 30px;text-transform: capitalize;}
+        .sec03 .sec03_wrap .s03_txt span i{margin-left: 10px;}
+
+    </style>
+
+</head>
+<body>
+    <div class="brand_wrap">
+        <header>
+            <div class="top">
+                <div class="logo"><a href="#"></a></div>
+                <ul class="nav">
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">INNOVATION</a></li>
+                    <li><a href="#">BRANDS</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">ESG</a></li>
+                </ul>
+                <div class="top_right">
+                    <p>
+                        <a href="#"><span><img src="https://glasslock.co.kr/pages/layout/_glasslock/images/common/ico_topmall_cart_bk.svg" alt="cart_bk"></span> 글라스락몰</a>
+                    </p>
+                    <select name="lang" id="lang">
+                        <option value="">한국어</option>
+                        <option value="서울">English</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <section class="sec01">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <video autoplay muted loop>
+                        <source src="https://files.deweb.kr/glasslock/movie/glasslock_movie_ver2.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="sec02">
+            <div class="sec02_wrap">
+                <div class="s02_img"></div>
+                <div class="s02_txt">
+                    <p><img src="https://glasslock.co.kr/pages/layout/_glasslock/images/common/logo.svg" alt="logo"></p>
+                    <p><strong>자연과 사람 모두에게 건강한 그릇을 만듭니다.</strong><br>
+                        가장 강하고 안전한 유리를 위해 50년 이상 달려온 우리는<br>
+                        1200도 이상의 열정으로 유리를 녹여<br>
+                        까다로운 장신정신이 만들어낸 독자적인 기술을 더합니다.
+                    </p>
+                    <span><a href="#">view more<i class="xi-plus-min"></i></a></span>
+                </div>
+            </div>
+        </section>
+        <section class="sec03">
+            <div class="sec03_wrap">
+                <div class="s03_txt">
+                    <p>지금 이 순간에도 끊임 없는 연구와 수많은 시험을 거쳐 가며<br>
+                        더 강하고 더 안전한 유리를 만들고 있습니다.
+                    </p>
+                    <span><a href="#">view more<i class="xi-plus-min"></i></a></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+        });
+      </script>
+</body>
+</html>
