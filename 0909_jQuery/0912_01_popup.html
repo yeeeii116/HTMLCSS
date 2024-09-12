@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.on{height: 100vh;overflow: hidden;}
+        /* 팝업창이 떴을 때 스크롤이 안내려가도록 */
+        .popup{display: none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);}
+        p{position: relative;z-index: 999;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            let bool = true;
+            $("p").click(function(){
+                if(bool){
+                     $(".popup").css("display","block");
+                     $("body").addClass("on");
+                }else{
+                    $(".popup").css("display","none");
+                    $("body").removeClass("on");
+                }
+               bool = !bool;
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>클릭</p>
+    <div class="popup"></div>
+    <div>
+        Lorem Ipsum
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+        
+        freestar
+        
+        freestar
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies vitae libero eu suscipit. Aenean et enim quam. Aenean a pretium sem. Pellentesque at mi vitae leo condimentum elementum vel eu mi. Nullam non tellus mauris. Donec vitae orci id mi commodo interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ultricies dolor magna, a interdum sem suscipit ut. In dapibus pulvinar blandit. Duis dapibus, nisl aliquet sodales porttitor, massa metus scelerisque quam, non porta magna sapien sed tortor. Aenean metus ante, lobortis vitae posuere in, laoreet a tortor.
+        
+        Morbi tristique neque id dictum pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sollicitudin velit ut laoreet vestibulum. Sed id turpis id lorem sodales sodales ac in enim. Nunc dignissim volutpat sem sed suscipit. Suspendisse sapien purus, elementum id porttitor non, faucibus nec magna. Vivamus blandit tellus eget lorem tincidunt, ac commodo turpis faucibus. Pellentesque in mattis nibh, a posuere arcu. Vivamus augue tortor, pharetra quis nulla eget, lacinia ultricies lacus. Donec justo mauris, laoreet non mollis sed, blandit at dolor. Sed ut metus magna. In scelerisque mauris at quam molestie ornare. Nunc placerat lobortis pretium.
+        
+        Proin nulla leo, lobortis sit amet nibh volutpat, feugiat lobortis massa. Fusce condimentum elementum arcu maximus malesuada. Quisque sit amet tellus eros. Curabitur ultrices, massa eget condimentum dapibus, enim neque rhoncus justo, non consectetur tellus metus at urna. Nullam interdum augue in nunc fringilla, in lacinia orci cursus. Maecenas semper lacus sodales dictum blandit. Sed sollicitudin diam est. Vestibulum ut est convallis, maximus dui in, consectetur felis. Donec scelerisque orci id molestie vulputate. Integer eros odio, posuere vitae feugiat ut, semper ac leo. Aenean vel mauris quis nisl scelerisque imperdiet. Etiam vel vestibulum orci.
+        
+        Etiam venenatis efficitur magna. Donec mattis eros fringilla posuere egestas. Vivamus cursus cursus mi, et ullamcorper felis ultrices id. Suspendisse accumsan id arcu ut porttitor. Sed vestibulum efficitur placerat. Mauris sit amet accumsan velit. Aenean sit amet enim egestas, egestas mi sed, sagittis elit. Donec vulputate risus nec arcu pretium ullamcorper. Ut fringilla, erat at tempor iaculis, arcu mi mattis magna, vel commodo orci risus id dolor. Sed tincidunt gravida tempor.
+        
+        Nunc ante augue, interdum ac bibendum at, semper vel felis. Nam risus elit, laoreet ut ex non, mattis venenatis orci. Aliquam bibendum nunc ultricies rutrum dignissim. Maecenas vitae nisl consequat nibh fermentum pretium ut finibus turpis. Nam sollicitudin dolor et urna vehicula mollis. Nunc et risus sit amet leo euismod iaculis et bibendum purus. Nulla facilisi. Donec at orci dolor. Morbi feugiat pharetra suscipit. Mauris vehicula laoreet tempus. Suspendisse magna justo, sagittis non justo vel, tristique pulvinar augue. Maecenas vehicula sed ipsum vel lacinia. Mauris eu eros felis.
+        
+        Nam efficitur vulputate ligula sed fermentum. Integer at nibh tincidunt, auctor massa sit amet, aliquet neque. Nulla fermentum egestas maximus. Nulla in erat commodo, viverra felis et, pulvinar lacus. Praesent nec est elementum, congue est ac, hendrerit odio. Integer imperdiet nisi vitae eros cursus commodo. Cras volutpat et leo vel tempus. Aliquam commodo dolor non mattis scelerisque. Phasellus commodo lacus ac euismod porta.
+        
+        Integer elementum placerat venenatis. Praesent pulvinar convallis eleifend. Fusce magna lorem, lobortis nec venenatis at, convallis vitae elit. Etiam pharetra massa ut tellus rutrum, sed gravida sapien ullamcorper. Aliquam vel erat nec diam feugiat finibus. Aenean luctus mattis molestie. Quisque tellus nulla, ultricies et ipsum id, porta auctor tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer efficitur, arcu nec lacinia pulvinar, enim elit cursus elit, vitae tempor tellus sem ac dui.
+        
+        Curabitur elit metus, dapibus eu mauris vitae, sodales iaculis enim. Etiam facilisis in quam ut sagittis. Praesent ultrices vitae tellus sit amet faucibus. Nulla dapibus cursus felis. Ut faucibus elit at neque luctus, eget fermentum arcu sodales. Fusce laoreet libero ut lacus tristique, in iaculis metus consequat. Etiam finibus pulvinar felis, in bibendum est convallis sit amet. Quisque et diam id sapien dignissim ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer eu risus mauris. Praesent ullamcorper ante sit amet leo iaculis fermentum. Proin eget eleifend massa. Duis ligula leo, venenatis vitae erat a, egestas malesuada quam. Suspendisse potenti. Nullam eu turpis vel augue iaculis dapibus. In sem nibh, iaculis vel egestas vitae, dignissim sit amet sem.
+        
+        Sed tempor vulputate odio eu imperdiet. Vivamus dignissim porttitor lacinia. Cras ac metus quis turpis consequat volutpat. Vestibulum tincidunt aliquet est sed porta. Pellentesque finibus risus ac lacus condimentum, sit amet dictum sapien aliquet. Proin ex metus, egestas et pulvinar in, dictum ultrices nisi. Vestibulum ac tempus nisl, in ullamcorper ex. Donec vel neque vitae quam aliquet vulputate. Maecenas pulvinar ut ex sit amet pellentesque.
+        
+        Proin sit amet eleifend velit. Donec in interdum neque. Duis eget ante tincidunt, sagittis mi eu, varius nulla. Nunc quis metus tortor. Aliquam dapibus accumsan sollicitudin. Nullam ultrices tristique sagittis. Sed gravida sagittis augue, nec ornare lectus suscipit eu. Morbi imperdiet, dui non tincidunt sollicitudin, erat arcu tempus tellus, et euismod ligula metus non enim. Sed laoreet orci euismod metus placerat placerat.
+        
+        Generated 10 paragraphs, 839 words, 5693 bytes of Lorem Ipsum
+        Lorem Ipsum
+        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+        
+        freestar
+        
+        freestar
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies vitae libero eu suscipit. Aenean et enim quam. Aenean a pretium sem. Pellentesque at mi vitae leo condimentum elementum vel eu mi. Nullam non tellus mauris. Donec vitae orci id mi commodo interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ultricies dolor magna, a interdum sem suscipit ut. In dapibus pulvinar blandit. Duis dapibus, nisl aliquet sodales porttitor, massa metus scelerisque quam, non porta magna sapien sed tortor. Aenean metus ante, lobortis vitae posuere in, laoreet a tortor.
+        
+        Morbi tristique neque id dictum pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sollicitudin velit ut laoreet vestibulum. Sed id turpis id lorem sodales sodales ac in enim. Nunc dignissim volutpat sem sed suscipit. Suspendisse sapien purus, elementum id porttitor non, faucibus nec magna. Vivamus blandit tellus eget lorem tincidunt, ac commodo turpis faucibus. Pellentesque in mattis nibh, a posuere arcu. Vivamus augue tortor, pharetra quis nulla eget, lacinia ultricies lacus. Donec justo mauris, laoreet non mollis sed, blandit at dolor. Sed ut metus magna. In scelerisque mauris at quam molestie ornare. Nunc placerat lobortis pretium.
+        
+        Proin nulla leo, lobortis sit amet nibh volutpat, feugiat lobortis massa. Fusce condimentum elementum arcu maximus malesuada. Quisque sit amet tellus eros. Curabitur ultrices, massa eget condimentum dapibus, enim neque rhoncus justo, non consectetur tellus metus at urna. Nullam interdum augue in nunc fringilla, in lacinia orci cursus. Maecenas semper lacus sodales dictum blandit. Sed sollicitudin diam est. Vestibulum ut est convallis, maximus dui in, consectetur felis. Donec scelerisque orci id molestie vulputate. Integer eros odio, posuere vitae feugiat ut, semper ac leo. Aenean vel mauris quis nisl scelerisque imperdiet. Etiam vel vestibulum orci.
+        
+        Etiam venenatis efficitur magna. Donec mattis eros fringilla posuere egestas. Vivamus cursus cursus mi, et ullamcorper felis ultrices id. Suspendisse accumsan id arcu ut porttitor. Sed vestibulum efficitur placerat. Mauris sit amet accumsan velit. Aenean sit amet enim egestas, egestas mi sed, sagittis elit. Donec vulputate risus nec arcu pretium ullamcorper. Ut fringilla, erat at tempor iaculis, arcu mi mattis magna, vel commodo orci risus id dolor. Sed tincidunt gravida tempor.
+        
+        Nunc ante augue, interdum ac bibendum at, semper vel felis. Nam risus elit, laoreet ut ex non, mattis venenatis orci. Aliquam bibendum nunc ultricies rutrum dignissim. Maecenas vitae nisl consequat nibh fermentum pretium ut finibus turpis. Nam sollicitudin dolor et urna vehicula mollis. Nunc et risus sit amet leo euismod iaculis et bibendum purus. Nulla facilisi. Donec at orci dolor. Morbi feugiat pharetra suscipit. Mauris vehicula laoreet tempus. Suspendisse magna justo, sagittis non justo vel, tristique pulvinar augue. Maecenas vehicula sed ipsum vel lacinia. Mauris eu eros felis.
+        
+        Nam efficitur vulputate ligula sed fermentum. Integer at nibh tincidunt, auctor massa sit amet, aliquet neque. Nulla fermentum egestas maximus. Nulla in erat commodo, viverra felis et, pulvinar lacus. Praesent nec est elementum, congue est ac, hendrerit odio. Integer imperdiet nisi vitae eros cursus commodo. Cras volutpat et leo vel tempus. Aliquam commodo dolor non mattis scelerisque. Phasellus commodo lacus ac euismod porta.
+        
+        Integer elementum placerat venenatis. Praesent pulvinar convallis eleifend. Fusce magna lorem, lobortis nec venenatis at, convallis vitae elit. Etiam pharetra massa ut tellus rutrum, sed gravida sapien ullamcorper. Aliquam vel erat nec diam feugiat finibus. Aenean luctus mattis molestie. Quisque tellus nulla, ultricies et ipsum id, porta auctor tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer efficitur, arcu nec lacinia pulvinar, enim elit cursus elit, vitae tempor tellus sem ac dui.
+        
+        Curabitur elit metus, dapibus eu mauris vitae, sodales iaculis enim. Etiam facilisis in quam ut sagittis. Praesent ultrices vitae tellus sit amet faucibus. Nulla dapibus cursus felis. Ut faucibus elit at neque luctus, eget fermentum arcu sodales. Fusce laoreet libero ut lacus tristique, in iaculis metus consequat. Etiam finibus pulvinar felis, in bibendum est convallis sit amet. Quisque et diam id sapien dignissim ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer eu risus mauris. Praesent ullamcorper ante sit amet leo iaculis fermentum. Proin eget eleifend massa. Duis ligula leo, venenatis vitae erat a, egestas malesuada quam. Suspendisse potenti. Nullam eu turpis vel augue iaculis dapibus. In sem nibh, iaculis vel egestas vitae, dignissim sit amet sem.
+        
+        Sed tempor vulputate odio eu imperdiet. Vivamus dignissim porttitor lacinia. Cras ac metus quis turpis consequat volutpat. Vestibulum tincidunt aliquet est sed porta. Pellentesque finibus risus ac lacus condimentum, sit amet dictum sapien aliquet. Proin ex metus, egestas et pulvinar in, dictum ultrices nisi. Vestibulum ac tempus nisl, in ullamcorper ex. Donec vel neque vitae quam aliquet vulputate. Maecenas pulvinar ut ex sit amet pellentesque.
+        
+        Proin sit amet eleifend velit. Donec in interdum neque. Duis eget ante tincidunt, sagittis mi eu, varius nulla. Nunc quis metus tortor. Aliquam dapibus accumsan sollicitudin. Nullam ultrices tristique sagittis. Sed gravida sagittis augue, nec ornare lectus suscipit eu. Morbi imperdiet, dui non tincidunt sollicitudin, erat arcu tempus tellus, et euismod ligula metus non enim. Sed laoreet orci euismod metus placerat placerat.
+        
+        Generated 10 paragraphs, 839 words, 5693 bytes of Lorem Ipsum
+    </div>
+</body>
+</html>

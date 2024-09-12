@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    
+    .swiper {
+      width: 684px;
+      height: 460px;
+      padding-bottom: 30px;
+      overflow: visible;
+    }
+
+    .swiper-slide {
+        /* width: 684px;
+        height: 100%; */
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202408/63d780ad-de97-442a-8b86-e8b39b91b55c.png" alt="1">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202408/c1725484-8814-4259-9189-6a398fcb4107.png" alt="2">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202408/1515a5de-d655-4d57-8548-c2bacd778ba9.png" alt="3">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202409/e9357e10-f3a1-40d4-abe6-4b81a4084133.png" alt="4">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202408/412948e6-89bb-4ae2-b8a2-e871176f6346.png" alt="5">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202408/bbe0c8f8-180b-4aa0-9432-b28855ea7a87.png" alt="6">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202408/5bae28c2-2d15-482f-8781-1a1d62af5d4a.png" alt="7">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://cdn.ypbooks.co.kr/image/banner/202409/9398e4c0-b385-4e1d-a127-9cbbf342ca04.png" alt="8">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+    //   slidesPerView: 1,
+        loop: true,
+      spaceBetween: 50,
+    //   autoplay: {
+    //     delay: 3000,
+    //   },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
