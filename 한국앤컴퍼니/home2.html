@@ -130,8 +130,44 @@
         .sec6 .sec6_con > ul li ul li img{transition: 0.5s;width: 100%;}
         .sec6 .sec6_con > ul li ul li:hover img{width: 120%;}
 
-        footer{width: 100%;height: 400px;background: #000;position: relative;}
-        footer .go_top{position: absolute;right: 0;top: -50px;width: 48px;height: 48px;background-color: #000;border-radius: 50%;text-align: center;line-height: 48px;}
+        footer{width: 100%;height: auto;background: #000;position: relative;}
+        footer .go_top{position: absolute;top: -72px;right: 10px; width: 48px;height: 48px;background-color: #000;border-radius: 50%;text-align: center;z-index: 10;font-size: 10px;}
+        footer .go_top a{display: block;width: 100%;height: 100%;color: #fff;}
+        footer .go_top a p{position: relative;top: -7px;}
+        footer .go_top a span{position: relative;display: inline-block;width: 30px;height: 15px;margin-top: 13px;box-sizing: border-box;}
+        footer .go_top a span::before{content: "";position: absolute;width: 17px;height: 17px;top: 50%;left: 50%;transform: translate(-50%,-50%) rotate(45deg);border-top: 2px solid #fff;border-left: 2px solid #fff;}
+
+        footer .footwrap{width: 100%;max-width: 1180px;margin: 0 auto;}
+        footer .footwrap .footer_con{display: flex;justify-content: space-between;padding: 48px 0 16px;}
+        footer .footwrap .footer_con .footer_logo a{display: block;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);width: 112px;height: 44px;background-size: 960px;background-repeat: no-repeat;background-position: -274px 0;text-indent: -9999px;}
+
+        footer .footwrap .footer_con .footlink{display: flex;}
+        footer .footwrap .footer_con .footlink ul{width: 300px;}
+        footer .footwrap .footer_con .footlink ul:first-of-type li{width: 100%;padding-bottom: 30px;}
+        footer .footwrap .footer_con .footlink ul:first-of-type li a{display: block; font-size: 16px;height: 18px;}
+        footer .footwrap .footer_con .footlink ul:nth-of-type(2) li{padding-bottom: 20px;}
+        footer .footwrap .footer_con .footlink ul:nth-of-type(2) li a{display: block; font-size: 14px;height: 16px;}
+        footer .footwrap .footer_con .footlink ul li:last-child{padding-bottom: 0;}
+        footer .footwrap .footer_con .footlink ul li a{color: #fff;}
+
+        footer .footwrap .footlink2{padding: 22px 0;display: flex;justify-content: flex-end;}
+        footer .footwrap .footlink2 ul{width: 600px;height: 16px;display: flex;}
+        footer .footwrap .footlink2 ul li{}
+        footer .footwrap .footlink2 ul li:after{content: "";display: inline-block;vertical-align: middle;width: 1px;height: 14px;margin: 0 16px;background: rgba(255, 255, 255, 0.15);}
+        footer .footwrap .footlink2 ul li:last-child::after{height: 0;}
+        footer .footwrap .footlink2 ul li a{font-size: 14px; color: #999;}
+
+        footer .copyright{padding: 30px 0;border-top: 1px solid #1a1a1a;}
+        footer .copyright .copy{display: flex;justify-content: space-between;align-items: center;}
+        footer .copyright .copy address{font-size: 12px;color: #fff;height: 12px;}
+
+        footer .copyright .copy .lang{display: flex;font-size: 14px;}
+        footer .copyright .copy .lang li:first-child a{color: #fff;}
+        footer .copyright .copy .lang li:nth-child(2) a{color: #666;}
+        footer .copyright .copy .lang li::after{content: "";display: inline-block;vertical-align: middle;width: 1px;height: 14px;margin: 0 16px;background: rgba(255, 255, 255, 0.15);}
+        footer .copyright .copy .lang li:last-child:after{height: 0;}
+
+        
 
         
 
@@ -351,7 +387,7 @@
         <footer>
             <div class="go_top">
                 <a href="#">
-                    <span></span>TOP
+                    <span></span><p>TOP</p>
                 </a>
             </div>
             <div class="footwrap">
@@ -378,16 +414,18 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footlink2">
-                        <ul>
-                            <li><a href="#">그룹소개</a></li>
-                            <li><a href="#">채용</a></li>
-                            <li><a href="#">윤리경영 신고</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright">
-                        <div class="left"><address>ⓒ 2024 Hankook & Company Co., Ltd.</address></div>
+                </div>
+                <div class="footlink2">
+                    <ul>
+                        <li><a href="#">그룹소개</a></li>
+                        <li><a href="#">채용</a></li>
+                        <li><a href="#">윤리경영 신고</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <div class="copy">
+                        <address>ⓒ 2024 Hankook & Company Co., Ltd.</address>
                         <ul class="lang">
                             <li><a href="#">KOR</a></li>
                             <li><a href="#">ENG</a></li>

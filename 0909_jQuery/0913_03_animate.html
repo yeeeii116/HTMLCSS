@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{width: 300px;height: 300px;background: #ccc;}
+        .ball{width: 50px;height: 50px;border-radius: 50%;background: #ccc;position: relative;}
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                $("p").animate({width: "0",backgroundColor: "red"},1000,"linear");
+                /* jquery-ui가 없을 경우엔 '수치'에 의한 속성만 적용되기 때문에 backgroundColor 적용안됨 */
+            });
+            $("#move").click(function(){
+                $(".ball").animate({left:"300px"},1000)
+                            .animate({top:"300px"},1000)
+                            .animate({left:"0"},1000)
+                            .animate({top:"0"},1000);
+            });
+
+            /* setInterval(function(){
+                $("#move").click() //4초 인터벌간격을 줘서 #move를 클릭했을때 행동을 실행해줘
+            },4000) */
+            $("#move").trigger("click"); // #move 클릭 행동을 실행
+            let interval = setInterval(function(){
+                $("#move").click()
+            },4000);
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        <p></p>
+    </div>
+    <button id="btn">클릭</button>
+    <div class="ball"></div>
+    <button id="move">move</button>
+</body>
+</html>
