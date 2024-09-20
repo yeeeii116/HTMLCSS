@@ -162,12 +162,16 @@
         .youtube .youtube_item div:hover .link_deco{opacity: 1;transition: 0.5s;}
 
         .people{width: 95%;max-width: 1200px;height: 240px;margin: 0 auto; background: #f0f0f0;border-radius: 20px;position: relative;display: flex;align-items:center;justify-content: space-evenly;margin-top: 150px;}
-        .people > p:first-child > img{position: absolute;left: 10px;top: -50px;}
-        .people .txt_people{text-align: center;}
-        .people .txt_people p:first-child{font-size: 24px;color: #181818;font-family: NewOriginMyongjo;}
-        .people .txt_people p:nth-child(2){margin-top: 50px;}
+        /* .people > p:first-child > img{position: absolute;left: 10px;top: -120px;} */
+        .people img{position: relative;top: 2px;}
+        .people .swiper-slide .ilhan_txt{text-align: center;width: 700px;}
+        .people .swiper-slide .ilhan_txt p{font-size: 24px;color: #181818;font-family: NewOriginMyongjo;position: relative;top: -180px; right: -450px;}
+        /* .people .txt_people p:nth-child(2){margin-top: 50px;}
         .people .txt_people p:nth-child(2) a{display: inline-block; color: #181818;border: 1px solid #181818; border-radius: 50px;line-height: 46px;font-size: 18px;width: 220px;font-family: Pretendard;font-weight: 600;}
-        .people .txt_people p:nth-child(2) a::after{content: "";width: 9px;height: 46px;display: inline-block;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/main_arrow.png);background-repeat: no-repeat;background-position: center;vertical-align: top;background-size: contain;margin-left: 13px;}
+        .people .txt_people p:nth-child(2) a::after{content: "";width: 9px;height: 46px;display: inline-block;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/main_arrow.png);background-repeat: no-repeat;background-position: center;vertical-align: top;background-size: contain;margin-left: 13px;} */
+        .people .mySwiper2 span{position: absolute; top: 200px; transform: translateX(670px);z-index: 10;}
+        .people .mySwiper2 span a{display: inline-block; color: #181818;border: 1px solid #181818; border-radius: 50px;line-height: 46px;font-size: 18px;width: 220px;font-family: Pretendard;font-weight: 600;text-align: center;}
+        .people .mySwiper2 span a::after{content: "";width: 9px;height: 46px;display: inline-block;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/main_arrow.png);background-repeat: no-repeat;background-position: center;vertical-align: top;background-size: contain;margin-left: 13px;}
 
         .sec04{width: 100%;padding: 100px 0;}
         .sec04 .sec04_inner{width: 95%;max-width: 1200px;margin: 0 auto;}
@@ -414,10 +418,35 @@
         </div>
 
         <div class="people">
-            <p><img src="https://yuhancare.com/data/yuhancare/inc/img_new/main/ilhan1.png" alt="ilhan1"></p>
-            <div class="txt_people">
-                <p>“정직, 이것이 유한의 영원한 전통이 되어야 한다.”</p>
-                <p><a href="#">설립자 유일한</a></p>
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan1.png" alt="ilhan1">
+                        <div class="ilhan_txt">
+                            <p>“정직, 이것이 유한의 영원한 전통이 되어야 한다.”</p>
+                        </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan2.png" alt="ilhan2">
+                        <div class="ilhan_txt">
+                            <p>“기업은 한두 사람의 손에 의해서 발전되지 않는다.<br> 여러 사람의 두뇌가 참여함으로써 비로소 발전되는 것이다.”</p>
+                        </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan3.png" alt="ilhan3">
+                        <div class="ilhan_txt">
+                            <p>“기업에서 얻은 이익은 그 기업을 키워 준<br>사회에 환원하여야 한다.”</p>
+                        </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan4.png" alt="ilhan4">
+                        <div class="ilhan_txt">
+                            <p>“건강한 국민, 병들지 아니한 국민만이<br>주권을 누릴 수가 있는 것이다.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <span><a href="#">설립자 유일한</a></span>
             </div>
         </div>
 
@@ -548,6 +577,16 @@
                 v.onclick = function(){
                     swiper.slideTo(k);
                 }
+            });
+
+            var swiper2 = new Swiper(".mySwiper2", {
+                // effect:"fade",
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
             });
         </script>
     </div>
