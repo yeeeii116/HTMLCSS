@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body{display: flex;justify-content: space-around;align-items: center;min-height: 100vh;}
+        /* min-height: 100vh; 100vh보다 작아질 수 없음 */
+        .box{width: 50px;height: 50px;opacity: 0;}
+        .green{background: green;}
+        .blue{background: blue;}
+        .purple{background: purple;}
+    </style>
+</head>
+<body>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box purple"></div>
+    <div class="box purple"></div>
+    <div class="box purple"></div>
+
+    <script>
+        gsap.to(".box", {
+            duration: 3,
+            scaleY: 5,
+            delay: 1,
+            stagger: {amount: 0.5,from: 0},
+            // stagger: 0.5 / 0.5초씩 기다렸다가 하나씩 진행
+            // from:"center" 가운데부터 나옴 (gsap 홈페이지 stagger 참고)
+            // from: 0 / 인덱스번호 입력한 것부터 나옴. (인덱스번호는 0번부터 시작)
+            opacity: 1,
+        });
+    </script>
+</body>
+</html>
