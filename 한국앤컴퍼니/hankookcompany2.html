@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css">
     <style>
         @font-face {
             font-family: HankookKRTTFLight;
@@ -89,7 +90,7 @@
         .sec3 ul li .s3_txtbox .s3_list a::after{
             content: "";
             position: absolute; z-index: -1;
-            left: 0;top: -20px;width: 0;height: 150%;background: #000;transition: 0.5s;transform: scale(2) rotate(15deg);
+            left: 0;top: -20px;width: 0;height: 150%;background: #000;transition: 0.6s;transform: scale(2) rotate(15deg);
         }
         .sec3 ul li .s3_txtbox .s3_list a:hover::after{
             width: 100%;
@@ -116,14 +117,14 @@
 
         .sec5{width: 100%;height: auto;}
         .sec5 ul{width: 1180px;margin: 0 auto;}
-        .sec5 ul li{display: flex;justify-content: space-between;align-items: center;flex-direction: row-reverse; width: 100%;height: 457px;}
+        .sec5 ul li{display: flex;justify-content: space-between;align-items: center;flex-direction: row-reverse; width: 100%;height: 497px;}
         .sec5 ul li .s5_txtbox .s5_list{display: flex;gap: 10px;margin-bottom: 24px;}
         .sec5 ul li .s5_txtbox .s5_list a{display: block;border: 1px solid #ccc;font-size: 12px;color: #000;margin: 0 2px;padding: 10px 20px 8px;line-height: 12px;font-family: HankookKRTTFRegular;position: relative;overflow: hidden;}
         .sec5 ul li .s5_txtbox .s5_list a:hover{color: #fff;}
         .sec5 ul li .s5_txtbox .s5_list a::after{
             content: "";
             position: absolute; z-index: -1;
-            left: 0;top: -20px;width: 0;height: 150%;background: #000;transition: 0.5s;transform: scale(2) rotate(15deg);
+            left: 0;top: -20px;width: 0;height: 150%;background: #000;transition: 0.6s;transform: scale(2) rotate(15deg);
         }
         .sec5 ul li .s5_txtbox .s5_list a:hover::after{
             width: 100%;
@@ -142,7 +143,7 @@
         .sec5 ul li .s5_imgbox img:hover{transform: scale(1.1);}
 
         .sec6{width: 100%;padding-bottom: 140px;}
-        .sec6 .sec6_con{width: 100%;max-width: 1180px;margin: 0 auto;}
+        .sec6 .sec6_con{width: 100%;max-width: 1180px;margin: 0 auto;padding-top: 80px;}
         .sec6 .sec6_con .sec6_title{display: flex;justify-content: space-between;margin-bottom: 20px;}
         .sec6 .sec6_con .sec6_title h3{font-size: 32px;text-transform: capitalize;}
         .sec6 .sec6_con .sec6_title a span{display: inline-block; position: relative;color: #000;font-size: 0;font-weight: bold;width: 150px;height: 48px;line-height: 48px;text-transform: capitalize;transition: 0.3s ease-in-out;}
@@ -191,23 +192,77 @@
         footer .footwrap .footlink2 ul li:last-child::after{height: 0;}
         footer .footwrap .footlink2 ul li a{font-size: 14px; color: #999;}
 
-        footer .copyright{padding: 30px 0;border-top: 1px solid #1a1a1a;}
+        footer .copyright{padding: 30px 0;border-top: 1px solid #1a1a1a;line-height: 11px;}
         footer .copyright .copy{display: flex;justify-content: space-between;align-items: center;}
         footer .copyright .copy address{font-size: 12px;color: #fff;height: 12px;}
 
         footer .copyright .copy .lang{display: flex;font-size: 14px;}
+        footer .copyright .copy .lang li{line-height: 36px;}
         footer .copyright .copy .lang li:first-child a{color: #fff;}
         footer .copyright .copy .lang li:nth-child(2) a{color: #666;}
         footer .copyright .copy .lang li::after{content: "";display: inline-block;vertical-align: middle;width: 1px;height: 14px;margin: 0 16px;background: rgba(255, 255, 255, 0.15);}
         footer .copyright .copy .lang li:last-child:after{height: 0;}
+
+        footer .copyright .copy .copy_right{display: flex;align-content: center;}
+        footer .copyright .copy .copy_right .dropdown_list{display: inline-block;min-width: 220px;position: relative;}
+        footer .copyright .copy .copy_right .dropdown_list .dropdown_value{position: relative;}
+        footer .copyright .copy .copy_right .dropdown_list .dropdown_value input{width: 100%;font-size: 12px;color: #999;background-color: transparent;border: 1px solid #4d4d4d;height: 36px;padding: 11px 16px;box-sizing: border-box;min-width: 220px;vertical-align: middle;}
+        footer .copyright .copy .copy_right .dropdown_list .dropdown_value input.on{background: #000;}
+        footer .copyright .copy .copy_right .dropdown_list .dropdown_value .btn_opener{display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 100%;border: 0;cursor: pointer;background: transparent;}
+        footer .copyright .copy .copy_right .dropdown_list .dropdown_value .btn_opener i{display: inline-block;position: relative;width: 18px;height: 9px;float: right;right: 10px;}
+        footer .copyright .copy .copy_right .dropdown_list .dropdown_value .btn_opener i::before{content: "";position: absolute;top: 20%;left: 50%;width: 8px;height: 8px;transform: translate(-50%, -50%) rotate(45deg);border-right: 2px solid #999;border-bottom: 2px solid #999;}
+        footer .copyright .copy .copy_right .dropdown_list .item_list{display: none;position: absolute;bottom: 36px;left: 0;z-index: 10;width: 220px;border: 1px solid #4d4d4d;border-bottom: 0;color: #999;background: #000;padding: 12px 0;box-sizing: border-box;}
+        footer .copyright .copy .copy_right .dropdown_list .item_list.on{display: block;}
+        footer .copyright .copy .copy_right .dropdown_list .item_list a{display: block;width: 100%;padding: 10px 14px;box-sizing: border-box; border: 0;background: transparent;font-size: 12px;line-height: 1;cursor: pointer;color: #666;}
+        footer .copyright .copy .copy_right .dropdown_list .item_list a:hover{text-decoration: underline;}
+
 
         #popup{
             position: fixed;width: 100%;
             left: 100%;top: 0;height: 100vh;transition: 0.5s;z-index: 888;
         }
         #popup video{width: 100%;height: 100%;object-fit: cover;object-position: center;}
-        #pop_nav{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,0.5);}
+        #pop_nav{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,0.7);}
         #pop_nav .close{float: right;font-size: 100px;color: #fff;}
+        #pop_nav .popmenu{width: 1100px;margin: .5% auto 0;top: 25%; position: relative;}
+        #pop_nav .popmenu .pop_list{display: flex;justify-content: center;align-content: center;}
+        #pop_nav .popmenu .pop_list a{color: #fff;}
+        #pop_nav .popmenu .pop_list > li{position: relative;margin-left: 0;padding: 15px 0;line-height: 16px;}
+        #pop_nav .popmenu .pop_list > li > a{display: inline-block;font-size: 26px;line-height: 1.4;min-width: 220px;}
+        #pop_nav .popmenu .pop_list li .sub{margin-top: 40px;}
+        #pop_nav .popmenu .pop_list li .sub > li > a{display: inline-block;font-size: 16px;padding-bottom: 3px;}
+        #pop_nav .popmenu .pop_list li .sub > li:nth-child(2),
+        #pop_nav .popmenu .pop_list li .sub > li:nth-child(3),
+        #pop_nav .popmenu .pop_list li .sub > li:nth-child(4),
+        #pop_nav .popmenu .pop_list li .sub > li:nth-child(5){margin-top: 16px;}
+
+        /* .pop_ct{width: 1100px;margin: .5% auto 0;top: 30%; position: relative;} */
+        #pop_category{display: flex;justify-content: space-between;align-items: center;padding-top: 60px;}
+        #pop_category .category_link{position: relative;display: flex;align-items: center;}
+        #pop_category .category_link a{margin-left: 72px;}
+        #pop_category .category_link a:first-child{margin-left: 0;}
+        #pop_category .category_row{float: right;position: relative;max-width: 1180px;}
+        #pop_category .category_row .row_bgcolr{width: 370px;height: 70px;display: flex;justify-content: space-between;}
+        #pop_category .category_row .row_bgcolr .lang{display: flex;align-items: center;}
+        #pop_category .category_row .row_bgcolr .lang li:first-child a{color: #fff;border-bottom: 1px solid #fff;}
+        #pop_category .category_row .row_bgcolr .lang li:first-child::after{content: "";display: inline-block;vertical-align: middle;width: 1px;height: 14px;margin: 0 11px 0 16px;background: rgba(255, 255, 255, 0.15);border-bottom: none;}
+        #pop_category .category_row .row_bgcolr .lang li:nth-child(2) a{color: #666;}
+
+        #pop_category .category_row .row_bgcolr .dropdown_list{display: inline-block; position: absolute;right: 20px;top: 50%;transform: translateY(-50%);min-width: 220px;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .dropdown_value{position: relative;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .dropdown_value input{width: 100%;font-size: 12px;color: #999;background-color: transparent;border: 1px solid #4d4d4d;height: 36px;padding: 11px 16px;box-sizing: border-box;min-width: 220px;vertical-align: middle;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .dropdown_value input.on{background: #000;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .dropdown_value .btn_opener{display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 100%;border: 0;cursor: pointer;background: transparent;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .dropdown_value .btn_opener i{display: inline-block;position: relative;width: 18px;height: 9px;float: right;right: 10px;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .dropdown_value .btn_opener i::before{content: "";position: absolute;top: 50%;left: 50%;width: 8px;height: 8px;transform: translate(-50%, -50%) rotate(45deg);margin-top: -3px; border-right: 2px solid #999;border-bottom: 2px solid #999;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .dropdown_value .btn_opener i.on::before{margin-top: 3px;border-left: 2px solid #999; border-top: 2px solid #999; border-bottom: 0; border-right: 0;}
+
+        #pop_category .category_row .row_bgcolr .dropdown_list .item_list{display: none;position: absolute;bottom: 36px;left: 0;z-index: 10;width: 100%;border: 1px solid #4d4d4d;border-bottom: 0;color: #999;background: #000;padding: 12px 0;box-sizing: border-box;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .item_list.on{display: block;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .item_list a{display: block;width: 100%;padding: 10px 14px;box-sizing: border-box; border: 0;background: transparent;font-size: 12px;line-height: 1;cursor: pointer;color: #666;}
+        #pop_category .category_row .row_bgcolr .dropdown_list .item_list a:hover{text-decoration: underline;}
+        
+        
 
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -242,6 +297,32 @@
 
            $(".go_top").click(function(){
                 $("html, body").animate({scrollTop:0},800);
+           });
+
+           $(".row_bgcolr .btn_opener").click(function(){
+               if(bool){
+                    $(".row_bgcolr .item_list").addClass("on");
+                    $(".row_bgcolr .dropdown_value input").addClass("on");
+                    $(".row_bgcolr .btn_opener i").addClass("on");
+               }else{
+                    $(".row_bgcolr .item_list").removeClass("on");
+                    $(".row_bgcolr .dropdown_value input").removeClass("on");
+                    $(".row_bgcolr .btn_opener i").removeClass("on");
+               }
+               bool = !bool;
+           });
+
+           $(".copy_right .btn_opener").click(function(){
+               if(bool){
+                    $(".copy_right .item_list").addClass("on");
+                    $(".copy_right .dropdown_value input").addClass("on");
+                    $(".copy_right .btn_opener i").addClass("on");
+               }else{
+                    $(".copy_right .item_list").removeClass("on");
+                    $(".copy_right .dropdown_value input").removeClass("on");
+                    $(".copy_right .btn_opener i").removeClass("on");
+               }
+               bool = !bool;
            });
 
         });
@@ -378,7 +459,7 @@
         </div>
         <div class="sec3">   
             <ul>
-                <li>
+                <li data-aos="fade-up">
                     <div class="s3_txtbox">
                         <div class="s3_list">
                             <a href="#">#Mobility Culture</a>
@@ -394,7 +475,7 @@
                         <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b03.jpg?a=0.8707287855402337" alt="s3_1">
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <div class="s3_txtbox">
                         <div class="s3_list">
                                 <a href="">#Mobility Culture</a>
@@ -411,7 +492,7 @@
                         <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b04.jpg?a=0.5914432188630598" alt="s3_1">
                     </div>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <div class="s3_txtbox">
                         <div class="s3_list">
                                 <a href="">#Hihg-tech</a>
@@ -441,7 +522,7 @@
         </div>
         <div class="sec5">   
             <ul>
-                <li>
+                <li data-aos="fade-up">
                     <div class="s5_txtbox">
                         <div class="s5_list">
                             <a href="">#High-tech</a>
@@ -548,35 +629,124 @@
                 <div class="copyright">
                     <div class="copy">
                         <address>ⓒ 2024 Hankook & Company Co., Ltd.</address>
-                        <ul class="lang">
-                            <li><a href="#">KOR</a></li>
-                            <li><a href="#">ENG</a></li>
-                        </ul>
+                        <div class="copy_right">
+                            <ul class="lang">
+                                <li><a href="#">KOR</a></li>
+                                <li><a href="#">ENG</a></li>
+                            </ul>
+                            <div class="dropdown_list" aria-expanded="false">
+                                <div class="dropdown_value">
+                                    <input type="text" role="combobox" value="Family Site" aria-expanded="false" tabindex="-1" readonly>
+                                    <button type="button" aria-label="목록열기" class="btn_opener"aria-expanded="false"><i></i></button>
+                                </div>
+                                <ul class="item_list" role="listbox">
+                                    <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Tire & Technology</a></li>
+                                    <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Networks</a></li>
+                                    <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Engineering Works</a></li>
+                                    <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Precision Works</a></li>
+                                    <li role="option"><a href="#" target="_blank" tabindex="0">ES Business HQ</a></li>
+                                    <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Motorsports</a></li>
+                                    <li role="option"><a href="#" target="_blank" tabindex="0">Preciseley Microtechnology Corp.</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
     <div id="popup">
-        <div class="pop">
+        <div class="pop_wrap">
+            <!-- 팝업 네비게이션 BG -->
             <video muted loop autoplay>
                 <source src="https://cdn.hankook-technologygroup.com/static/assets/mov/htg/menu01_2.mp4" type="video/mp4">
             </video>
             <div id="pop_nav">
-                <div class="popup">
-                    <div class="popmenu"></div>
+                <div class="popmenu">
+                    <ul class="pop_list">
+                        <li><a href="#">Business</a>
+                            <ul class="sub">
+                                <li><a href="#">미션</a></li>
+                                <li><a href="#">경영원칙</a></li>
+                                <li><a href="#">그룹소개</a></li>
+                                <li><a href="#">지배구조</a></li>
+                                <li><a href="#">투자정보</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sustainability</a>
+                            <ul class="sub">
+                                <li><a href="#">Principles</a></li>
+                                <li><a href="#">Focus Areas</a></li>
+                                <li><a href="#">Performance</a></li>
+                                <li><a href="#">Awards</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Culture</a>
+                            <ul class="sub">
+                                <li><a href="#">Proactive Culture</a></li>
+                                <li><a href="#">Proactive Leader</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Media</a>
+                            <ul class="sub">
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Video</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="pop_category">
+                        <div class="category_link">
+                            <a href="#"><img src="images/ico_tim.png" alt="ico_tim"></a>
+                            <a href="#"><img src="images/ico_drive.png" alt="ico_drive"></a>
+                            <a href="#"><img src="images/ico_miu.png" alt="ico_miu"></a>
+                            <a href="#"><img src="images/ico_htm.png" alt="ico_htm"></a>
+                        </div>
+                        <div class="category_row">
+                            <div class="row_bgcolr">
+                                <ul class="lang">
+                                    <li><a href="#">KOR</a></li>
+                                    <li><a href="#">ENG</a></li>
+                                </ul>
+                                <div class="dropdown_list" aria-expanded="false">
+                                    <div class="dropdown_value">
+                                        <input type="text" role="combobox" value="Family Site" aria-expanded="false" tabindex="-1" readonly>
+                                        <button type="button" aria-label="목록열기" class="btn_opener"aria-expanded="false"><i></i></button>
+                                    </div>
+                                    <ul class="item_list" role="listbox">
+                                        <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Tire & Technology</a></li>
+                                        <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Networks</a></li>
+                                        <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Engineering Works</a></li>
+                                        <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Precision Works</a></li>
+                                        <li role="option"><a href="#" target="_blank" tabindex="0">ES Business HQ</a></li>
+                                        <li role="option"><a href="#" target="_blank" tabindex="0">Hankook Motorsports</a></li>
+                                        <li role="option"><a href="#" target="_blank" tabindex="0">Preciseley Microtechnology Corp.</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/aos.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
           },
+        });
+
+        AOS.init({
+            easing: "ease",
+            duration: 1000,
+            offset: 120,
+            /*스크롤에 얼마나 반응할지를 설정. 해당요소가 스크롤링이 120픽셀이상 진행될때 애니메이션이 시작되도록 지정 */
+            delay: 200,
         });
       </script>
 </body>
