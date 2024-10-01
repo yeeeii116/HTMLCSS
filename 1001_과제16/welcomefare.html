@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #000;}
+        .brand{width: 100%;position: relative;}
+        .brand .btn_wrap{width: 100%;height: 80px;border-bottom: 1px solid rgba(87, 87, 89,0.2);box-sizing: border-box;}
+        .brand .btn_wrap .btn{width: 90%;max-width: 1500px;margin: 0 auto;display: flex;}
+        .brand .btn_wrap .btn li{flex: 1 1;height: 80px;position: relative;}
+        .brand .btn_wrap .btn li a{display: flex;justify-content: center;align-items: center; width: 100%;height: 100%;color: #000;font-size: 18px;padding: 10px;box-sizing: border-box;font-weight: bold;}
+        .brand .btn_wrap .btn li a.on{color: #ea002c;}
+        .brand .btn_wrap .btn li a::after{content: "";position: absolute;left: 0;bottom: 0;width: 100%;height: 3px;background: #000;transition: 0.5s;transform: scaleX(0);opacity: 0;}
+        .brand .btn_wrap .btn li:hover a::after{content: "";transform: scaleX(1);opacity: 1;}
+        .brand .btn_wrap .btn li.on a::after{background: #ea002c;opacity: 1;transform: scaleX(1);}
+
+        .brand .contents{width: 100%;display: flex;justify-content: center;}
+        .brand .contents > li{width: 100%; position: absolute;padding-top: 140px;text-align: center;display: none;}
+        .brand .contents > li.on{display: block;}
+        .brand .contents > li div h1{font-size: 50px;color: #111;line-height: 85px;}
+        .brand .contents > li div .inner_list{display: flex;height: 34px;margin-top: 5px;justify-content: center;align-items: center;}
+        .brand .contents > li div .inner_list li{position: relative;}
+        .brand .contents > li div .inner_list li::after{content: "";position: absolute;top: 0;bottom: 0;right: -2px;margin: auto;width: 4px;height: 4px;background: #ccc;border-radius: 50%;}
+        .brand .contents > li div .inner_list li:last-child:after{height: 0;}
+        .brand .contents > li div .inner_list a{display: inline-block;padding: 0 21px;color: #666;font-weight: bold;font-size: 20px;}
+        .brand .contents > li div .inner_list a.on{color: #ea002c;}
+    </style>
+</head>
+<body>
+    <div class="brand">
+        <div class="btn_wrap">
+            <ul class="btn">
+                <li><a href="#">아동복지사업</a></li>
+                <li><a href="#">청소년복지사업</a></li>
+                <li><a href="#">노인복지사업</a></li>
+                <li><a href="#">장애인복지사업</a></li>
+                <li><a href="#">사회봉사사업</a></li>
+            </ul>
+        </div>
+        <ul class="contents">
+            <li>
+                <div>
+                    <h1>아동복지사업</h1>
+                    <ul class="inner_list list1">
+                        <li><a href="#">지역아동센터사업</a></li>
+                        <li><a href="#">우리동네키움센터사업</a></li>
+                        <li><a href="#">어린이집사업</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h1>청소년복지사업</h1>
+                    <ul class="inner_list list2">
+                        <li><a href="#">청소년복지시설사업</a></li>
+                        <li><a href="#">웰컴투모로우사업</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h1>노인복지사업</h1>
+                    <ul class="inner_list list3">
+                        <li><a href="#">행복빨래방사업</a></li>
+                        <li><a href="#">주거환경개선사업</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h1>장애인복지사업</h1>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h1>사회봉사사업</h1>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let btn = document.querySelectorAll(".btn li");
+        let con = document.querySelectorAll(".contents > li");
+        let inner = document.querySelectorAll(".list1 li");
+        let inner2 = document.querySelectorAll(".list2 li");
+        let inner3 = document.querySelectorAll(".list3 li");
+
+        btn[0].classList.add("on");
+        btn[0].querySelector("a").classList.add("on");
+        con[0].classList.add("on");
+        inner[0].querySelector("a").classList.add("on");
+        inner2[0].querySelector("a").classList.add("on");
+        inner3[0].querySelector("a").classList.add("on");
+
+        function myfnc(){
+            btn.forEach(function(value,key){
+                value.classList.remove("on");
+                value.querySelector("a").classList.remove("on");
+            })
+        }
+
+        btn.forEach(function(value,key){
+            value.onclick = function(e){
+                e.preventDefault();
+                con.forEach(function(v,k){
+                    con[k].classList.remove("on");
+                });
+                // inner.forEach(function(v,k){
+                //     inner[k].querySelector("a").classList.remove("on");
+                // });
+                myfnc();
+                inner[0].querySelector("a").classList.add("on");
+                btn[key].classList.add("on");
+                btn[key].querySelector("a").classList.add("on");
+                con[key].classList.add("on");
+            }
+        });
+
+        function myfnc2(){
+            inner.forEach(function(v,k){
+                v.querySelector("a").classList.remove("on");
+            })
+        };
+        inner.forEach(function(v,k){
+            v.onclick = function(e){
+                e.preventDefault();
+                myfnc2();
+                console.log(k);
+                inner[k].querySelector("a").classList.add("on");
+            } 
+        })
+
+        function myfnc3(){
+            inner2.forEach(function(v,k){
+                v.querySelector("a").classList.remove("on");
+            })
+        };
+        inner2.forEach(function(v,k){
+            v.onclick = function(e){
+                e.preventDefault();
+                myfnc3();
+                console.log(k);
+                inner2[k].querySelector("a").classList.add("on");
+            } 
+        })
+
+        function myfnc4(){
+            inner3.forEach(function(v,k){
+                v.querySelector("a").classList.remove("on");
+            })
+        };
+        inner3.forEach(function(v,k){
+            v.onclick = function(e){
+                e.preventDefault();
+                myfnc4();
+                console.log(k);
+                inner3[k].querySelector("a").classList.add("on");
+            } 
+        })
+    </script>
+</body>
+</html>

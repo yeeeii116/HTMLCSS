@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: oq;
+            src: url(fonts/H4clBXOCl9bbnla_nHIq75u9.woff2);
+        }
+        *{margin: 0;padding: 0;font-size: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #999;}
+        .brand{width: 1700px;margin: 0 auto;}
+        .brand h1{width: 100%;height: 88px; font-size: 80px;color: #000;text-align: center;margin-bottom: 30px;line-height: 88px;letter-spacing: -0.48px;font-family: oq;}
+        .brand .btn{display: flex;justify-content: center;gap: 60px; margin-bottom: 100px;text-align: center;}
+        .brand .btn li a{display: inline-block; font-size: 22px;line-height: 33px;font-family: oq;font-weight: bold;}
+        .brand .btn li a.on{color: #184100;}
+        .brand .btn li a::after{content: "";display: block;width: 100%;height: 2px;background: #184100;opacity: 0;}
+        .brand .btn li a.on::after{opacity: 1;}
+
+        .brand .gallery-list ul{width: 1700px;margin: 0 auto; display: flex;flex-wrap: wrap;justify-content: center;justify-content: flex-start;}
+        .brand .gallery-list ul li{width: 386.75px;margin-right: 3%;margin-bottom: 3%;}
+        .brand .gallery-list ul li:nth-child(4){margin-right: 0;margin-bottom: 0;}
+        .brand .gallery-list ul li .thumb{width: 100%;height: 0;padding-top: 124%;position: relative;}
+        .brand .gallery-list ul li .thumb img{position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}
+    </style>
+    
+</head>
+<body>
+    <div class="brand">
+        <h1>products</h1>
+        <ul class="btn">
+            <li><a href="#">ALL</a></li>
+            <li><a href="#">Dermasona</a></li>
+            <li><a href="#">Hot & Cool</a></li>
+            <li><a href="#">Haute Liang</a></li>
+            <li><a href="#">Gel</a></li>
+        </ul>
+        <div class="gallery-list">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="thumb">
+                            <img src="https://www.bienglo.com/upload/goodsdata1/goodsdata149227_0.jpg" alt="Quadthera">
+                        </div>
+                    </a>
+                </li>
+                <li><a href="#"><div class="thumb"><img src="https://www.bienglo.com/upload/goodsdata1/goodsdata161309_0.png" alt="Hot & Cool Glow On"></div></a></li>
+                <li><a href="#"><div class="thumb"><img src="https://www.bienglo.com/upload/goodsdata1/goodsdata177651_0.jpg" alt="Hot & Cool Glow On Petite"></div></a></li>
+                <li><a href="#"><div class="thumb"><img src="https://www.bienglo.com/upload/goodsdata1/goodsdata151112_0.jpg" alt="Haute Liang"></div></a></li>
+                <li><div class="thumb"><a href="#"><img src="https://www.bienglo.com/upload/goodsdata1/goodsdata159279_0.png" alt="Glow Boosting Gel"></a></div></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+        let btn = document.querySelectorAll(".btn li");
+        let gallery = document.querySelectorAll(".gallery-list li")
+		btn[0].querySelector("a").classList.add("on");
+		
+		function my(){
+			btn.forEach(function(v,k){
+				v.querySelector("a").classList.remove("on");
+			});
+		};
+
+		btn.forEach(function(v,k){
+			v.querySelector("a").onclick=function(e){
+				e.preventDefault();
+				my();
+				btn[k].querySelector("a").classList.add("on");
+			};
+		});
+
+        $(btn).eq(0).click(function(){
+            $(gallery).css("display","block");
+        });
+        $(btn).eq(1).click(function(){
+            $(gallery).eq(0).css("display","block");
+            $(gallery).eq(1).css("display","none");
+            $(gallery).eq(2).css("display","none");
+            $(gallery).eq(3).css("display","none");
+            $(gallery).eq(4).css("display","none");
+        });
+        $(btn).eq(2).click(function(){
+            $(gallery).eq(0).css("display","none");
+            $(gallery).eq(1).css("display","block");
+            $(gallery).eq(2).css("display","block");
+            $(gallery).eq(3).css("display","none");
+            $(gallery).eq(4).css("display","none");
+        });
+        $(btn).eq(3).click(function(){
+            $(gallery).eq(0).css("display","none");
+            $(gallery).eq(1).css("display","none");
+            $(gallery).eq(2).css("display","none");
+            $(gallery).eq(3).css("display","block");
+            $(gallery).eq(4).css("display","none");
+        });
+        $(btn).eq(4).click(function(){
+            $(gallery).eq(0).css("display","none");
+            $(gallery).eq(1).css("display","none");
+            $(gallery).eq(2).css("display","none");
+            $(gallery).eq(3).css("display","none");
+            $(gallery).eq(4).css("display","block");
+        });
+    </script>
+</body>
+</html>

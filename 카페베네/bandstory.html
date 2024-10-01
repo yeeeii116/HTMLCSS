@@ -36,30 +36,70 @@
 
         #container{width: 100%;position: relative;}
         #container .sub_top{width: 100%;height: 820px;position: relative;}
-        .swiper {
-      width: 100%;
-      height: 820px;
-    }
+        #container .sub_visual_bene .swiper{width: 100%;height: 820px;position: relative;}
+        #container .sub_visual_bene .swiper-slide {text-align: center;display: flex;justify-content: center;align-items: center;}
+        #container .sub_visual_bene .swiper-slide img {display: block;width: 100%;height: 820px;object-fit: cover;}
+        #container .sub_visual_bene .swiper-pagination{position: absolute;height: 17px; width: 100%;bottom: -200px;display: flex;justify-content: center;align-items: center;}
+        #container .sub_visual_bene .swiper-pagination-bullet{margin: 0 8px !important;width: 12px;height: 12px;background: #fff;opacity: 1;}
+        #container .sub_visual_bene .swiper-pagination-bullet-active{background: #3a466a;}
+        #container .sub_visual_bene .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{top: 95%;}
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: static;
-    }
+        #container .sub_visual_bene .swiper-slide .txt_box{width: 1920px;position: absolute;left: 6px;bottom: 174px;text-align: center;font-size: 40px;color: #fff;opacity: 1;transform: translateY(0);}
+        /* #container .sub_visual_bene .swiper-slide .txt_box.on{opacity: 1;transform: translateY(0);} */
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 820px;
-      object-fit: cover;
-    }
-    
-    .swiper-pagination{position: absolute;bottom: 0;left: 0;} 
+        #container .sub_visual_bene .swiper-slide:nth-child(2) .txt_box{bottom: 560px;left: 190px;}
+        #container .sub_visual_bene .swiper-slide:nth-child(3) .txt_box{bottom: 90px;left: -210px;}
+        #container .sub_visual_bene .swiper-slide:nth-child(4) .txt_box{bottom: 120px;left: -103px;}
+        #container .sub_visual_bene .swiper-slide:nth-child(4) .txt_box strong{display: inline-block;width: 335px;color: transparent;}
+
+        #container .sub_contents{width: 100%;}
+        #container .sub_contents .bene_story{position: relative;padding-bottom: 156px;}
+        #container .sub_contents .bene_story::before{content: "";display: block;position: absolute;top: 568px;left: 0;width: 100%;height: 781px;background: #f5f5f5;z-index: -1;}
+        #container .sub_contents .bene_story .sec1{width: 1021px;margin: 0 auto; padding: 83px 0 103px;color: #3a466a;}
+        #container .sub_contents .bene_story .sec1::before{content: "";display: block;width: 42px;height: 3px;margin-bottom: 35px;background: #3a466a;}
+        #container .sub_contents .bene_story .sec1 p:first-child{font-size: 20px;line-height: 33.4px;}
+        #container .sub_contents .bene_story .sec1 p:nth-child(2){font-size: 34px;margin-top: 25px;line-height: 56.78px;}
+
+        #container .sub_contents .bene_story .sec2{width: 1021px;margin: 0 auto;}
+        #container .sub_contents .bene_story .sec2 .s2_txt{margin: 50px 0 100px;color: #444;}
+        #container .sub_contents .bene_story .sec2 .s2_txt p{font-size: 18px;line-height: 30.06px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1{overflow: hidden;padding-left: 122px;margin-top: 100px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 img{float: left;margin-right: 90px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt{float: left;margin-top: 140px;color: #444;font-size: 18px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt::before{content: "";display: block;width: 42px;height: 3px;margin-bottom: 35px;background: #3a466a;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p{margin-bottom: 15px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p:nth-child(2),#container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p:nth-child(3),#container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p:nth-child(4){line-height: 30px;}
+        #container .sub_contents .bene_story .bg{width: 1920px;height: 300px;position: absolute;bottom: 0;left: 50%;margin-left: -960px;background: url(http://www.caffebene.co.kr/images/bene/bene3.png) no-repeat 373px 0;z-index: -1;}
+
+        /* #container .bene-story-sect2{width: 100%;height: 820px;}
+        #container .bene-story-sect2 .swiper{width: 100%;height: 820px;}
+        #container .bene-story-sect2 .swiper-slide {text-align: center;display: flex;justify-content: center;align-items: center;}
+        #container .bene-story-sect2 .swiper-slide .img_box{width: 100%;height: 100%;}
+        #container .bene-story-sect2 .swiper-slide img{width: 100%;height: 820px;object-fit: cover;}
+        #container .bene-story-sect2 .swiper-pagination{position: absolute;height: 17px; width: 100%;bottom: 0;display: flex;justify-content: center;align-items: center;}
+        #container .bene-story-sect2 .swiper-pagination-bullet{margin: 0 8px !important;width: 12px;height: 12px;background: #fff;opacity: 1;}
+        #container .bene-story-sect2 .swiper-pagination-bullet-active{background: #3a466a;}
+        #container .bene-story-sect2 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{top: 95%;}
+
+        #container .bene-story-sect2 .swiper-slide .txt_box{width: 1920px;position: absolute;left: 6px;bottom: 174px;text-align: center;font-size: 40px;color: #fff;opacity: 1;transform: translateY(0);} */
+
+        .bene-story-sect2{width: 100%;height: 820px;}
+        .bene-story-sect2 .swiper{width: 100%;height: 820px;}
+        .bene-story-sect2 .swiper-slide{text-align: center;background: #fff;display: flex;justify-content: center;align-items: center;}
+        .bene-story-sect2 .swiper-slide img{display: block;width: 100%;height: 820px;object-fit: cover;}
+        .bene-story-sect2 .swiper-pagination{position: absolute;height: 17px; width: 100%;bottom: -200px;display: flex;justify-content: center;align-items: center;}
+        .bene-story-sect2 .swiper-pagination-bullet{margin: 0 8px !important;width: 12px;height: 12px;background: #fff;opacity: 1;}
+        .bene-story-sect2 .swiper-pagination-bullet-active{background: #3a466a;}
+
+        /* .bene-story-sect2 .swiper-slide .txt_box{width: 1920px;position: absolute;left: 6px;bottom: 174px;text-align: center;font-size: 40px;color: #fff;opacity: 1;transform: translateY(0);} */
+
+
+
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+    </script>
 </head>
 <body>
     <header>
@@ -124,7 +164,7 @@
             </div>
         </div>
     </header>
-    <div id="container" class="sub">
+    <div id="container">
         <section class="sub_top">
             <div class="sub_visual_bene">
                 <div class="swiper mySwiper">
@@ -133,20 +173,32 @@
                         <div class="img_box">
                             <img src="images/bene-s1.jpg" alt="s1">
                         </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>오래된 기찻길</strong> ] 이 있습니다.</p>
+                        </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="img_box">
                             <img src="images/bene-s2.jpg" alt="s2">
+                        </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>도시의 반딧불이</strong> ] 가 있습니다.</p>
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="img_box">
                             <img src="images/bene-s3.jpg" alt="s3">
                         </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>아이들 웃음소리</strong> ] 가 있습니다.</p>
+                        </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="img_box">
                             <img src="images/bene-s4.jpg" alt="s4">
+                        </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>CAFFE BENE</strong> ] 가 있습니다.</p>
                         </div>
                       </div>
                     </div>
@@ -154,16 +206,100 @@
                   </div>
             </div>
         </section>
+        <section class="sub_contents">
+            <div class="bene_story">
+                <div class="sec1">
+                    <p>동네마다 알게 모르게<br>우리 곁을 둘러싸고 있는</p>
+                    <p>정겨운 것들이 있습니다.</p>
+                </div>
+                <div class="sec2">
+                    <img src="http://www.caffebene.co.kr/images/bene/bene1.jpg" alt="bene1">
+                    <div class="s2_txt">
+                        <p>오래된 세탁소, 아이들 웃음 소리처럼-<br>
+                        없으면, 서운하고<br>
+                        있으면, 더 없이 좋은 그런 것들이요</p>
+                    </div>
+                    <div class="sec2_1">
+                        <img src="http://www.caffebene.co.kr/images/bene/bene2.jpg" alt="bene2">
+                        <div class="sec2_1_txt">
+                            <p>우리도 그런 존재가 되려고 합니다</p>
+                            <p>화려한 랜드마크는 아니더라도<br>누구나 편하게 드나들 수 있는 곳</p>
+                            <p>언제나 활짝 열려있는<br>동네 사랑방 같은 곳이 되려고 합니다</p>
+                            <p>우리 동네의 자랑이 되고 싶습니다<br>나의 정다운 이웃, 당신을 기다리고 있습니다 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg"></div>
+                </div>
+            </div>
+            <div class="bene-story-sect2">
+                <div class="bene-story-slider">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/bene-s21.jpg" alt="bene-s21">
+                                <div class="slider_txt">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/bene-s22.jpg" alt="bene-s22">
+                                    <div class="slider_txt">
+                                        <p></p>
+                                    </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/bene-s23.jpg" alt="bene-s23">
+                                    <div class="slider_txt">
+                                        <p></p>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="bene-story-sect3">
+                <div class="s3_txt">
+                    <div class="s3_txtbox">
+                        <p>2008년부터 지금까지<br>카페베네는 대한민국 대표 토종 커피브랜드로 많은 사랑을 받아왔습니다</p>
+                        <p>‘배려’와 ‘진정성’으로<br>
+                            소중한 오늘의 이야기를 만들어가는 곳<br>
+                            가장 나다운 시간을 보낼 수 있는 곳<br>
+                            누구에게나 소중한 진심을 다하는 곳이 되겠습니다
+                        </p>
+                    </div>
+                    <div class="s3_txtbox2">
+                        <img src="http://www.caffebene.co.kr/images/bene/bene4.jpg" alt="bene4">
+                        <p>우리동네_카페베네</p>
+                        <p>그래서, 우리의 내일이 <br>오늘보다 조금 더 빛날 수 있도록</p>
+                        <p>누구에게나 열려있는 공간<br>머물고 싶은 편안한 아지트가 되겠습니다</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
             direction: "vertical",
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
         });
+       
     </script>
 </body>
 </html>

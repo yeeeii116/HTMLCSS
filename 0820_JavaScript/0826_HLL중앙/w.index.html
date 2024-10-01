@@ -50,8 +50,8 @@
         )};
 
         btn.forEach(function(v,k){
-            // v.querySelector("a").onclick = function(e){
-                v.querySelector("a").onmouseenter = function(e){
+            v.querySelector("a").onclick = function(e){
+                // v.querySelector("a").onmouseenter = function(e){
                 e.preventDefault();
                 my();
                 console.log(k);
@@ -60,10 +60,7 @@
                 document.querySelector(".title").style.backgroundImage = bgTitle.replace(bgTitle.slice(-6,-5), k+1);
                 document.querySelector(".visual").style.backgroundImage = bg.replace(bg.slice(-6,-5), k+1);
             }
-        })
-
-
-
+        });
     </script>
     
 </body>
