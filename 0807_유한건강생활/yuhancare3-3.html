@@ -31,8 +31,8 @@
             src: url(fonts/NewOriginMyongjoSemiBold.woff2) format(woff2);
         }
         *{margin: 0;padding: 0;}
-       ul{list-style: none;}
-       a{text-decoration: none;color: #fff;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #fff;}
         select{outline: none;}
         header{width: 100%;max-width: 1600px;margin: 0 auto;display: flex;position: absolute;left: 50%;transform: translateX(-50%);padding-top: 20px;box-sizing: border-box;z-index: 999;}
         header .logo{width: 160px;height: 64px;position: relative;display: flex;align-items: center;}
@@ -73,15 +73,15 @@
         header .lang select{background: transparent;border: none;color: #fff;font-size: 16px;font-family: Pretendard-R;padding-right: 5px;} */
 
         header .option {position: absolute;top: 30px;right: 30px;}
-        header .option .lang .lang_select{position: relative;padding: 10px 20px;border: none;color: #fff;font-size: 16px;overflow: visible;background-color: transparent;cursor: pointer;}
-        header .option .lang .lang_select::after{content: "";display: inline-block;width: 11px;height: 7px;margin-left: 8px;background: url(images/footer_arrow.png) no-repeat;vertical-align: middle;filter: brightness(100);transition: 0.3s;}
+        header .option .lang .lang_select{position: relative;padding: 10px 20px;border: none;color: #fff;font-size: 16px;overflow: visible;background-color: transparent;cursor: pointer;display: inline-block;vertical-align: middle;}
+        header .option .lang .lang_select::after{content: "";display: inline-block;width: 11px;height: 7px;margin-left: 3px;background: url(images/footer_arrow.png) no-repeat;vertical-align: middle;filter: brightness(100);transition: 0.3s;}
         header .option .lang .lang_select.on::after{transform: scaleY(-1);}
-        header .option .lang .lang_select span{display: inline-block; vertical-align: middle;transition: transform 250ms ease-in-out;background-position-y: -7px;}
+        header .option .lang .lang_select span{display: inline-block; vertical-align: middle;transition: transform 250ms ease-in-out;background-position-y: -7px;margin: 0;padding: 0;box-sizing: border-box;font-family: Pretendard-R;}
         header .option .lang .lang_select:hover span{font-weight: bold;}
 
         header .option .lang .lang_list{display: none;position: absolute;width: 100%;background-color: rgba(255, 255, 255, 0.7);transition: 250ms ease-in-out;opacity: 1;text-align: center;opacity: 0;}
         header .option .lang .lang_list.on{display: block;opacity: 1;}
-        header .option .lang .lang_list a{width: 100%;padding: 5px 10px;color: #717171;font-size: 16px;transition: line-height 250ms ease-in-out;}
+        header .option .lang .lang_list a{display: inline-block;width: 100%;padding: 5px 10px;color: #717171;font-size: 16px;transition: line-height 250ms ease-in-out;box-sizing: border-box;letter-spacing: -0.4px;font-family: Pretendard-R;line-height: 16px;}
         
         .sec1_wrap{overflow: hidden;}
         .sec1_wrap .sec1{width: 100%;position: relative;box-sizing: border-box;}

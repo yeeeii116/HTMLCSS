@@ -7,9 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
+         @font-face {
+            font-family: NotoSans;
+            src: url(fonts/NotoSansKR-Regular.woff) format(woff);
+        }
         *{margin: 0;padding: 0;}
         ul{list-style: none;}
         a{text-decoration: none; color: #222;}
+        body{font-family: NotoSans;}
         header{width: 100%;background: #fff;position: sticky;top: 0;z-index: 999;}
         .head{width: 1190px;margin: 0 auto;height: 123px;display: flex;justify-content: space-between;align-items: center;}
         .head > ul{display: flex;}
@@ -111,25 +116,30 @@
         .aside a:nth-child(2){width: 32px;height: 32px;background-image: url(images/aside-blog.png);margin: 10px 26px 0;}
         .aside a:nth-child(3){width: 84px;height: 132px;background-image: url(images/aside-fran.png);margin-top: 30px;}
 
-        footer{width: 100%;}
-        footer > ul{width: 1190px;margin: 0 auto;}
-        footer > ul li ul{display: flex;position: relative;padding: 35px 0 27px;}
-        footer > ul li ul li{padding-right: 30px;}
-        footer > ul li ul li a{font-size: 14px;font-weight: bold;}
-        footer > ul li ul li a span{color: #00a6b1;}
-        footer > ul li ul li:last-child{position: absolute;left: 97.8%;}
-
-        footer .ft-line{width: 100%;border-top: 3px solid #3a476a;}
-        footer .ft{width: 1190px;margin: 25px auto 50px;display: flex;position: relative;}
-        footer .ft-txt{padding-left: 70px;}
-        footer .ft-txt p span{font-size: 12px;font-weight: bold;color: #222;}
-        footer .ft-txt p:first-child span:first-child,footer .ft-txt p:first-child span:last-child,footer .ft-txt p:nth-child(2) span:nth-child(2){margin: 4px 20px 4px 0;}
-        footer .ft-txt p:first-child span:nth-child(2),footer .ft-txt p:nth-child(2) span:nth-child(1){margin: 4px 10px 4px 0;}
-        footer .ft-txt p:last-child{font-size: 12px;color: #b8b8b8;margin-top: 30px;}
-       
-        footer .sns{position: absolute;left: 82.4%;}
-        footer .sns a{margin: 0 4px;}
-        footer .sns a:last-child{margin: 0 0 0 4px;}
+        footer .footer_top .static{position: relative;width: 1190px;margin: 0 auto;padding-bottom: 27px;}
+        footer .footer_top .static ul{overflow: hidden;}
+        footer .footer_top .static ul li{float: left;display: block;font-size: 14px;font-weight: bold; margin-right: 30px;}
+        footer .footer_top .static ul li a{display: inline-block;color: #3a466a;}
+        footer .footer_top .static ul li:nth-child(5) a{color: #00a6b1;}
+        footer .footer_top .static .Top{display: inline-block;width: 27px;height: 15px;position: absolute;top: 0;right: 0;background: url(images/ico-arr-top.png) no-repeat 50% 50%;font-size: 0;outline: none;border: none;cursor: pointer;vertical-align: middle;}
+        footer .ft-line{border-top: 3px solid #3a466a;}
+        footer .ft-line .ft{width: 1190px;margin: 0 auto;overflow: hidden;padding: 25px 0 50px;}
+        footer .ft-line .ft .ft_info{float: left;padding-left: 180px;background: url(images/footer-logo.png) no-repeat 0 5px;}
+        /* background: - repeat position / size  */
+        footer .ft-line .ft .ft_info .info{font-size: 12px;font-weight: bold;color: #222;}
+        footer .ft-line .ft .ft_info .info address{display: inline-block;margin-top: 4px;margin-bottom: 4px;margin-right: 20px;font-style: normal;line-height: 14.4px;vertical-align: middle;}
+        footer .ft-line .ft .ft_info .info span{display: inline-block;margin-top: 4px;margin-bottom: 4px;vertical-align: middle;line-height: 14.4px;}
+        footer .ft-line .ft .ft_info .info .tt{margin-right: 10px;}
+        footer .ft-line .ft .ft_info .info .ts{margin-right: 20px;}
+        footer .ft-line .ft .ft_info .copy{margin-top: 30px;font-size: 12px;color: #b8b8b8;}
+        footer .ft-line .ft .sns{float: right;}
+        footer .ft-line .ft .sns a{margin: 0 4px;}
+        .ico-inst, .ico-blog, .ico-fb, .ico-youtub, .ico-app{display: inline-block;width: 30px;height: 30px;font-size: 0;vertical-align: top;background-repeat: no-repeat;background-position: 50% 50%;}
+        footer .ft-line .ft .sns .ico-inst{background-image: url(images/ico-insta.png);}
+        footer .ft-line .ft .sns .ico-blog{background-image: url(images/ico-blog.png);}
+        footer .ft-line .ft .sns .ico-fb{background-image: url(images/ico-fb.png);}
+        footer .ft-line .ft .sns .ico-youtub{background-image: url(images/ico-youtub.png);}
+        footer .ft-line .ft .sns .ico-app{background-image: url(images/ico-app.png);}
     </style>
     <script>
        
@@ -492,34 +502,37 @@
     </div>
 
     <footer>
-        <ul>
-           <li>
+        <div class="footer_top">
+            <div class="static">
                 <ul>
                     <li><a href="#">오시는 길</a></li>
                     <li><a href="#">제휴문의</a></li>
                     <li><a href="#">개인정보처리방침</a></li>
                     <li><a href="#">이용약관</a></li>
                     <li><a href="#"><span>고객센터 1688-4666</span></a></li>
-                    <li>
-                        <a href="#" class="Top"><img src="./images/ico-arr-top.png" alt="arrtop"></a>
-                    </li>
                 </ul>
-           </li>
-        </ul>
+                <button type="button" class="Top"></button>
+            </div>
+        </div>
         <div class="ft-line">
             <div class="ft">
-                <div class="bottom-logo"><img src="./images/footer-logo.png" alt="ftlogo"></div>
-                <div class="ft-txt">
-                    <p><span>경기도 파주시 월롱면 홀작로 129, 5동</span><span>대표이사</span><span>박그레타</span></p>
-                    <p><span>사업자등록번호</span><span>206-86-29161</span><span>benecs@caffebene.co.kr</span></p>
-                    <p>Copyright© by Caffebene, All rights reserved.</p>
+                <div class="ft_info">
+                    <div class="info">
+                        <address>경기도 파주시 월롱면 홀작로 129, 5동</address>
+                        <span class="tt">대표이사</span>
+                        <span class="ts">박그레타</span><br>
+                        <span class="tt">사업자등록번호</span>
+                        <span class="ts">206-86-29161</span>
+                        <span>benecs@caffebene.co.kr</span>
+                    </div>
+                    <p class="copy">Copyright© by Caffebene, All rights reserved.</p>
                 </div>
                 <div class="sns">
-                    <a href="#"><img src="./images/ico-insta.png" alt="ico1"></a>
-                    <a href="#"><img src="./images/ico-blog.png" alt="ico2"></a>
-                    <a href="#"><img src="./images/ico-fb.png" alt="ico3"></a>
-                    <a href="#"><img src="./images/ico-youtub.png" alt="ico4"></a>
-                    <a href="#"><img src="./images/ico-app.png" alt="ico5"></a>
+                    <a href="#" class="ico-inst">인스타그램</a>
+                    <a href="#" class="ico-blog">블로그</a>
+                    <a href="#" class="ico-fb">페이스북</a>
+                    <a href="#" class="ico-youtub">유튜브</a>
+                    <a href="#" class="ico-app">APP</a>
                 </div>
             </div>
         </div>
