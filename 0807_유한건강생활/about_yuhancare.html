@@ -95,11 +95,9 @@
         .content .sub_tabbox .tab_list li.on::before{transform: scaleX(1);}
         .content .sub_tabbox .tab_list li .tab_btn{display: inline-flex;height: 100%;justify-content: center;align-items: center;color: #717171;font-size: 20px;padding: 0 5px;box-sizing: border-box;border: none; vertical-align: middle;overflow: visible;border-color: transparent;background-color: transparent;cursor: pointer;}
         .content .sub_tabbox .tab_list li.on .tab_btn{color: #181818;font-weight: bold;}
-        /* 첫번째 li에 class on 입력해놨음 */
 
-        .content .matchbox1{display: block;} 
-        /* 임시로 넣어놓음, 원래는 전부 none */
-        .content .matchbox.on{display: block;} 
+        .content .tab_match > li{display: none;}
+        .content .tab_match > li.on{display: block;}
         .content .matchbox{padding-top: 100px;}
         .content .matchbox:not(.matchbox1){padding-bottom: 160px;}
         .content .matchbox1{text-align: center;}
@@ -111,8 +109,6 @@
         .content .matchbox1 .full_img{height: 420px;}
         .content .matchbox1 .full_img img{width: 100%;height: 100%;object-fit: cover;object-position: center;}
 
-        .content .matchbox2{display: none;} 
-        /* 임시로 넣어놓음, 원래는 전부 none */
         .content .matchbox2{text-align: center;}
         .content .matchbox2 .title_box{margin-bottom: 91px;}
         .content .matchbox2 .subject{font-size: 32px;font-weight: 700;}
@@ -134,8 +130,6 @@
         .content .matchbox2 .conbox .circlebox ul li span{display: block;font-weight: 600;}
         .content .matchbox2 .conbox .tm{margin-top: 30px;box-sizing: border-box;}
 
-        .content .matchbox3{display: none;} 
-        /* 임시로 넣어놓음, 원래는 전부 none */
         .content .matchbox3{position: relative;color: #3e3e3e;padding-top: 130px;box-sizing: border-box;}
         .content .matchbox3 .inner_wrap{width: 1200px;margin: 0 auto;padding: 0 28px;box-sizing: border-box;}
         .content .matchbox3 .inner_wrap .speech{font-size: 38px;font-weight: 700;line-height: 52px;margin-bottom: 63px;box-sizing: border-box;}
@@ -155,7 +149,8 @@
         .content .matchbox3 .inner_wrap_m .speech span{display: inline-block;color: #008e43;}
         .content .matchbox3 .inner_wrap_m .text{font-size: 18px;line-height: 28px;word-break: keep-all;}
 
-        footer{width: 95%;max-width: 1200px;margin: 0 auto;padding-bottom: 50px;}
+        footer{background-color: #f8f8f8;}
+        footer .footer_wrap{width: 100%;max-width: 1200px;margin: 0 auto;padding-bottom: 50px;}
         footer .footer_top{padding-top: 45px;margin-bottom: 30px;display: flex;justify-content: space-between;}
         footer .footer_top .footer_logo{width: 181px;height: 39px;}
         footer .footer_top .footer_logo img{width: 100%;height: 100%;object-fit: contain;}
@@ -185,7 +180,6 @@
      <script>
         $(function(){
             $("header").hover(function(){
-                
                 $(".logo a").css("backgroundImage","url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/yuhancare_logo_all_white.png)")
                 $(".bg1").css("borderBottom","1px solid #888");
             },function(){
@@ -215,9 +209,16 @@
 
             $(".path_item").eq(0).addClass("on");
 
-            // $(".tab_list li").hover(function(){
-            //     $(this).addClass("on");
-            // })
+            $(".link_list").click(function(){
+                if(bool){
+                    $(".link_list ul").addClass("on");
+                    $(".link_open").addClass("on");
+                }else{
+                    $(".link_list ul").removeClass("on");
+                    $(".link_open").removeClass("on");
+                }
+                bool = !bool;
+            });
         });
      </script>
 </head>
@@ -304,13 +305,13 @@
         <div class="content">
             <div class="sub_tabbox">
                 <ul class="tab_list">
-                    <li class="on"><button type="button" class="tab_btn">슬로건</button></li>
+                    <li><button type="button" class="tab_btn">슬로건</button></li>
                     <li><button type="button" class="tab_btn">미션 & 비전 & 가치체계</button></li>
                     <li><button type="button" class="tab_btn">CEO 인사말</button></li>
                 </ul>
             </div>
-            <div class="tab_match">
-                <div class="matchbox matchbox1">
+            <ul class="tab_match">
+                <li class="matchbox matchbox1">
                     <div class="slogan_en">Redefine The Origin</div>
                     <div class="slogan_kr">오리진을 다시 쓰다</div>
                     <div class="slogan_text">
@@ -326,8 +327,8 @@
                     <div class="full_img">
                         <img src="images/tab1_img.jpg" alt="tab1_img">
                     </div>
-                </div>
-                <div class="matchbox matchbox2">
+                </li>
+                <li class="matchbox matchbox2">
                     <div class="title_box">
                         <div class="subject">Mission</div>
                         <div class="title">
@@ -371,8 +372,8 @@
                             비즈니스를 지속가능 하게 이끌어가기 위한 새로운 도전을 마다하지 않습니다.
                         </div>
                     </div>
-                </div>
-                <div class="matchbox matchbox3">
+                </li>
+                <li class="matchbox matchbox3">
                     <div class="inner_wrap">
                         <div class="speech">
                             유한건강생활은 고(故) 유일한 박사의 <span>고귀한 기업가 정신을 바탕</span>으로<br>
@@ -421,8 +422,8 @@
                             <div class="ceo_nm">유한건강생활 대표이사 <span>손 정 수</span></div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -465,5 +466,32 @@
             </div>
         </div>
     </footer>
+    <script>
+        let btn = document.querySelectorAll(".tab_list li");
+        let con = document.querySelectorAll(".tab_match > li");
+        btn[0].classList.add("on");
+        con[0].classList.add("on");
+
+        function myfnc(){
+            btn.forEach(function(value,key){
+                value.classList.remove("on");
+            })
+        }
+
+        btn.forEach(function(value,key){
+            value.onclick = function(e){
+                e.preventDefault();
+                
+                con.forEach(function(v,k){
+                    con[k].classList.remove("on");
+                    console.log(k);
+                })
+                myfnc();
+                btn[key].classList.add("on");
+                con[key].classList.add("on");
+            }
+        })
+
+    </script>
 </body>
 </html>
