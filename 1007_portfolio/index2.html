@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>title</title>
     <style>
+        @font-face {
+            font-family: s-Italic;
+            src: url(fonts/InstrumentSerif-Italic.woff) format(woff);
+        }
         *{margin: 0;padding: 0;}
         ul{list-style: none;}
         body{font-size: 0;background-color: #F6F3EC;}
@@ -13,28 +17,75 @@
         .header_wp{width: 100%;height: 100px;}
         header{width: 100%;max-width: 1200px;height: 100px;font-size: 16px;position: absolute;left: 50%;top: 0; transform: translateX(-50%);z-index: 999;}
         header .top{height: 100%;display: flex;justify-content: space-between;align-items: center;}
-
+        header .top .logo{width: 80px;}
+        header .top .logo a{display: inline-block;width: 100%;height: 90px;background-image: url(images/Asset4.png);background-size: contain;background-position: center;background-repeat: no-repeat;}
         header .top .nav_list{display: flex;}
         header .top .nav_list li{text-align: center;padding: 0 15px;color: #F6F3EC;}
-        header .top .nav_list li a{font-size: 16px;font-weight: bold;color: #F6F3EC;}
+        header .top .nav_list li a{font-size: 16px;font-weight: bold;color: #F6F3EC;position: relative;}
+        header .top .nav_list li a::before{content: "";position: absolute;bottom: -2px;left: 0;width: 100%;height: 1px;background: #F6F3EC;transform: scale(0);transition: 0.5s;}
+        header .top .nav_list li a:hover::before{transform: scale(1);}
 
-        #section1{width: 100%;height: 100vh;margin-bottom: 80px;background-color: #444C35;}
-        #section1 .s1_content{width: 1200px;height: 100%;margin: 0 auto;display: flex;justify-content: center;align-items: center;}
-        #section1 .s1_content .s1_bg{width: 700px;height: 700px;background-image: url(images/frame-6624463_1280.png);
-            background-size: contain;background-repeat: no-repeat;vertical-align: middle;background-position: center;}
+        #sec1{width: 100%;height: 100vh;margin-bottom: 100px;background-color: #444C35;}
+        #sec1 .s1_con{height: 100%;display: flex;justify-content: center;align-items: center;background: rgba(68, 76, 53, 0.7) url(images/top_bg.jpg) no-repeat center / cover;background-attachment: fixed;background-blend-mode: multiply;position: relative;}
+        #sec1 .s1_con .s1_txt{font-size: 82px;font-family: s-Italic;color: #F6F3EC;letter-spacing: 3px;}
+        #sec1 .s1_con .s1_img{width: 100%;height: 100%;position: absolute;bottom: 0;left: 50%;transform: translateX(-50%);background: url(images/ss_1.png) no-repeat 50% 50% / cover;}
 
-        #section2{width: 100%;max-width: 1200px;margin: 0 auto;height: 500px;position: relative;}
-        #section2::before{content: "";display: block; position: absolute;left: 0;top: 100px;width: 1200px;height: 1px;background: #444C35;text-align: center;}
-        #section2 .s2_content{height: 3000px;font-size: 16px;padding-top: 100px;}
-        #section2 .s2_content .about{display: flex;height: 500px;}
-        #section2 .s2_content .about .s2_txt{width: 800px;display: inline-flex;flex-direction: column;justify-content: center;align-items: center;padding-left: 20px; box-sizing: border-box;}
-        #section2 .s2_content .about .s2_img{flex: 1;position: relative;}
-        #section2 .s2_content .about .s2_img_wp{width: 320px;height: 500px;margin-left: 50px;position: absolute;top: -50px;border-radius: 150px 0 150px; overflow: hidden;}
-        #section2 .s2_content .about .s2_img_wp img{width: 100%;height: 100%;object-fit: cover;}
+        #sec2{width: 100%;max-width: 1200px;margin: 0 auto;height: auto;position: relative;}
+        #sec2::before{content: "";position: absolute;right: -10px;bottom: 0;width: 210px;height: 210px; background: url(images/circle1.png) no-repeat center / cover;opacity: 0.5;animation: circle 40s linear infinite;}
+        @keyframes circle{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        #sec2 .s2_con{font-size: 16px;color: #333;}
+        #sec2 .s2_con h1{position: relative;font-size: 64px;font-family: s-Italic;color: #444C35;}
+        #sec2 .s2_con h1 span{color: transparent;font-size: 18px;}
+        #sec2 .s2_con h1::before{content: "";display: block;position: absolute;left: 0;bottom: 0;width: 1200px;height: 1px;background: #444C35;text-align: center;}
+        #sec2 .s2_con .about{display: flex;height: 400px;}
+        #sec2 .s2_con .about .s2_txt{width: 800px;display: inline-flex;flex-direction: column;padding-left: 130px; box-sizing: border-box;}
+        #sec2 .s2_con .about .s2_txt span{font-weight: bold;margin-right: 7px;}
+        #sec2 .s2_con .about .s2_txt .title{font-size: 32px;margin: 20px 0;}
+        #sec2 .s2_con .about .s2_txt .location{margin-bottom: 15px;}
 
+        #sec2 .s2_con .about .s2_img{flex: 1;position: relative;}
+        #sec2 .s2_con .about .s2_img_wp{width: 320px;height: 430px;margin-left: 30px;position: absolute;top: -50px;border-radius: 150px 0 150px; overflow: hidden;}
+        #sec2 .s2_con .about .s2_img_wp img{width: 100%;height: 100%;object-fit: cover;}
 
+        #sec3{width: 100%;max-width: 1200px;margin: 0 auto;padding: 100px 0;}
+        #sec3 .s3_con{display: flex;flex-direction: column;align-items: center;}
+        #sec3 .s3_con h1{font-size: 42px;font-family: s-Italic;color: #444C35;position: relative;}
+        #sec3 .s3_con h1::before{content: "";display: block;position: absolute;left: 50%;top: -20px;width: 1200px;height: 1px;background: #444C35;transform: translateX(-50%);}
+        #sec3 .s3_con h1::after{content: "";position: absolute;right: -30px;bottom: -10px;width: 50px;height: 50px;background: url(images/Asset5.png) no-repeat center / contain;transform: rotate(-30deg);z-index: -1;}
+        #sec3 .s3_con .skill{display: flex;justify-content: center;align-items: baseline;gap: 100px;margin-top: 30px;text-align: center;}
+        #sec3 .s3_con .skill .item{width: 50px;height: 250px;background: #444C35;margin: 0 auto;}
+        #sec3 .s3_con .skill .t2{height: 190px;}
+        #sec3 .s3_con .skill .t3{height: 170px;}
+        #sec3 .s3_con .skill .t4{height: 175px;}
+        #sec3 .s3_con .skill .t5{height: 175px;}
+        #sec3 .s3_con .skill .t6{height: 130px;}
+        #sec3 .s3_con .skill .t7{height: 160px;}
+        #sec3 .s3_con .skill .item_box p{width: 60px;height: 60px;background-repeat: no-repeat;background-position: center;background-size: contain;margin-top: 10px;}
+        #sec3 .s3_con .skill .item_box:nth-child(1) p,#sec3 .s3_con .skill .item_box:nth-child(2) p,#sec3 .s3_con .skill .item_box:nth-child(3) p{margin-top: 17px;}
+        #sec3 .s3_con .skill .item_box .ps_ico{background-image: url(images/photoshop_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .illu_ico{background-image: url(images/illustrator_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .figma_ico{background-image: url(images/figma_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .html_ico{background-image: url(images/html_icon.png);}
+        #sec3 .s3_con .skill .item_box .css_ico{background-image: url(images/css_icon.png);}
+        #sec3 .s3_con .skill .item_box .js_ico{background-image: url(images/js_icon.png);}
+        #sec3 .s3_con .skill .item_box .jq_ico{background-image: url(images/jq_icon.png);}
+
+        #sec4{width: 100%;max-width: 1200px;margin: 210px auto 0;height: 1000px;}
+        #sec4 .s4_con{text-align: center;}
+        #sec4 .s4_con h1{font-size: 42px;font-family: s-Italic;color: #444C35;position: relative;}
+        #sec4 .s4_con h1::before{content: "";display: block;position: absolute;left: 50%;top: -20px;width: 1200px;height: 1px;background: #444C35;transform: translateX(-50%);}
+        #sec4 .s4_con h1 span{display: block;font-size: 16px;font-weight: normal;position: relative;margin-top: -5px;}
+        #sec4 .s4_con h1 span::before{content: "";position: absolute;left: -200px;top: -45px;width: 600px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;}
+        #sec4 .s4_con h1 span::after{content: "";position: absolute;right: -200px;top: -45px;width: 600px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;transform: rotate(180deg);}
 
         
+        
+        #sec4 .s4_con p.bg_left{display: inline-block;}
+       
+
 
     </style>
 
@@ -44,41 +95,119 @@
         <div class="header_wrap">
             <header>
                 <div class="top">
-                    <div class="logo">logo<a href="/"></a></div>
+                    <div class="logo"><a href="#"></a></div>
                     <div class="nav">
                         <ul class="nav_list">
-                            <li><a href="#sec1">About</a></li>
-                            <li><a href="#sec2">Portfolio</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Menu</a></li>
+                            <li><a href="#sec2">Profil</a></li>
+                            <li><a href="#sec3">Skills</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </header>
         </div>
-        <div class="section" id="section1">
-            <div class="s1_content">
-                <div class="s1_bg"></div>
+        <div id="sec1">
+            <div class="s1_con">
+                <div class="s1_txt">
+                    <h1>Portfolio</h1>
+                    <div class="s1_img"></div>
+                </div>
             </div>
         </div>
-        <div class="section fp-auto-height" id="section2">
-            <div class="s2_content">
+        <div id="sec2">
+            <div class="s2_con">
+                <h1><span>-----------</span> About Me</h1>
                 <div class="about">
                     <div class="s2_txt">
-                        <p>name</p>
-                        <p>name</p>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        <p class="title">“좌우명 적기”</p>
+                        <p class="name"><span>Name :</span>안예리</p>
+                        <p class="location"><span>Location :</span>대전 유성구 신성동</p>
+                        <p class="pr">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                     </div>
                     <div class="s2_img">
                         <div class="s2_img_wp">
-                            <img src="images/sheets-5329790_1280.jpg" alt="ex">
+                            <img src="images/etc.jpg" alt="profil">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="sec3">
+            <div class="s3_con">
+                <h1>Skills</h1>
+                <div class="skill">
+                    <div class="item_box ps">
+                        <div class="item t1"></div>
+                        <p class="ps_ico">포토샵</p>
+                    </div>
+                    <div class="item_box illu">
+                        <div class="item t2"></div>
+                        <p class="illu_ico">일러스트레이트</p>
+                    </div>
+                    <div class="item_box figma">
+                        <div class="item t3"></div>
+                        <p class="figma_ico">피그마</p>
+                    </div>
+                    <div class="item_box html">
+                        <div class="item t4"></div>
+                        <p class="html_ico">html</p>
+                    </div>
+                    <div class="item_box css">
+                        <div class="item t5"></div>
+                        <p class="css_ico">html</p>
+                    </div>
+                    <div class="item_box js">
+                        <div class="item t6"></div>
+                        <p class="js_ico">js</p>
+                    </div>
+                    <div class="item_box jq">
+                        <div class="item t7"></div>
+                        <p class="jq_ico">jq</p>
+                    </div>
+                </div>
+                <!-- <div class="skill_icon">
+                    <div class="ps">포토샵</div>
+                    <div class="illu">일러스트레이트</div>
+                    <div class="figma">피그마</div>
+                    <div class="html"></div>
+                    <div class="js"></div>
+                    <div class="jq"></div>
+                </div> -->
+            </div>
+        </div>
+        <div id="sec4">
+            <div class="s4_con">
+                <p class="bg_left"></p>
+                <h1>Portfolio<span>저의 작업물을 소개합니다.</span></h1>
+                <p class="bg_right"></p>
+            </div>
+        </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        const ani1 = gsap.timeline(); //할당 재선언 안됨
+        ani1.from("#sec3 .item",{
+            height:0,
+           opacity:0,
+            stagger:{
+                amount: 5,
+                from: "random",
+            }
+        });
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger:"#sec3",
+            // markers: true,
+            start:"top top", 
+            end: "150% top",
+            pin: true, 
+            scrub: true,
+            anticipatePin: 1,
+        });
+    </script>
 </body>
 </html>
