@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" href="xeicon.css">
+    <style>
+        @font-face {
+            font-family: s-Italic;
+            src: url(fonts/InstrumentSerif-Italic.woff) format(woff);
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        body{font-size: 0;background-color: #F6F3EC;}
+        a{text-decoration: none;color: #333;}
+        .header_wp{width: 100%;height: 100px;}
+        header{width: 100%;max-width: 1200px;height: 100px;font-size: 16px;position: absolute;left: 50%;top: 0; transform: translateX(-50%);z-index: 999;}
+        header .top{height: 100%;display: flex;justify-content: space-between;align-items: center;}
+        header .top .logo{width: 80px;}
+        header .top .logo a{display: inline-block;width: 100%;height: 90px;background-image: url(images/Asset4.png);background-size: contain;background-position: center;background-repeat: no-repeat;}
+        header .top .nav_list{display: flex;}
+        header .top .nav_list li{text-align: center;padding: 0 15px;color: #F6F3EC;}
+        header .top .nav_list li a{font-size: 16px;font-weight: bold;color: #F6F3EC;position: relative;}
+        header .top .nav_list li a::before{content: "";position: absolute;bottom: -2px;left: 0;width: 100%;height: 1px;background: #F6F3EC;transform: scale(0);transition: 0.5s;}
+        header .top .nav_list li a:hover::before{transform: scale(1);}
+
+        #sec1{width: 100%;height: 100vh;margin-bottom: 100px;background-color: #444C35;}
+        #sec1 .s1_con{height: 100%;display: flex;justify-content: center;align-items: center;background: rgba(68, 76, 53, 0.7) url(images/top_bg.jpg) no-repeat center / cover;background-attachment: fixed;background-blend-mode: multiply;position: relative;}
+        #sec1 .s1_con .s1_txt{font-size: 82px;font-family: s-Italic;color: #F6F3EC;letter-spacing: 3px;}
+        #sec1 .s1_con .s1_img{width: 100%;height: 100%;position: absolute;bottom: 0;left: 50%;transform: translateX(-50%);background: url(images/ss_1.png) no-repeat 50% 50% / cover;}
+
+        #sec2{width: 100%;max-width: 1200px;margin: 0 auto;height: auto;position: relative;}
+        #sec2::before{content: "";position: absolute;right: -10px;bottom: 0;width: 210px;height: 210px; background: url(images/circle1.png) no-repeat center / cover;opacity: 0.5;animation: circle 40s linear infinite;}
+        @keyframes circle{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        #sec2 .s2_con{font-size: 16px;color: #333;}
+        #sec2 .s2_con h1{position: relative;font-size: 64px;font-family: s-Italic;color: #444C35;}
+        #sec2 .s2_con h1 span{color: transparent;font-size: 18px;}
+        #sec2 .s2_con h1::before{content: "";display: block;position: absolute;left: 0;bottom: 0;width: 1200px;height: 1px;background: #444C35;text-align: center;}
+        #sec2 .s2_con .about{display: flex;height: 400px;}
+        #sec2 .s2_con .about .s2_txt{width: 800px;display: inline-flex;flex-direction: column;padding-left: 130px; box-sizing: border-box;}
+        #sec2 .s2_con .about .s2_txt span{font-weight: bold;margin-right: 7px;}
+        #sec2 .s2_con .about .s2_txt .title{font-size: 32px;margin: 20px 0;}
+        #sec2 .s2_con .about .s2_txt .location{margin-bottom: 15px;}
+
+        #sec2 .s2_con .about .s2_img{flex: 1;position: relative;}
+        #sec2 .s2_con .about .s2_img_wp{width: 320px;height: 430px;margin-left: 30px;position: absolute;top: -50px;border-radius: 150px 0 150px; overflow: hidden;}
+        #sec2 .s2_con .about .s2_img_wp img{width: 100%;height: 100%;object-fit: cover;}
+
+        #sec3{width: 100%;max-width: 1200px;margin: 0 auto;padding: 100px 0;}
+        #sec3 .s3_con{display: flex;flex-direction: column;align-items: center;}
+        #sec3 .s3_con h1{font-size: 42px;font-family: s-Italic;color: #444C35;position: relative;}
+        #sec3 .s3_con h1::before{content: "";display: block;position: absolute;left: 50%;top: -20px;width: 1200px;height: 1px;background: #444C35;transform: translateX(-50%);}
+        #sec3 .s3_con h1::after{content: "";position: absolute;right: -30px;bottom: -10px;width: 50px;height: 50px;background: url(images/Asset5.png) no-repeat center / contain;transform: rotate(-30deg);z-index: -1;}
+        #sec3 .s3_con .skill{display: flex;justify-content: center;align-items: baseline;gap: 100px;margin-top: 30px;text-align: center;}
+        #sec3 .s3_con .skill .item{width: 50px;height: 250px;background: #444C35;margin: 0 auto;}
+        #sec3 .s3_con .skill .t2{height: 190px;}
+        #sec3 .s3_con .skill .t3{height: 170px;}
+        #sec3 .s3_con .skill .t4{height: 175px;}
+        #sec3 .s3_con .skill .t5{height: 175px;}
+        #sec3 .s3_con .skill .t6{height: 130px;}
+        #sec3 .s3_con .skill .t7{height: 160px;}
+        #sec3 .s3_con .skill .item_box p{width: 60px;height: 60px;background-repeat: no-repeat;background-position: center;background-size: contain;margin-top: 10px;}
+        #sec3 .s3_con .skill .item_box:nth-child(1) p,#sec3 .s3_con .skill .item_box:nth-child(2) p,#sec3 .s3_con .skill .item_box:nth-child(3) p{margin-top: 17px;}
+        #sec3 .s3_con .skill .item_box .ps_ico{background-image: url(images/photoshop_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .illu_ico{background-image: url(images/illustrator_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .figma_ico{background-image: url(images/figma_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .html_ico{background-image: url(images/html_icon.png);}
+        #sec3 .s3_con .skill .item_box .css_ico{background-image: url(images/css_icon.png);}
+        #sec3 .s3_con .skill .item_box .js_ico{background-image: url(images/js_icon.png);}
+        #sec3 .s3_con .skill .item_box .jq_ico{background-image: url(images/jq_icon.png);}
+
+        .sec4_wrap .sec4_bg{display: inline-block; width: 100%;height: 70px;position: relative;overflow: hidden;top: 290px;}
+        .sec4_wrap .sec4_bg::before{content: "";position: absolute;left: 0;top: 0px;width: 750px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;}
+        .sec4_wrap .sec4_bg::after{content: "";position: absolute;right: 0;top: 0px;width: 750px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;transform: rotate(180deg);}
+
+        #sec4{width: 100%;max-width: 1200px;margin: 210px auto 0;}
+        #sec4 .s4_con{text-align: center;}
+        #sec4 .s4_con h1{font-size: 42px;font-family: s-Italic;color: #444C35;position: relative;}
+        #sec4 .s4_con h1::before{content: "";display: block;position: absolute;left: 50%;top: -20px;width: 1200px;height: 1px;background: #444C35;transform: translateX(-50%);}
+        #sec4 .s4_con h1 span{display: block;font-size: 16px;font-weight: normal;margin-top: -5px;}
+        #sec4 .s4_con .contents{font-size: 20px;margin-top: 60px;}
+        #sec4 .s4_con .contents .con_list{display: flex;flex-direction: column;gap: 80px;}
+        #sec4 .s4_con .contents .con_list li{display: flex;justify-content: center;height: 370px;}
+        #sec4 .s4_con .contents .con_list li:nth-child(2n){flex-direction: row-reverse;}
+        #sec4 .s4_con .contents .con_list li .con_img{width: 700px;height: 100%;overflow: hidden;}
+        #sec4 .s4_con .contents .con_list li .con_img img{width: 100%;height: 100%;object-fit: cover;transform: scale(1);transition: 1s;}
+        #sec4 .s4_con .contents .con_list li .con_img:hover img{transform: scale(1.1);}
+
+        #sec4 .s4_con .contents .con_list li .con_des{text-align: left;padding: 50px 0 50px;flex: 1;}
+        #sec4 .s4_con .contents .con_list li .con_des .num{font-size: 20px;font-family: s-Italic;font-weight: bold;position: relative;}
+        #sec4 .s4_con .contents .con_list li:nth-child(2n) .con_des .num{text-align: right;}
+        #sec4 .s4_con .contents .con_list li .con_des .num span{color: transparent;}
+        #sec4 .s4_con .contents .con_list li .con_des .num::before{content: "";display: block;position: absolute;left: 50%;bottom: 0;width: 100%;height: 1px;background: #444C35;transform: translateX(-50%);opacity: 0.5;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner{padding: 30px 20px 30px 120px;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .title{font-weight: bold;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des{margin-top: 15px;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des p .t1{font-size: 16px;font-weight: bold; position: relative;display: inline-block;width: 100px;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des p .t1::before{content: ""; position: absolute;display: block;width: 2px;height: 14px;top: 50%;right: 0;transform: translateY(-50%); background: #333;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des p .t2{font-size: 16px;display: inline-block;margin-left: 20px;}
+        
+        #sec4 .s4_con .contents .con_list li .con_des .inner a{display: inline-block;margin-top: 30px;width: 150px; border: 1px solid #333;border-radius: 25px;line-height: 40px;text-align: center;text-transform: capitalize;font-weight: bold;font-size: 16px;}
+        #sec4 .s4_con .s4_btm{height: 200px;margin-top: 80px;}
+        #sec4 .s4_con .s4_btm p{position: relative;line-height: 110px;font-size: 16px;font-weight: bold;}
+        #sec4 .s4_con .s4_btm p span{display: inline-block; animation: move 1s ease-in-out infinite alternate;}
+        @keyframes move {
+            0%{transform: scale(1);}
+            100%{transform: scale(1.2);}
+        }
+        #sec4 .s4_con .s4_btm p::before{content: "";position: absolute;top: 0;left: 50%;transform: translateX(-50%); background-image: url(images/circle2.png);width: 100px;height: 100px;background-size: cover;z-index: -1;}
+
+        .footer_wrap{width: 100%;background-color: #dad6cb;}
+        footer{width: 100%;max-width: 1200px;height: 150px;margin: 0 auto;}
+        footer .ft_con{font-size: 16px;padding-top: 50px;display: flex;align-items: center;}
+        footer .ft_con > p{font-size: 32px;font-family: s-Italic;color: #333;font-weight: bold;margin-right: 30px;}
+        footer .ft_con .contact .t3{display: inline-block;width: 60px;font-weight: bold;}
+        footer .ft_con .contact .t4{margin-left: 20px;}
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="header_wrap">
+            <header>
+                <div class="top">
+                    <div class="logo"><a href="#"></a></div>
+                    <div class="nav">
+                        <ul class="nav_list">
+                            <li><a href="#sec2">Profil</a></li>
+                            <li><a href="#sec3">Skills</a></li>
+                            <li><a href="#sec4">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="sec1">
+            <div class="s1_con">
+                <div class="s1_txt">
+                    <h1>Portfolio</h1>
+                    <div class="s1_img"></div>
+                </div>
+            </div>
+        </div>
+        <div id="sec2">
+            <div class="s2_con">
+                <h1><span>-----------</span> About Me</h1>
+                <div class="about">
+                    <div class="s2_txt">
+                        <p class="title">“좌우명 적기”</p>
+                        <p class="name"><span>Name :</span>안예리</p>
+                        <p class="location"><span>Location :</span>대전 유성구 신성동</p>
+                        <p class="pr">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    </div>
+                    <div class="s2_img">
+                        <div class="s2_img_wp">
+                            <img src="images/etc.jpg" alt="profil">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec3">
+            <div class="s3_con">
+                <h1>Skills</h1>
+                <div class="skill">
+                    <div class="item_box ps">
+                        <div class="item t1"></div>
+                        <p class="ps_ico">포토샵</p>
+                    </div>
+                    <div class="item_box illu">
+                        <div class="item t2"></div>
+                        <p class="illu_ico">일러스트레이트</p>
+                    </div>
+                    <div class="item_box figma">
+                        <div class="item t3"></div>
+                        <p class="figma_ico">피그마</p>
+                    </div>
+                    <div class="item_box html">
+                        <div class="item t4"></div>
+                        <p class="html_ico">html</p>
+                    </div>
+                    <div class="item_box css">
+                        <div class="item t5"></div>
+                        <p class="css_ico">html</p>
+                    </div>
+                    <div class="item_box js">
+                        <div class="item t6"></div>
+                        <p class="js_ico">js</p>
+                    </div>
+                    <div class="item_box jq">
+                        <div class="item t7"></div>
+                        <p class="jq_ico">jq</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec4_wrap">
+            <div class="sec4_bg"></div>
+            <div id="sec4">
+                <div class="s4_con">
+                    <h1>Portfolio<span>저의 작업물을 소개합니다.</span></h1>
+                    <div class="contents">
+                        <ul class="con_list">
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/caffebene.jpg" alt="caffebene">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"><span>--</span># 1</p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">CAFFEBENE Clone page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">ddddd</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="#">more view<i class="xi-plus-min"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/yuhan.jpg" alt="yuhan">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"># 2<span>--</span></p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">유한건강생활 Clone page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">ddddd</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="#">more view<i class="xi-plus-min"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/hankook.jpg" alt="hankook">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"><span>--</span># 3</p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">Hankook&Company Clone page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">ddddd</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="#">more view<i class="xi-plus-min"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/glasslock.jpg" alt="glasslock">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"># 4<span>--</span></p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">Glasslock Re-design page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">ddddd</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="#">more view<i class="xi-plus-min"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/smoothleking.jpg" alt="caffebene">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"><span>--</span># 5</p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">SmoothleKing Re-design page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">ddddd</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">ddddd</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="#">more view<i class="xi-plus-min"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="s4_btm">
+                            <p><span>추가 준비중</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_wrap">
+            <footer>
+                <div class="ft_con">
+                    <p>Contact Me</p>
+                    <div class="contact">
+                        <p><span class="t3">Tel</span><span class="t4">000-0000-0000</span></p>
+                        <p><span class="t3">E-mail</span><span class="t4">aaaa@gmail.com</span></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        const ani1 = gsap.timeline(); //할당 재선언 안됨
+        ani1.from("#sec3 .item",{
+            height:0,
+           opacity:0,
+            stagger:{
+                amount: 5,
+                from: "random",
+            }
+        });
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger:"#sec3",
+            // markers: true,
+            start:"top top", 
+            end: "150% top",
+            pin: true, 
+            scrub: true,
+            anticipatePin: 1,
+        });
+    </script>
+</body>
+</html>
