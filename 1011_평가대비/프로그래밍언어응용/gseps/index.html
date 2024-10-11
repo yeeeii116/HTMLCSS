@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        ul.btn{display: flex;justify-content: center;gap: 100px;border-bottom: 2px solid #ccc;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);position: relative;z-index: 999;}
+        ul.btn a{font-size: 32px;line-height: 100px;}
+
+        .txtwrap{position: relative;width: 1000px;height: 200px;margin: 0 auto;}
+        .txtwrap > div{position: absolute;background: #fff;text-align: center;width: 1000px;word-break: keep-all;}
+        /* 백그라운드를 주면 다 가려져서 마지막 요소만 보임 */
+        /* position: absolute; 줄 경우 margin:0 auto로 가운데로 안감 이때는 transform 사용 */
+        .txtwrap > div p{padding: 0 140px;}
+
+        .imgwrap{width: 1000px;height: 535px;position: relative;margin: 0 auto;}
+        .imgwrap > div{position: absolute;background: #fff;display: flex;}
+    </style>
+</head>
+<body>
+    <ul class="btn">
+        <li><a href="#">천연가스</a></li>
+        <li><a href="#">바이오매스</a></li>
+        <li><a href="#">태양광</a></li>
+    </ul>
+    <div class="txtwrap">
+        <div class="txt">
+            <h1>
+                청정 연료인 LNG를 통해<br>
+                친환경 전력 생산에 앞장섭니다
+            </h1>
+            <p>천연가스인 LNG는 석탄과 석유보다 대기오염 물질과 탄소 배출량이 적은 친환경 연료입니다. GS EPS는 LNG를 연료로 활용하여 친환경·저탄소 에너지를 생산함으로써 미래 환경을 더 깨끗하게 만들고 있습니다.</p>
+        </div>
+        <div class="txt">
+            <h1>
+                재생 가능한 유기물인 바이오매스로<br>
+                청정 에너지를 만듭니다
+            </h1>
+            <p>바이오매스는 자원을 보다 효율적으로 활용하여 지구온난화에 미치는 영향을 감소시킬 수 있는 친환경 에너지원입니다. 연료 사용 과정에서 발생하는 이산화탄소가 식물의 광합성으로 흡수되고 새로운 바이오매스로 환원되어 탄소순환이 이루어지기 때문입니다.
+            GS EPS는 바이오매스를 연료로 활용하는 친환경 발전을 통해 탄소중립에 기여하며 지속 가능한 청정 에너지를 만들고 있습니다.</p>
+        </div>
+        <div class="txt">
+            <h1>
+                무한한 자원인 태양광으로<br>
+                지속 가능한 미래를 밝힙니다
+            </h1>
+            <p>재생 가능한 에너지원인 태양광을 이용하는 발전은 온실가스 배출량을 감소시켜 기후변화에 미치는 영향을 완화합니다. GS EPS는 태양광 발전으로 자연 생태계를 보호하며 지속 가능한 에너지를 생산하고 있습니다.</p>
+        </div>
+    </div>
+    <div class="imgwrap">
+        <div>
+            <p><img src="images/natural_gas_01.jpg" alt=""></p>
+            <p><img src="images/natural_gas_02.jpg" alt=""></p>
+        </div>
+        <div><p><img src="images/bio_mass_img_01.svg" alt=""></p></div>
+        <div>
+            <p><img src="images/sun_light_01.jpg" alt=""></p>
+            <p><img src="images/sun_light_02.jpg" alt=""></p>
+        </div>
+    </div>
+</body>
+</html>
