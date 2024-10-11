@@ -67,23 +67,20 @@
         #sec3 .s3_con h1::after{content: "";position: absolute;right: -30px;bottom: -10px;width: 50px;height: 50px;background: url(images/Asset5.png) no-repeat center / contain;transform: rotate(-30deg);z-index: -1;}
         #sec3 .s3_con .skill{display: flex;justify-content: center;align-items: baseline;gap: 60px;margin-top: 30px;text-align: center;}
         #sec3 .s3_con .skill .item{display: inline-block;width: 100px;height: 100px;border-radius: 50%;border: 2px solid #dad6cb;position: relative;overflow: hidden;transform: translate3d(0, 0, 0);}
-        #sec3 .s3_con .skill .item .wave{position: absolute;
-        bottom: 3%;
-        left: 50%;
-        background: #0af;
-        width: 300px;
-        height: 300px;
-        margin-left: -150px;
-        margin-bottom: -301px;
-        transform-origin: 50% 48%;
-        border-radius: 43%;
-        transition-duration: 0.75s;
-        transition-property: margin-bottom;
-        transition-timing-function: ease;}
-        #sec3 .s3_con .skill .item:hover .wave{margin-bottom: -250px;animation: rotate 2000ms infinite linear;}
+        #sec3 .s3_con .skill .item .wave{position: absolute;bottom: 3%;left: 50%;width: 300px;height: 300px;margin-left: -150px;transform-origin: 50% 48%;border-radius: 43%;transition-duration: 0.75s;transition-property: margin-bottom;transition-timing-function: ease;animation-direction: alternate;animation: rotate 5s infinite linear;}
+        /* margin-bottom: -301px; */
+        #sec3 .s3_con .skill .t1 .wave{margin-bottom: -230px;background: #0af;}
+        #sec3 .s3_con .skill .t2 .wave{margin-bottom: -260px;animation-timing-function: ease-in-out;background: #FF9A00;}
+        #sec3 .s3_con .skill .t3 .wave{margin-bottom: -260px;background: #B659FF;}
+        #sec3 .s3_con .skill .t4 .wave{margin-bottom: -240px;animation-timing-function: ease;background: #F46836;}
+        #sec3 .s3_con .skill .t5 .wave{margin-bottom: -250px;background: #15A0DA;}
+        #sec3 .s3_con .skill .t6 .wave{margin-bottom: -290px;animation-timing-function: ease-in;background: #FEDC21;}
+        #sec3 .s3_con .skill .t7 .wave{margin-bottom: -270px;background: #0868AB;}
+
+        /* #sec3 .s3_con .skill .item:hover .wave{margin-bottom: -250px;animation: rotate 2000ms infinite linear;} */
         @keyframes rotate {
-        from { transform: rotate(0deg); }
-        from { transform: rotate(360deg); }
+        from {transform: rotate(0deg);}
+        from {transform: rotate(350deg); }
         }
         /* #sec3 .s3_con .skill .t2{height: 190px;}
         #sec3 .s3_con .skill .t3{height: 170px;}
@@ -101,11 +98,11 @@
         #sec3 .s3_con .skill .item_box .js_ico{background-image: url(images/js_icon.png);}
         #sec3 .s3_con .skill .item_box .jq_ico{background-image: url(images/jq_icon.png);}
 
-        .sec4_wrap .sec4_bg{display: inline-block; width: 100%;height: 70px;position: relative;overflow: hidden;top: 290px;}
+        .sec4_wrap .sec4_bg{display: inline-block; width: 100%;height: 70px;position: relative;overflow: hidden;top: 80px;}
         .sec4_wrap .sec4_bg::before{content: "";position: absolute;left: 0;top: 0px;width: 750px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;}
         .sec4_wrap .sec4_bg::after{content: "";position: absolute;right: 0;top: 0px;width: 750px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;transform: rotate(180deg);}
 
-        #sec4{width: 100%;max-width: 1200px;margin: 210px auto 0;}
+        #sec4{width: 100%;max-width: 1200px;margin: 0px auto 0;}
         #sec4 .s4_con{text-align: center;}
         #sec4 .s4_con h1{font-size: 42px;font-family: s-Italic;color: #444C35;position: relative;}
         #sec4 .s4_con h1::before{content: "";display: block;position: absolute;left: 50%;top: -20px;width: 1200px;height: 1px;background: #444C35;transform: translateX(-50%);}
@@ -141,13 +138,22 @@
         #sec4 .s4_con .s4_btm p::before{content: "";position: absolute;top: 0;left: 50%;transform: translateX(-50%); background-image: url(images/circle2.png);width: 100px;height: 100px;background-size: cover;z-index: -1;}
 
         .footer_wrap{width: 100%;background-color: #dad6cb;}
-        footer{width: 100%;max-width: 1200px;height: 150px;margin: 0 auto;}
-        footer .ft_con{font-size: 16px;padding-top: 50px;display: flex;align-items: center;}
+        footer{width: 100%;max-width: 1200px;height: 100vh;margin: 0 auto;padding-top: 100px;}
+        footer > p{font-size: 62px;font-family: s-Italic;font-weight: bold;}
+        footer .ft_con{display: flex;padding-top: 50px;justify-content: center;align-items: center;}
+        footer .ft_con .img_wrap{flex: 1;border-radius: 50%;overflow: hidden;}
+        footer .ft_con .img_wrap img{width: 100%;height: 100%;object-fit: cover;}
+        footer .ft_con .contact{flex: 2;font-size: 16px;margin-left: 50px;}
+
+
+        /* footer .ft_con{font-size: 16px;padding-top: 50px;display: flex;align-items: center;}
         footer .ft_con > p{font-size: 32px;font-family: s-Italic;color: #333;font-weight: bold;margin-right: 30px;}
         footer .ft_con .contact .t3{display: inline-block;width: 60px;font-weight: bold;}
-        footer .ft_con .contact .t4{margin-left: 20px;}
+        footer .ft_con .contact .t4{margin-left: 20px;} */
 
-        .go_top{width: 50px;height: 50px;background: #dad6cb;position: fixed;bottom: 200px;right: 50px;border-radius: 50%;text-align: center;cursor: pointer;}
+
+
+        .go_top{width: 50px;height: 50px;background: #444C35;position: fixed;bottom: 100px;right: 50px;border-radius: 50%;text-align: center;cursor: pointer;}
         .go_top p{font-size: 32px;color: #fff;}
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -228,27 +234,39 @@
                         <p class="ps_ico">포토샵</p>
                     </div>
                     <div class="item_box illu">
-                        <div class="item t2"></div>
+                        <div class="item t2">
+                            <span class="wave"></span>
+                        </div>
                         <p class="illu_ico">일러스트레이트</p>
                     </div>
                     <div class="item_box figma">
-                        <div class="item t3"></div>
+                        <div class="item t3">
+                            <span class="wave"></span>
+                        </div>
                         <p class="figma_ico">피그마</p>
                     </div>
                     <div class="item_box html">
-                        <div class="item t4"></div>
+                        <div class="item t4">
+                            <span class="wave"></span>
+                        </div>
                         <p class="html_ico">html</p>
                     </div>
                     <div class="item_box css">
-                        <div class="item t5"></div>
+                        <div class="item t5">
+                            <span class="wave"></span>
+                        </div>
                         <p class="css_ico">html</p>
                     </div>
                     <div class="item_box js">
-                        <div class="item t6"></div>
+                        <div class="item t6">
+                            <span class="wave"></span>
+                        </div>
                         <p class="js_ico">js</p>
                     </div>
                     <div class="item_box jq">
-                        <div class="item t7"></div>
+                        <div class="item t7">
+                            <span class="wave"></span>
+                        </div>
                         <p class="jq_ico">jq</p>
                     </div>
                 </div>
@@ -366,12 +384,22 @@
         </div>
         <div class="footer_wrap">
             <footer>
+                <p>Contact Me</p>
                 <div class="ft_con">
-                    <p>Contact Me</p>
-                    <div class="contact">
-                        <p><span class="t3">Tel</span><span class="t4">000-0000-0000</span></p>
-                        <p><span class="t3">E-mail</span><span class="t4">aaaa@gmail.com</span></p>
+                    <div class="img_wrap">
+                        <img src="images/etc.jpg" alt="etc">
                     </div>
+                    <div class="contact">
+                        <p>
+                            저의 포트폴리오를 읽어주셔서 감사합니다.<br>
+                            저에 대해 궁금하신 점이 있으시다면 언제든 연락주세요!
+                        </p>
+                        <p><span class="t3">Tel.</span><span class="t4">000-0000-0000</span></p>
+                        <p><span class="t3">E-mail.</span><span class="t4">aaaa@gmail.com</span></p>
+                    </div>
+                </div>
+                <div class="copy">
+                    <p>© Copyright 2024 AHNYERI, All Rights Reserved.</p>
                 </div>
             </footer>
         </div>
@@ -431,25 +459,21 @@
         progressBar.style.width = getPercent(scrollNum, documentHeight) + "%";
         });
 
-        // const ani1 = gsap.timeline(); //할당 재선언 안됨
-        // ani1.from("#sec3 .item",{
-        //     height:0,
-        //    opacity:0,
-        //     stagger:{
-        //         amount: 5,
-        //         from: "random",
-        //     }
-        // });
-        // ScrollTrigger.create({
-        //     animation: ani1,
-        //     trigger:"#sec3",
-        //     // markers: true,
-        //     start:"top top", 
-        //     end: "150% top",
-        //     pin: true, 
-        //     scrub: true,
-        //     anticipatePin: 1,
-        // });
+        const ani1 = gsap.timeline(); //할당 재선언 안됨
+        ani1.from("#sec3 .item .wave",{
+            height:0,
+           opacity:0,
+        });
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger:"#sec3",
+            // markers: true,
+            start:"top top", 
+            end: "130% top",
+            pin: true, 
+            scrub: true,
+            anticipatePin: 1,
+        });
     </script>
 </body>
 </html>
