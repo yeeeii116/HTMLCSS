@@ -4,107 +4,496 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
-    <link rel="stylesheet" href="css/jquery.fullPage.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-    <script src="js/scrolloverflow.js"></script>
-    <script src="js/jquery.fullPage.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                verticalCentered: true,
-                anchors: ['anchor1', 'anchor2'],
-                menu: '#menu',
-                // sectionsColor: ['#444C35', '#F6F3EC'],
-                scrollBar: true,
-            });
-        });
-    </script>
-
+    <title>YERI's Portfolio</title>
+    <link rel="stylesheet" href="xeicon.css">
     <style>
-        /* #menu{position: fixed;top: 0;z-index: 999;display: none;} */
+        @font-face {
+            font-family: s-Italic;
+            src: url(fonts/InstrumentSerif-Italic.woff) format(woff);
+        }
         *{margin: 0;padding: 0;}
         ul{list-style: none;}
         body{font-size: 0;background-color: #F6F3EC;}
         a{text-decoration: none;color: #333;}
-        .header_wp{width: 100%;height: 100px;}
-        header{width: 100%;max-width: 1200px;height: 100px;font-size: 16px;position: absolute;left: 50%;top: 0; transform: translateX(-50%);z-index: 999;}
+        .header_wrap{width: 100%;height: 100px;background: rgba(255, 255, 255, 0.1);position: fixed;left: 0;top: 0;z-index: 999;}
+        header{width: 100%;max-width: 1200px;height: 100px;font-size: 16px;left: 50%;top: 0; transform: translateX(-50%);z-index: 999;position: fixed;transition: ease 0.4s;&--scrolled {height: 40px;}}
         header .top{height: 100%;display: flex;justify-content: space-between;align-items: center;}
-
+        header .top .logo{width: 80px;}
+        header .top .logo a{display: inline-block;width: 100%;height: 90px;background-image: url(images/Asset4.png);background-size: contain;background-position: center;background-repeat: no-repeat;}
         header .top .nav_list{display: flex;}
         header .top .nav_list li{text-align: center;padding: 0 15px;color: #F6F3EC;}
-        header .top .nav_list li a{font-size: 16px;font-weight: bold;color: #F6F3EC;}
+        header .top .nav_list li a{font-size: 16px;font-weight: bold;color: #F6F3EC;position: relative;}
+        header .top .nav_list li a::before{content: "";position: absolute;bottom: -2px;left: 0;width: 100%;height: 1px;background: #F6F3EC;transform: scale(0);transition: 0.5s;}
+        header .top .nav_list li a:hover::before{transform: scale(1);}
 
-        #section1{margin-bottom: 80px;background-color: #444C35;}
-        #section1 .s1_content{width: 1000px;height: 600px;margin: 0 auto;background-image: url(images/frame-6624463_1280.png);background-size: contain;background-repeat: no-repeat;vertical-align: middle;background-position: center;}
+        .progressWrap{position: fixed;top: 0;left: 0;width: 100%;height: 5px;
+        background-color: #fff;z-index: 999;}
+        .bar{width: 0%;height: inherit;position: absolute;z-index: 999;background-color: #444C35;border-top-right-radius: 3px;border-bottom-right-radius: 3px;transition: width 300ms;}
 
-        #section2{width: 100%;max-width: 1200px;margin: 0 auto;height: 500px;position: relative;}
-        #section2::before{content: "";display: block; position: absolute;left: 0;top: 100px;width: 1200px;height: 1px;background: #444C35;text-align: center;}
-        #section2 .s2_content{height: 3000px;font-size: 16px;padding-top: 100px;}
-        #section2 .s2_content .about{display: flex;height: 500px;}
-        #section2 .s2_content .about .s2_txt{width: 800px;display: inline-flex;flex-direction: column;justify-content: center;align-items: center;}
-        #section2 .s2_content .about .s2_img{flex: 1;position: relative;}
-        #section2 .s2_content .about .s2_img_wp{width: 320px;height: 500px;margin-left: 50px;position: absolute;top: -50px;border-radius: 150px 0 150px; overflow: hidden;}
-        #section2 .s2_content .about .s2_img_wp img{width: 100%;height: 100%;object-fit: cover;}
+        #sec1{width: 100%;height: 100vh;margin-bottom: 100px;background-color: #444C35;}
+        #sec1 .s1_con{height: 100%;display: flex;justify-content: center;align-items: center;background: rgba(68, 76, 53, 0.7) url(images/top_bg.jpg) no-repeat center / cover;background-attachment: fixed;background-blend-mode: multiply;position: relative;}
+        #sec1 .s1_con .s1_txt h1{font-size: 110px;font-family: s-Italic;color: #F6F3EC;letter-spacing: 3px;animation: txtshow 1s linear;overflow: hidden; white-space: nowrap;}
+        @keyframes txtshow {
+            0%{width: 0;}
+            100%{width: 100%;}
+        }
+        #sec1 .s1_con .s1_img{width: 100%;height: 100%;position: absolute;bottom: 0;left: 50%;transform: translateX(-50%);background: url(images/ss_1.png) no-repeat 50% 50% / cover;}
 
+        #sec2{width: 100%;max-width: 1200px;margin: 0 auto;height: auto;position: relative;}
+        #sec2::before{content: "";position: absolute;right: -10px;bottom: 0;width: 210px;height: 210px; background: url(images/circle1.png) no-repeat center / cover;opacity: 0.5;animation: circle 40s linear infinite;}
+        @keyframes circle{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        #sec2 .s2_con{font-size: 16px;color: #333;}
+        #sec2 .s2_con h1{position: relative;font-size: 64px;font-family: s-Italic;color: #444C35;}
+        #sec2 .s2_con h1 span{color: transparent;font-size: 18px;}
+        #sec2 .s2_con h1::before{content: "";display: block;position: absolute;left: 0;bottom: 0;width: 1200px;height: 1px;background: #444C35;text-align: center;}
+        #sec2 .s2_con .about{display: flex;height: 400px;}
+        #sec2 .s2_con .about .s2_txt{width: 800px;display: inline-flex;flex-direction: column;padding-left: 130px; box-sizing: border-box;}
+        #sec2 .s2_con .about .s2_txt span{font-weight: bold;margin-right: 7px;}
+        #sec2 .s2_con .about .s2_txt .title{font-size: 32px;margin: 20px 0;}
+        #sec2 .s2_con .about .s2_txt .name{}
+        #sec2 .s2_con .about .s2_txt .location{}
+        #sec2 .s2_con .about .s2_txt .keyword{}
+        #sec2 .s2_con .about .s2_txt .edu{font-size: 15px;margin-bottom: 20px;}
+        
 
+        #sec2 .s2_con .about .s2_img{flex: 1;position: relative;}
+        #sec2 .s2_con .about .s2_img_wp{width: 320px;height: 430px;margin-left: 30px;position: absolute;top: -50px;border-radius: 150px 0 150px; overflow: hidden;}
+        #sec2 .s2_con .about .s2_img_wp img{width: 100%;height: 100%;object-fit: cover;}
 
-        /* .s2_content{height: 3000px;} */
-        /* .dddd{height: 500px;} */
+        #sec3{width: 100%;max-width: 1200px;margin: 0 auto;padding: 100px 0 0;}
+        #sec3 .s3_con{display: flex;flex-direction: column;align-items: center;}
+        #sec3 .s3_con h1{font-size: 42px;font-family: s-Italic;color: #444C35;position: relative;}
+        #sec3 .s3_con h1::before{content: "";display: block;position: absolute;left: 50%;top: -20px;width: 1200px;height: 1px;background: #444C35;transform: translateX(-50%);}
+        #sec3 .s3_con h1::after{content: "";position: absolute;right: -30px;bottom: -10px;width: 50px;height: 50px;background: url(images/Asset5.png) no-repeat center / contain;transform: rotate(-30deg);z-index: -1;}
+        #sec3 .s3_con .skill{display: flex;justify-content: center;align-items: baseline;gap: 60px;margin-top: 30px;text-align: center;}
+        #sec3 .s3_con .skill .item{display: inline-block;width: 100px;height: 100px;border-radius: 50%;border: 2px solid #dad6cb;position: relative;overflow: hidden;transform: translate3d(0, 0, 0);}
+        #sec3 .s3_con .skill .item .wave{position: absolute;bottom: 3%;left: 50%;width: 300px;height: 300px;margin-left: -150px;transform-origin: 50% 48%;border-radius: 43%;transition-duration: 0.75s;transition-property: margin-bottom;transition-timing-function: ease;animation-direction: alternate;animation: rotate 5s infinite linear;}
+        /* margin-bottom: -301px; */
+        #sec3 .s3_con .skill .t1 .wave{margin-bottom: -230px;background: #0af;}
+        #sec3 .s3_con .skill .t2 .wave{margin-bottom: -260px;animation-timing-function: ease-in-out;background: #FF9A00;}
+        #sec3 .s3_con .skill .t3 .wave{margin-bottom: -260px;background: #B659FF;}
+        #sec3 .s3_con .skill .t4 .wave{margin-bottom: -240px;animation-timing-function: ease;background: #F46836;}
+        #sec3 .s3_con .skill .t5 .wave{margin-bottom: -250px;background: #15A0DA;}
+        #sec3 .s3_con .skill .t6 .wave{margin-bottom: -290px;animation-timing-function: ease-in;background: #FEDC21;}
+        #sec3 .s3_con .skill .t7 .wave{margin-bottom: -270px;background: #0868AB;}
 
+        /* #sec3 .s3_con .skill .item:hover .wave{margin-bottom: -250px;animation: rotate 2000ms infinite linear;} */
+        @keyframes rotate {
+        from {transform: rotate(0deg);}
+        from {transform: rotate(350deg); }
+        }
+        /* #sec3 .s3_con .skill .t2{height: 190px;}
+        #sec3 .s3_con .skill .t3{height: 170px;}
+        #sec3 .s3_con .skill .t4{height: 175px;}
+        #sec3 .s3_con .skill .t5{height: 175px;}
+        #sec3 .s3_con .skill .t6{height: 130px;}
+        #sec3 .s3_con .skill .t7{height: 160px;} */
+        #sec3 .s3_con .skill .item_box p{width: 60px;height: 60px;background-repeat: no-repeat;background-position: center;background-size: contain;margin: 15px auto 0;}
+        #sec3 .s3_con .skill .item_box:nth-child(1) p,#sec3 .s3_con .skill .item_box:nth-child(2) p,#sec3 .s3_con .skill .item_box:nth-child(3) p{margin-top: 17px;}
+        #sec3 .s3_con .skill .item_box .ps_ico{background-image: url(images/photoshop_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .illu_ico{background-image: url(images/illustrator_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .figma_ico{background-image: url(images/figma_icon.png);width: 50px;height: 50px;}
+        #sec3 .s3_con .skill .item_box .html_ico{background-image: url(images/html_icon.png);}
+        #sec3 .s3_con .skill .item_box .css_ico{background-image: url(images/css_icon.png);}
+        #sec3 .s3_con .skill .item_box .js_ico{background-image: url(images/js_icon.png);}
+        #sec3 .s3_con .skill .item_box .jq_ico{background-image: url(images/jq_icon.png);}
+
+        .sec4_wrap .sec4_bg{display: inline-block; width: 100%;height: 70px;position: relative;overflow: hidden;top: 80px;}
+        .sec4_wrap .sec4_bg::before{content: "";position: absolute;left: 0;top: 0px;width: 750px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;}
+        .sec4_wrap .sec4_bg::after{content: "";position: absolute;right: 0;top: 0px;width: 750px;height: 64px;background: url(images/Asset2.png) no-repeat 100% 100% / cover;transform: rotate(180deg);}
+
+        #sec4{width: 100%;max-width: 1200px;margin: 0px auto 0;}
+        #sec4 .s4_con{text-align: center;}
+        #sec4 .s4_con h1{font-size: 42px;font-family: s-Italic;color: #444C35;position: relative;}
+        #sec4 .s4_con h1::before{content: "";display: block;position: absolute;left: 50%;top: -20px;width: 1200px;height: 1px;background: #444C35;transform: translateX(-50%);}
+        #sec4 .s4_con h1 span{display: block;font-size: 16px;font-weight: normal;margin-top: -5px;}
+        #sec4 .s4_con .contents{font-size: 20px;margin-top: 60px;}
+        #sec4 .s4_con .contents .con_list{display: flex;flex-direction: column;gap: 80px;}
+        #sec4 .s4_con .contents .con_list li{display: flex;justify-content: center;height: 370px;}
+        #sec4 .s4_con .contents .con_list li:nth-child(2n){flex-direction: row-reverse;}
+        #sec4 .s4_con .contents .con_list li .con_img{width: 700px;height: 100%;overflow: hidden;}
+        #sec4 .s4_con .contents .con_list li .con_img img{width: 100%;height: 100%;object-fit: cover;transform: scale(1);transition: 1s;}
+        #sec4 .s4_con .contents .con_list li .con_img:hover img{transform: scale(1.1);}
+
+        #sec4 .s4_con .contents .con_list li .con_des{text-align: left;padding: 50px 0 50px;flex: 1;}
+        #sec4 .s4_con .contents .con_list li .con_des .num{font-size: 20px;font-family: s-Italic;font-weight: bold;position: relative;}
+        #sec4 .s4_con .contents .con_list li:nth-child(2n) .con_des .num{text-align: right;}
+        #sec4 .s4_con .contents .con_list li .con_des .num span{color: transparent;}
+        #sec4 .s4_con .contents .con_list li .con_des .num::before{content: "";display: block;position: absolute;left: 50%;bottom: 0;width: 100%;height: 1px;background: #444C35;transform: translateX(-50%);opacity: 0.5;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner{padding: 30px 20px 30px 120px;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .title{font-weight: bold;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des{margin-top: 15px;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des p .t1{font-size: 16px;font-weight: bold; position: relative;display: inline-block;width: 100px;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des p .t1::before{content: ""; position: absolute;display: block;width: 2px;height: 14px;top: 50%;right: 0;transform: translateY(-50%); background: #333;}
+        #sec4 .s4_con .contents .con_list li .con_des .inner .inner_des .des p .t2{font-size: 16px;display: inline-block;margin-left: 20px;}
+        
+        #sec4 .s4_con .contents .con_list li .con_des .inner a{display: inline-block;margin-top: 30px;width: 150px; border: 1px solid #333;border-radius: 25px;line-height: 40px;text-align: center;text-transform: capitalize;font-weight: bold;font-size: 16px;}
+        #sec4 .btn:hover{background: #dad6cb;}
+        #sec4 .btn i{font-weight: bold;font-size: 14px;transform: rotate(0);transition: 0.5s;margin-left: 5px;}
+        #sec4 .btn:hover i{transform: rotate(90deg);}
+        #sec4 .s4_con .s4_btm{height: 200px;margin-top: 80px;}
+        #sec4 .s4_con .s4_btm p{position: relative;line-height: 110px;font-size: 16px;font-weight: bold;}
+        #sec4 .s4_con .s4_btm p span{display: inline-block; animation: move 1s ease-in-out infinite alternate;}
+        @keyframes move {
+            0%{transform: scale(1);}
+            100%{transform: scale(1.2);}
+        }
+        #sec4 .s4_con .s4_btm p::before{content: "";position: absolute;top: 0;left: 50%;transform: translateX(-50%); background-image: url(images/circle2.png);width: 100px;height: 100px;background-size: cover;z-index: -1;}
+
+        .footer_wrap{width: 100%;background-color: #dad6cb;}
+        footer{width: 100%;max-width: 1200px;height: 100vh;margin: 0 auto;padding-top: 100px;box-sizing: border-box;}
+        footer > p{font-size: 62px;font-family: s-Italic;font-weight: bold;}
+        footer .ft_con{display: flex;padding-top: 50px;justify-content: center;align-items: center;}
+        footer .ft_con .img_wrap{flex: 1;border-radius: 50%;overflow: hidden;}
+        footer .ft_con .img_wrap img{width: 100%;height: 100%;object-fit: cover;}
+        footer .ft_con .contact{flex: 2;font-size: 16px;margin-left: 50px;}
+        footer .ft_con .contact p:first-child{margin-bottom: 10px;}
+        footer .ft_con .contact .t3{margin-right: 8px;}
+
+        /* footer .ft_con{font-size: 16px;padding-top: 50px;display: flex;align-items: center;}
+        footer .ft_con > p{font-size: 32px;font-family: s-Italic;color: #333;font-weight: bold;margin-right: 30px;}
+        footer .ft_con .contact .t3{display: inline-block;width: 60px;font-weight: bold;}
+        footer .ft_con .contact .t4{margin-left: 20px;} */
+
+        .go_top{width: 50px;height: 50px;background: #444C35;position: fixed;bottom: 100px;right: 50px;border-radius: 50%;text-align: center;cursor: pointer;}
+        .go_top p{font-size: 32px;color: #fff;}
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+         $(function(){
+            let ht = $(window).scrollTop();
+           $(window).scroll(function(){
+                let ht = $(window).scrollTop();
+                if(ht > 800){
+                    $(".go_top").css("opacity","1");
+                }else{
+                    $(".go_top").css("opacity","0");
+                }
+           });
+
+           $(".go_top").click(function(){
+                $("html, body").animate({scrollTop:0},800);
+           });
+
+           $(".profil_btn").click(function(){
+                $("html, body").animate({scrollTop:920},800);
+           });
+           $(".skills_btn").click(function(){
+                $("html, body").animate({scrollTop:1520},800);
+           });
+           $(".work_btn").click(function(){
+                $("html, body").animate({scrollTop:2400},800);
+           });
+           $(".contc_btn").click(function(){
+                $("html, body").animate({scrollTop:5300},800);
+           });
+
+         })
+    </script>
 
 </head>
 <body>
-<!-- <ul id="menu">
-  <li data-menuanchor="anchor1"><a href="#anchor1">First slide</a></li>
-  <li data-menuanchor="anchor2"><a href="#anchor2">Second slide</a></li>
-</ul> -->
-
-<div id="fullpage">
     <div class="wrap">
-            <div class="header_wrap">
-                <header>
-                    <div class="top">
-                        <div class="logo">logo<a href="/"></a></div>
-                        <div class="nav">
-                            <ul class="nav_list">
-                                <li><a href="#sec1">About</a></li>
-                                <li><a href="#sec2">Portfolio</a></li>
-                                <li><a href="#">Menu</a></li>
-                                <li><a href="#">Menu</a></li>
-                                <li><a href="#">Menu</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </header>
-            </div>
-            <div class="section" id="section1">
-                <div class="s1_content">
-                    <div class=""></div>
-                </div>
-            </div>
-            <div class="section fp-auto-height" id="section2">
-                <div class="s2_content">
-                    <div class="about">
-                        <div class="s2_txt">
-                            <p>name</p>
-                            <p>name</p>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                        </div>
-                        <div class="s2_img">
-                            <div class="s2_img_wp">
-                                <img src="images/sheets-5329790_1280.jpg" alt="ex">
-                            </div>
-                        </div>
+        <div class="header_wrap">
+            <header>
+                <div class="top">
+                    <div class="logo"><a href="#"></a></div>
+                    <div class="nav">
+                        <ul class="nav_list">
+                            <li class="profil_btn"><a href="#">Profil</a></li>
+                            <li class="skills_btn"><a href="#">Skills</a></li>
+                            <li class="work_btn"><a href="#">Portfolio</a></li>
+                            <li class="contc_btn"><a href="#">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
+            </header>
+        </div>
+        <div class="progressWrap">
+            <div class="bar"></div>
+        </div>
+        <div id="sec1">
+            <div class="s1_con">
+                <div class="s1_txt">
+                    <h1>Welcome To My Portfolio</h1>
+                    <div class="s1_img"></div>
+                </div>
             </div>
+        </div>
+        <div id="sec2">
+            <div class="s2_con">
+                <h1><span>-----------</span> About Me</h1>
+                <div class="about">
+                    <div class="s2_txt">
+                        <p class="title">“할 수 있다고 믿는 사람은 결국 그렇게 된다.”</p>
+                        <p class="name"><span>Name :</span>안예리</p>
+                        <p class="location"><span>Location :</span>대전 유성구 신성동</p>
+                        <p class="keyword"><span>Keyword :</span>#INFJ #긍정적 #섬세함</p>
+                        <p class="edu"><span>Education :</span><br>[디지털디자인]UIUX 반응형 웹디자인&웹퍼블리셔(프론트엔드) 양성 과정 수료 2024.05.29 - 2024.10.28</p>
+                        <p class="pr">항상 스스로의 가능성을 믿고, 도전 앞에서 결코 주저하지 않는 웹디자이너 안예리입니다. 어려움 속에서도 긍정적인 마음가짐을 유지하며, 목표를 향해 꾸준히 나아가는 것이 제 신념입니다. 결국 믿음은 행동을 이끌고, 행동은 성과로 이어질 것이라고 확신합니다.</p>
+                    </div>
+                    <div class="s2_img">
+                        <div class="s2_img_wp">
+                            <img src="images/etc.jpg" alt="profil">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec3">
+            <div class="s3_con">
+                <h1>Skills</h1>
+                <div class="skill">
+                    <div class="item_box ps">
+                        <div class="item t1">
+                            <span class="wave"></span>
+                        </div>
+                        <p class="ps_ico">포토샵</p>
+                    </div>
+                    <div class="item_box illu">
+                        <div class="item t2">
+                            <span class="wave"></span>
+                        </div>
+                        <p class="illu_ico">일러스트레이트</p>
+                    </div>
+                    <div class="item_box figma">
+                        <div class="item t3">
+                            <span class="wave"></span>
+                        </div>
+                        <p class="figma_ico">피그마</p>
+                    </div>
+                    <div class="item_box html">
+                        <div class="item t4">
+                            <span class="wave"></span>
+                        </div>
+                        <p class="html_ico">html</p>
+                    </div>
+                    <div class="item_box css">
+                        <div class="item t5">
+                            <span class="wave"></span>
+                        </div>
+                        <p class="css_ico">html</p>
+                    </div>
+                    <div class="item_box js">
+                        <div class="item t6">
+                            <span class="wave"></span>
+                        </div>
+                        <p class="js_ico">js</p>
+                    </div>
+                    <div class="item_box jq">
+                        <div class="item t7">
+                            <span class="wave"></span>
+                        </div>
+                        <p class="jq_ico">jq</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec4_wrap">
+            <div class="sec4_bg"></div>
+            <div id="sec4">
+                <div class="s4_con">
+                    <h1>Portfolio<span>저의 작업물을 소개합니다.</span></h1>
+                    <div class="contents">
+                        <ul class="con_list">
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/caffebene.jpg" alt="caffebene">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"><span>--</span># 1</p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">CAFFEBENE Clone page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">2024.08 - 2024.09</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">개인작업 100%</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">HTML CSS JS</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="caffebene/index.html" target="_new" class="btn">more view<i class="xi-plus"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/yuhan.jpg" alt="yuhan">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"># 2<span>--</span></p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">유한건강생활 Clone page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">2024.08 - 2024.09</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">개인작업 100%</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">HTML CSS JS jQuary</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="yuhan" target="_new" class="btn">more view<i class="xi-plus"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/hankook.jpg" alt="hankook">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"><span>--</span># 3</p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">Hankook&Company Clone page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">2024.09 - 2024.10</span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">개인작업 100%</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">HTML CSS JS jQuary</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="hankook" target="_new" class="btn">more view<i class="xi-plus"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/glasslock.jpg" alt="glasslock">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"># 4<span>--</span></p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">Glasslock Re-design page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">2024.09 ~ </span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">개인작업 100%</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">Figma</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="images/glasslock.jpg" target="_new" class="btn">more view<i class="xi-plus"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="con_img">
+                                    <img src="images/smoothleking.jpg" alt="smoothleking">
+                                </div>
+                                <div class="con_des">
+                                    <p class="num"><span>--</span># 5</p>
+                                    <div class="inner">
+                                        <div class="inner_des">
+                                            <p class="title">SmoothleKing Re-design page</p>
+                                            <div class="des">
+                                                <p><span class="t1">프로젝트 기간</span><span class="t2">2024.09 ~ </span></p>
+                                                <p><span class="t1">역할 / 기여도</span><span class="t2">개인작업 100%</span></p>
+                                                <p><span class="t1">사용 툴</span><span class="t2">Figma Photoshop</span></p>
+                                            </div>
+                                        </div>
+                                        <a href="images/smoothleking.jpg" target="_new" class="btn">more view<i class="xi-plus"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="s4_btm">
+                            <p><span>추가 준비중</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_wrap">
+            <footer>
+                <p>Contact Me</p>
+                <div class="ft_con">
+                    <div class="img_wrap">
+                        <img src="images/etc.jpg" alt="etc">
+                    </div>
+                    <div class="contact">
+                        <p>
+                            저의 포트폴리오를 읽어주셔서 감사합니다.<br>
+                            저에 대해 궁금하신 점이 있으시다면 언제든 연락주세요!
+                        </p>
+                        <p><span class="t3"><i class="xi-call"></i></span><span class="t4">010-0000-0000</span></p>
+                        <p><span class="t3"><i class="xi-mail"></i></span><span class="t4">yeeeii116@gmail.com</span></p>
+                    </div>
+                </div>
+                <div class="copy">
+                    <p>© Copyright 2024 AHNYERI, All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <div class="go_top"><p><i class="xi-angle-up"></i></p></div>
     </div>
-</div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        const showNav = gsap.from('header', { 
+            yPercent: -100,
+            paused: true,
+            duration: 0.2
+            }).progress(1);
+
+            ScrollTrigger.create({
+            start: "top top",
+            end: "max",
+            // markers: false,
+            onUpdate: (self) => {
+                self.direction === -1 ? showNav.play() : showNav.reverse()
+            }
+        });
+        const showBg = gsap.from('.header_wrap', { 
+            yPercent: -100,
+            paused: true,
+            duration: 0.2
+            }).progress(1);
+
+            ScrollTrigger.create({
+            start: "top top",
+            end: "max",
+            // markers: true,
+            onUpdate: (self) => {
+                self.direction === -1 ? showBg.play() : showBg.reverse()
+            }
+        });
+
+        const progressBar = document.querySelector(".bar");
+        let scrollNum = 0;
+        let documentHeight = 0;
+
+        // 전체 문서에서 얼마나 스크롤되었는지 계산
+        const getPercent = (scroll, total) => {
+        return (scroll / total) * 100;
+        };
+
+        window.addEventListener("scroll", () => {
+        // scroll top이기 때문에 height가 5000px이면 5000에서 화면높이를 뺀 값까지만 나온다.
+        scrollNum = document.documentElement.scrollTop; // 또는 window.scrollY 사용 가능
+        
+        // scroll top값을 기준으로 계산할 것이기 때문에 문서의 전체 길이에서 화면 크기만큼 빼준다.
+        documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        // 전체 문서에서 몇 %만큼 스크롤되었는지 계산해 progress bar의 width를 바꿔준다.
+        progressBar.style.width = getPercent(scrollNum, documentHeight) + "%";
+        });
+
+        const ani1 = gsap.timeline(); //할당 재선언 안됨
+        ani1.from("#sec3 .item .wave",{
+            height:0,
+           opacity:0,
+        });
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger:"#sec3",
+            // markers: true,
+            start:"top top", 
+            end: "130% top",
+            pin: true, 
+            scrub: true,
+            anticipatePin: 1,
+        });
+    </script>
 </body>
 </html>
