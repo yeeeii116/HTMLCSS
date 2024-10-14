@@ -15,8 +15,8 @@ header .top .logo{width: 80px;}
 header .top .logo a{display: inline-block;width: 100%;height: 90px;background-image: url(../images/Asset4.png);background-size: contain;background-position: center;background-repeat: no-repeat;}
 header .top .nav_list{display: flex;}
 header .top .nav_list li{text-align: center;padding: 0 15px;color: #F6F3EC;}
-header .top .nav_list li a{font-size: 16px;font-weight: bold;color: #F6F3EC;position: relative;}
-header .top .nav_list li a::before{content: "";position: absolute;bottom: -2px;left: 0;width: 100%;height: 1px;background: #F6F3EC;transform: scale(0);transition: 0.5s;}
+header .top .nav_list li a{font-size: 16px;font-weight: bold;color: #dad6cb;position: relative;}
+header .top .nav_list li a::before{content: "";position: absolute;bottom: -2px;left: 0;width: 100%;height: 1px;background: #dad6cb;transform: scale(0);transition: 0.5s;}
 header .top .nav_list li a:hover::before{transform: scale(1);}
 
 .progressWrap{position: fixed;top: 0;left: 0;width: 100%;height: 5px;
