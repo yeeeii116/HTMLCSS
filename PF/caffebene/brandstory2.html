@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFFEBENE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @font-face {
+            font-family: NotoSans;
+            src: url(fonts/NotoSansKR-Regular.woff) format(woff);
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #222;}
+        body{font-family: NotoSans;}
+        header{width: 100%;background: #fff;position: sticky;top: 0;z-index: 999;}
+        .head{width: 1190px;margin: 0 auto;height: 123px;display: flex;justify-content: space-between;align-items: center;}
+        .head > ul{display: flex;}
+        .head > ul > li{text-align: center;position: relative;}
+        .head > ul > li > a{display: block; padding: 0 30px;line-height: 123px;font-weight: bold;}
+        .head > ul > li:hover a{color: #273658;}
+
+        .head > ul > li .sub{position: absolute;top: 123px;left: 0;width: 100%;z-index: 1;display: none;}
+        .head > ul > li .sub li a{line-height: 40px;font-size: 15px;}
+        .head > ul > li .sub li:hover a{text-decoration: underline;font-weight: bold;color: #273658;}
+        .head .bg{position: absolute;left: 0;top: 123px;width: 100%;height: 250px;background: rgba(255, 255, 255, 0.5);display: none;}
+
+        .head > ul:hover > li .sub{display: block;}
+        .head > ul:hover ~ .bg{display: block;}
+
+        .head .lang{position: relative;top: -15px;}
+        .head .lang p a{display: inline-block; font-size: 12px;font-weight: bold;padding: 0 10px;position: relative;}
+        .head .lang p a:nth-of-type(2):after{content: "";width: 1px;height: 10px;background-color: #ccc;position: absolute;left: 0;top: 4px;}
+        .head .lang p a:nth-of-type(1){color: #222;}
+        .head .lang p a:nth-of-type(2){color: #707070;}
+        .head .lang p:first-child a{transform: translateX(68px);}
+        .head .lang p:last-child a{margin-top: 10px;}
+        .head .lang p:last-child a{display: block;border-radius: 50px;padding: 8px 40px;font-size: 14px;background-color: #00a5b1;color: #fff;}
+
+        #container{width: 100%;position: relative;}
+        #container .sub_top{width: 100%;height: 820px;position: relative;}
+        #container .sub_visual_bene .swiper{width: 100%;height: 820px;position: relative;}
+        #container .sub_visual_bene .swiper-slide {text-align: center;display: flex;justify-content: center;align-items: center;}
+        #container .sub_visual_bene .swiper-slide img {display: block;width: 100%;height: 820px;object-fit: cover;}
+        #container .sub_visual_bene .swiper-pagination{position: absolute;height: 17px; width: 100%;bottom: -200px;display: flex;justify-content: center;align-items: center;}
+        #container .sub_visual_bene .swiper-pagination-bullet{margin: 0 8px !important;width: 12px;height: 12px;background: #fff;opacity: 1;}
+        #container .sub_visual_bene .swiper-pagination-bullet-active{background: #3a466a;}
+        #container .sub_visual_bene .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{top: 95%;}
+
+        #container .sub_visual_bene .swiper-slide .txt_box{width: 1920px;position: absolute;left: 6px;bottom: 174px;text-align: center;font-size: 40px;color: #fff;opacity: 1;transform: translateY(0);}
+        /* #container .sub_visual_bene .swiper-slide .txt_box.on{opacity: 1;transform: translateY(0);} */
+
+        #container .sub_visual_bene .swiper-slide:nth-child(2) .txt_box{bottom: 560px;left: 190px;}
+        #container .sub_visual_bene .swiper-slide:nth-child(3) .txt_box{bottom: 90px;left: -210px;}
+        #container .sub_visual_bene .swiper-slide:nth-child(4) .txt_box{bottom: 120px;left: -103px;}
+        #container .sub_visual_bene .swiper-slide:nth-child(4) .txt_box strong{display: inline-block;width: 335px;color: transparent;}
+
+        #container .sub_contents{width: 100%;}
+        #container .sub_contents .bene_story{position: relative;padding-bottom: 156px;}
+        #container .sub_contents .bene_story::before{content: "";display: block;position: absolute;top: 568px;left: 0;width: 100%;height: 781px;background: #f5f5f5;z-index: -1;}
+        #container .sub_contents .bene_story .sec1{width: 1021px;margin: 0 auto; padding: 83px 0 103px;color: #3a466a;}
+        #container .sub_contents .bene_story .sec1::before{content: "";display: block;width: 42px;height: 3px;margin-bottom: 35px;background: #3a466a;}
+        #container .sub_contents .bene_story .sec1 p:first-child{font-size: 20px;line-height: 33.4px;}
+        #container .sub_contents .bene_story .sec1 p:nth-child(2){font-size: 34px;margin-top: 25px;line-height: 56.78px;}
+
+        #container .sub_contents .bene_story .sec2{width: 1021px;margin: 0 auto;}
+        #container .sub_contents .bene_story .sec2 .s2_txt{margin: 50px 0 100px;color: #444;}
+        #container .sub_contents .bene_story .sec2 .s2_txt p{font-size: 18px;line-height: 30.06px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1{overflow: hidden;padding-left: 122px;margin-top: 100px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 img{float: left;margin-right: 90px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt{float: left;margin-top: 140px;color: #444;font-size: 18px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt::before{content: "";display: block;width: 42px;height: 3px;margin-bottom: 35px;background: #3a466a;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p{margin-bottom: 15px;}
+        #container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p:nth-child(2),#container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p:nth-child(3),#container .sub_contents .bene_story .sec2 .sec2_1 .sec2_1_txt p:nth-child(4){line-height: 30px;}
+        #container .sub_contents .bene_story .bg{width: 1920px;height: 300px;position: absolute;bottom: 0;left: 50%;margin-left: -960px;background: url(http://www.caffebene.co.kr/images/bene/bene3.png) no-repeat 373px 0;z-index: -1;}
+
+        .bene-story-sect2{width: 100%;height: 820px;}
+        .bene-story-sect2 .swiper{width: 100%;height: 820px;}
+        .bene-story-sect2 .swiper-slide{text-align: center;background: #fff;display: flex;justify-content: center;align-items: center;}
+        .bene-story-sect2 .swiper-slide img{display: block;width: 100%;height: 820px;object-fit: cover;}
+        .bene-story-sect2 .swiper-pagination{position: absolute;height: 17px; width: 100%;bottom: -200px;display: flex;justify-content: center;align-items: center;}
+        .bene-story-sect2 .swiper-pagination-bullet{margin: 0 8px !important;width: 12px;height: 12px;background: #fff;opacity: 1;}
+        .bene-story-sect2 .swiper-pagination-bullet-active{background: #3a466a;}
+
+        .bene-story-sect2 .swiper-slide .slider_txt{width: 1920px;position: absolute;left: 6px;bottom: 174px;text-align: center;font-size: 40px;color: #fff;opacity: 1;transform: translateY(0);}
+        .bene-story-sect2 .swiper-slide:first-child .slider_txt{bottom: 300px;left: 100px;}
+        .bene-story-sect2 .swiper-slide:nth-child(2) .slider_txt{bottom: 250px;left: 35px;}
+        .bene-story-sect2 .swiper-slide:nth-child(3) .slider_txt{bottom: 185px;left: 35px;}
+
+        .bene-story-sect3{position: relative;}
+        .bene-story-sect3::before{content: "";display: block;width: 1944px;height: 400px;position: absolute;top: 0;left: 50%;background: url(images/bene5.png) no-repeat 0 -140px;margin-left: -972px;z-index: -1;}
+        .bene-story-sect3::after{content: "";display: block;width: 100%;height: 457px;position: absolute;top: 429px;left: 0;background: #f5f5f5;z-index: -1;}
+        .bene-story-sect3 .s3_txt{width: 709px;margin: 0 auto;font-size: 18px;color: #444;line-height: 1.5;text-align: center;}
+        .bene-story-sect3 .s3_txt .s3_txtbox{padding: 40px 0 185px;}
+        .bene-story-sect3 .s3_txt .s3_txtbox p:first-child{margin-top: 50px;font-weight: bold;color: #3a466a;}
+        .bene-story-sect3 .s3_txt .s3_txtbox p:nth-child(2){margin-top: 50px;}
+        .bene-story-sect3 .s3_txt .s3_txtbox2{padding-bottom: 200px;}
+        .bene-story-sect3 .s3_txt .s3_txtbox2 p:nth-child(2){font-size: 30px;color: #3a466a;line-height: 1.33;margin-top: 70px;}
+        .bene-story-sect3 .s3_txt .s3_txtbox2 .txt2{font-size: 16px;margin-top: 40px;}
+
+        footer .footer_top .static{position: relative;width: 1190px;margin: 0 auto;padding-bottom: 27px;}
+        footer .footer_top .static ul{overflow: hidden;}
+        footer .footer_top .static ul li{float: left;display: block;font-size: 14px;font-weight: bold; margin-right: 30px;}
+        footer .footer_top .static ul li a{display: inline-block;color: #3a466a;}
+        footer .footer_top .static ul li:nth-child(5) a{color: #00a6b1;}
+        footer .footer_top .static .Top{display: inline-block;width: 27px;height: 15px;position: absolute;top: 0;right: 0;background: url(images/ico-arr-top.png) no-repeat 50% 50%;font-size: 0;outline: none;border: none;cursor: pointer;vertical-align: middle;}
+        footer .ft-line{border-top: 3px solid #3a466a;}
+        footer .ft-line .ft{width: 1190px;margin: 0 auto;overflow: hidden;padding: 25px 0 50px;}
+        footer .ft-line .ft .ft_info{float: left;padding-left: 180px;background: url(images/footer-logo.png) no-repeat 0 5px;}
+        /* background: - repeat position / size  */
+        footer .ft-line .ft .ft_info .info{font-size: 12px;font-weight: bold;color: #222;}
+        footer .ft-line .ft .ft_info .info address{display: inline-block;margin-top: 4px;margin-bottom: 4px;margin-right: 20px;font-style: normal;line-height: 14.4px;vertical-align: middle;}
+        footer .ft-line .ft .ft_info .info span{display: inline-block;margin-top: 4px;margin-bottom: 4px;vertical-align: middle;line-height: 14.4px;}
+        footer .ft-line .ft .ft_info .info .tt{margin-right: 10px;}
+        footer .ft-line .ft .ft_info .info .ts{margin-right: 20px;}
+        footer .ft-line .ft .ft_info .copy{margin-top: 30px;font-size: 12px;color: #b8b8b8;}
+        footer .ft-line .ft .sns{float: right;}
+        footer .ft-line .ft .sns a{margin: 0 4px;}
+        .ico-inst, .ico-blog, .ico-fb, .ico-youtub, .ico-app{display: inline-block;width: 30px;height: 30px;font-size: 0;vertical-align: top;background-repeat: no-repeat;background-position: 50% 50%;}
+        footer .ft-line .ft .sns .ico-inst{background-image: url(images/ico-insta.png);}
+        footer .ft-line .ft .sns .ico-blog{background-image: url(images/ico-blog.png);}
+        footer .ft-line .ft .sns .ico-fb{background-image: url(images/ico-fb.png);}
+        footer .ft-line .ft .sns .ico-youtub{background-image: url(images/ico-youtub.png);}
+        footer .ft-line .ft .sns .ico-app{background-image: url(images/ico-app.png);}
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo"><a href="index.html"><img src="./images/logo.png" alt="logo"></a></div>
+            <ul>
+                <li><a href="#">CAFFEBENE</a>
+                    <ul class="sub">
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">베네캣 스토리</a></li>
+                        <li><a href="#">카페베네 원두</a></li>
+                        <li><a href="#">카페베네 소식</a></li>
+                        <li><a href="#">매거진</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU</a>
+                    <ul class="sub">
+                        <li><a href="#">신메뉴</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
+                        <li><a href="#">MD상품</a></li>
+                        <li><a href="#">Retail</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">STORE</a>
+                    <ul class="sub">
+                        <li><a href="#">국내</a></li>
+                        <li><a href="#">해외</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MEMBERSHIP</a>
+                    <ul class="sub">
+                        <li><a href="#">등급&혜택</a></li>
+                        <li><a href="#">가입방법안내</a></li>
+                        <li><a href="#">서비스</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">GLOBAL</a>
+                    <ul class="sub">
+                        <li><a href="#">해외매장안내</a></li>
+                        <li><a href="#">해외사업소개</a></li>
+                        <li><a href="#">해외가맹&유통문의</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CONTENTS</a>
+                    <ul class="sub">
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">우리동네</a></li>
+                        <li><a href="#">사람들</a></li>
+                        <li><a href="#">메뉴</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">매장</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="bg"></div>
+            <div class="lang">
+                <p><a href="#">KR</a><a href="#">EN</a></p>
+                <p><a href="#">가맹문의</a></p>
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <section class="sub_top">
+            <div class="sub_visual_bene">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="images/bene-s1.jpg" alt="s1">
+                        </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>오래된 기찻길</strong> ] 이 있습니다.</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="images/bene-s2.jpg" alt="s2">
+                        </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>도시의 반딧불이</strong> ] 가 있습니다.</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="images/bene-s3.jpg" alt="s3">
+                        </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>아이들 웃음소리</strong> ] 가 있습니다.</p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="images/bene-s4.jpg" alt="s4">
+                        </div>
+                        <div class="txt_box">
+                            <p>우리동네에는 [ <strong>CAFFE BENE</strong> ] 가 있습니다.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+        </section>
+        <section class="sub_contents">
+            <div class="bene_story">
+                <div class="sec1">
+                    <p>동네마다 알게 모르게<br>우리 곁을 둘러싸고 있는</p>
+                    <p>정겨운 것들이 있습니다.</p>
+                </div>
+                <div class="sec2">
+                    <img src="http://www.caffebene.co.kr/images/bene/bene1.jpg" alt="bene1">
+                    <div class="s2_txt">
+                        <p>오래된 세탁소, 아이들 웃음 소리처럼-<br>
+                        없으면, 서운하고<br>
+                        있으면, 더 없이 좋은 그런 것들이요</p>
+                    </div>
+                    <div class="sec2_1">
+                        <img src="http://www.caffebene.co.kr/images/bene/bene2.jpg" alt="bene2">
+                        <div class="sec2_1_txt">
+                            <p>우리도 그런 존재가 되려고 합니다</p>
+                            <p>화려한 랜드마크는 아니더라도<br>누구나 편하게 드나들 수 있는 곳</p>
+                            <p>언제나 활짝 열려있는<br>동네 사랑방 같은 곳이 되려고 합니다</p>
+                            <p>우리 동네의 자랑이 되고 싶습니다<br>나의 정다운 이웃, 당신을 기다리고 있습니다 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg"></div>
+                </div>
+            </div>
+            <div class="bene-story-sect2">
+                <div class="bene-story-slider">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/bene-s21.jpg" alt="bene-s21">
+                                <div class="slider_txt">
+                                    <p>카페베네에는 [ <strong>우리의 이야기</strong> ] 가 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/bene-s22.jpg" alt="bene-s22">
+                                    <div class="slider_txt">
+                                        <p>카페베네에는 [ <strong>따뜻한 배려</strong> ] 가 있습니다.</p>
+                                    </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/bene-s23.jpg" alt="bene-s23">
+                                    <div class="slider_txt">
+                                        <p>카페베네에는 [ <strong>소중한 진심</strong> ] 이 있습니다.</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="bene-story-sect3">
+                <div class="s3_txt">
+                    <div class="s3_txtbox">
+                        <p>2008년부터 지금까지<br>카페베네는 대한민국 대표 토종 커피브랜드로 많은 사랑을 받아왔습니다</p>
+                        <p>‘배려’와 ‘진정성’으로<br>
+                            소중한 오늘의 이야기를 만들어가는 곳<br>
+                            가장 나다운 시간을 보낼 수 있는 곳<br>
+                            누구에게나 소중한 진심을 다하는 곳이 되겠습니다
+                        </p>
+                    </div>
+                    <div class="s3_txtbox2">
+                        <img src="http://www.caffebene.co.kr/images/bene/bene4.jpg" alt="bene4">
+                        <p>우리동네_카페베네</p>
+                        <p class="txt2">그래서, 우리의 내일이 <br>오늘보다 조금 더 빛날 수 있도록</p>
+                        <p class="txt2">누구에게나 열려있는 공간<br>머물고 싶은 편안한 아지트가 되겠습니다</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer_top">
+            <div class="static">
+                <ul>
+                    <li><a href="#">오시는 길</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#"><span>고객센터 1688-4666</span></a></li>
+                </ul>
+                <button type="button" class="Top"></button>
+            </div>
+        </div>
+        <div class="ft-line">
+            <div class="ft">
+                <div class="ft_info">
+                    <div class="info">
+                        <address>경기도 파주시 월롱면 홀작로 129, 5동</address>
+                        <span class="tt">대표이사</span>
+                        <span class="ts">박그레타</span><br>
+                        <span class="tt">사업자등록번호</span>
+                        <span class="ts">206-86-29161</span>
+                        <span>benecs@caffebene.co.kr</span>
+                    </div>
+                    <p class="copy">Copyright© by Caffebene, All rights reserved.</p>
+                </div>
+                <div class="sns">
+                    <a href="#" class="ico-inst">인스타그램</a>
+                    <a href="#" class="ico-blog">블로그</a>
+                    <a href="#" class="ico-fb">페이스북</a>
+                    <a href="#" class="ico-youtub">유튜브</a>
+                    <a href="#" class="ico-app">APP</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            direction: "vertical",
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        $(".Top").click(function(e){
+            e.preventDefault();
+            $("html, body").stop().animate({scrollTop: 0},800);
+        })
+    </script>
+</body>
+</html>
