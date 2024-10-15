@@ -9,6 +9,14 @@ $(function(){
         }
    });
 
+    AOS.init({
+        easing: "ease",
+        duration: 1000,
+        offset: 400,
+        // delay: 500,
+    });
+
+
    $(".go_top").click(function(){
         $("html, body").animate({scrollTop:0},800);
    });

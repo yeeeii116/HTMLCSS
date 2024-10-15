@@ -2,23 +2,23 @@
 
 @font-face {
     font-family: Pretendard;
-    src: url(fonts/Pretendard-Light.woff) format(woff); 
+    src: url(../fonts/Pretendard-Light.woff) format(woff); 
 }
 @font-face {
     font-family: Pretendard-R;
-    src: url(fonts/Pretendard-Regular.woff) format(woff);
+    src: url(../fonts/Pretendard-Regular.woff) format(woff);
 }
 @font-face {
     font-family: Pretendard-S;
-    src: url(fonts/Pretendard-SemiBold.woff) format(woff); 
+    src: url(../fonts/Pretendard-SemiBold.woff) format(woff); 
 }
 @font-face {
     font-family: Pretendard-B;
-    src: url(fonts/Pretendard-Bold.woff) format(woff); 
+    src: url(../fonts/Pretendard-Bold.woff) format(woff); 
 }
 @font-face {
-    font-family: NewOriginMyongjo;
-    src: url(fonts/NewOriginMyongjoSemiBold.woff2) format(woff2);
+    font-family: NanumMyeongjo;
+    src: url(../fonts/NanumMyeongjoBold.woff) format(woff);
 }
 *{margin: 0;padding: 0;}
 ul{list-style: none;}
@@ -193,7 +193,7 @@ position: relative;display: flex;justify-content: space-between;align-items: cen
 /* img 한곳에 모여있어야 하기 때문에 position: absolute; 줌 */
 .analects .txt {position: relative;width: 600px;height: 240px;text-align: center;display: flex;flex-direction: column;margin-top: 75px;margin-right: 100px;}
 .analects .desc {height: 100px;}
-.analects .desc p {position: absolute;top: 0;font-size: 24px;line-height: 34px;width: 100%;font-size: 24px;color: #181818;font-family: NewOriginMyongjo;letter-spacing: -1px;}
+.analects .desc p {position: absolute;top: 0;font-size: 24px;line-height: 34px;width: 100%;font-size: 24px;color: #181818;letter-spacing: -1px;font-family: NanumMyeongjo;}
 /* 한곳에 모여있어야 하기 때문에 position: absolute; 줌 */
 .analects a {display: block;margin: 0 auto;font-size: 18px;line-height: 46px;width: 220px;border: 1px solid #181818;color: #181818;border-radius: 24px;}
 .analects a:after {content: "";display: inline-block;width: 9px;height: 46px;vertical-align: top;margin-left: 13px;
