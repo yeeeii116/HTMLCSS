@@ -31,15 +31,18 @@ $(function(){
     $(".intro .yuhancare .item li").eq(0).addClass("on");
     $(".mask .zoom_circle").eq(0).addClass("on");
     $(".intro .btn li").eq(0).addClass("on");
+    $(".intro .btn_txt li").eq(0).addClass("on");
     $(".intro .btn li").click(function(){
         let i = $(this).index();
-        console.log(i);
+        // console.log(i);
         $(".intro .btn li").removeClass("on");
+        $(".intro .btn_txt li").removeClass("on");
         $(".intro .yuhancare .item li").removeClass("on");
         $(".intro .btn li").eq(i).addClass("on");
         $(".intro .yuhancare .item li").eq(i).addClass("on");
         $(".mask span").removeClass("on");
         $(".mask span").eq(i).addClass("on");
+        $(".intro .btn_txt li").eq(i).addClass("on");
     });
 
     $(function () {

@@ -95,7 +95,7 @@ header .option .lang .lang_list a{display: inline-block;width: 100%;padding: 5px
 .bottom_wrap .center_bottom li a.on{color: #fff;}
 
 .swiper-pagination-bullet{border-radius: 0;width: 140px;height: 2px;margin: 0 16px !important;position: relative; top: -70px;background: rgba(255, 255, 255, 0);}
-.swiper-pagination-bullet-active{width: 140px;height: 2px;background: #fff;animation-name: move;animation-duration: 3s;animation-timing-function: linear;animation-fill-mode: forwards;position: absolute;top: -56px;transform: translateX(-87px);}
+.swiper-pagination-bullet-active{width: 140px;height: 2px;background: #fff;animation-name: move;animation-duration: 3s;animation-timing-function: linear;animation-fill-mode: forwards;position: absolute;top: -56px;transform: translateX(-86px);}
 @keyframes move {
     0%{width: 0;}
     100%{width: 140px;}  
@@ -129,9 +129,9 @@ clip-path: circle(0%);}
 .zoom_circle.on {
 clip-path: circle(100%);
 transition: clip-path 1s 800ms ease-out;}
-.intro  .yuhancare .topImage .mask span:first-child{background:url(../images/text_to_img1.jpg);}
-.intro  .yuhancare .topImage .mask span:nth-child(2){background:url(../images/text_to_img2.jpg);}
-.intro  .yuhancare .topImage .mask span:nth-child(3){background:url(../images/text_to_img3.jpg);}
+.intro  .yuhancare .topImage .mask span:first-child{background:url(../images/text_to_img1.jpg);border-radius: 30px;}
+.intro  .yuhancare .topImage .mask span:nth-child(2){background:url(../images/text_to_img2.jpg);border-radius: 30px;}
+.intro  .yuhancare .topImage .mask span:nth-child(3){background:url(../images/text_to_img3.jpg);border-radius: 30px;}
 .intro .yuhancare .item{width: 100%;max-width: 1200px;height: 210px;margin: 0 auto;position: relative;text-align: center;}
 .intro .yuhancare .item li{width: 100%;position: absolute;left: 0;top: 0; font-size: 190px;font-weight: bold;text-align: center;line-height: 210px;color: transparent;transition: 0.5s;opacity: 0;}
 .intro .yuhancare .item li.on{opacity: 1;}
@@ -143,7 +143,10 @@ transition: clip-path 1s 800ms ease-out;}
 .intro .btn li{cursor: pointer;padding: 12px 40px;border: 1px solid #181818;border-radius: 50px;font-size: 24px;font-weight: bold;color: #181818;}
 .intro .btn li.on{color: #fff;background: #181818;}
 
-.intro > p:nth-of-type(2){font-size: 18px; color: #181818;padding: 50px 0;}
+.intro .btn_txt li{font-size: 18px; color: #181818;padding: 50px 0;display: none;}
+.intro .btn_txt li.on{display: block;}
+
+/* .intro > p:nth-of-type(2){} */
 .intro .linkbox a{color: #181818;font-size: 24px;font-weight: 600;font-family: Pretendard;}
 .intro .linkbox a::after{content: "";width: 9px;height: 24px;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/arrow_right_black.svg);display: inline-block;background-repeat: no-repeat;background-size: 9px auto;margin-left: 12px;vertical-align: middle;}
 .intro .omega3{width: 100%;height: 460px;margin-top: 50px;position: relative;}

@@ -25,10 +25,10 @@ $(function(){
         $("html, body").animate({scrollTop:920},800);
    });
    $(".skills_btn").click(function(){
-        $("html, body").animate({scrollTop:1520},800);
+        $("html, body").animate({scrollTop:1820},800);
    });
    $(".work_btn").click(function(){
-        $("html, body").animate({scrollTop:2400},800);
+        $("html, body").animate({scrollTop:2250},800);
    });
    $(".contc_btn").click(function(){
         $("html, body").animate({scrollTop:5300},800);
@@ -93,7 +93,7 @@ $(function(){
         trigger:"#sec3",
         // markers: true,
         start:"top top", 
-        end: "130% top",
+        end: "90% top",
         pin: true, 
         scrub: true,
         anticipatePin: 1,
