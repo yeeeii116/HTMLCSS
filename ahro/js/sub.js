@@ -1,0 +1,9 @@
+$(function(){
+    $("#menu").hover(function(){
+        $(".sub").addClass("on");
+        $(".sub_bg").addClass("on");
+    },function(){
+        $(".sub").removeClass("on");
+        $(".sub_bg").removeClass("on");
+    });
+});
