@@ -50,7 +50,7 @@ h1 img{width:100px;height:auto;object-fit: contain;}
 #m_menu > li i{font-size: 28px;color: #000;text-shadow: -1px 0px rgba(255, 255, 255, 0.5), 0px 1px rgba(255, 255, 255, 0.5), 1px 0px rgba(255, 255, 255, 0.5), 0px -1px rgba(255, 255, 255, 0.5);}
 #m_menu .menu_ico{width: 30px;position: relative;top: 0px;height: 29px;cursor: pointer;}
 #m_menu .menu_ico a{position: absolute;top: 15px;width: 30px;height: 30px;box-sizing: border-box;}
-#m_menu span{display: block;position: absolute;height: 2px;background-color: #000;border: 1px solid rgba(255, 255, 255, 0.5);border-radius: 25px;transition: 1s;transform: rotate(0deg);;}
+#m_menu span{display: block;position: absolute;height: 2px;background-color: #000;border: 1px solid rgba(255, 255, 255, 0.5);border-radius: 25px;transition: 1s;transform: rotate(0deg);}
 #m_menu span:first-child{top: 0;width: 100%;opacity: 1;}
 #m_menu span:nth-child(2){top: 8px;width: 100%;}
 #m_menu span:nth-child(3){top: -8px;width: 100%;}
