@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        body{font-family: Arial, 돋움, Dotum, sans-serif;}
+        #wrap{width: 1200px;margin: 0 auto;}
+        header{height: 100px;}
+        .slide{height: 300px;width: 100%;overflow: hidden;}
+        /* overflow: hidden; 줘서 넘치는 애들 안보이게 */
+        .slide ul{display: flex;}
+        .slide ul li{width: 1200px; flex-shrink: 0;}
+        /* flex-shrink: 0;로 서로 크기를 나누면서 이미지가 안작아지게 */
+        .slide ul img{width: 100%;height: 300px;object-fit: cover;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- 시험볼때는 시험 폴더에 제공된걸로 사용해야됨 -->
+    <script>
+        $(function(){
+            function nextani(){
+                $(".slide ul").animate({marginLeft:"-1200px"},500,function(){
+                    $(".slide ul li").eq(0).appendTo(".slide ul");
+                    // 첫번째꺼를 제일 뒤로 보내는 작업
+                    $(".slide ul").css({marginLeft:"0"});
+                });
+            }
+            function prevani(){
+                $(".slide ul li").eq(2).prependTo(".slide ul");
+                // 마지막꺼를 맨 앞으로 보내는 작업
+                $(".slide ul").css({marginLeft:"-1200px"});
+                $(".slide ul").animate({marginLeft:"0"},500);
+            } 
+            let interval = setInterval(function(){
+                prevani();
+            }, 2000);
+
+            // 마우스를 갖다대면 슬라이드 안움직이게, 마우스 멀어지면 다시 움직이게 만드는 작업
+            $(".btn li").hover(function(){
+                clearInterval(interval);
+            },function(){
+                interval = setInterval(function(){
+                    prevani();
+                }, 2000);
+            });
+
+            // 이전을 클릭하면 prevani가, 다음을 클릭하면 nextani가 실행되도록
+            $(".btn li").eq(0).click(function(){
+                prevani();
+            });
+            $(".btn li").eq(1).click(function(){
+                nextani();
+            });
+        });
+ 
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <div class="slide">
+            <ul>
+                <li><img src="https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg" alt=""></li>
+                <li><img src="https://cdn.pixabay.com/photo/2022/04/03/14/22/city-7109073_1280.jpg" alt=""></li>
+                <li><img src="https://cdn.pixabay.com/photo/2022/11/01/17/46/candle-7562931_1280.jpg" alt=""></li>
+            </ul>
+        </div>
+        <ul class="btn">
+            <li><p>이전</p></li>
+            <li><p>다음</p></li>
+        </ul>
+    </div>
+</body>
+</html>

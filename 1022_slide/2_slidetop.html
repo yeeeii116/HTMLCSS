@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        body{font-family: Arial, 돋움, Dotum, sans-serif;}
+        #wrap{width: 1200px;margin: 0 auto;}
+        header{height: 100px;}
+        .slide{height: 300px;width: 100%;font-size: 0;overflow: hidden;}
+        /* 바뀐 부분 */
+        .slide ul{}
+        .slide ul li{width: 1200px;}
+        .slide ul img{width: 100%;height: 300px;object-fit: cover;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- 시험볼때는 시험 폴더에 제공된걸로 사용해야됨 -->
+    <script>
+        $(function(){
+            function nextani(){
+                $(".slide ul").animate({marginTop:"-300px"},500,function(){
+                    $(".slide ul li").eq(0).appendTo(".slide ul");
+                    // 첫번째꺼를 제일 뒤로 보내는 작업
+                    $(".slide ul").css({marginTop:"0"});
+                });
+            }
+            function prevani(){
+                $(".slide ul li").eq(2).prependTo(".slide ul");
+                $(".slide ul").css({marginTop:"-300px"});
+                $(".slide ul").animate({marginTop:"0"},500);
+            }
+            setInterval(function(){
+                nextani();
+            }, 2000)
+        });
+ 
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <div class="slide">
+            <ul>
+                <li><img src="https://cdn.pixabay.com/photo/2023/11/07/06/52/forest-8371211_1280.jpg" alt=""></li>
+                <li><img src="https://cdn.pixabay.com/photo/2022/04/03/14/22/city-7109073_1280.jpg" alt=""></li>
+                <li><img src="https://cdn.pixabay.com/photo/2022/11/01/17/46/candle-7562931_1280.jpg" alt=""></li>
+            </ul>
+        </div>
+        <ul class="btn">
+            <li><p>이전</p></li>
+            <li><p>다음</p></li>
+        </ul>
+    </div>
+</body>
+</html>
