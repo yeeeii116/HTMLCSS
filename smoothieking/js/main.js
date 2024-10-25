@@ -27,4 +27,6 @@ $(function(){
             self.direction === -1 ? showBg.play() : showBg.reverse()
         }
     });
+
+   
 });
