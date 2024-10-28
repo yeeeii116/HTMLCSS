@@ -52,9 +52,9 @@ header .nav li:hover a{color: #E51B24;}
 .ap{background-image: url(../images/apple.png);width: 120px;height: 120px;top: 450px;left: 80px;}
 .wm{background-image: url(../images/watermelon.png);width: 130px;height: 130px;top: 300px;left: 150px;}
 .banana{background-image: url(../images/banana.png);width: 180px;height: 130px;top: 630px;left: 100px;}
-.sb{background-image: url(../images/strawberry.png);width: 120px;height: 120px;top: 300px;left: 1050px;transform: rotate(-60deg);}
+.sb{background-image: url(../images/strawberry.png);width: 120px;height: 120px;top: 300px;left: 950px;transform: rotate(-60deg);}
 .mg{background-image: url(../images/mango.png);width: 130px;height: 130px;top: 400px;left: 1150px;}
-.lm{background-image: url(../images/lemon.png);width: 150px;height: 150px;top: 600px;left: 730px;transform: rotate(90deg);}
+.lm{background-image: url(../images/lemon.png);width: 150px;height: 150px;top: 600px;left: 780px;transform: rotate(90deg);}
 
 .sec1{margin-top: 120px;box-sizing: border-box;position: static;width: 100%;position: relative;font-size: 16px;padding-top: 50px;}
 .sec1::before{content: "";position: absolute;z-index: 2;background-image: url(../images/wave-cover-w.png);top: -60px;width: 100%;height: 50px;}
@@ -125,7 +125,15 @@ header .nav li:hover a{color: #E51B24;}
 
 
 .sec2{width: 100%;height: 1000px;position: relative;}
-.sec2::before{content: "";position: absolute;top: 0;width: 100%;height: 480px;background: #E51B24;z-index: -1;}
+.sec2::before{content: "";position: absolute;top: 0;width: 100%;height: 400px;background: #E51B24;z-index: -1;}
 .sec2 .s2_inner{width: 100%;max-width: 1600px;margin: 0 auto;}
 .sec2 .s2_title{font-size: 24px;color: #fff;text-align: center;padding: 30px 0;font-family: Protest;}
 .sec2 .s2_title p{font-size: 48px;}
+
+.swiper{width: 1400px;height: 100%;}
+.swiper-slide {height: 400px !important;border: 1px solid #E51B24;box-sizing: border-box;text-align: center;font-size: 18px;background: #fff;display: flex;justify-content: center;align-items: center;overflow: hidden;border-radius: 100px 0 100px 0;}
+.swiper-slide img {display: block;width: 100%;height: 100%;
+object-fit: cover;}
+
+.swiper .txt_box{position: absolute;left: 50%;transform: translateX(-50%);top: 50px;}
+.s2_txt{font-size: 16px;}
