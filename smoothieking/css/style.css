@@ -28,14 +28,14 @@ header .nav li:hover a{color: #E51B24;}
 .s0_inner .s0_txt{font-size: 24px;color: #fff;}
 .s0_inner .img_box div{position: absolute;}
 /* .s0_inner .img_box div:first-child{bottom: -260px;left: 50%;transform: translateX(-50%);z-index: 1;} */
-.s0_inner .img_box div:first-child{bottom: 80px;left: 50%;transform: translateX(-50%);z-index: 1;}
+.s0_inner .img_box div:first-child{bottom: -312px;left: 50%;transform: translateX(-50%);z-index: 1;}
 /* .s0_inner .img_box div:nth-child(2){bottom: -290px;left: 35%;transform: translateX(-50%);} */
-.s0_inner .img_box div:nth-child(2){bottom: 20px;left: 36%;transform: translateX(-50%);}
+/* .s0_inner .img_box div:nth-child(2){bottom: 20px;left: 36%;transform: translateX(-50%);} */
 /* .s0_inner .img_box div:nth-child(3){bottom: -285px;left: 65%;transform: translateX(-50%);} */
-.s0_inner .img_box div:nth-child(3){bottom: 50px;left: 64%;transform: translateX(-50%);}
-.s0_inner .img_box div:first-child img{transform: scale(2);}
-.s0_inner .img_box div:nth-child(2) img{transform: scale(2);}
-.s0_inner .img_box div:nth-child(3) img{transform: scale(1.9);}
+/* .s0_inner .img_box div:nth-child(3){bottom: 50px;left: 64%;transform: translateX(-50%);} */
+/* .s0_inner .img_box div:first-child img{transform: scale(0.9);} */
+/* .s0_inner .img_box div:nth-child(2) img{transform: scale(2);} */
+/* .s0_inner .img_box div:nth-child(3) img{transform: scale(1.9);} */
 
 .s0_txt{position: relative;}
 /* .s0_txt::before{content: "";position: absolute;right: 445px;top: 80px; width: 86px;height: 65px;background-image: url(../images/brand_logo3_w.png);z-index: 1;}
