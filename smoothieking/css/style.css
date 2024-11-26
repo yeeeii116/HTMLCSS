@@ -124,16 +124,31 @@ header .nav li:hover a{color: #E51B24;}
 .track p{float: left;width: 550px;font-size: 36px;color: #E51B24;font-family: Protest;opacity: 20%;}
 
 
-.sec2{width: 100%;height: 1000px;position: relative;}
+.sec2{width: 100%;position: relative;margin-bottom: 80px;}
 .sec2::before{content: "";position: absolute;top: 0;width: 100%;height: 400px;background: #E51B24;z-index: -1;}
-.sec2 .s2_inner{width: 100%;max-width: 1600px;margin: 0 auto;}
+.sec2 .s2_inner{width: 100%;max-width: 1600px;margin: 0 auto;position: relative;}
 .sec2 .s2_title{font-size: 24px;color: #fff;text-align: center;padding: 30px 0;font-family: Protest;}
 .sec2 .s2_title p{font-size: 48px;}
 
-.swiper{width: 1400px;height: 100%;}
-.swiper-slide {height: 400px !important;border: 1px solid #E51B24;box-sizing: border-box;text-align: center;font-size: 18px;background: #fff;display: flex;justify-content: center;align-items: center;overflow: hidden;border-radius: 100px 0 100px 0;}
-.swiper-slide img {display: block;width: 100%;height: 100%;
-object-fit: cover;}
+.swiper{width: 1400px;height: 100%;position: static !important;}
+.swiper-wrapper{width: 100%; position: static !important;}
+.swiper-slide{height: 400px !important;border: 1px solid #E51B24;box-sizing: border-box;text-align: center;font-size: 18px;background: #fff;display: flex;justify-content: center;align-items: center;overflow: hidden;border-radius: 100px 0 100px 0;}
+.swiper-slide img {display: block;width: 100%;height: 100%;object-fit: cover;}
 
 .swiper .txt_box{position: absolute;left: 50%;transform: translateX(-50%);top: 50px;}
 .s2_txt{font-size: 16px;}
+
+.swiper-button-next{right: 30px !important;}
+.swiper-button-prev{left: 30px !important;}
+.swiper-button-next, .swiper-button-prev{width: 50px !important;height: 50px !important;background: rgba(255,255,255,1);border-radius: 50%;top: 330px !important;}
+.swiper-button-next:after, .swiper-button-prev:after{font-size: 32px !important; font-weight: bold;color: #E51B24;}
+.swiper-button-next:hover, .swiper-button-prev:hover{border-radius: 50%;border: 2px solid #fff;}
+
+.sec3{width: 100%;height: 500px;margin-bottom: 50px;}
+.sec3 .s3_inner{width: 100%;height: 100%; background: url(../images/pic_store.png) no-repeat center top/cover;border-radius: 0 0 250px 0;overflow: hidden;position: relative;text-align: center;}
+.sec3 .s3_inner::after{content: "";width: 100%;height: 100%;position: absolute;top: 0;left: 0; background-color: rgba(0, 0, 0, 0.3);}
+.sec3 .s3_inner .s3_txtbox{color: #fff; position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 1;}
+.sec3 .s3_inner .s3_txt{font-size: 36px;margin-bottom: 10px;}
+.sec3 .s3_inner .s3_btn{font-size: 28px;display: inline-block;}
+.sec3 .s3_inner .s3_btn a{width: 100%;height: 100%; display: block;color: #fff;padding: 8px 25px;border: 1px solid #fff;border-radius: 50px;box-sizing: border-box;}
+.sec3 .s3_inner .s3_btn i{font-size: 32px;transform: translateY(3px);}
