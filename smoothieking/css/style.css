@@ -152,3 +152,24 @@ header .nav li:hover a{color: #E51B24;}
 .sec3 .s3_inner .s3_btn{font-size: 28px;display: inline-block;}
 .sec3 .s3_inner .s3_btn a{width: 100%;height: 100%; display: block;color: #fff;padding: 8px 25px;border: 1px solid #fff;border-radius: 50px;box-sizing: border-box;}
 .sec3 .s3_inner .s3_btn i{font-size: 32px;transform: translateY(3px);}
+
+footer{background: #E51B24;width: 100%;height: 150px;display: flex;justify-content: center;align-items: center;}
+footer .ft{display: flex;flex-direction: row;}
+footer .ft .ft_logo{width: 126px;margin-right: 50px;display: flex;justify-content: center;align-items: center;}
+footer .ft .ft_logo img{height: 92px;width: 100%;height: 100%;object-fit: contain;}
+
+footer .ft .ft_menu{font-size: 16px;color: #fff;display: flex;flex-direction: column;justify-content: center;}
+footer .ft .ft_menu ul{display: flex;margin:5px 0 15px 0;}
+footer .ft .ft_menu ul li{padding: 0 10px;position: relative;}
+footer .ft .ft_menu ul li:first-child{padding-left: 0;}
+footer .ft .ft_menu ul li:last-child{padding-right: 0;}
+footer .ft .ft_menu ul li::before{content: "";position: absolute;left: 0;top: 50%;display: block;height: 15px;width: 1px;background-color: #fff;transform: translateY(-50%);}
+footer .ft .ft_menu ul li:first-child:before{height: 0;}
+footer .ft .ft_menu ul li a{color: #fff;font-size: 14px;}
+footer .ft .ft_menu p{font-size: 12px;}
+
+footer .ft .ft_menu .info{margin-bottom: 10px;}
+footer .ft .ft_menu .info p span{padding: 0 10px;position: relative;}
+footer .ft .ft_menu .info p span:first-child{padding-left: 0;}
+footer .ft .ft_menu .info p span:first-child::before{height: 0;}
+footer .ft .ft_menu .info p span::before{content: "";position: absolute;left: 0;top: 50%;display: block;height: 12px;width: 1px;background-color: #fff;transform: translateY(-50%);}
